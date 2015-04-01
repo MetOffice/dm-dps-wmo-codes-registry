@@ -15,14 +15,14 @@
 
 @prefix reg:  <http://purl.org/linked-data/registry#> .
 
-@base <http://ukgovld-registry.dnsalias.net/> .
+@base <http://codes.wmo.int/> .
 
 <> a reg:Register;
     version:currentVersion <>;
     rdfs:label "root"@en;
     dct:description "The root register"@en;
-    reg:owner      <http://example.com/UKLocation> ;
-    reg:manager   <http://www.epimorphics.com/#id> ;
+    reg:owner <http://codes.wmo.int/system/organization/wmo> ;
+    reg:manager <http://codes.wmo.int/system/organization/www-dm> ;
     reg:containedItemClass reg:Register, skos:Collection, skos:ConceptScheme;
     owl:versionInfo 1;
 .
