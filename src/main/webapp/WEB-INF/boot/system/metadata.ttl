@@ -18,8 +18,6 @@
 <system> a reg:Register;
     rdfs:label "system register"@en;
     dct:description "Registers which control system operation"@en;
-    reg:owner      <http://example.com/UKLocation> ;
-    reg:manager   <http://www.epimorphics.com/#id> ;
     reg:containedItemClass reg:Register;
     reg:subregister <system/bulkCollectionTypes> ;
     .

@@ -10,6 +10,5 @@
 <bulkCollectionTypes> a reg:Register;
     rdfs:label "bulk collection types"@en;
     dct:description "Register of bulk collection types"@en;
-    reg:owner      <http://example.com/UKLocation> ;
-    reg:manager   <http://www.epimorphics.com/#id> ;
     .
+

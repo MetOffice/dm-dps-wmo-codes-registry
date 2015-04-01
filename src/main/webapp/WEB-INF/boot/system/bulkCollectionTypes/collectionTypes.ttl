@@ -45,4 +45,30 @@ skos:ConceptScheme a owl:Class;
 reg:Register a owl:Class;
     rdfs:label "Register"@en;
     .
-    
+
+<_ldp-container> a reg:RegisterItem ;
+    rdfs:label "LDP Container"@en;
+    dct:description "Registration of ldp:Container as a legal batch upload type"@en;
+    reg:itemClass owl:Class;
+    reg:status reg:statusStable;
+    reg:definition [ reg:entity ldp:Container ];
+    ldp:membershipPredicate rdfs:member ;
+    .
+ 
+ldp:Container a owl:Class ;
+    rdfs:label "LDP Container"@en ;
+    .
+
+<_owl-ontology> a reg:RegisterItem ;
+    rdfs:label "OWL Ontology"@en;
+    dct:description "Registration of owl:Ontology as a legal batch upload type"@en;
+    reg:itemClass owl:Class;
+    reg:status reg:statusStable;
+    reg:definition [ reg:entity owl:Ontology ];
+    ldp:inverseMembershipPredicate rdfs:isDefinedBy ;
+    .
+ 
+owl:Ontology a owl:Class ;
+    rdfs:label "OWL Ontology"@en ;
+    .
+

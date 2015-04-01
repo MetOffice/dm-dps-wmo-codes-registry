@@ -1,0 +1,32 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix ldp:     <http://www.w3.org/ns/ldp#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+[] a reg:RegisterItem ;
+    reg:itemClass foaf:Organization ;
+    reg:definition [ reg:entity <wmo> ];
+    reg:status reg:statusStable ;
+    reg:notation "wmo" ;
+    .
+<wmo> a foaf:Organization ;
+    rdfs:label "World Meteorological Organization (WMO)"@en ;
+    dct:description "The World Meteorological Organization (WMO) is a specialized agency of the United Nations. It is the UN system's authoritative voice on the state and behaviour of the Earth's atmosphere, its interaction with the oceans, the climate it produces and the resulting distribution of water resources."@en ;
+    foaf:homepage <http://www.wmo.int> ;
+    foaf:name "World Meteorological Organization"
+    .
+[] a reg:RegisterItem ;
+    reg:itemClass foaf:Organization ;
+    reg:definition [ reg:entity <www-dm> ];
+    reg:status reg:statusStable ;
+    reg:notation "www-dm" ;
+    .
+<www-dm> a foaf:Organization ;
+    rdfs:label "WWW Data Management"@en ;
+    dct:description "WWW Data Management (WWW/DM) is the component within the World Weather Watch (WWW) system that provides the support functions needed for the orderly and efficient overall management of meteorological data and products of the WWW system, in particular the standardised representation of data and metadata, and coordinates the monitoring of data availability and quality."@en ;
+    foaf:homepage <https://www.wmo.int/pages/prog/www/WDM/wdm.html> ;
+    foaf:name "WWW Data Management" ;
+    .
+    
