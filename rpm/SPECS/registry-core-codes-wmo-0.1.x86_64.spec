@@ -1,4 +1,4 @@
-Name:		registry-core-tt-acv
+Name:		registry-core-codes-wmo
 Version:	0.1
 Release:	1
 Summary:	TT ACV linked data registry
@@ -13,6 +13,9 @@ Requires:       java-1.7.0-openjdk
 Requires:       nginx
 Requires:       tomcat7
 
+Obsoletes:      wmocodes
+Obsoletes:      wmocodes-bootstrap
+Obsoletes:      registry-core
 
 %description
 
