@@ -1,0 +1,33 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+<_2.0>
+    a reg:RegisterItem ;
+    reg:definition [ reg:entity <2.0> ] ;
+    reg:itemClass reg:NamespaceForward , reg:Delegated ;
+    reg:notation "2.0" ;
+    reg:status reg:statusStable ;
+    .
+<2.0>
+    a reg:NamespaceForward , reg:Delegated ;
+    rdfs:label "O&M Observation types 2.0" ;
+    dct:description "Observation and Measurement types defined in OGC 10-004 'Observations and Measurements' (ISO 19156:2011) clause 7 'Specialized observations'." ;
+    rdfs:seeAlso <http://www.opengis.net/doc/AS/om#clause-7> ;
+    reg:delegationTarget <http://www.opengis.net/def/observationType/OGC-OM/2.0/> ;
+    reg:forwardingCode "307" ;
+    reg:notation "2.0" ;
+    reg:manager
+        [ a foaf:Organization ;
+          foaf:homepage <http://www.opengeospatial.org/ogcna> ;
+          foaf:name "OGC Naming Authority"
+         ] ;
+    reg:owner
+        [ a foaf:Organization ;
+          foaf:homepage <http://www.opengeospatial.org> ;
+          foaf:name "Open Geospatial Consortium"
+        ] ;
+    .

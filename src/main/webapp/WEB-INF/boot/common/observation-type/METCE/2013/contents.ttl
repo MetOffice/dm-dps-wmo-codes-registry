@@ -1,0 +1,48 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix ldp:     <http://www.w3.org/ns/ldp#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <ComplexSamplingMeasurement> ] ;
+    reg:status reg:statusExperimental ;
+    reg:notation "ComplexSamplingMeasurement" ;
+    .
+<ComplexSamplingMeasurement>
+    a skos:Concept ;
+    rdfs:label "ComplexSamplingMeasurement"@en ;
+    dct:description "ComplexSamplingMeasurement (a subclass of OM_ComplexObservation) is intended for use where the observation event is concerned with the evaluation of multiple measurands at a specified location and time instant or duration. The result of this observation type shall refer to an entity of metatype Record (from ISO 19103). ComplexSamplingMeasurement enforces the following additional constraints: 'featureOfInterest' shall refer to an entity of type SF_SpatialSamplingFeature (from ISO 19156), or subclass thereof; and 'procedure' shall refer to an entity of type Process (from METCE), or subclass thereof. The OM_ComplexObservation is used because the 'result' of this class of observations is a group of measures, provided as a Record. Again, this matches the WMO application domain wherein multiple phenomena are measured within a single 'observation event'. The term ‘measurement’ is used in the name in an attempt to reduce confusion arising from the overloading of the term ‘observation’."@en ;
+    rdfs:seeAlso <http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_ComplexObservation> ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SamplingObservation> ] ;
+    reg:status reg:statusExperimental ;
+    reg:notation "SamplingObservation" ;
+    .
+<SamplingObservation>
+    a skos:Concept ;
+    rdfs:label "SamplingObservation"@en ;
+    dct:description "SamplingObservation (a subclass of OM_Observation) provides a general purpose observation type. It enforces the following additional constraints: 'featureOfInterest' shall refer to an entity of type SF_SpatialSamplingFeature (from ISO 19156), or subclass thereof; and 'procedure' shall refer to an entity of type Process (from METCE), or subclass thereof. SamplingObservation is intended for use where measurement of physical phenomena is not the goal of the procedure. For example, the procedure executed to define SIGMET reports results in the identification of areas of turbulence, icing or other meteorological phenomena."@en ;
+    rdfs:seeAlso <http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_Observation> ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SamplingCoverageMeasurement> ] ;
+    reg:status reg:statusExperimental ;
+    reg:notation "SamplingCoverageMeasurement" ;
+    .
+<SamplingCoverageMeasurement>
+    a skos:Concept ;
+    rdfs:label "SamplingCoverageMeasurement"@en ;
+    dct:description "SamplingCoverageMeasurement (a subclass of OM_DiscreteCoverageObservation) is intended for use where the observation is concerned with the evaluation of measurands that vary with respect to space and/or time - the result of this observation type shall refer to an entity of type CV_DiscreteCoverage (from ISO 19123). ComplexSamplingMeasurement enforces the following additional constraints: 'featureOfInterest' shall refer to an entity of type SF_SpatialSamplingFeature (from ISO 19156), or subclass thereof; and 'procedure' shall refer to an entity of type Process (from METCE), or subclass thereof. The Class ‘SamplingCoverageMeasurement’ is based on the SamplingCoverageObservation which is defined in an informative annex of ISO 19156. The term ‘measurement’ is used in the name in an attempt to reduce confusion arising from the overloading of the term ‘observation’."@en ;
+    rdfs:seeAlso <http://www.opengis.net/def/observationType/OGC-OM/2.0/OM_DiscreteCoverageObservation> ;
+    .

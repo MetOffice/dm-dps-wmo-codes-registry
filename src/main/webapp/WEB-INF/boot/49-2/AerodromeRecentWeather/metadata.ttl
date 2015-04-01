@@ -1,0 +1,23 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix ldp:     <http://www.w3.org/ns/ldp#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+<_AerodromeRecentWeather>
+    a reg:RegisterItem ;
+    reg:definition [ reg:entity <AerodromeRecentWeather> ] ;
+    reg:itemClass reg:Register ;
+    reg:notation "AerodromeRecentWeather" ;
+    reg:status reg:statusStable ;
+    .
+<AerodromeRecentWeather>
+    a reg:Register , ldp:Container , skos:Collection ;
+    ldp:membershipPredicate skos:member ;
+    rdfs:label "Code Table D-6: Aerodrome recent weather" ;
+    skos:notation "D-6" ;
+    dct:description "The items within this code table are the weather types that may be reported within a meteorological aerodrome observation report that have occurred during the period since the last issued routine report or last hour, whichever is shorter, but are not observed at the time of the observation. Requirements for reporting recent weather at an aerodrome are specified in Technical Regulations, Volume II (WMO-No. 49), Part II, Appendix 3, [C.3.1.] 4.8.1.1.  This code table contains the set of weather types that are permitted for reporting recent weather. These are a subset of the enumerated set of meteorologically valid combinations specified in Part A, Code Table 4678 comprising elements ‘intensity or proximity’, ‘descriptor’, ‘precipitation’, ‘obscuration’ and/or ‘other’."@en ;
+    reg:owner <http://codes.wmo.int/system/organization/wmo> ;
+    reg:manager <http://codes.wmo.int/system/organization/www-dm> ;
+    .

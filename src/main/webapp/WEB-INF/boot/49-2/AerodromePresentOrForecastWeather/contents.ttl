@@ -1,0 +1,4397 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix ldp:     <http://www.w3.org/ns/ldp#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZ" ;
+.
+<http://codes.wmo.int/306/4678/-DZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RA" ;
+.
+<http://codes.wmo.int/306/4678/-RA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SN" ;
+.
+<http://codes.wmo.int/306/4678/-SN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SG" ;
+.
+<http://codes.wmo.int/306/4678/-SG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PL" ;
+.
+<http://codes.wmo.int/306/4678/-PL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-UP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-UP" ;
+.
+<http://codes.wmo.int/306/4678/-UP>
+    a skos:Concept ;
+    rdfs:label "Light unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZRA" ;
+.
+<http://codes.wmo.int/306/4678/-DZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RADZ" ;
+.
+<http://codes.wmo.int/306/4678/-RADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNDZ" ;
+.
+<http://codes.wmo.int/306/4678/-SNDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGDZ" ;
+.
+<http://codes.wmo.int/306/4678/-SGDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLDZ" ;
+.
+<http://codes.wmo.int/306/4678/-PLDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZSN" ;
+.
+<http://codes.wmo.int/306/4678/-DZSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASN" ;
+.
+<http://codes.wmo.int/306/4678/-RASN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNRA" ;
+.
+<http://codes.wmo.int/306/4678/-SNRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGRA" ;
+.
+<http://codes.wmo.int/306/4678/-SGRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLRA" ;
+.
+<http://codes.wmo.int/306/4678/-PLRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZSG" ;
+.
+<http://codes.wmo.int/306/4678/-DZSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASG" ;
+.
+<http://codes.wmo.int/306/4678/-RASG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNSG" ;
+.
+<http://codes.wmo.int/306/4678/-SNSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGSN" ;
+.
+<http://codes.wmo.int/306/4678/-SGSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSN" ;
+.
+<http://codes.wmo.int/306/4678/-PLSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZPL" ;
+.
+<http://codes.wmo.int/306/4678/-DZPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RAPL" ;
+.
+<http://codes.wmo.int/306/4678/-RAPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNPL" ;
+.
+<http://codes.wmo.int/306/4678/-SNPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGPL" ;
+.
+<http://codes.wmo.int/306/4678/-SGPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSG" ;
+.
+<http://codes.wmo.int/306/4678/-PLSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZRASN" ;
+.
+<http://codes.wmo.int/306/4678/-DZRASN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZSNRA" ;
+.
+<http://codes.wmo.int/306/4678/-DZSNRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RADZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RADZSN" ;
+.
+<http://codes.wmo.int/306/4678/-RADZSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RASNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASNDZ" ;
+.
+<http://codes.wmo.int/306/4678/-RASNDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNDZRA" ;
+.
+<http://codes.wmo.int/306/4678/-SNDZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNRADZ" ;
+.
+<http://codes.wmo.int/306/4678/-SNRADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZRASG" ;
+.
+<http://codes.wmo.int/306/4678/-DZRASG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZSGRA" ;
+.
+<http://codes.wmo.int/306/4678/-DZSGRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RADZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RADZSG" ;
+.
+<http://codes.wmo.int/306/4678/-RADZSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RASGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASGDZ" ;
+.
+<http://codes.wmo.int/306/4678/-RASGDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGDZRA" ;
+.
+<http://codes.wmo.int/306/4678/-SGDZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGRADZ" ;
+.
+<http://codes.wmo.int/306/4678/-SGRADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZRAPL" ;
+.
+<http://codes.wmo.int/306/4678/-DZRAPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-DZPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZPLRA" ;
+.
+<http://codes.wmo.int/306/4678/-DZPLRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RADZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RADZPL" ;
+.
+<http://codes.wmo.int/306/4678/-RADZPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RAPLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RAPLDZ" ;
+.
+<http://codes.wmo.int/306/4678/-RAPLDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLDZRA" ;
+.
+<http://codes.wmo.int/306/4678/-PLDZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLRADZ" ;
+.
+<http://codes.wmo.int/306/4678/-PLRADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RASNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASNSG" ;
+.
+<http://codes.wmo.int/306/4678/-RASNSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RASGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASGSN" ;
+.
+<http://codes.wmo.int/306/4678/-RASGSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNRASG" ;
+.
+<http://codes.wmo.int/306/4678/-SNRASG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNSGRA" ;
+.
+<http://codes.wmo.int/306/4678/-SNSGRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGRASN" ;
+.
+<http://codes.wmo.int/306/4678/-SGRASN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGSNRA" ;
+.
+<http://codes.wmo.int/306/4678/-SGSNRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RASNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASNPL" ;
+.
+<http://codes.wmo.int/306/4678/-RASNPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-RAPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RAPLSN" ;
+.
+<http://codes.wmo.int/306/4678/-RAPLSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNRAPL" ;
+.
+<http://codes.wmo.int/306/4678/-SNRAPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNPLRA" ;
+.
+<http://codes.wmo.int/306/4678/-SNPLRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLRASN" ;
+.
+<http://codes.wmo.int/306/4678/-PLRASN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSNRA" ;
+.
+<http://codes.wmo.int/306/4678/-PLSNRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLSNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSNSG" ;
+.
+<http://codes.wmo.int/306/4678/-PLSNSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-PLSGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSGSN" ;
+.
+<http://codes.wmo.int/306/4678/-PLSGSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNPLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNPLSG" ;
+.
+<http://codes.wmo.int/306/4678/-SNPLSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SNSGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNSGPL" ;
+.
+<http://codes.wmo.int/306/4678/-SNSGPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGPLSN" ;
+.
+<http://codes.wmo.int/306/4678/-SGPLSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SGSNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGSNPL" ;
+.
+<http://codes.wmo.int/306/4678/-SGSNPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZ" ;
+.
+<http://codes.wmo.int/306/4678/DZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RA" ;
+.
+<http://codes.wmo.int/306/4678/RA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SN" ;
+.
+<http://codes.wmo.int/306/4678/SN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SG" ;
+.
+<http://codes.wmo.int/306/4678/SG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PL" ;
+.
+<http://codes.wmo.int/306/4678/PL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/UP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "UP" ;
+.
+<http://codes.wmo.int/306/4678/UP>
+    a skos:Concept ;
+    rdfs:label "Unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZRA" ;
+.
+<http://codes.wmo.int/306/4678/DZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RADZ" ;
+.
+<http://codes.wmo.int/306/4678/RADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNDZ" ;
+.
+<http://codes.wmo.int/306/4678/SNDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGDZ" ;
+.
+<http://codes.wmo.int/306/4678/SGDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLDZ" ;
+.
+<http://codes.wmo.int/306/4678/PLDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZSN" ;
+.
+<http://codes.wmo.int/306/4678/DZSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASN" ;
+.
+<http://codes.wmo.int/306/4678/RASN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNRA" ;
+.
+<http://codes.wmo.int/306/4678/SNRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGRA" ;
+.
+<http://codes.wmo.int/306/4678/SGRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLRA" ;
+.
+<http://codes.wmo.int/306/4678/PLRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZSG" ;
+.
+<http://codes.wmo.int/306/4678/DZSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASG" ;
+.
+<http://codes.wmo.int/306/4678/RASG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNSG" ;
+.
+<http://codes.wmo.int/306/4678/SNSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGSN" ;
+.
+<http://codes.wmo.int/306/4678/SGSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSN" ;
+.
+<http://codes.wmo.int/306/4678/PLSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZPL" ;
+.
+<http://codes.wmo.int/306/4678/DZPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RAPL" ;
+.
+<http://codes.wmo.int/306/4678/RAPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNPL" ;
+.
+<http://codes.wmo.int/306/4678/SNPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGPL" ;
+.
+<http://codes.wmo.int/306/4678/SGPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSG" ;
+.
+<http://codes.wmo.int/306/4678/PLSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZRASN" ;
+.
+<http://codes.wmo.int/306/4678/DZRASN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZSNRA" ;
+.
+<http://codes.wmo.int/306/4678/DZSNRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RADZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RADZSN" ;
+.
+<http://codes.wmo.int/306/4678/RADZSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RASNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASNDZ" ;
+.
+<http://codes.wmo.int/306/4678/RASNDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNDZRA" ;
+.
+<http://codes.wmo.int/306/4678/SNDZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNRADZ" ;
+.
+<http://codes.wmo.int/306/4678/SNRADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZRASG" ;
+.
+<http://codes.wmo.int/306/4678/DZRASG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZSGRA" ;
+.
+<http://codes.wmo.int/306/4678/DZSGRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RADZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RADZSG" ;
+.
+<http://codes.wmo.int/306/4678/RADZSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RASGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASGDZ" ;
+.
+<http://codes.wmo.int/306/4678/RASGDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGDZRA" ;
+.
+<http://codes.wmo.int/306/4678/SGDZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGRADZ" ;
+.
+<http://codes.wmo.int/306/4678/SGRADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZRAPL" ;
+.
+<http://codes.wmo.int/306/4678/DZRAPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DZPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZPLRA" ;
+.
+<http://codes.wmo.int/306/4678/DZPLRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RADZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RADZPL" ;
+.
+<http://codes.wmo.int/306/4678/RADZPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RAPLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RAPLDZ" ;
+.
+<http://codes.wmo.int/306/4678/RAPLDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLDZRA" ;
+.
+<http://codes.wmo.int/306/4678/PLDZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLRADZ" ;
+.
+<http://codes.wmo.int/306/4678/PLRADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RASNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASNSG" ;
+.
+<http://codes.wmo.int/306/4678/RASNSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RASGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASGSN" ;
+.
+<http://codes.wmo.int/306/4678/RASGSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNRASG" ;
+.
+<http://codes.wmo.int/306/4678/SNRASG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNSGRA" ;
+.
+<http://codes.wmo.int/306/4678/SNSGRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGRASN" ;
+.
+<http://codes.wmo.int/306/4678/SGRASN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGSNRA" ;
+.
+<http://codes.wmo.int/306/4678/SGSNRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RASNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASNPL" ;
+.
+<http://codes.wmo.int/306/4678/RASNPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/RAPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RAPLSN" ;
+.
+<http://codes.wmo.int/306/4678/RAPLSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNRAPL" ;
+.
+<http://codes.wmo.int/306/4678/SNRAPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNPLRA" ;
+.
+<http://codes.wmo.int/306/4678/SNPLRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLRASN" ;
+.
+<http://codes.wmo.int/306/4678/PLRASN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSNRA" ;
+.
+<http://codes.wmo.int/306/4678/PLSNRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLSNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSNSG" ;
+.
+<http://codes.wmo.int/306/4678/PLSNSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PLSGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSGSN" ;
+.
+<http://codes.wmo.int/306/4678/PLSGSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNPLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNPLSG" ;
+.
+<http://codes.wmo.int/306/4678/SNPLSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SNSGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNSGPL" ;
+.
+<http://codes.wmo.int/306/4678/SNSGPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGPLSN" ;
+.
+<http://codes.wmo.int/306/4678/SGPLSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SGSNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGSNPL" ;
+.
+<http://codes.wmo.int/306/4678/SGSNPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZ" ;
+.
+<http://codes.wmo.int/306/4678/+DZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RA" ;
+.
+<http://codes.wmo.int/306/4678/+RA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SN" ;
+.
+<http://codes.wmo.int/306/4678/+SN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SG" ;
+.
+<http://codes.wmo.int/306/4678/+SG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PL" ;
+.
+<http://codes.wmo.int/306/4678/+PL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+UP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+UP" ;
+.
+<http://codes.wmo.int/306/4678/+UP>
+    a skos:Concept ;
+    rdfs:label "Heavy unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZRA" ;
+.
+<http://codes.wmo.int/306/4678/+DZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RADZ" ;
+.
+<http://codes.wmo.int/306/4678/+RADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNDZ" ;
+.
+<http://codes.wmo.int/306/4678/+SNDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGDZ" ;
+.
+<http://codes.wmo.int/306/4678/+SGDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLDZ" ;
+.
+<http://codes.wmo.int/306/4678/+PLDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZSN" ;
+.
+<http://codes.wmo.int/306/4678/+DZSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASN" ;
+.
+<http://codes.wmo.int/306/4678/+RASN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNRA" ;
+.
+<http://codes.wmo.int/306/4678/+SNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGRA" ;
+.
+<http://codes.wmo.int/306/4678/+SGRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLRA" ;
+.
+<http://codes.wmo.int/306/4678/+PLRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZSG" ;
+.
+<http://codes.wmo.int/306/4678/+DZSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASG" ;
+.
+<http://codes.wmo.int/306/4678/+RASG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNSG" ;
+.
+<http://codes.wmo.int/306/4678/+SNSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGSN" ;
+.
+<http://codes.wmo.int/306/4678/+SGSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSN" ;
+.
+<http://codes.wmo.int/306/4678/+PLSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZPL" ;
+.
+<http://codes.wmo.int/306/4678/+DZPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RAPL" ;
+.
+<http://codes.wmo.int/306/4678/+RAPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNPL" ;
+.
+<http://codes.wmo.int/306/4678/+SNPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGPL" ;
+.
+<http://codes.wmo.int/306/4678/+SGPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSG" ;
+.
+<http://codes.wmo.int/306/4678/+PLSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZRASN" ;
+.
+<http://codes.wmo.int/306/4678/+DZRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZSNRA" ;
+.
+<http://codes.wmo.int/306/4678/+DZSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RADZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RADZSN" ;
+.
+<http://codes.wmo.int/306/4678/+RADZSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RASNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASNDZ" ;
+.
+<http://codes.wmo.int/306/4678/+RASNDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNDZRA" ;
+.
+<http://codes.wmo.int/306/4678/+SNDZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNRADZ" ;
+.
+<http://codes.wmo.int/306/4678/+SNRADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZRASG" ;
+.
+<http://codes.wmo.int/306/4678/+DZRASG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZSGRA" ;
+.
+<http://codes.wmo.int/306/4678/+DZSGRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RADZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RADZSG" ;
+.
+<http://codes.wmo.int/306/4678/+RADZSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RASGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASGDZ" ;
+.
+<http://codes.wmo.int/306/4678/+RASGDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGDZRA" ;
+.
+<http://codes.wmo.int/306/4678/+SGDZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGRADZ" ;
+.
+<http://codes.wmo.int/306/4678/+SGRADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZRAPL" ;
+.
+<http://codes.wmo.int/306/4678/+DZRAPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DZPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZPLRA" ;
+.
+<http://codes.wmo.int/306/4678/+DZPLRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RADZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RADZPL" ;
+.
+<http://codes.wmo.int/306/4678/+RADZPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RAPLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RAPLDZ" ;
+.
+<http://codes.wmo.int/306/4678/+RAPLDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLDZRA" ;
+.
+<http://codes.wmo.int/306/4678/+PLDZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLRADZ" ;
+.
+<http://codes.wmo.int/306/4678/+PLRADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RASNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASNSG" ;
+.
+<http://codes.wmo.int/306/4678/+RASNSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RASGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASGSN" ;
+.
+<http://codes.wmo.int/306/4678/+RASGSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNRASG" ;
+.
+<http://codes.wmo.int/306/4678/+SNRASG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNSGRA" ;
+.
+<http://codes.wmo.int/306/4678/+SNSGRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGRASN" ;
+.
+<http://codes.wmo.int/306/4678/+SGRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGSNRA" ;
+.
+<http://codes.wmo.int/306/4678/+SGSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RASNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASNPL" ;
+.
+<http://codes.wmo.int/306/4678/+RASNPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+RAPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RAPLSN" ;
+.
+<http://codes.wmo.int/306/4678/+RAPLSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNRAPL" ;
+.
+<http://codes.wmo.int/306/4678/+SNRAPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNPLRA" ;
+.
+<http://codes.wmo.int/306/4678/+SNPLRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLRASN" ;
+.
+<http://codes.wmo.int/306/4678/+PLRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSNRA" ;
+.
+<http://codes.wmo.int/306/4678/+PLSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLSNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSNSG" ;
+.
+<http://codes.wmo.int/306/4678/+PLSNSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+PLSGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSGSN" ;
+.
+<http://codes.wmo.int/306/4678/+PLSGSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNPLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNPLSG" ;
+.
+<http://codes.wmo.int/306/4678/+SNPLSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SNSGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNSGPL" ;
+.
+<http://codes.wmo.int/306/4678/+SNSGPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGPLSN" ;
+.
+<http://codes.wmo.int/306/4678/+SGPLSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SGSNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGSNPL" ;
+.
+<http://codes.wmo.int/306/4678/+SGSNPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRA" ;
+.
+<http://codes.wmo.int/306/4678/-SHRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSN" ;
+.
+<http://codes.wmo.int/306/4678/-SHSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGR" ;
+.
+<http://codes.wmo.int/306/4678/-SHGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGS" ;
+.
+<http://codes.wmo.int/306/4678/-SHGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHUP" ;
+.
+<http://codes.wmo.int/306/4678/-SHUP>
+    a skos:Concept ;
+    rdfs:label "Light unidentified showery precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRASN" ;
+.
+<http://codes.wmo.int/306/4678/-SHRASN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNRA" ;
+.
+<http://codes.wmo.int/306/4678/-SHSNRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGRRA" ;
+.
+<http://codes.wmo.int/306/4678/-SHGRRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGSRA" ;
+.
+<http://codes.wmo.int/306/4678/-SHGSRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRAGR" ;
+.
+<http://codes.wmo.int/306/4678/-SHRAGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNGR" ;
+.
+<http://codes.wmo.int/306/4678/-SHSNGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGRSN" ;
+.
+<http://codes.wmo.int/306/4678/-SHGRSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGSSN" ;
+.
+<http://codes.wmo.int/306/4678/-SHGSSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRAGS" ;
+.
+<http://codes.wmo.int/306/4678/-SHRAGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNGS" ;
+.
+<http://codes.wmo.int/306/4678/-SHSNGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRASNGR" ;
+.
+<http://codes.wmo.int/306/4678/-SHRASNGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRAGRSN" ;
+.
+<http://codes.wmo.int/306/4678/-SHRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNRAGR" ;
+.
+<http://codes.wmo.int/306/4678/-SHSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNGRRA" ;
+.
+<http://codes.wmo.int/306/4678/-SHSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGRRASN" ;
+.
+<http://codes.wmo.int/306/4678/-SHGRRASN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGRSNRA" ;
+.
+<http://codes.wmo.int/306/4678/-SHGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRASNGS" ;
+.
+<http://codes.wmo.int/306/4678/-SHRASNGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRAGSSN" ;
+.
+<http://codes.wmo.int/306/4678/-SHRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNRAGS" ;
+.
+<http://codes.wmo.int/306/4678/-SHSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNGSRA" ;
+.
+<http://codes.wmo.int/306/4678/-SHSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGSRASN" ;
+.
+<http://codes.wmo.int/306/4678/-SHGSRASN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-SHGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGSSNRA" ;
+.
+<http://codes.wmo.int/306/4678/-SHGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRA" ;
+.
+<http://codes.wmo.int/306/4678/SHRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSN" ;
+.
+<http://codes.wmo.int/306/4678/SHSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGR" ;
+.
+<http://codes.wmo.int/306/4678/SHGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGS" ;
+.
+<http://codes.wmo.int/306/4678/SHGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHUP" ;
+.
+<http://codes.wmo.int/306/4678/SHUP>
+    a skos:Concept ;
+    rdfs:label "Unidentified showery precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRASN" ;
+.
+<http://codes.wmo.int/306/4678/SHRASN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNRA" ;
+.
+<http://codes.wmo.int/306/4678/SHSNRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGRRA" ;
+.
+<http://codes.wmo.int/306/4678/SHGRRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGSRA" ;
+.
+<http://codes.wmo.int/306/4678/SHGSRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRAGR" ;
+.
+<http://codes.wmo.int/306/4678/SHRAGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNGR" ;
+.
+<http://codes.wmo.int/306/4678/SHSNGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGRSN" ;
+.
+<http://codes.wmo.int/306/4678/SHGRSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGSSN" ;
+.
+<http://codes.wmo.int/306/4678/SHGSSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRAGS" ;
+.
+<http://codes.wmo.int/306/4678/SHRAGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNGS" ;
+.
+<http://codes.wmo.int/306/4678/SHSNGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRASNGR" ;
+.
+<http://codes.wmo.int/306/4678/SHRASNGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRAGRSN" ;
+.
+<http://codes.wmo.int/306/4678/SHRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNRAGR" ;
+.
+<http://codes.wmo.int/306/4678/SHSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNGRRA" ;
+.
+<http://codes.wmo.int/306/4678/SHSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGRRASN" ;
+.
+<http://codes.wmo.int/306/4678/SHGRRASN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGRSNRA" ;
+.
+<http://codes.wmo.int/306/4678/SHGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRASNGS" ;
+.
+<http://codes.wmo.int/306/4678/SHRASNGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRAGSSN" ;
+.
+<http://codes.wmo.int/306/4678/SHRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNRAGS" ;
+.
+<http://codes.wmo.int/306/4678/SHSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNGSRA" ;
+.
+<http://codes.wmo.int/306/4678/SHSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGSRASN" ;
+.
+<http://codes.wmo.int/306/4678/SHGSRASN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SHGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGSSNRA" ;
+.
+<http://codes.wmo.int/306/4678/SHGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRA" ;
+.
+<http://codes.wmo.int/306/4678/+SHRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSN" ;
+.
+<http://codes.wmo.int/306/4678/+SHSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGR" ;
+.
+<http://codes.wmo.int/306/4678/+SHGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGS" ;
+.
+<http://codes.wmo.int/306/4678/+SHGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHUP" ;
+.
+<http://codes.wmo.int/306/4678/+SHUP>
+    a skos:Concept ;
+    rdfs:label "Heavy unidentified showery precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRASN" ;
+.
+<http://codes.wmo.int/306/4678/+SHRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNRA" ;
+.
+<http://codes.wmo.int/306/4678/+SHSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGRRA" ;
+.
+<http://codes.wmo.int/306/4678/+SHGRRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGSRA" ;
+.
+<http://codes.wmo.int/306/4678/+SHGSRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRAGR" ;
+.
+<http://codes.wmo.int/306/4678/+SHRAGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNGR" ;
+.
+<http://codes.wmo.int/306/4678/+SHSNGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGRSN" ;
+.
+<http://codes.wmo.int/306/4678/+SHGRSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGSSN" ;
+.
+<http://codes.wmo.int/306/4678/+SHGSSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRAGS" ;
+.
+<http://codes.wmo.int/306/4678/+SHRAGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNGS" ;
+.
+<http://codes.wmo.int/306/4678/+SHSNGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRASNGR" ;
+.
+<http://codes.wmo.int/306/4678/+SHRASNGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRAGRSN" ;
+.
+<http://codes.wmo.int/306/4678/+SHRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNRAGR" ;
+.
+<http://codes.wmo.int/306/4678/+SHSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNGRRA" ;
+.
+<http://codes.wmo.int/306/4678/+SHSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGRRASN" ;
+.
+<http://codes.wmo.int/306/4678/+SHGRRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGRSNRA" ;
+.
+<http://codes.wmo.int/306/4678/+SHGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRASNGS" ;
+.
+<http://codes.wmo.int/306/4678/+SHRASNGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRAGSSN" ;
+.
+<http://codes.wmo.int/306/4678/+SHRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNRAGS" ;
+.
+<http://codes.wmo.int/306/4678/+SHSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNGSRA" ;
+.
+<http://codes.wmo.int/306/4678/+SHSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGSRASN" ;
+.
+<http://codes.wmo.int/306/4678/+SHGSRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SHGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGSSNRA" ;
+.
+<http://codes.wmo.int/306/4678/+SHGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRA" ;
+.
+<http://codes.wmo.int/306/4678/-TSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSN" ;
+.
+<http://codes.wmo.int/306/4678/-TSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGR" ;
+.
+<http://codes.wmo.int/306/4678/-TSGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGS" ;
+.
+<http://codes.wmo.int/306/4678/-TSGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSUP" ;
+.
+<http://codes.wmo.int/306/4678/-TSUP>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRASN" ;
+.
+<http://codes.wmo.int/306/4678/-TSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNRA" ;
+.
+<http://codes.wmo.int/306/4678/-TSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGRRA" ;
+.
+<http://codes.wmo.int/306/4678/-TSGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGSRA" ;
+.
+<http://codes.wmo.int/306/4678/-TSGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRAGR" ;
+.
+<http://codes.wmo.int/306/4678/-TSRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNGR" ;
+.
+<http://codes.wmo.int/306/4678/-TSSNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGRSN" ;
+.
+<http://codes.wmo.int/306/4678/-TSGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGSSN" ;
+.
+<http://codes.wmo.int/306/4678/-TSGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRAGS" ;
+.
+<http://codes.wmo.int/306/4678/-TSRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNGS" ;
+.
+<http://codes.wmo.int/306/4678/-TSSNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRASNGR" ;
+.
+<http://codes.wmo.int/306/4678/-TSRASNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRAGRSN" ;
+.
+<http://codes.wmo.int/306/4678/-TSRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNRAGR" ;
+.
+<http://codes.wmo.int/306/4678/-TSSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNGRRA" ;
+.
+<http://codes.wmo.int/306/4678/-TSSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGRRASN" ;
+.
+<http://codes.wmo.int/306/4678/-TSGRRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGRSNRA" ;
+.
+<http://codes.wmo.int/306/4678/-TSGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRASNGS" ;
+.
+<http://codes.wmo.int/306/4678/-TSRASNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRAGSSN" ;
+.
+<http://codes.wmo.int/306/4678/-TSRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNRAGS" ;
+.
+<http://codes.wmo.int/306/4678/-TSSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNGSRA" ;
+.
+<http://codes.wmo.int/306/4678/-TSSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGSRASN" ;
+.
+<http://codes.wmo.int/306/4678/-TSGSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-TSGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGSSNRA" ;
+.
+<http://codes.wmo.int/306/4678/-TSGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRA" ;
+.
+<http://codes.wmo.int/306/4678/TSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSN" ;
+.
+<http://codes.wmo.int/306/4678/TSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGR" ;
+.
+<http://codes.wmo.int/306/4678/TSGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGS" ;
+.
+<http://codes.wmo.int/306/4678/TSGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSUP" ;
+.
+<http://codes.wmo.int/306/4678/TSUP>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRASN" ;
+.
+<http://codes.wmo.int/306/4678/TSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNRA" ;
+.
+<http://codes.wmo.int/306/4678/TSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGRRA" ;
+.
+<http://codes.wmo.int/306/4678/TSGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGSRA" ;
+.
+<http://codes.wmo.int/306/4678/TSGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRAGR" ;
+.
+<http://codes.wmo.int/306/4678/TSRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNGR" ;
+.
+<http://codes.wmo.int/306/4678/TSSNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGRSN" ;
+.
+<http://codes.wmo.int/306/4678/TSGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGSSN" ;
+.
+<http://codes.wmo.int/306/4678/TSGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRAGS" ;
+.
+<http://codes.wmo.int/306/4678/TSRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNGS" ;
+.
+<http://codes.wmo.int/306/4678/TSSNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRASNGR" ;
+.
+<http://codes.wmo.int/306/4678/TSRASNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRAGRSN" ;
+.
+<http://codes.wmo.int/306/4678/TSRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNRAGR" ;
+.
+<http://codes.wmo.int/306/4678/TSSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNGRRA" ;
+.
+<http://codes.wmo.int/306/4678/TSSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGRRASN" ;
+.
+<http://codes.wmo.int/306/4678/TSGRRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGRSNRA" ;
+.
+<http://codes.wmo.int/306/4678/TSGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRASNGS" ;
+.
+<http://codes.wmo.int/306/4678/TSRASNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRAGSSN" ;
+.
+<http://codes.wmo.int/306/4678/TSRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNRAGS" ;
+.
+<http://codes.wmo.int/306/4678/TSSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNGSRA" ;
+.
+<http://codes.wmo.int/306/4678/TSSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGSRASN" ;
+.
+<http://codes.wmo.int/306/4678/TSGSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TSGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGSSNRA" ;
+.
+<http://codes.wmo.int/306/4678/TSGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRA" ;
+.
+<http://codes.wmo.int/306/4678/+TSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSN" ;
+.
+<http://codes.wmo.int/306/4678/+TSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGR" ;
+.
+<http://codes.wmo.int/306/4678/+TSGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGS" ;
+.
+<http://codes.wmo.int/306/4678/+TSGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSUP" ;
+.
+<http://codes.wmo.int/306/4678/+TSUP>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRASN" ;
+.
+<http://codes.wmo.int/306/4678/+TSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNRA" ;
+.
+<http://codes.wmo.int/306/4678/+TSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGRRA" ;
+.
+<http://codes.wmo.int/306/4678/+TSGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGSRA" ;
+.
+<http://codes.wmo.int/306/4678/+TSGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRAGR" ;
+.
+<http://codes.wmo.int/306/4678/+TSRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNGR" ;
+.
+<http://codes.wmo.int/306/4678/+TSSNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGRSN" ;
+.
+<http://codes.wmo.int/306/4678/+TSGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGSSN" ;
+.
+<http://codes.wmo.int/306/4678/+TSGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRAGS" ;
+.
+<http://codes.wmo.int/306/4678/+TSRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNGS" ;
+.
+<http://codes.wmo.int/306/4678/+TSSNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRASNGR" ;
+.
+<http://codes.wmo.int/306/4678/+TSRASNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRAGRSN" ;
+.
+<http://codes.wmo.int/306/4678/+TSRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNRAGR" ;
+.
+<http://codes.wmo.int/306/4678/+TSSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNGRRA" ;
+.
+<http://codes.wmo.int/306/4678/+TSSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGRRASN" ;
+.
+<http://codes.wmo.int/306/4678/+TSGRRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGRSNRA" ;
+.
+<http://codes.wmo.int/306/4678/+TSGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRASNGS" ;
+.
+<http://codes.wmo.int/306/4678/+TSRASNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRAGSSN" ;
+.
+<http://codes.wmo.int/306/4678/+TSRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNRAGS" ;
+.
+<http://codes.wmo.int/306/4678/+TSSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNGSRA" ;
+.
+<http://codes.wmo.int/306/4678/+TSSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGSRASN" ;
+.
+<http://codes.wmo.int/306/4678/+TSGSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+TSGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGSSNRA" ;
+.
+<http://codes.wmo.int/306/4678/+TSGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-FZDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZDZ" ;
+.
+<http://codes.wmo.int/306/4678/-FZDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of freezing drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-FZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZRA" ;
+.
+<http://codes.wmo.int/306/4678/-FZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of freezng rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-FZUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZUP" ;
+.
+<http://codes.wmo.int/306/4678/-FZUP>
+    a skos:Concept ;
+    rdfs:label "Light unidentified freezing precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-FZDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZDZRA" ;
+.
+<http://codes.wmo.int/306/4678/-FZDZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of freezing drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/-FZRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZRADZ" ;
+.
+<http://codes.wmo.int/306/4678/-FZRADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of freezing rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/FZDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZDZ" ;
+.
+<http://codes.wmo.int/306/4678/FZDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of freezing drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/FZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZRA" ;
+.
+<http://codes.wmo.int/306/4678/FZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of freezng rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/FZUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZUP" ;
+.
+<http://codes.wmo.int/306/4678/FZUP>
+    a skos:Concept ;
+    rdfs:label "Unidentified freezing precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/FZDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZDZRA" ;
+.
+<http://codes.wmo.int/306/4678/FZDZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of freezing drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/FZRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZRADZ" ;
+.
+<http://codes.wmo.int/306/4678/FZRADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of freezing rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+FZDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZDZ" ;
+.
+<http://codes.wmo.int/306/4678/+FZDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of freezing drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+FZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZRA" ;
+.
+<http://codes.wmo.int/306/4678/+FZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of freezng rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+FZUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZUP" ;
+.
+<http://codes.wmo.int/306/4678/+FZUP>
+    a skos:Concept ;
+    rdfs:label "Heavy unidentified freezing precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+FZDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZDZRA" ;
+.
+<http://codes.wmo.int/306/4678/+FZDZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of freezing drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+FZRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZRADZ" ;
+.
+<http://codes.wmo.int/306/4678/+FZRADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of freezing rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DS" ;
+.
+<http://codes.wmo.int/306/4678/DS>
+    a skos:Concept ;
+    rdfs:label "Duststorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+DS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DS" ;
+.
+<http://codes.wmo.int/306/4678/+DS>
+    a skos:Concept ;
+    rdfs:label "Heavy duststorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCDS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCDS" ;
+.
+<http://codes.wmo.int/306/4678/VCDS>
+    a skos:Concept ;
+    rdfs:label "Duststorm in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SS" ;
+.
+<http://codes.wmo.int/306/4678/SS>
+    a skos:Concept ;
+    rdfs:label "Sandstorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/+SS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SS" ;
+.
+<http://codes.wmo.int/306/4678/+SS>
+    a skos:Concept ;
+    rdfs:label "Heavy sandstorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCSS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCSS" ;
+.
+<http://codes.wmo.int/306/4678/VCSS>
+    a skos:Concept ;
+    rdfs:label "Sandstorm in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/FG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FG" ;
+.
+<http://codes.wmo.int/306/4678/FG>
+    a skos:Concept ;
+    rdfs:label "Fog"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/FC> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FC" ;
+.
+<http://codes.wmo.int/306/4678/FC>
+    a skos:Concept ;
+    rdfs:label "Funnel cloud(s) (tornado or water-spout)"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PO> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PO" ;
+.
+<http://codes.wmo.int/306/4678/PO>
+    a skos:Concept ;
+    rdfs:label "Dust/sand whirls (dust devils)"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VA" ;
+.
+<http://codes.wmo.int/306/4678/VA>
+    a skos:Concept ;
+    rdfs:label "Volcanic ash"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCFG" ;
+.
+<http://codes.wmo.int/306/4678/VCFG>
+    a skos:Concept ;
+    rdfs:label "Fog in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCFC> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCFC" ;
+.
+<http://codes.wmo.int/306/4678/VCFC>
+    a skos:Concept ;
+    rdfs:label "Funnel cloud(s) (tornado or water-spout) in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCPO> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCPO" ;
+.
+<http://codes.wmo.int/306/4678/VCPO>
+    a skos:Concept ;
+    rdfs:label "Dust/sand whirls (dust devils) in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCVA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCVA" ;
+.
+<http://codes.wmo.int/306/4678/VCVA>
+    a skos:Concept ;
+    rdfs:label "Volcanic ash in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/TS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TS" ;
+.
+<http://codes.wmo.int/306/4678/TS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCTS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCTS" ;
+.
+<http://codes.wmo.int/306/4678/VCTS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCSH> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCSH" ;
+.
+<http://codes.wmo.int/306/4678/VCSH>
+    a skos:Concept ;
+    rdfs:label "Shower(s) in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCBLSA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCBLSA" ;
+.
+<http://codes.wmo.int/306/4678/VCBLSA>
+    a skos:Concept ;
+    rdfs:label "Blowing sand in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCBLDU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCBLDU" ;
+.
+<http://codes.wmo.int/306/4678/VCBLDU>
+    a skos:Concept ;
+    rdfs:label "Blowing dust in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/VCBLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCBLSN" ;
+.
+<http://codes.wmo.int/306/4678/VCBLSN>
+    a skos:Concept ;
+    rdfs:label "Blowing snow in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/BLSA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BLSA" ;
+.
+<http://codes.wmo.int/306/4678/BLSA>
+    a skos:Concept ;
+    rdfs:label "Blowing sand"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/BLDU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BLDU" ;
+.
+<http://codes.wmo.int/306/4678/BLDU>
+    a skos:Concept ;
+    rdfs:label "Blowing dust"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/BLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BLSN" ;
+.
+<http://codes.wmo.int/306/4678/BLSN>
+    a skos:Concept ;
+    rdfs:label "Blowing snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DRSA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DRSA" ;
+.
+<http://codes.wmo.int/306/4678/DRSA>
+    a skos:Concept ;
+    rdfs:label "Low drifting sand"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DRDU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DRDU" ;
+.
+<http://codes.wmo.int/306/4678/DRDU>
+    a skos:Concept ;
+    rdfs:label "Low drifting dust"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DRSN" ;
+.
+<http://codes.wmo.int/306/4678/DRSN>
+    a skos:Concept ;
+    rdfs:label "Low drifting snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SA" ;
+.
+<http://codes.wmo.int/306/4678/SA>
+    a skos:Concept ;
+    rdfs:label "Sand"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/DU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DU" ;
+.
+<http://codes.wmo.int/306/4678/DU>
+    a skos:Concept ;
+    rdfs:label "Dust"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/MIFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "MIFG" ;
+.
+<http://codes.wmo.int/306/4678/MIFG>
+    a skos:Concept ;
+    rdfs:label "Shallow fog"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/PRFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PRFG" ;
+.
+<http://codes.wmo.int/306/4678/PRFG>
+    a skos:Concept ;
+    rdfs:label "Partial fog (covering part of the aerodrome)"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/BCFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BCFG" ;
+.
+<http://codes.wmo.int/306/4678/BCFG>
+    a skos:Concept ;
+    rdfs:label "Patches of fog"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/FZFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZFG" ;
+.
+<http://codes.wmo.int/306/4678/FZFG>
+    a skos:Concept ;
+    rdfs:label "Freezing fog"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/BR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BR" ;
+.
+<http://codes.wmo.int/306/4678/BR>
+    a skos:Concept ;
+    rdfs:label "Mist"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/HZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "HZ" ;
+.
+<http://codes.wmo.int/306/4678/HZ>
+    a skos:Concept ;
+    rdfs:label "Haze"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/FU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FU" ;
+.
+<http://codes.wmo.int/306/4678/FU>
+    a skos:Concept ;
+    rdfs:label "Smoke"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/306/4678/SQ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SQ" ;
+.
+<http://codes.wmo.int/306/4678/SQ>
+    a skos:Concept ;
+    rdfs:label "Squalls"@en ;
+.

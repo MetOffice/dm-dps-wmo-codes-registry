@@ -1,0 +1,195 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix ldp:     <http://www.w3.org/ns/ldp#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <OBSC_TS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "OBSC_TS" ;
+    .
+<OBSC_TS>
+    a skos:Concept ;
+    rdfs:label "Obscured thunderstorm"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <OBSC_TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "OBSC_TSGR" ;
+    .
+<OBSC_TSGR>
+    a skos:Concept ;
+    rdfs:label "Obscured thunderstorm with hail"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <EMBD_TS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "EMBD_TS" ;
+    .
+<EMBD_TS>
+    a skos:Concept ;
+    rdfs:label "Embedded thunderstorm"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <EMBD_TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "EMBD_TSGR" ;
+    .
+<EMBD_TSGR>
+    a skos:Concept ;
+    rdfs:label "Embedded thunderstorm with hail"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FRQ_TS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FRQ_TS" ;
+    .
+<FRQ_TS>
+    a skos:Concept ;
+    rdfs:label "Frequent thunderstorm"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FRQ_TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FRQ_TSGR" ;
+    .
+<FRQ_TSGR>
+    a skos:Concept ;
+    rdfs:label "Frequent thunderstorm with hail"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SQL_TS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SQL_TS" ;
+    .
+<SQL_TS>
+    a skos:Concept ;
+    rdfs:label "Squall line"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SQL_TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SQL_TSGR" ;
+    .
+<SQL_TSGR>
+    a skos:Concept ;
+    rdfs:label "Squall line with hail"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TC> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TC" ;
+    .
+<TC>
+    a skos:Concept ;
+    rdfs:label "Tropical cyclone"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SEV_TURB> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SEV_TURB" ;
+    .
+<SEV_TURB>
+    a skos:Concept ;
+    rdfs:label "Severe turbulence"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SEV_ICE> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SEV_ICE" ;
+    .
+<SEV_ICE>
+    a skos:Concept ;
+    rdfs:label "Severe airframe icing"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SEV_ICE_FZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SEV_ICE_FZRA" ;
+    .
+<SEV_ICE_FZRA>
+    a skos:Concept ;
+    rdfs:label "Severe airframe icing from freezing rain"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SEV_MTW> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SEV_MTW" ;
+    .
+<SEV_MTW>
+    a skos:Concept ;
+    rdfs:label "Severe mountain wave"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <HVY_DS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "HVY_DS" ;
+    .
+<HVY_DS>
+    a skos:Concept ;
+    rdfs:label "Heavy dust storm"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <HVY_SS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "HVY_SS" ;
+    .
+<HVY_SS>
+    a skos:Concept ;
+    rdfs:label "Heavy sand storm"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VA" ;
+    .
+<VA>
+    a skos:Concept ;
+    rdfs:label "Volcanic ash"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RDOACT_CLD> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RDOACT_CLD" ;
+    .
+<RDOACT_CLD>
+    a skos:Concept ;
+    rdfs:label "Radioactive cloud"@en ;
+    .

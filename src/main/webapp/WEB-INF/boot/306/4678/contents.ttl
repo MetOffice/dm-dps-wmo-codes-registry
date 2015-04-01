@@ -1,0 +1,4419 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix ldp:     <http://www.w3.org/ns/ldp#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZ" ;
+.
+<-DZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RA" ;
+.
+<-RA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SN" ;
+.
+<-SN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SG" ;
+.
+<-SG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PL" ;
+.
+<-PL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-UP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-UP" ;
+.
+<-UP>
+    a skos:Concept ;
+    rdfs:label "Light unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZRA" ;
+.
+<-DZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RADZ" ;
+.
+<-RADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNDZ" ;
+.
+<-SNDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGDZ" ;
+.
+<-SGDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLDZ" ;
+.
+<-PLDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZSN" ;
+.
+<-DZSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASN" ;
+.
+<-RASN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNRA" ;
+.
+<-SNRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGRA" ;
+.
+<-SGRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLRA" ;
+.
+<-PLRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZSG" ;
+.
+<-DZSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASG" ;
+.
+<-RASG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNSG" ;
+.
+<-SNSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGSN" ;
+.
+<-SGSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSN" ;
+.
+<-PLSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZPL" ;
+.
+<-DZPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RAPL" ;
+.
+<-RAPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNPL" ;
+.
+<-SNPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGPL" ;
+.
+<-SGPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSG" ;
+.
+<-PLSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZRASN" ;
+.
+<-DZRASN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZSNRA" ;
+.
+<-DZSNRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RADZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RADZSN" ;
+.
+<-RADZSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RASNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASNDZ" ;
+.
+<-RASNDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNDZRA" ;
+.
+<-SNDZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNRADZ" ;
+.
+<-SNRADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZRASG" ;
+.
+<-DZRASG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZSGRA" ;
+.
+<-DZSGRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RADZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RADZSG" ;
+.
+<-RADZSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RASGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASGDZ" ;
+.
+<-RASGDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGDZRA" ;
+.
+<-SGDZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGRADZ" ;
+.
+<-SGRADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZRAPL" ;
+.
+<-DZRAPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DZPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DZPLRA" ;
+.
+<-DZPLRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of drizzle, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RADZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RADZPL" ;
+.
+<-RADZPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RAPLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RAPLDZ" ;
+.
+<-RAPLDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLDZRA" ;
+.
+<-PLDZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLRADZ" ;
+.
+<-PLRADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RASNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASNSG" ;
+.
+<-RASNSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RASGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASGSN" ;
+.
+<-RASGSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNRASG" ;
+.
+<-SNRASG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNSGRA" ;
+.
+<-SNSGRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGRASN" ;
+.
+<-SGRASN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGSNRA" ;
+.
+<-SGSNRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RASNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RASNPL" ;
+.
+<-RASNPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-RAPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-RAPLSN" ;
+.
+<-RAPLSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of rain, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNRAPL" ;
+.
+<-SNRAPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNPLRA" ;
+.
+<-SNPLRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLRASN" ;
+.
+<-PLRASN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSNRA" ;
+.
+<-PLSNRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLSNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSNSG" ;
+.
+<-PLSNSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-PLSGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-PLSGSN" ;
+.
+<-PLSGSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of ice pellets, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNPLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNPLSG" ;
+.
+<-SNPLSG>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SNSGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SNSGPL" ;
+.
+<-SNSGPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow, snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGPLSN" ;
+.
+<-SGPLSN>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SGSNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SGSNPL" ;
+.
+<-SGSNPL>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of snow grains, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZ" ;
+.
+<DZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RA" ;
+.
+<RA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SN" ;
+.
+<SN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SG" ;
+.
+<SG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PL" ;
+.
+<PL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <UP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "UP" ;
+.
+<UP>
+    a skos:Concept ;
+    rdfs:label "Unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZRA" ;
+.
+<DZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RADZ" ;
+.
+<RADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNDZ" ;
+.
+<SNDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGDZ" ;
+.
+<SGDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLDZ" ;
+.
+<PLDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZSN" ;
+.
+<DZSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASN" ;
+.
+<RASN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNRA" ;
+.
+<SNRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGRA" ;
+.
+<SGRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLRA" ;
+.
+<PLRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZSG" ;
+.
+<DZSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASG" ;
+.
+<RASG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNSG" ;
+.
+<SNSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGSN" ;
+.
+<SGSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSN" ;
+.
+<PLSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZPL" ;
+.
+<DZPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RAPL" ;
+.
+<RAPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNPL" ;
+.
+<SNPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGPL" ;
+.
+<SGPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSG" ;
+.
+<PLSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZRASN" ;
+.
+<DZRASN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZSNRA" ;
+.
+<DZSNRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RADZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RADZSN" ;
+.
+<RADZSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RASNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASNDZ" ;
+.
+<RASNDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNDZRA" ;
+.
+<SNDZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNRADZ" ;
+.
+<SNRADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZRASG" ;
+.
+<DZRASG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZSGRA" ;
+.
+<DZSGRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RADZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RADZSG" ;
+.
+<RADZSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RASGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASGDZ" ;
+.
+<RASGDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGDZRA" ;
+.
+<SGDZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGRADZ" ;
+.
+<SGRADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZRAPL" ;
+.
+<DZRAPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DZPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DZPLRA" ;
+.
+<DZPLRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of drizzle, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RADZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RADZPL" ;
+.
+<RADZPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RAPLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RAPLDZ" ;
+.
+<RAPLDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLDZRA" ;
+.
+<PLDZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLRADZ" ;
+.
+<PLRADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RASNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASNSG" ;
+.
+<RASNSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RASGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASGSN" ;
+.
+<RASGSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNRASG" ;
+.
+<SNRASG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNSGRA" ;
+.
+<SNSGRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGRASN" ;
+.
+<SGRASN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGSNRA" ;
+.
+<SGSNRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RASNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RASNPL" ;
+.
+<RASNPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <RAPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "RAPLSN" ;
+.
+<RAPLSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of rain, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNRAPL" ;
+.
+<SNRAPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNPLRA" ;
+.
+<SNPLRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLRASN" ;
+.
+<PLRASN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSNRA" ;
+.
+<PLSNRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLSNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSNSG" ;
+.
+<PLSNSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PLSGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PLSGSN" ;
+.
+<PLSGSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of ice pellets, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNPLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNPLSG" ;
+.
+<SNPLSG>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SNSGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SNSGPL" ;
+.
+<SNSGPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow, snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGPLSN" ;
+.
+<SGPLSN>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SGSNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SGSNPL" ;
+.
+<SGSNPL>
+    a skos:Concept ;
+    rdfs:label "Precipitation of snow grains, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZ" ;
+.
+<+DZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RA" ;
+.
+<+RA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SN" ;
+.
+<+SN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SG" ;
+.
+<+SG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PL" ;
+.
+<+PL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+UP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+UP" ;
+.
+<+UP>
+    a skos:Concept ;
+    rdfs:label "Heavy unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZRA" ;
+.
+<+DZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RADZ" ;
+.
+<+RADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNDZ" ;
+.
+<+SNDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGDZ" ;
+.
+<+SGDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLDZ" ;
+.
+<+PLDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZSN" ;
+.
+<+DZSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASN" ;
+.
+<+RASN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNRA" ;
+.
+<+SNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGRA" ;
+.
+<+SGRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLRA" ;
+.
+<+PLRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZSG" ;
+.
+<+DZSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASG" ;
+.
+<+RASG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNSG" ;
+.
+<+SNSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGSN" ;
+.
+<+SGSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSN" ;
+.
+<+PLSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZPL" ;
+.
+<+DZPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RAPL" ;
+.
+<+RAPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNPL" ;
+.
+<+SNPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGPL" ;
+.
+<+SGPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSG" ;
+.
+<+PLSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZRASN" ;
+.
+<+DZRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZSNRA" ;
+.
+<+DZSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RADZSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RADZSN" ;
+.
+<+RADZSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, drizzle and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RASNDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASNDZ" ;
+.
+<+RASNDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNDZRA" ;
+.
+<+SNDZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNRADZ" ;
+.
+<+SNRADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZRASG" ;
+.
+<+DZRASG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZSGRA" ;
+.
+<+DZSGRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RADZSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RADZSG" ;
+.
+<+RADZSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, drizzle and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RASGDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASGDZ" ;
+.
+<+RASGDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow grains and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGDZRA" ;
+.
+<+SGDZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGRADZ" ;
+.
+<+SGRADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZRAPL" ;
+.
+<+DZRAPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DZPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DZPLRA" ;
+.
+<+DZPLRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of drizzle, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RADZPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RADZPL" ;
+.
+<+RADZPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, drizzle and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RAPLDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RAPLDZ" ;
+.
+<+RAPLDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, ice pellets and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLDZRA" ;
+.
+<+PLDZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLRADZ" ;
+.
+<+PLRADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RASNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASNSG" ;
+.
+<+RASNSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RASGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASGSN" ;
+.
+<+RASGSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNRASG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNRASG" ;
+.
+<+SNRASG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, rain and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNSGRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNSGRA" ;
+.
+<+SNSGRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, snow grains and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGRASN" ;
+.
+<+SGRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGSNRA" ;
+.
+<+SGSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RASNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RASNPL" ;
+.
+<+RASNPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+RAPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+RAPLSN" ;
+.
+<+RAPLSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of rain, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNRAPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNRAPL" ;
+.
+<+SNRAPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, rain and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNPLRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNPLRA" ;
+.
+<+SNPLRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, ice pellets and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLRASN" ;
+.
+<+PLRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSNRA" ;
+.
+<+PLSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLSNSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSNSG" ;
+.
+<+PLSNSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, snow and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+PLSGSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+PLSGSN" ;
+.
+<+PLSGSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of ice pellets, snow grains and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNPLSG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNPLSG" ;
+.
+<+SNPLSG>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, ice pellets and snow grains"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SNSGPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SNSGPL" ;
+.
+<+SNSGPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow, snow grains and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGPLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGPLSN" ;
+.
+<+SGPLSN>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, ice pellets and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SGSNPL> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SGSNPL" ;
+.
+<+SGSNPL>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of snow grains, snow and ice pellets"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRA" ;
+.
+<-SHRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSN" ;
+.
+<-SHSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGR" ;
+.
+<-SHGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGS" ;
+.
+<-SHGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHUP" ;
+.
+<-SHUP>
+    a skos:Concept ;
+    rdfs:label "Light unidentified showery precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRASN" ;
+.
+<-SHRASN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNRA" ;
+.
+<-SHSNRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGRRA" ;
+.
+<-SHGRRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGSRA" ;
+.
+<-SHGSRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRAGR" ;
+.
+<-SHRAGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNGR" ;
+.
+<-SHSNGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGRSN" ;
+.
+<-SHGRSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGSSN" ;
+.
+<-SHGSSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRAGS" ;
+.
+<-SHRAGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNGS" ;
+.
+<-SHSNGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRASNGR" ;
+.
+<-SHRASNGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRAGRSN" ;
+.
+<-SHRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNRAGR" ;
+.
+<-SHSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNGRRA" ;
+.
+<-SHSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGRRASN" ;
+.
+<-SHGRRASN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGRSNRA" ;
+.
+<-SHGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRASNGS" ;
+.
+<-SHRASNGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHRAGSSN" ;
+.
+<-SHRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNRAGS" ;
+.
+<-SHSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHSNGSRA" ;
+.
+<-SHSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGSRASN" ;
+.
+<-SHGSRASN>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SHGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SHGSSNRA" ;
+.
+<-SHGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Light showery precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRA" ;
+.
+<SHRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSN" ;
+.
+<SHSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGR" ;
+.
+<SHGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGS" ;
+.
+<SHGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHUP" ;
+.
+<SHUP>
+    a skos:Concept ;
+    rdfs:label "Unidentified showery precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRASN" ;
+.
+<SHRASN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNRA" ;
+.
+<SHSNRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGRRA" ;
+.
+<SHGRRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGSRA" ;
+.
+<SHGSRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRAGR" ;
+.
+<SHRAGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNGR" ;
+.
+<SHSNGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGRSN" ;
+.
+<SHGRSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGSSN" ;
+.
+<SHGSSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRAGS" ;
+.
+<SHRAGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNGS" ;
+.
+<SHSNGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRASNGR" ;
+.
+<SHRASNGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRAGRSN" ;
+.
+<SHRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNRAGR" ;
+.
+<SHSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNGRRA" ;
+.
+<SHSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGRRASN" ;
+.
+<SHGRRASN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGRSNRA" ;
+.
+<SHGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRASNGS" ;
+.
+<SHRASNGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHRAGSSN" ;
+.
+<SHRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNRAGS" ;
+.
+<SHSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHSNGSRA" ;
+.
+<SHSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGSRASN" ;
+.
+<SHGSRASN>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SHGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SHGSSNRA" ;
+.
+<SHGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Showery precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRA" ;
+.
+<+SHRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSN" ;
+.
+<+SHSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGR" ;
+.
+<+SHGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGS" ;
+.
+<+SHGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHUP" ;
+.
+<+SHUP>
+    a skos:Concept ;
+    rdfs:label "Heavy unidentified showery precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRASN" ;
+.
+<+SHRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNRA" ;
+.
+<+SHSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGRRA" ;
+.
+<+SHGRRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGSRA" ;
+.
+<+SHGSRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRAGR" ;
+.
+<+SHRAGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNGR" ;
+.
+<+SHSNGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGRSN" ;
+.
+<+SHGRSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGSSN" ;
+.
+<+SHGSSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRAGS" ;
+.
+<+SHRAGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNGS" ;
+.
+<+SHSNGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRASNGR" ;
+.
+<+SHRASNGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRAGRSN" ;
+.
+<+SHRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNRAGR" ;
+.
+<+SHSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNGRRA" ;
+.
+<+SHSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGRRASN" ;
+.
+<+SHGRRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGRSNRA" ;
+.
+<+SHGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRASNGS" ;
+.
+<+SHRASNGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHRAGSSN" ;
+.
+<+SHRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNRAGS" ;
+.
+<+SHSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHSNGSRA" ;
+.
+<+SHSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGSRASN" ;
+.
+<+SHGSRASN>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SHGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SHGSSNRA" ;
+.
+<+SHGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Heavy showery precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRA" ;
+.
+<-TSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSN" ;
+.
+<-TSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGR" ;
+.
+<-TSGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGS" ;
+.
+<-TSGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSUP" ;
+.
+<-TSUP>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRASN" ;
+.
+<-TSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNRA" ;
+.
+<-TSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGRRA" ;
+.
+<-TSGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGSRA" ;
+.
+<-TSGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRAGR" ;
+.
+<-TSRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNGR" ;
+.
+<-TSSNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGRSN" ;
+.
+<-TSGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGSSN" ;
+.
+<-TSGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRAGS" ;
+.
+<-TSRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNGS" ;
+.
+<-TSSNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRASNGR" ;
+.
+<-TSRASNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRAGRSN" ;
+.
+<-TSRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNRAGR" ;
+.
+<-TSSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNGRRA" ;
+.
+<-TSSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGRRASN" ;
+.
+<-TSGRRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGRSNRA" ;
+.
+<-TSGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRASNGS" ;
+.
+<-TSRASNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSRAGSSN" ;
+.
+<-TSRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNRAGS" ;
+.
+<-TSSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSSNGSRA" ;
+.
+<-TSSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGSRASN" ;
+.
+<-TSGSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-TSGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-TSGSSNRA" ;
+.
+<-TSGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with light precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRA" ;
+.
+<TSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSN" ;
+.
+<TSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGR" ;
+.
+<TSGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGS" ;
+.
+<TSGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSUP" ;
+.
+<TSUP>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRASN" ;
+.
+<TSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNRA" ;
+.
+<TSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGRRA" ;
+.
+<TSGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGSRA" ;
+.
+<TSGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRAGR" ;
+.
+<TSRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNGR" ;
+.
+<TSSNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGRSN" ;
+.
+<TSGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGSSN" ;
+.
+<TSGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRAGS" ;
+.
+<TSRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNGS" ;
+.
+<TSSNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRASNGR" ;
+.
+<TSRASNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRAGRSN" ;
+.
+<TSRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNRAGR" ;
+.
+<TSSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNGRRA" ;
+.
+<TSSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGRRASN" ;
+.
+<TSGRRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGRSNRA" ;
+.
+<TSGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRASNGS" ;
+.
+<TSRASNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSRAGSSN" ;
+.
+<TSRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNRAGS" ;
+.
+<TSSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSSNGSRA" ;
+.
+<TSSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGSRASN" ;
+.
+<TSGSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TSGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TSGSSNRA" ;
+.
+<TSGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRA" ;
+.
+<+TSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSN" ;
+.
+<+TSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGR" ;
+.
+<+TSGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGS" ;
+.
+<+TSGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSUP" ;
+.
+<+TSUP>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of unidentified precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRASN" ;
+.
+<+TSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNRA" ;
+.
+<+TSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGRRA" ;
+.
+<+TSGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGSRA" ;
+.
+<+TSGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRAGR" ;
+.
+<+TSRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSSNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNGR" ;
+.
+<+TSSNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGRSN" ;
+.
+<+TSGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGSSN" ;
+.
+<+TSGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRAGS" ;
+.
+<+TSRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSSNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNGS" ;
+.
+<+TSSNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSRASNGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRASNGR" ;
+.
+<+TSRASNGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain, snow and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSRAGRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRAGRSN" ;
+.
+<+TSRAGRSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain, hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSSNRAGR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNRAGR" ;
+.
+<+TSSNRAGR>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow, rain and hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSSNGRRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNGRRA" ;
+.
+<+TSSNGRRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow, hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGRRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGRRASN" ;
+.
+<+TSGRRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGRSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGRSNRA" ;
+.
+<+TSGRSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSRASNGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRASNGS" ;
+.
+<+TSRASNGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain, snow and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSRAGSSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSRAGSSN" ;
+.
+<+TSRAGSSN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of rain, snow pellets/small hail and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSSNRAGS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNRAGS" ;
+.
+<+TSSNRAGS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow, rain and snow pellets/small hail"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSSNGSRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSSNGSRA" ;
+.
+<+TSSNGSRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow, snow pellets/small hail and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGSRASN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGSRASN" ;
+.
+<+TSGSRASN>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail, rain and snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+TSGSSNRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+TSGSSNRA" ;
+.
+<+TSGSSNRA>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm with heavy precipitation of snow pellets/small hail, snow and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-FZDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZDZ" ;
+.
+<-FZDZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of freezing drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-FZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZRA" ;
+.
+<-FZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of freezng rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-FZUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZUP" ;
+.
+<-FZUP>
+    a skos:Concept ;
+    rdfs:label "Light unidentified freezing precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-FZDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZDZRA" ;
+.
+<-FZDZRA>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of freezing drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-FZRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-FZRADZ" ;
+.
+<-FZRADZ>
+    a skos:Concept ;
+    rdfs:label "Light precipitation of freezing rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FZDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZDZ" ;
+.
+<FZDZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of freezing drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZRA" ;
+.
+<FZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of freezng rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FZUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZUP" ;
+.
+<FZUP>
+    a skos:Concept ;
+    rdfs:label "Unidentified freezing precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FZDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZDZRA" ;
+.
+<FZDZRA>
+    a skos:Concept ;
+    rdfs:label "Precipitation of freezing drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FZRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZRADZ" ;
+.
+<FZRADZ>
+    a skos:Concept ;
+    rdfs:label "Precipitation of freezing rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+FZDZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZDZ" ;
+.
+<+FZDZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of freezing drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+FZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZRA" ;
+.
+<+FZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of freezng rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+FZUP> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZUP" ;
+.
+<+FZUP>
+    a skos:Concept ;
+    rdfs:label "Heavy unidentified freezing precipitation"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+FZDZRA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZDZRA" ;
+.
+<+FZDZRA>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of freezing drizzle and rain"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+FZRADZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+FZRADZ" ;
+.
+<+FZRADZ>
+    a skos:Concept ;
+    rdfs:label "Heavy precipitation of freezing rain and drizzle"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-DS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-DS" ;
+.
+<-DS>
+    a skos:Concept ;
+    rdfs:label "Light duststorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DS" ;
+.
+<DS>
+    a skos:Concept ;
+    rdfs:label "Duststorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+DS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+DS" ;
+.
+<+DS>
+    a skos:Concept ;
+    rdfs:label "Heavy duststorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCDS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCDS" ;
+.
+<VCDS>
+    a skos:Concept ;
+    rdfs:label "Duststorm in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <-SS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "-SS" ;
+.
+<-SS>
+    a skos:Concept ;
+    rdfs:label "Light sandstorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SS" ;
+.
+<SS>
+    a skos:Concept ;
+    rdfs:label "Sandstorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <+SS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "+SS" ;
+.
+<+SS>
+    a skos:Concept ;
+    rdfs:label "Heavy sandstorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCSS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCSS" ;
+.
+<VCSS>
+    a skos:Concept ;
+    rdfs:label "Sandstorm in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FG" ;
+.
+<FG>
+    a skos:Concept ;
+    rdfs:label "Fog"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FC> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FC" ;
+.
+<FC>
+    a skos:Concept ;
+    rdfs:label "Funnel cloud(s) (tornado or water-spout)"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PO> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PO" ;
+.
+<PO>
+    a skos:Concept ;
+    rdfs:label "Dust/sand whirls (dust devils)"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VA" ;
+.
+<VA>
+    a skos:Concept ;
+    rdfs:label "Volcanic ash"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCFG" ;
+.
+<VCFG>
+    a skos:Concept ;
+    rdfs:label "Fog in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCFC> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCFC" ;
+.
+<VCFC>
+    a skos:Concept ;
+    rdfs:label "Funnel cloud(s) (tornado or water-spout) in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCPO> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCPO" ;
+.
+<VCPO>
+    a skos:Concept ;
+    rdfs:label "Dust/sand whirls (dust devils) in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCVA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCVA" ;
+.
+<VCVA>
+    a skos:Concept ;
+    rdfs:label "Volcanic ash in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <TS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TS" ;
+.
+<TS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCTS> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCTS" ;
+.
+<VCTS>
+    a skos:Concept ;
+    rdfs:label "Thunderstorm in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCSH> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCSH" ;
+.
+<VCSH>
+    a skos:Concept ;
+    rdfs:label "Shower(s) in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCBLSA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCBLSA" ;
+.
+<VCBLSA>
+    a skos:Concept ;
+    rdfs:label "Blowing sand in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCBLDU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCBLDU" ;
+.
+<VCBLDU>
+    a skos:Concept ;
+    rdfs:label "Blowing dust in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <VCBLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "VCBLSN" ;
+.
+<VCBLSN>
+    a skos:Concept ;
+    rdfs:label "Blowing snow in the vicinity"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <BLSA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BLSA" ;
+.
+<BLSA>
+    a skos:Concept ;
+    rdfs:label "Blowing sand"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <BLDU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BLDU" ;
+.
+<BLDU>
+    a skos:Concept ;
+    rdfs:label "Blowing dust"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <BLSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BLSN" ;
+.
+<BLSN>
+    a skos:Concept ;
+    rdfs:label "Blowing snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DRSA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DRSA" ;
+.
+<DRSA>
+    a skos:Concept ;
+    rdfs:label "Low drifting sand"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DRDU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DRDU" ;
+.
+<DRDU>
+    a skos:Concept ;
+    rdfs:label "Low drifting dust"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DRSN> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DRSN" ;
+.
+<DRSN>
+    a skos:Concept ;
+    rdfs:label "Low drifting snow"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SA> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SA" ;
+.
+<SA>
+    a skos:Concept ;
+    rdfs:label "Sand"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <DU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "DU" ;
+.
+<DU>
+    a skos:Concept ;
+    rdfs:label "Dust"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <MIFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "MIFG" ;
+.
+<MIFG>
+    a skos:Concept ;
+    rdfs:label "Shallow fog"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <PRFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "PRFG" ;
+.
+<PRFG>
+    a skos:Concept ;
+    rdfs:label "Partial fog (covering part of the aerodrome)"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <BCFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BCFG" ;
+.
+<BCFG>
+    a skos:Concept ;
+    rdfs:label "Patches of fog"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FZFG> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FZFG" ;
+.
+<FZFG>
+    a skos:Concept ;
+    rdfs:label "Freezing fog"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <BR> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "BR" ;
+.
+<BR>
+    a skos:Concept ;
+    rdfs:label "Mist"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <HZ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "HZ" ;
+.
+<HZ>
+    a skos:Concept ;
+    rdfs:label "Haze"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <FU> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "FU" ;
+.
+<FU>
+    a skos:Concept ;
+    rdfs:label "Smoke"@en ;
+.
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <SQ> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "SQ" ;
+.
+<SQ>
+    a skos:Concept ;
+    rdfs:label "Squalls"@en ;
+.

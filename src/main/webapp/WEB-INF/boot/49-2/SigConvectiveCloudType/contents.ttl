@@ -1,0 +1,30 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix ldp:     <http://www.w3.org/ns/ldp#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/bufr4/codeflag/0-20-012/9> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "CB" ;
+    .
+<http://codes.wmo.int/bufr4/codeflag/0-20-012/9>
+    a <http://codes.wmo.int/common/c-15/me/cloudType> ;
+    rdfs:label "Cumulonimbus"@en ;
+    .
+[]
+    a reg:RegisterItem ;
+    reg:definition
+        [ reg:entity <http://codes.wmo.int/bufr4/codeflag/0-20-012/32> ] ;
+    reg:status reg:statusStable ;
+    reg:notation "TCU" ;
+    .
+<http://codes.wmo.int/bufr4/codeflag/0-20-012/32>
+    a <http://codes.wmo.int/common/c-15/me/cloudType> ;
+    rdfs:label "Towering cumulus"@en ;
+    .

@@ -1,0 +1,54 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix ldp:     <http://www.w3.org/ns/ldp#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+    
+<_MeteorologicalAerodromeForecast>
+    a reg:RegisterItem ;
+    reg:definition [ reg:entity <MeteorologicalAerodromeForecast> ] ;
+    reg:itemClass reg:NamespaceForward , reg:Delegated ;
+    reg:notation "MeteorologicalAerodromeForecast" ;
+    reg:status reg:statusExperimental ;
+    .
+<MeteorologicalAerodromeForecast>
+    a reg:NamespaceForward , reg:Delegated ;
+    rdfs:label "MeteorologicalAerodromeForecast property"@en ;
+    dct:description "The set of physical properties evaluated as a result of an aerodrome forecast (TAF), as specified in Technical Regulations, Volume II (WMO-No. 49): Meteorological Services for International Air Navigation."@en ;
+    reg:delegationTarget <http://codes.wmo.int/ui/resources/observableProperty_MeteorologicalAerodromeForecast.xml> ;
+    reg:forwardingCode "200" ;
+    reg:notation "MeteorologicalAerodromeForecast" ;
+    .
+<_MeteorologicalAerodromeObservation>
+    a reg:RegisterItem ;
+    reg:definition [ reg:entity <MeteorologicalAerodromeObservation> ] ;
+    reg:itemClass reg:NamespaceForward , reg:Delegated ;
+    reg:notation "MeteorologicalAerodromeObservation" ;
+    reg:status reg:statusExperimental ;
+    .
+<MeteorologicalAerodromeObservation>
+    a reg:NamespaceForward , reg:Delegated ;
+    rdfs:label "MeteorologicalAerodromeObservation property"@en ;
+    dct:description "The set of physical properties evaluated as a result of the observation procedure of a routine or special aerodrome meteorological report (METAR or SPECI), as specified in Technical Regulations, Volume II (WMO-No. 49): Meteorological Services for International Air Navigation."@en ;
+    reg:delegationTarget <http://codes.wmo.int/ui/resources/observableProperty_MeteorologicalAerodromeObservation.xml> ;
+    reg:forwardingCode "200" ;
+    reg:notation "MeteorologicalAerodromeObservation" ;
+    .
+<_MeteorologicalAerodromeTrendForecast>
+    a reg:RegisterItem ;
+    reg:definition [ reg:entity <MeteorologicalAerodromeTrendForecast> ] ;
+    reg:itemClass reg:NamespaceForward , reg:Delegated ;
+    reg:notation "MeteorologicalAerodromeTrendForecast" ;
+    reg:status reg:statusExperimental ;
+    .
+<MeteorologicalAerodromeTrendForecast>
+    a reg:NamespaceForward , reg:Delegated ;
+    rdfs:label "MeteorologicalAerodromeTrendForecast property"@en ;
+    dct:description "The set of physical properties evaluated as a result of the trend forecast procedure of a routine or special aerodrome meteorological report (METAR or SPECI), as specified in Technical Regulations, Volume II (WMO-No. 49): Meteorological Services for International Air Navigation."@en ;
+    reg:delegationTarget <http://codes.wmo.int/ui/resources/observableProperty_MeteorologicalAerodromeTrendForecast.xml> ;
+    reg:forwardingCode "200" ;
+    reg:notation "MeteorologicalAerodromeTrendForecast" ;
+    .
+

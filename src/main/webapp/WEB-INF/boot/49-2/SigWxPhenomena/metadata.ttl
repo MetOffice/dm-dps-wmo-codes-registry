@@ -1,0 +1,23 @@
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dct:     <http://purl.org/dc/terms/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix reg:     <http://purl.org/linked-data/registry#> .
+@prefix ldp:     <http://www.w3.org/ns/ldp#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+
+<_SigWxPhenomena>
+    a reg:RegisterItem ;
+    reg:definition [ reg:entity <SigWxPhenomena> ] ;
+    reg:itemClass reg:Register ;
+    reg:notation "SigWxPhenomena" ;
+    reg:status reg:statusStable ;
+    .
+<SigWxPhenomena>
+    a reg:Register , ldp:Container , skos:Collection ;
+    ldp:membershipPredicate skos:member ;
+    rdfs:label "Code Table D-10: Significant Weather Phenomena" ;
+    skos:notation "D-10" ;
+    dct:description "The items within this code table are the types of weather phenomena of significance to aeronautical operations – as used in SIGMET and AIRMET reports and specified in Technical Regulations, Volume II (WMO-No. 49), Part II, Appendix 6, [C.3.1.] 1.1.4. "@en ;
+    reg:owner <http://codes.wmo.int/system/organization/wmo> ;
+    reg:manager <http://codes.wmo.int/system/organization/www-dm> ;
+    .
