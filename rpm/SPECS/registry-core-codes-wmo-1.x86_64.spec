@@ -1,6 +1,6 @@
 Name:		registry-core-codes-wmo
-Version:	0.1
-Release:	1
+Version:	1
+Release:	2
 Summary:	TT ACV linked data registry
 
 License:	apache
@@ -32,6 +32,11 @@ mkdir -p $RPM_BUILD_ROOT/opt/ldregistry/config
 mkdir -p $RPM_BUILD_ROOT/var/opt/ldregistry
 mkdir -p $RPM_BUILD_ROOT/var/log/ldregistry
 install -D var/lib/tomcat7/webapps/ROOT.war $RPM_BUILD_ROOT/var/lib/tomcat7/webapps/ROOT.war
+install -D opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeForecast.xml $RPM_BUILD_ROOT/opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeForecast.xml
+install -D opt/ldregistry/ui/resources/WMO-Codes-Registry_FAQ-v1.0.pdf $RPM_BUILD_ROOT/opt/ldregistry/ui/resources/WMO-Codes-Registry_FAQ-v1.0.pdf
+install -D opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeObservation.xml $RPM_BUILD_ROOT/opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeObservation.xml
+install -D opt/ldregistry/ui/resources/WMO-Codes-Registry_user-guide-v1.0.pdf $RPM_BUILD_ROOT/opt/ldregistry/ui/resources/WMO-Codes-Registry_user-guide-v1.0.pdf
+install -D opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeTrendForecast.xml $RPM_BUILD_ROOT/opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeTrendForecast.xml
 
 %pre
 SERVICE='tomcat'#7
@@ -64,6 +69,11 @@ rm -rf $RPM_BUILD_ROOT
 %dir /opt/ldregistry/config
 %dir /var/opt/ldregistry
 %dir /var/log/ldregistry
+/opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeForecast.xml
+/opt/ldregistry/ui/resources/WMO-Codes-Registry_FAQ-v1.0.pdf
+/opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeObservation.xml
+/opt/ldregistry/ui/resources/WMO-Codes-Registry_user-guide-v1.0.pdf
+/opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeTrendForecast.xml
 
 
 %changelog
