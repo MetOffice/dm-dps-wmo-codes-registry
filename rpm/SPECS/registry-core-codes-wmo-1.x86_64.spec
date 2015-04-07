@@ -1,6 +1,6 @@
 Name:		registry-core-codes-wmo
 Version:	1
-Release:	2
+Release:	4
 Summary:	TT ACV linked data registry
 
 License:	apache
@@ -29,8 +29,6 @@ rm -rf $RPM_BUILD_ROOT
 install -D etc/sudoers.d/uklSudoers.conf $RPM_BUILD_ROOT/etc/sudoers.d/uklSudoers.conf
 mkdir -p $RPM_BUILD_ROOT/opt/ldregistry/ui
 mkdir -p $RPM_BUILD_ROOT/opt/ldregistry/config
-mkdir -p $RPM_BUILD_ROOT/var/opt/ldregistry
-mkdir -p $RPM_BUILD_ROOT/var/log/ldregistry
 install -D var/lib/tomcat7/webapps/ROOT.war $RPM_BUILD_ROOT/var/lib/tomcat7/webapps/ROOT.war
 install -D opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeForecast.xml $RPM_BUILD_ROOT/opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeForecast.xml
 install -D opt/ldregistry/ui/resources/WMO-Codes-Registry_FAQ-v1.0.pdf $RPM_BUILD_ROOT/opt/ldregistry/ui/resources/WMO-Codes-Registry_FAQ-v1.0.pdf
@@ -51,6 +49,17 @@ rm -rf /opt/ldregistry
 rm -rf /var/opt/ldregistry/userstore/db.lck
 rm -rf /var/opt/ldregistry/userstore/dbex.lck
 
+declare -a arr=("/var/log/ldregistry" "/var/opt/ldregistry")
+
+for sd in "${arr[@]}"
+do
+    if [[ ! -d $sd ]]; then
+	mkdir -p $sd
+	chown root:tomcat $sd
+	chmod 775 $sd
+    fi
+done
+
 %post
 ln -s /opt/oauth/oauth.conf /opt/ldregistry/config/oauth.conf
 service tomcat7 start
@@ -67,8 +76,7 @@ rm -rf $RPM_BUILD_ROOT
 %dir /opt/ldregistry
 %dir /opt/ldregistry/ui
 %dir /opt/ldregistry/config
-%dir /var/opt/ldregistry
-%dir /var/log/ldregistry
+%dir /opt/ldregistry/ui/resources
 /opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeForecast.xml
 /opt/ldregistry/ui/resources/WMO-Codes-Registry_FAQ-v1.0.pdf
 /opt/ldregistry/ui/resources/observableProperty_MeteorologicalAerodromeObservation.xml
