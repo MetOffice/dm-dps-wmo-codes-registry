@@ -1,6 +1,6 @@
 Name:		registry-core-codes-wmo
-Version:	1
-Release:	4
+Version:	1.1
+Release:	1
 Summary:	TT ACV linked data registry
 
 License:	apache
