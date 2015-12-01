@@ -1,8 +1,6 @@
-# registry-config-base
+# codes-wmo-deploy
 
-Provides configuration, UI templates and bootstraping for a starting registry installation.
-
-Custom installations can fork this repository then customize the configuration and UI files. This makes it possible to pull in an merge upstream UI fixes made in this base repository.
+Provides configuration, UI templates and bootstraping for the WMO codes registry installation.
 
 N.B. Requires registry-core 0.1.1 or higher
 
@@ -15,8 +13,6 @@ Directory | Role
 `scripts` | Example installation scripts
 
 ## Customizing the configuration
-
-The base configuration is based on the UK Government Environment registry. 
 
 Files in `ldregistry` which make require customization are:
 
