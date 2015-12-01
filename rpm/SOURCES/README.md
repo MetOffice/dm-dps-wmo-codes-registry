@@ -1,1 +1,1 @@
-tar -cvhf ~/rpmbuild/SOURCES/registry-config-base-1.0.tar.gz registry-config-base-1.0
+tar -cvhf ~/rpmbuild/SOURCES/registry-config-codes-wmo-1.0.tar.gz registry-config-codes-wmo-1.0
