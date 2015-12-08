@@ -118,8 +118,10 @@
 #else 
 
   $lib.reg.addLabels($entity)
+
   <div class="row">
-  	<div class="col-md-6">
+
+  	<div class=#if($registry.configExtensions.suppressLinkView) "col-md-12" #else "col-md-6" #end>
   		<h2>Definition</h2>
   		#if($template)
           #parse($template)
@@ -127,9 +129,11 @@
   		  #restable($entity, "table-striped table-condensed table-bordered")
   		#end
   	</div>
+    #if( ! $registry.configExtensions.suppressLinkView)
     <div class="col-md-offset-1 col-md-5">
       #parse("links-render.vm")
     </div>
+    #end
   </div>
 #end
 
