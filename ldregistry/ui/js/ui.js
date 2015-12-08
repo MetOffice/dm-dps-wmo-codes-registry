@@ -5,6 +5,9 @@ $(function() {
     // Move any rhs elements (typically from type-specific templates) to rhs column
     $(".rhs").appendTo("#rhs");
 
+    // Enable datatable processing
+    $('.datatable').dataTable();
+    
     // Query forms run a target query and load the resulting HTML into a data-result element
     var processQueryForms = function() {
         $(".query-form").each(function() {
