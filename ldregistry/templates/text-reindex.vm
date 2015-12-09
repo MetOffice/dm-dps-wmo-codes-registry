@@ -5,7 +5,7 @@
     <div class="container">
     #if($subject.isAuthenticated() && $subject.hasRole("administrator"))
 
-        <h2>Regenerate lucence index</h2>
+        <h2>Regenerate text index</h2>
 
           <div class="row">
             <form class="form-inline ajax-inline-form col-md-12" action="$root/system/text-reindex" method="post">
