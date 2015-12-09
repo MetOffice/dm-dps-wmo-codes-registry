@@ -30,6 +30,7 @@
               <li><a  href="$uiroot/administrators">Administrators</a></li>
               <li><a  href="$uiroot/reset-password">Reset user password</a></li>
               <li><a  href="$uiroot/backups">Backups</a></li>
+              <li><a  href="$uiroot/text-reindex">Rebuild text index</a></li>
             #end
             <li><a  href="#logout-dialog" role="button" data-toggle="modal">Logout</a></li>
           </ul>

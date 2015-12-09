@@ -89,6 +89,19 @@ $(function() {
           });
     });
 
+    // Simple ajax inline forms that display the returned message
+    $(".ajax-inline-form").ajaxForm({
+      success:
+          function(data, status, xhr){
+             $("#form-result").html(data);
+          },
+
+      error:
+        function(xhr, status, error){
+           $("#form-result").html("<div class='alert'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
+        }
+    });
+
     // Hierarchicall views
     var hlistHandler = function(event) {
         var button = $(event.target).closest("a");
