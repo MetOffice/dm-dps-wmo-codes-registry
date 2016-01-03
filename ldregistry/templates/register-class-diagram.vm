@@ -1,0 +1,46 @@
+
+<script type="text/javascript">
+    var ClassDiagramClasses=[
+        #set($started = false)
+        #foreach($member in $members)
+          #if ($member.hasResourceValue("rdf:type", "owl:Class"))
+            #if($started),#else#set($started=true)#end 
+            {
+                'label' : '$member.name', 
+                'uri' : '$member.uRI',
+                'superClasses' :[
+                    #foreach($c in $member.listPropertyValues("rdfs:subClassOf")) #if(!$c.isAnon())'$c.uRI'#end #if( $foreach.hasNext ),#end #end                
+                ]
+            } 
+          #end
+        #end
+    ];
+    var ClassDiagramObjectProperties = [
+        #set($started = false)
+        #foreach($member in $members)
+          #if ($member.hasResourceValue("rdf:type", "owl:ObjectProperty"))
+            #if($started),#else#set($started=true)#end
+            {
+                'label' : '$member.name', 
+                'uri' : '$member.uRI', 
+                'domain' : [
+                ## Allow multiple properties though this is semantically incorrect
+                #foreach($d in $member.listPropertyValues("rdfs:domain")) '$d.uRI' #if( $foreach.hasNext ),#end #end
+                ],
+                'range' : [
+                #foreach($d in $member.listPropertyValues("rdfs:range")) '$d.uRI' #if( $foreach.hasNext ),#end #end
+                ]
+            } 
+          #end
+        #end
+    ];
+</script>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div id="paper">
+      </div>        
+    </div>
+  </div>
+
+#set($extraJS="lodash.min.js,backbone-min.js,graphlib.min.js,dagre.min.js,joint.js,joint.shapes.devs.min.js,class-diagram.js")

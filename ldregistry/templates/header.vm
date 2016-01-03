@@ -18,6 +18,7 @@
     <link type="text/css" rel="stylesheet" href="$uiroot/css/ui.css" />
     <link type="text/css" rel="stylesheet" href="$uiroot/css/jquery.dataTables.css" />
     <link href="$uiroot/css/bootstrap-editable.css" rel="stylesheet"/>
+    #if($classView)<link rel="stylesheet" type="text/css" href="$uiroot/css/joint.min.css" />#end
 
     #if($extraCSS)
       #foreach($file in $extraCSS.split(","))
@@ -30,7 +31,8 @@
         <link type="text/css" rel="stylesheet" href="$file" />
       #end
     #end
-    <script type="text/javascript" src="$uiroot/js/jquery-1.10.2.min.js"></script>
+##    <script type="text/javascript" src="$uiroot/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="$uiroot/js/jquery.min.js"></script>
     <script type="text/javascript" src="$uiroot/js/jquery.form.js"></script>
   </head>
 
