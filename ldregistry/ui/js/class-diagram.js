@@ -2,8 +2,9 @@
 //       ClassDiagramClasses
 //       ClassDiagramObjectProperties
 
-$(function(){
+// Class diagram library
 
+var classDiagram = (function(){
     // Sizing constants
     var WIDTH = 150;
     var HEIGHT = 60;
@@ -12,8 +13,9 @@ $(function(){
     var LABEL_HEIGHT = 40;
 
     // New shape types
-    var owlClass    = {};
-    owlClass.Class = joint.shapes.basic.Generic.extend({
+
+    // Variant on uml.Class which omits the method block
+    OwlClass = joint.shapes.basic.Generic.extend({
 
         markup: [
         '<g class="rotatable">',
@@ -26,7 +28,7 @@ $(function(){
 
         defaults: joint.util.deepSupplement({
 
-            type: 'owl.Class',
+            type: 'owl.OwlClass',
 
             attrs: {
                 rect: { 'width': 200 },
@@ -90,7 +92,8 @@ $(function(){
         }
     });
 
-    var labelBlock = joint.shapes.basic.Generic.extend({
+    // A block label that relies on routing to choose directions of link up
+    var LabelBlock = joint.shapes.basic.Generic.extend({
 
         markup: ['<g class="rotatable"><g class="scalable"><rect/></g>',
              '<text class="content"/>',
@@ -137,14 +140,17 @@ $(function(){
 
     });
 
-    var labelPorts = joint.shapes.basic.Generic.extend(_.extend({}, joint.shapes.basic.PortsModelInterface, {
+    // A block label with invisible connetion ports at top and bottom
+    var LabelPorts = joint.shapes.basic.Generic.extend(_.extend({}, joint.shapes.basic.PortsModelInterface, {
 
         markup: '<g class="rotatable"><g class="scalable"><rect class="body"/></g><text class="label"/><g class="inPorts"/><g class="outPorts"/></g>',
         portMarkup: '<g class="port port<%= id %>"><circle class="port-body"/><text class="port-label"/></g>',
 
         defaults: joint.util.deepSupplement({
 
-            type: 'devs.Model',
+//            type: 'devs.Model',   // To match up to devs.ModelView
+            type: 'owl.LabelPorts',
+
             size: { width: 1, height: 1 },
 
             inPorts: ['in'],
@@ -183,21 +189,51 @@ $(function(){
             return attrs;
         }
     }));
+    var LabelPortsView = joint.dia.ElementView.extend(joint.shapes.basic.PortsViewInterface);
 
-
-    var owlPropertyIn = joint.dia.Link.extend({
+    // Simple routed link, no arrows, used to connect source to label
+    var PropertyIn = joint.dia.Link.extend({
         defaults: {
             type: 'owl.PropertyIn',
-            router: { name: 'manhattan' },
+            router: { 
+                name: 'manhattan', 
+                args: {
+                    startDirections: ['bottom'],
+                    endDirections: ['top']
+                }
+            },
             connector: { name: 'rounded' }
         }
     });
 
-    var owlPropertyOut = joint.dia.Link.extend({
+    // Simple routed link with a plain filled end arrow, used to connect label to target
+    var PropertyOut = joint.dia.Link.extend({
         defaults: {
             type: 'owl.PropertyOut',
             attrs: { '.marker-target': { d: 'M 10 0 L 0 5 L 10 10 z', fill: 'black' }, '.font-size' : 10},
-            router: { name: 'manhattan' },
+            router: { 
+                name: 'manhattan', 
+                args: {
+                    startDirections: [ 'bottom'],
+                    endDirections: ['top', 'left', 'right']
+                }
+            },
+            connector: { name: 'rounded' }
+        }
+    });
+
+    // Subclass links
+    SubClassOf = joint.dia.Link.extend({
+        defaults: {
+            type: 'owl.SubClassOf',
+            attrs: { '.marker-target': { d: 'M 20 0 L 0 10 L 20 20 L 20 0 z', fill: 'white' }},
+            router: { 
+                name: 'manhattan', 
+                args: {
+                    startDirections: [ 'top'],
+                    endDirections: ['bottom', 'right']
+                }
+            },
             connector: { name: 'rounded' }
         }
     });
@@ -205,7 +241,7 @@ $(function(){
     // Process the classes and properties
     var indexClass = function(cells, classIndex, spec) {
         var wraptext = joint.util.breakText(spec.label, { width: WIDTH });
-        var cls = new owlClass.Class({
+        var cls = new OwlClass({
             size: {width: WIDTH, height: HEIGHT},
             name: wraptext
         });
@@ -218,39 +254,38 @@ $(function(){
         var range = classIndex[r];
         if ( ! _.isUndefined(domain) && ! _.isUndefined(range) ) {
             var wraptext = joint.util.breakText(labelText, { width: LABEL_WIDTH });
-            var label = new labelPorts({
+//            var label = new LabelPorts({
+//                size: {width: LABEL_WIDTH,  height: LABEL_HEIGHT},
+//                attrs: {
+//                    '.label': { text: wraptext }
+//                }
+//            });
+//            var inLink = new PropertyIn({
+//                source: { id: domain.id },
+//                target: { id: label.id, selector: label.getPortSelector('in') },
+//            });
+//            var outLink = new PropertyOut({
+//                source: { id: label.id, selector: label.getPortSelector('out') },
+//                target: { id: range.id },
+//            });
+            var label = new LabelBlock({
                 size: {width: LABEL_WIDTH,  height: LABEL_HEIGHT},
-                attrs: {
-                    '.label': { text: wraptext }
-                }
+                content : wraptext
             });
-            var inLink = new owlPropertyIn({
+            var inLink = new PropertyIn({
                 source: { id: domain.id },
-                target: { id: label.id, selector: label.getPortSelector('in') },
+                target: { id: label.id },
             });
-            var outLink = new owlPropertyOut({
-                source: { id: label.id, selector: label.getPortSelector('out') },
+            var outLink = new PropertyOut({
+                source: { id: label.id },
                 target: { id: range.id },
             });
+
             cells.push(label);
             cells.push(inLink);
             cells.push(outLink);
         };
     };
-
-    // Create the layout
-    var graph = new joint.dia.Graph;
-
-    var paper = new joint.dia.Paper({
-        el: $('#paper'),
-        width: WIDTH*8,
-        height: 1000,
-        gridSize: 1,
-        model: graph
-    });
-
-    // Just give the viewport a little padding.
-    V(paper.viewport).translate(10, 10);
 
     var layout = function() {
         var cells = [];
@@ -269,11 +304,9 @@ $(function(){
             _.each(spec.superClasses, function(supURI){
                 var sup = classIndex[supURI];
                 if ( ! _.isUndefined(sup) ) {
-                    var scLink = new joint.shapes.uml.Generalization({ 
+                    var scLink = new SubClassOf({ 
                         source: { id: sub.id }, 
                         target: { id: sup.id },
-                        router: { name: 'manhattan' },
-                        connector: { name: 'rounded' }
                     });
                     cells.push(scLink);
                 };
@@ -284,6 +317,31 @@ $(function(){
         joint.layout.DirectedGraph.layout(graph, { setLinkVertices: false });
     }
 
-    layout();
+    // Inject custom views into the joints.shapes namespace
+    joint.shapes.owl = {
+        OwlClass       : OwlClass,
+        LabelPorts     : LabelPorts,
+        LabelPortsView : LabelPortsView,
+        PropertyOut    : PropertyOut,
+        PropertyIn     : PropertyIn
+    };
 
+    // Return module contents
+    return {
+        layout: layout
+    }; 
+})();
+
+// Create the layout
+var graph = new joint.dia.Graph;
+
+var paper = new joint.dia.Paper({
+    el: $('#paper'),
+    width: 1200,
+    height: 1000,
+    gridSize: 1,
+    model: graph
 });
+
+V(paper.viewport).translate(10, 25);     // Just give the viewport a little padding.
+classDiagram.layout();

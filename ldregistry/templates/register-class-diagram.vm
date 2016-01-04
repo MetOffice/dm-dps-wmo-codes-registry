@@ -43,4 +43,4 @@
     </div>
   </div>
 
-#set($extraJS="lodash.min.js,backbone-min.js,graphlib.min.js,dagre.min.js,joint.js,joint.shapes.devs.min.js,class-diagram.js")
+#set($extraJS="lodash.min.js,backbone-min.js,graphlib.min.js,dagre.min.js,joint.min.js,class-diagram.js")
