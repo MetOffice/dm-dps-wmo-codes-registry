@@ -349,6 +349,16 @@ var classDiagram = (function(){
             expandClassSets(cells, classIndex, range), labelText);
     };
 
+    // experimental code to force a re-routing after layout
+    var rerouteAll = function(paper, cells) {
+        _.each(cells, function(cell){
+            var ty = cell.get('type');
+            if (ty === 'owl.PropertyIn' || ty === 'owl.PropertyOut' || ty === 'owl.SubClassOf') {
+                paper.findViewByModel(cell).update();                
+            }
+        });
+    };
+
     var layout = function() {
         var cells = [];
         var classIndex = {};
@@ -386,7 +396,8 @@ var classDiagram = (function(){
 
     // Return module contents
     return {
-        layout: layout
+        layout: layout,
+        rerouteAll: rerouteAll
     }; 
 })();
 
@@ -403,3 +414,4 @@ var paper = new joint.dia.Paper({
 
 V(paper.viewport).translate(10, 25);     // Just give the viewport a little padding.
 classDiagram.layout();
+classDiagram.rerouteAll(paper, graph.getCells());
