@@ -11,6 +11,8 @@ var classDiagram = (function(){
     var SPACING = 50;
     var LABEL_WIDTH = 120;
     var LABEL_HEIGHT = 40;
+    var ANON_WIDTH = 80;
+    var ANON_HEIGHT = 40;
 
     // New shape types
 
@@ -90,6 +92,54 @@ var classDiagram = (function(){
                 offsetY += rectHeight;
             });
         }
+    });
+
+    // Shape used for anonymous intersection classes
+    var IntersectionClass = joint.shapes.basic.Generic.extend({
+
+        markup: '<g class="rotatable"><g class="scalable"><rect/></g><text/></g>',
+
+        defaults: joint.util.deepSupplement({
+
+            type: 'basic.Rect',
+            attrs: {
+                'rect': {
+                    fill: '#ffffff',
+                    stroke: '#000000', 'stroke-width': 1,
+                    width: ANON_WIDTH,  height: ANON_HEIGHT,
+                    rx: 5, ry: 5
+                },
+                'text': {
+                    fill: '#000000',
+                    text: 'intersection',
+                    'font-size': 12,
+                    'ref-x': .5,
+                    'ref-y': .5,
+                    'text-anchor': 'middle',
+                    'y-alignment': 'middle',
+                    'font-family': 'Arial, helvetica, sans-serif'
+                }
+            }
+
+        }, joint.shapes.basic.Generic.prototype.defaults)
+    });
+
+    var IntersectionClassOLD = joint.shapes.basic.Rect.extend({
+
+        defaults: joint.util.deepSupplement({
+
+            // see joint.css for more element styles
+            attrs: {
+                rect: {
+                    width: ANON_WIDTH,  height: ANON_HEIGHT, rx: 5, ry: 5, 'stroke-width': 2, stroke: 'black', fill: 'white'
+                },
+                text: {
+                    text: 'intersection', fill: 'black', 'font-size': 12, 'font-family': 'Arial, helvetica, sans-serif'
+                }
+            },
+
+        }, joint.shapes.basic.Generic.prototype.defaults)
+
     });
 
     // A block label that relies on routing to choose directions of link up
@@ -249,42 +299,72 @@ var classDiagram = (function(){
         cells.push(cls);
     };
 
-    var addProperty = function(cells, classIndex, d, r, labelText) {
-        var domain = classIndex[d];
-        var range = classIndex[r];
-        if ( ! _.isUndefined(domain) && ! _.isUndefined(range) ) {
-            var wraptext = joint.util.breakText(labelText, { width: LABEL_WIDTH });
-//            var label = new LabelPorts({
-//                size: {width: LABEL_WIDTH,  height: LABEL_HEIGHT},
-//                attrs: {
-//                    '.label': { text: wraptext }
-//                }
-//            });
-//            var inLink = new PropertyIn({
-//                source: { id: domain.id },
-//                target: { id: label.id, selector: label.getPortSelector('in') },
-//            });
-//            var outLink = new PropertyOut({
-//                source: { id: label.id, selector: label.getPortSelector('out') },
-//                target: { id: range.id },
-//            });
-            var label = new LabelBlock({
-                size: {width: LABEL_WIDTH,  height: LABEL_HEIGHT},
-                content : wraptext
-            });
-            var inLink = new PropertyIn({
-                source: { id: domain.id },
-                target: { id: label.id },
-            });
-            var outLink = new PropertyOut({
-                source: { id: label.id },
-                target: { id: range.id },
-            });
+    var linkProperty = function(cells, classIndex, source, target, labelText) {
+        _.each(source, function(s){
+            _.each(target, function(t){
+                var wraptext = joint.util.breakText(labelText, { width: LABEL_WIDTH });
+                var label = new LabelBlock({
+                    size: {width: LABEL_WIDTH,  height: LABEL_HEIGHT},
+                    content : wraptext
+                });
+                var inLink = new PropertyIn({
+                    source: { id: s.id },
+                    target: { id: label.id },
+                });
+                var outLink = new PropertyOut({
+                    source: { id: label.id },
+                    target: { id: t.id },
+                });
 
-            cells.push(label);
-            cells.push(inLink);
-            cells.push(outLink);
-        };
+                cells.push(label);
+                cells.push(inLink);
+                cells.push(outLink);
+            });
+        });
+    };
+
+    var lookupClassCells = function(classIndex, classes) {
+        var classCells = [];
+        _.each(classes, function(cls){
+            var cell = classIndex[cls];
+            if ( ! _.isUndefined(cell) ) {
+                classCells.push(cell);
+            }
+        });
+        return classCells;
+    };
+
+    var expandClassSets = function(cells, classIndex, classSpec) {
+        if (_.isObject(classSpec)) {
+            if (classSpec.type === 'unionOf') {
+                return lookupClassCells(classIndex, classSpec.members);
+            } else if (classSpec.type === 'intersectionOf') {
+                var intersectionCell = new IntersectionClass({size: {width: ANON_WIDTH, height : ANON_HEIGHT}});
+                cells.push(intersectionCell);
+                _.each(classSpec.members, function(member){
+                    var memberCell = classIndex[member];
+                    if (!_.isUndefined(memberCell)) {
+                        var inLink = new PropertyIn({
+                            source: { id: memberCell.id },
+                            target: { id: intersectionCell.id },
+                        });
+                        cells.push(inLink);
+                    }
+                });
+                return [ intersectionCell ];
+            }
+        } else if (_.isString(classSpec)) {
+            return lookupClassCells(classIndex, [classSpec]);
+        } 
+        // Internal error, should not happen
+        console.log("Cannot parse class specification" + classSpec);
+        return [];
+    };
+
+    var addProperty = function(cells, classIndex, domain, range, labelText) {
+        linkProperty(cells, classIndex, 
+            expandClassSets(cells, classIndex, domain), 
+            expandClassSets(cells, classIndex, range), labelText);
     };
 
     var layout = function() {
@@ -293,11 +373,7 @@ var classDiagram = (function(){
 
         _.each(ClassDiagramClasses, _.partial(indexClass, cells, classIndex));
         _.each(ClassDiagramObjectProperties, function(spec){
-            _.each(spec.domain, function(d){
-                _.each(spec.range, function(r){
-                    addProperty(cells, classIndex, d, r, spec.label);
-                });
-            });
+            addProperty(cells, classIndex, spec.domain, spec.range, spec.label);
         });
         _.each(ClassDiagramClasses, function(spec){
             var sub = classIndex[spec.uri];

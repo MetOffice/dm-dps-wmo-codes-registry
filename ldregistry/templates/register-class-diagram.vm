@@ -1,3 +1,41 @@
+#macro(parseClass $value)
+    #if($value.isAnon())
+        #if ($value.getPropertyValue("owl:intersectionOf"))
+            #set($pcty='intersectionOf')
+            #set($pcmembers=$value.getPropertyValue("owl:intersectionOf").asList())
+        #elseif ($value.getPropertyValue("owl:unionOf"))
+            #set($pcty='unionOf')
+            #set($pcmembers=$value.getPropertyValue("owl:unionOf").asList())
+        #else
+            #set($pcty='simple')
+        #end
+        #if ($pcty == 'simple')
+            '[]'
+        #else
+            { type: '$pcty', members: [
+                #foreach($c in $pcmembers)
+                    #parseClass($c)
+                    #if( $foreach.hasNext ),#end
+                #end
+            ]}
+        #end
+    #else
+        '$value.uRI'
+    #end
+#end
+
+#macro(parseDomainRange $values)
+    #if($values.size() == 1)
+        #parseClass($values[0])
+    #else
+        { type: 'intersectionOf', members: [
+                #foreach($c in $values)
+                    #parseClass($c)
+                    #if( $foreach.hasNext ),#end
+                #end
+            ]}
+    #end
+#end
 
 <script type="text/javascript">
     var ClassDiagramClasses=[
@@ -23,13 +61,8 @@
             {
                 'label' : '$member.name', 
                 'uri' : '$member.uRI', 
-                'domain' : [
-                ## Allow multiple properties though this is semantically incorrect
-                #foreach($d in $member.listPropertyValues("rdfs:domain")) '$d.uRI' #if( $foreach.hasNext ),#end #end
-                ],
-                'range' : [
-                #foreach($d in $member.listPropertyValues("rdfs:range")) '$d.uRI' #if( $foreach.hasNext ),#end #end
-                ]
+                'domain' : #parseDomainRange($member.listPropertyValues("rdfs:domain")),
+                'range'  : #parseDomainRange($member.listPropertyValues("rdfs:range"))
             } 
           #end
         #end
