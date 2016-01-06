@@ -124,24 +124,6 @@ var classDiagram = (function(){
         }, joint.shapes.basic.Generic.prototype.defaults)
     });
 
-    var IntersectionClassOLD = joint.shapes.basic.Rect.extend({
-
-        defaults: joint.util.deepSupplement({
-
-            // see joint.css for more element styles
-            attrs: {
-                rect: {
-                    width: ANON_WIDTH,  height: ANON_HEIGHT, rx: 5, ry: 5, 'stroke-width': 2, stroke: 'black', fill: 'white'
-                },
-                text: {
-                    text: 'intersection', fill: 'black', 'font-size': 12, 'font-family': 'Arial, helvetica, sans-serif'
-                }
-            },
-
-        }, joint.shapes.basic.Generic.prototype.defaults)
-
-    });
-
     // A block label that relies on routing to choose directions of link up
     var LabelBlock = joint.shapes.basic.Generic.extend({
 
