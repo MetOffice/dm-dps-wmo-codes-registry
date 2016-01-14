@@ -16,22 +16,25 @@
 
 
 <p>
-WMO Codes Registry (Initial Operating Capability)
+The WMO codes registry provides human and machine readable access to the metadata defined by the WMO.  The WMO manuals are the definitive source of these metadata specifications, the WMO codes registry reproduces the details of these manuals faithfully, to the best knowledge of the information maintainers.  However, the registery is not complete at this time.
 </p>
 <p>
-The primary purpose of this Service is to support the new data exchange standard developed by WMO in support of Amendment 76 to ICAO Annex 3 "Meteorological Services for International Air Navigation". This new data exchange standard (<a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a>) enables exchange of operational aeronautical meteorological (OPMET) in XML format. It depends on availability of authoritative terms from WMO technical regulation - most notably <a href="http://www.wmo.int/pages/prog/www/WMOCodes.html">WMO No. 306 Manual on Codes</a> - as web-accessible resources that can be referenced from WMO AvXML-compliant data products. 
+Each metadata entity provided in the registry is uniquly identified by a Universal Resource Identifier.  This provides direct access to every table entry and value which is registered.
+</p>
+<p>
+A key purpose of this Service is to support the new data exchange standard developed by WMO in support of Amendment 76 to ICAO Annex 3 "Meteorological Services for International Air Navigation". This new data exchange standard (<a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a>) enables exchange of operational aeronautical meteorological (OPMET) in XML format. It depends on availability of authoritative terms from WMO technical regulation - most notably <a href="http://www.wmo.int/pages/prog/www/WMOCodes.html">WMO No. 306 Manual on Codes</a> - as web-accessible resources that can be referenced from WMO AvXML-compliant data products. 
 </p>
 <p>
 The WMO Codes Registry is the mechanism through which the authoritative terms required for <a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a> are published as web-accessible resources.
 </p>
 <p>
-The <a href="http://www.metoffice.gov.uk">Met Office</a> operates this Service on behalf of <a href="http://www.wmo.int">WMO</a>. Following an initial period of two (2) years from September 2013, the Service, and the arrangements for it, will be assessed by WMO and the Met Office and a decision made as to whether this arrangement will continue or not or be amended or a new arrangement put in place.
+The <a href="http://www.metoffice.gov.uk">Met Office</a> operates this Service on behalf of <a href="http://www.wmo.int">WMO</a>.
 </p>
 <p>
-During this initial two year period the Service is provided as an Initial Operating Capability. The <a href="http://www.metoffice.gov.uk">Met Office</a> does not anticipate that operational services will have a direct dependency on this Service and therefore does not offer any assurances regarding the availability or accuracy of the Service.
+The Service is provided as an Initial Operating Capability. The <a href="http://www.metoffice.gov.uk">Met Office</a> does not anticipate that operational services will have a direct dependency on this Service and therefore does not offer any assurances regarding the availability or accuracy of the Service.
 </p>
 <p>
-However, the <a href="http://www.metoffice.gov.uk">Met Office</a> will endeavour that information provided within the Service is accurate, albeit sparse in comparison to the scope of the WMO Technical Regulation. Furthermore, please note that the Service does not (yet) provide a multi-lingual content, nor a change history of the authoritative terms pertaining to previous versions of the WMO Technical Regulation. The initial set of authoritative terms is deemed sufficient to support the <a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML data exchange standard</a>. It is anticipated that the scope of content available through this Service will expand during the Initial Operating Capability period. 
+However, the <a href="http://www.metoffice.gov.uk">Met Office</a> will endeavour that information provided within the Service is accurate, albeit incomplete in comparison to the scope of the WMO Technical Regulation. Furthermore, please note that the Service does not (yet) provide a multi-lingual content, nor a change history of the authoritative terms pertaining to previous versions of the WMO Technical Regulation. The initial set of authoritative terms is deemed sufficient to support the <a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML data exchange standard</a>. It is anticipated that the scope of content available through this Service will expand during the life of the service.
 </p>
 <p>
 The <a href="http://www.metoffice.gov.uk">Met Office</a> will endeavour that the Service is available, 24-hours per day, 7-days per week. In the event of a system fault, the <a href="http://www.metoffice.gov.uk">Met Office</a> will endeavour to restore the system to normal operation. There is no provision of an alternative service should the Service be unavailable.
