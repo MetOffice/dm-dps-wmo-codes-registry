@@ -1,6 +1,6 @@
 Name:		registry-config-codes-wmo
 Version:	1.1
-Release:	2
+Release:	4
 Summary:	Registry-core linked data registry
 
 License:	apache
