@@ -19,7 +19,7 @@
 WMO Codes Registry (Initial Operating Capability)
 </p>
 <p>
-The primary purpose of this Service is to support the new data exchange standard developed by WMO in support of Amendment 76 to ICAO Annex 3 "Meteorological Services for International Air Navigation". This new data exchange standard (<a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a>) enables exchange of operational aeronautical meteorological (OPMET) in XML format. It depends on availability of authoritative terms from WMO technical regulation - most notably <a href="http://www.wmo.int/pages/prog/www/WMOCodes.html">WMO No. 306 Manual on Codes</a> - as web-accessible resources that can be referenced from WMO AvXML-compliant data products. 
+Changing the changes to change those things. The primary purpose of this Service is to support the new data exchange standard developed by WMO in support of Amendment 76 to ICAO Annex 3 "Meteorological Services for International Air Navigation". This new data exchange standard (<a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a>) enables exchange of operational aeronautical meteorological (OPMET) in XML format. It depends on availability of authoritative terms from WMO technical regulation - most notably <a href="http://www.wmo.int/pages/prog/www/WMOCodes.html">WMO No. 306 Manual on Codes</a> - as web-accessible resources that can be referenced from WMO AvXML-compliant data products. 
 </p>
 <p>
 The WMO Codes Registry is the mechanism through which the authoritative terms required for <a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a> are published as web-accessible resources.
