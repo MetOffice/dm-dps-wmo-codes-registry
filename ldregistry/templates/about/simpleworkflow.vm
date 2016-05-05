@@ -1,0 +1,10 @@
+<li>Go to GitHub (you will need an account, and to be logged in) and go to https://github.com/wmo-registers/code-manuals/tree/master/typo_fixes</li>
+<li>Make a new file, using the ‘new file’ button.</li>
+<li>Name the file, ending in .ttl</li>
+<li>Copy and paste all the amended text into the new file.</li>
+<li>When you are proposing the new file, add an extended description so we know what you’ve changed.</li>
+<li>Hit the green ‘propose new file’ button.</li>
+<li>Review your change and hit the green ‘create pull request’ button.</li>
+<li>That’s it - thanks!</li>
+<li>Next up we’ll talk to our experts about the change you’ve suggested then evaluate it in our test system.</li>
+<li>We’ll get back to you through GitHub with an update to let you know what’s happening and if there’s further input we’d like from you.</li>
