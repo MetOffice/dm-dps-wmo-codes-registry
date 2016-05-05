@@ -1,0 +1,23 @@
+23 lines (16 sloc)  597 Bytes
+#parse("header.vm")
+#set($nav="about")
+#parse("navbar.vm")
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Contributing to the WMO Codes Registry</h1>
+        <a href="http://www.wmo.int/pages/index_en.html">
+            <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+
+      </div>
+    ## container will be closed by footer
+
+
+#parse("footer.vm")
