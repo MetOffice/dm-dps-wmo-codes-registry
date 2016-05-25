@@ -15,6 +15,7 @@
       <div class="row">
 
       <p> <a href="$uiroot/about/typofixes">How to fix a typographical error.</a> </p>
+      <p> <a href="$uiroot/about/translation">How to submit a language translation of an existing code.</a> </p>
 
       </div>
     ## container will be closed by footer
