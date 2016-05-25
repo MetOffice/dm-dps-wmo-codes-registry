@@ -18,7 +18,7 @@ If you notice a typo in the register, for example, you notice ‘velocity’ is 
 
 <ol><li>The first step is to get the text so you can change it - so download the content in the RDF ttl-plain format.</li>
 <li>Open the file with a text editor, find the typo and fix all instances of it.</li>
-#parse("simpleworkflow.vm")
+#parse("about/simpleworkflow.vm")
 </ol>
 
       </div>
