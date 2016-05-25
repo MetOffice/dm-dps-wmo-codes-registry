@@ -1,3 +1,4 @@
+23 lines (16 sloc)  597 Bytes
 #parse("header.vm")
 #set($nav="about")
 #parse("navbar.vm")
@@ -13,8 +14,12 @@
 
     <div class="container">
       <div class="row">
+If you notice a typo in the register, for example, you notice ‘velocity’ is spelled ‘vecolity’, this is how you can get it changed:
 
-      <p> <a href="$uiroot/about/typofixes">How to fix a typographical error.</a> </p>
+<ol><li>The first step is to get the text so you can change it - so download the content in the RDF ttl-plain format.</li>
+<li>Open the file with a text editor, find the typo and fix all instances of it.</li>
+#parse("about/simpleworkflow.vm")
+</ol>
 
       </div>
     ## container will be closed by footer
