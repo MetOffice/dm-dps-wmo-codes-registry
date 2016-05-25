@@ -1,1 +1,42 @@
+#parse("header.vm")
+#set($nav="about")
+#parse("navbar.vm")
 
+    <div class="jumbotron">
+      <div class="container">
+
+        <h1>Add a language translation for a code definition</h1>
+
+If you want to add a language translation for a code definition, here’s how to do it:
+
+The first step is to get the text so you can change it - so download the content in the RDF ttl-plain format.
+Open the file with a text editor and find rdfs:label. Add the translated text in speech marks immediately followed by @ and the two-character language tag (ISO 639-1 code). Keep language entries separated by space - comma - space (the order isn’t important as long as the ; is at the very end). Now follow the same process for the dct:description. Note - you can use symbols or unicode. 
+
+Before:
+<http://codes.wmo.int/bufr4/codeflag/0-20-086/6>
+    	a            	skos:Concept ;
+    	rdfs:label   	"Slush"@en ;
+    	<http://codes.wmo.int/def/bufr4/fxy>
+            	"020086" ;
+    	dct:description  "Snow or ice on the ground that has been reduced to a soft watery mixture by rain, warm temperature, and/or chemical treatment."@en ;
+    	skos:notation	6 .
+
+After:
+<http://codes.wmo.int/bufr4/codeflag/0-20-086/6>
+    	a            	skos:Concept ;
+    	rdfs:label   	"Neige fondante"@fr , "Slush"@en ;
+    	<http://codes.wmo.int/def/bufr4/fxy>
+            	"020086" ;
+    	dct:description  "Neige ou de glace sur le sol qui a été réduite à un doux mélange aqueux par la pluie, la température chaude et / ou le traitement chimique."@fr , "Snow or ice on the ground that has been reduced to a soft watery mixture by rain, warm temperature, and/or chemical treatment."@en ;
+    	skos:notation	6 .
+
+steps 3 to 12 as issue #16
+
+#parse("about/simpleworkflow.vm")
+</ol>
+
+      </div>
+    ## container will be closed by footer
+
+
+#parse("footer.vm")
