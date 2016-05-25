@@ -1,4 +1,4 @@
-<li>Go to GitHub (you will need an account, and to be logged in) and go to https://github.com/wmo-registers/code-manuals/tree/master/typo_fixes</li>
+<li>Go to GitHub (you will need an account, and to be logged in) and go to <a href="https://github.com/wmo-registers/code-manuals/tree/master/typo_fixes">https://github.com/wmo-registers/code-manuals/tree/master/typo_fixes</a></li>
 <li>Make a new file, using the ‘new file’ button.</li>
 <li>Name the file, ending in .ttl</li>
 <li>Copy and paste all the amended text into the new file.</li>
