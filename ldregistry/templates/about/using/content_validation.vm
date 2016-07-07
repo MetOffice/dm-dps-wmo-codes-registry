@@ -1,0 +1,97 @@
+#parse("header.vm")
+#set($nav="about")
+#parse("navbar.vm")
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Making use of the WMO Codes Registry</h1>
+        <a href="http://www.wmo.int/pages/index_en.html">
+            <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+Register content validation
+WMO Codes Registry relationship to WMO AvXML data exchange standard
+The primary purpose of the WMO Codes Registry is to provide web-accessible resources that can be referenced from WMO AvXML-compliant data products.
+Additionally, the WMO Codes Registry supports validation of those data products by assessing whether the terms used therein are members of the authoritative code- lists defined in the WMO and ICAO technical regulation.
+The WMO AvXML data exchange standard is developed in line with community best practice using a model driven approach based on the ISO 19100-series of International Standards enables a semantic model to be encoded in a variety of formats – including GML.
+Figure 4 provides a schematic of the model driven approach to the development of data exchange standards.
+￼
+Note: During the period of Initial Operating Capability, the WMO Codes Registry is not intended to support operational validation of data products. It is anticipated that offline copies of the Registry content will be used for local validation in operational systems.
+￼
+￼
+Figure 4: Schematic of model-driven approach to development of data exchange standards
+A critical factor in the development of the WMO AvXML data exchange standard is the ability to bind the data model to the code-tables defined in existing WMO technical regulation. Figure 5 illustrates how this is achieved by using a «CodeList» class with tagged values that reference the appropriate controlled vocabulary, as published within the WMO Codes Register, and the validation regime that should be applied.
+￼© Crown copyright. Met Office
+14
+￼￼￼￼￼￼￼￼Figure 5: Binding data model to WMO code-tables
+￼￼￼For reference, “extensibility” may be one of:
+ "none": implies that only terms from the specified code list are permitted;
+ "narrower": implies that terms with more refined definitions of the terms from
+the specified code list are permitted (e.g. narrower semantics); and
+ "any": implies that anything goes and the specified code list is simply a
+recommendation.
+Also note that the “vocabulary” and “extensibility” tagged values can be found in the XML Schema generated from the data model. Figure 6 provides a snippet from metarSpeci.xsd.
+<complexType name="AerodromeRunwayStateType"> <sequence>
+<element maxOccurs="1" minOccurs="0" name="runway" type="saf:RunwayDirectionPropertyType"/> <element maxOccurs="1" minOccurs="0" name="depositType" type="iwxxm:RunwayDepositsType"/> <element maxOccurs="1" minOccurs="0" name="contamination" type="gml:ScaleType"/>
+<element maxOccurs="1" minOccurs="0" name="depthOfDeposit" type="gml:LengthType"/> <element maxOccurs="1" minOccurs="0" name="estimatedSurfaceFriction" type="gml:ScaleType"/>
+</sequence>
+<attribute name="allRunways" type="boolean"/>
+<attribute name="cleared" type="boolean"/>
+<attribute name="estimatedSurfaceFrictionUnreliable" type="boolean"/> <attribute name="snowClosure" type="boolean"/>
+</complexType>
+<complexType name="RunwayDepositsType"> <annotation>
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼© Crown copyright. Met Office
+15
+￼￼<appinfo>
+￼￼￼<vocabulary>http://codes.wmo.int/bufr4/codeflag/0-20-086</vocabulary>
+￼￼￼<extensibility>none</extensibility>
+￼￼</appinfo>
+<documentation>Type of deposit on a runway. See WMO No. 306 Vol I.1 code table 0919 and WMO No.
+306 Vol I.2 FM 94 BUFR code table 0 20 086 "Runway deposits".
+</documentation> </annotation> <complexContent>
+<extension base="gml:ReferenceType"/> </complexContent>
+</complexType>
+Figure 6: XML Schema snippet from metarSpeci.xsd showing "vocabulary" and "extensibility" tagged values
+The “vocabulary” and “extensibility” tagged values provide sufficient information for one to validate whether a data product asserting compliance with the WMO AvXML data exchange standard (see Figure 7 for an example fragment from a METAR) is using terms from the authoritative lists as specified in the WMO and ICAO technical regulation.
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼<iwxxm:runwayState> <iwxxm:AerodromeRunwayState>
+<iwxxm:depositType
+xlink:href="http://codes.wmo.int/bufr4/codeflag/0-20-086/1"
+xlink:title="Damp"/> </iwxxm:AerodromeRunwayState>
+</iwxxm:runwayState>
+Figure 7: XML snippet from METAR data product
+￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼￼Validation mechanisms
+The WMO Codes Registry provides validation via both web application and programmatic API.
+In the case of the web application, one simply enters the URI of the term to be validated in the form-field and selects “check”. The web application will then determine whether the URI refers to an Entity within the Registry, and provides information about where this Entity is registered – as illustrated in Figure 8.
+© Crown copyright. Met Office
+16
+￼￼￼￼￼￼￼￼Figure 8: Entity validation via the web application
+￼￼￼Alternatively, the programmatic API may be used to achieve the same result by way of a HTTP request. The example below is based on use of the cURL utility, but any software application capable of executing HTTP would suffice.
+The following API request will validate whether a list of URIs are registered as entities within the specified Register and its Sub-registers.
+POST http://registry/{register}?validate={uri1}&validate={uri2}&...
+If successful, the Registry will provide a HTTP 200 “OK” response with body containing a list of Register Items associated with the given Entity or Entities. Else the Registry provides a HTTP 400 “Bad request” response with body indicating:
+     URI not found anywhere: [...]
+Example: to determine with the Runway Deposit type “Damp” occurs within the code-tables of FM 94 BUFR (edition 4) ...
+curl –i –X POST http://codes.wmo.int/bufr4?validate=http://codes.wmo.int/bu fr4/codeflag/0-20-086/1
+response: HTTP 200 “OK”
+http://codes.wmo.int/bufr4/codeflag/0-20-086/1 is http://codes.wmo.int/bufr4/codeflag/0-20-086/_1
+￼￼￼￼￼￼Note: For more information about validation using the programmatic API please refer here.
+￼￼￼￼￼￼© Crown copyright. Met Office
+17
+WMO Codes Registry web application
+The WMO Codes Registry provides two forms of access:
+1. Programmatic access via an API
+2. Human readable access via a web application
+An overview of navigation within the web application is provided below.
+￼￼￼￼￼For details describing how to access the WMO Codes Registry via the API see section:
+￼￼￼￼
+
+      </div>
+    ## container will be closed by footer
+
+
+#parse("footer.vm")
