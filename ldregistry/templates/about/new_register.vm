@@ -1,6 +1,21 @@
-How to provide a new register of content 
 
-→ Add explanation that WMO will approve it (or not)
+#parse("header.vm")
+#set($nav="about")
+#parse("navbar.vm")
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>How to provide a new register of content</h1>
+        <a href="http://www.wmo.int/pages/index_en.html">
+            <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+ <p> <a href="$uiroot/about/new_register">How to provide a new register of content.</a> </p>
+      <p> → Add explanation that WMO will approve it (or not)
 
 <ol>
 <li>You need to have the structured information such as one or more lists of terms ready.</li>
@@ -12,4 +27,15 @@ How to provide a new register of content
 <li>Once all comments and suggestions have been resolved, the WMO experts will deem the content as ‘suitable for adoption’.</li>
 <li>The relevant WMO expert team will make the decision whether to publish this content. </li>
 <li>If it is to be published, the register manager will then merge the pull request and publish the content onto the WMO Registers website. </li>
-</ol>
+</ol></p>
+
+      </div>
+    ## container will be closed by footer
+
+
+#parse("footer.vm")
+
+
+
+
+
