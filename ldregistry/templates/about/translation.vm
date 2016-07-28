@@ -31,7 +31,7 @@ After:
     	skos:notation	6 .
 
 steps 3 to 12 as issue #16
-
+<ol>
 #parse("about/simpleworkflow.vm")
 </ol>
 
