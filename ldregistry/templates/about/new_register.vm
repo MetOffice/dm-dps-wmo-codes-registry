@@ -19,7 +19,8 @@
 
 <ol>
 <li>Put together a request for change as a pull request on https://github.com/wmo-registers/code-manuals.</li>
-<li>Put the information you have ready into the request. This can be structured already (such as lists of terms) but doesn’t have to be. We will work with you to gather the right information and format it.</li>
+    <ol><li>Put the information you have ready into the request. This can be structured already (such as lists of terms) but doesn’t have to be. We will work with you to gather the right information and format it.</li>
+    </ol>
 <li>This pull request stays open until your new content is approved and added, or not deemed suitable and rejected. You are responsible for responding to comments on the pull request and updating the content accordingly (managing it to completion).</li>
 <li>The pull request will be reviewed by a register manager to make sure it works in the system (if it doesn’t you’ll be helped through this on the pull request).</li>
 <li>The new content will then be published to the WMO Registers test website for review by WMO experts.</li>
