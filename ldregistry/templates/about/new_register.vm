@@ -15,8 +15,8 @@
     <div class="container">
       <div class="row">
  <p> <a href="$uiroot/about/new_register">How to provide a new register of content.</a> </p>
-      <p> → Add explanation that WMO will approve it (or not)
-
+      <p>The relevant expert or task team in the WMO will review the information in the register you are submitting and make the decision whether to publish it. This team and the WMO secretariat are responsible for approving the exact content to be published within the WMO name space.
+      </p>
 <ol>
 <li>Put together a request for change as a pull request on https://github.com/wmo-registers/code-manuals.</li>
     <ol><li>Put the information you have ready into the request. This can be structured already (such as lists of terms) but doesn’t have to be. We will work with you to gather the right information and format it.</li>
