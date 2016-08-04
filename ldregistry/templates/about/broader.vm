@@ -1,7 +1,3 @@
-<FONT 
-style="BACKGROUND-COLOR: yellow">next </FONT>w
-
-
 #parse("header.vm")
 #set($nav="about")
 #parse("navbar.vm")
