@@ -23,77 +23,77 @@ The registered mime-types for these formats are:
 Note: This section describes only those elements of the API providing read-access to the Registry content; more details of the programmatic API can be found here, including a summary of the API operations. 
  
    
- HTML:  Turtle:  RDF/XML:  JSON-LD: 
+HTML:Turtle:RDF/XML:JSON-LD: 
 text/html text/turtle application/rdf+xml application/ld+json 
 The default response of the Registry is the provision of HTML content. This may be overridden either by use of the “Accept” HTTP request header. 
 Alternatively, one may append the _format={format} query parameter to the HTTP request: 
- Turtle:  RDF/XML:  JSON-LD: 
+Turtle:RDF/XML:JSON-LD: 
 ?_format=ttl
 ?_format=rdf
 ?_format=jsonld
 For consistency, all examples below will request content in turtle format. 
 Register retrieval 
 This section describes the API operations pertaining to retrieval of information about Registers. 
- To request details of a Register and those members with status category “accepted”. 
+To request details of a Register and those members with status category “accepted”. 
 GET http://registry/{register} 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/bufr4/codeflag/0-20-086 
- To request details of a Register, excluding members. © Crown copyright. Met Office 
+To request details of a Register, excluding members. © Crown copyright. Met Office 
 31 
 GET http://registry/{register}?non-member-properties 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/bufr4/codeflag/0-20-086?non-member- properties 
- To request details of a Register and a page of those members with status category “accepted”. 
+To request details of a Register and a page of those members with status category “accepted”. 
 GET http://registry/{register}?firstPage 
 GET http://registry/{register}?_page={n} 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/306/4678?_page=2 
- To request details of a Register and those members with specified status. GET http://registry/{register}?status={status} 
+To request details of a Register and those members with specified status. GET http://registry/{register}?status={status} 
 {status} must be one of: 
 - notAccepted - submitted - reserved - invalid 
 - accepted - valid - experimental - stable - deprecated - retired 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/bufr4/codeflag/0-20- 086?status=reserved 
- To request details of a Register and members – including associated Register Item resources. 
+To request details of a Register and members – including associated Register Item resources. 
 GET http://registry/{register}?_view=with_metadata 
 Example: 
 © Crown copyright. Met Office 
 32 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/49- 2/AerodromeRecentWeather?_view=with_metadata 
- To request details of a specific version of a Register and those members valid for that version. 
+To request details of a specific version of a Register and those members valid for that version. 
 GET http://registry/{register}:{version} 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/common/c- 15:3 
- To request details of a Register, its members, the Register Item associated with the Register and a list of versions of that Register Item. 
+To request details of a Register, its members, the Register Item associated with the Register and a list of versions of that Register Item. 
 GET http://registry/_{register}?_view=version_list 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/_common?_view=version_list 
- To request details of a Register and its members at a specific date-time. 
+To request details of a Register and its members at a specific date-time. 
 GET http://registry/{register}?_versionAt={dateTime} 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/common/c- 6?_versionAt=2013-08-05T12:00:00Z 
 Entity and Register Item retrieval 
 This section describes the API operations pertaining to retrieval of information about Entities and Register Items. Where Entities are referenced from outside the scope of the Registry, no guarantees can be made as to the behaviour of those resources. As a result, this section describes the operations pertaining to retrieval of information about those Entities managed within the scope of the Registry system. 
- To request information about an Entity. GET http://registry/{register}/{entity} 
+To request information about an Entity. GET http://registry/{register}/{entity} 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/bufr4/codeflag/0-20-086/6 
- To request information about an Entity and the associated Register Item. GET http://registry/{register}/{entity}?_view=with_metadata 
+To request information about an Entity and the associated Register Item. GET http://registry/{register}/{entity}?_view=with_metadata 
 © Crown copyright. Met Office 
 33 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/306/4678/FZDZ?_view=with_metadata 
- To request information about a Register Item and the associated Entity. GET http://registry/{register}/_{item} 
+To request information about a Register Item and the associated Entity. GET http://registry/{register}/_{item} 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/49- 2/AerodromeRecentWeather/_REFZDZ 
- To request information about a specific version of a Register Item and the associated information known about the associated Entity for that version. 
+To request information about a specific version of a Register Item and the associated information known about the associated Entity for that version. 
 GET http://registry/{register}/_{item}:{version} 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/49- 2/AerodromeRecentWeather/_REFZDZ:1 
- To request information about a Register Item, the associated Entity and the list of each version of the Register Item – including the interval over which it was valid, which version (if any) it replaced and whether it is the current version of the item.. 
+To request information about a Register Item, the associated Entity and the list of each version of the Register Item – including the interval over which it was valid, which version (if any) it replaced and whether it is the current version of the item.. 
 GET http://registry/{register}/_{item}?_view=version_list 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/49- 2/AerodromeRecentWeather/_REFZDZ?_view=version_list 
- To determine whether the Entity specified with the given URI is known within the Register sub-tree and has status category “accepted”; if found, details of the Entity are provided else a HTTP 404 “Not found” response is given. 
+To determine whether the Entity specified with the given URI is known within the Register sub-tree and has status category “accepted”; if found, details of the Entity are provided else a HTTP 404 “Not found” response is given. 
 GET http://registry/{register}?entity={uri} 
 Example: 
 curl –i –H “Accept:text/turtle” http://codes.wmo.int/ bufr4/b/12?entity=http://codes.wmo.int/common/c- 15/me/dewPointTemperature 
