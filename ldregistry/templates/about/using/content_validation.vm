@@ -30,10 +30,10 @@ A critical factor in the development of the WMO AvXML data exchange standard is 
 14
 ￼￼￼￼￼￼￼￼Figure 5: Binding data model to WMO code-tables
 ￼￼￼For reference, “extensibility” may be one of:
- "none": implies that only terms from the specified code list are permitted;
- "narrower": implies that terms with more refined definitions of the terms from
+"none": implies that only terms from the specified code list are permitted;
+"narrower": implies that terms with more refined definitions of the terms from
 the specified code list are permitted (e.g. narrower semantics); and
- "any": implies that anything goes and the specified code list is simply a
+"any": implies that anything goes and the specified code list is simply a
 recommendation.
 Also note that the “vocabulary” and “extensibility” tagged values can be found in the XML Schema generated from the data model. Figure 6 provides a snippet from metarSpeci.xsd.
 <complexType name="AerodromeRunwayStateType"> <sequence>
