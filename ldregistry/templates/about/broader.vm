@@ -30,6 +30,10 @@ We only accept suggestions for concepts to be linked in a broader way. The inver
 
 To make the suggestion:</p>
 
+<ol><li>The first step is to get the text so you can change it - so download the content in the RDF ttl-plain format.</li>
+<li>Open the file with a text editor.</li>
+#parse("about/simpleworkflow.vm")
+</ol>
 
 
 <p>For example: </p>
