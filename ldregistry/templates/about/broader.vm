@@ -4,7 +4,7 @@
 
     <div class="jumbotron">
       <div class="container">
-        <h1>Propose a relationship between concepts</h1>
+        <h2>Propose a relationship between concepts</h2>
         <a href="http://www.wmo.int/pages/index_en.html">
             <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
         </a>
