@@ -22,12 +22,13 @@ The concept is ‘Pressure reduced to MSL’
 
 You may want to suggest that this has a broader concept and that the broader concept is ‘Pressure’.
 
-We only accept suggestions for concepts to be linked in a broader way. The inverse relation is inferred, so we do not encode it.
+We only accept suggestions for concepts to be linked in a broader way. The inverse 'narrower' relation is inferred, so we do not encode it.
 
 To make the suggestion:</p>
 
 <ol><li>The first step is to get the text so you can change it - so download the content in the RDF ttl-plain format.</li>
 <li>Open the file with a text editor.</li>
+<li>Add the broader relation in a new line (see example below).</li>
 #parse("about/simpleworkflow.vm")
 </ol>
 
@@ -35,8 +36,7 @@ To make the suggestion:</p>
 <p>For example: </p>
 
 
-<p><FONT 
-style="BACKGROUND-COLOR: yellow"><http://codes.wmo.int/grib2/codeflag/4.2/0-3-1>
+<http://codes.wmo.int/grib2/codeflag/4.2/0-3-1>
         a                skos:Concept , <http://codes.wmo.int/def/grib2/Parameter> ;
         rdfs:label       "Pressure reduced to MSL"@en ;
         <http://codes.wmo.int/def/common/edition>
@@ -52,12 +52,11 @@ style="BACKGROUND-COLOR: yellow"><http://codes.wmo.int/grib2/codeflag/4.2/0-3-1>
         <http://metarelate.net/vocabulary/index.html#identifier>
                 <http://codes.wmo.int/def/grib2/category> , <http://codes.wmo.int/def/grib2/discipline> , <http://codes.wmo.int/def/grib2/parameter> , <http://codes.wmo.int/def/common/edition> ;
         dct:description  "Pressure reduced to MSL"@en ;
-        skos:prefLabel   "Pressure reduced to MSL"@en .</FONT></p>
+        skos:prefLabel   "Pressure reduced to MSL"@en .</p>
 
 <p>Becomes:</p>
 
-<p><FONT 
-style="BACKGROUND-COLOR: yellow"><http://codes.wmo.int/grib2/codeflag/4.2/0-3-1>
+<http://codes.wmo.int/grib2/codeflag/4.2/0-3-1>
         a                skos:Concept , <http://codes.wmo.int/def/grib2/Parameter> ;
         rdfs:label       "Pressure reduced to MSL"@en ;
         <http://codes.wmo.int/def/common/edition>
@@ -73,8 +72,9 @@ style="BACKGROUND-COLOR: yellow"><http://codes.wmo.int/grib2/codeflag/4.2/0-3-1>
         <http://metarelate.net/vocabulary/index.html#identifier>
                 <http://codes.wmo.int/def/grib2/category> , <http://codes.wmo.int/def/grib2/discipline> , <http://codes.wmo.int/def/grib2/parameter> , <http://codes.wmo.int/def/common/edition> ;
         dct:description  "Pressure reduced to MSL"@en ;
-        skos:prefLabel   "Pressure reduced to MSL"@en ;
-        skos:broader <http://codes.wmo.int/grib2/codeflag/4.2/0-3-0> .</FONT>
+        skos:prefLabel   "Pressure reduced to MSL"@en <p><FONT 
+style="BACKGROUND-COLOR: yellow">;
+        skos:broader <http://codes.wmo.int/grib2/codeflag/4.2/0-3-0></FONT> .
 
 
  </p>
