@@ -1,0 +1,28 @@
+23 lines (16 sloc)  597 Bytes
+#parse("header.vm")
+#set($nav="about")
+#parse("navbar.vm")
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Contributing to the WMO Codes Registry</h1>
+        <a href="http://www.wmo.int/pages/index_en.html">
+            <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
+        </a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+If you notice a typo in the register, for example, you notice ‘velocity’ is spelled ‘vecolity’, this is how you can get it changed:
+
+<ol><li>The first step is to get the text so you can change it - so download the content in the RDF ttl-plain format.</li>
+<li>Open the file with a text editor, find the typo and fix all instances of it.</li>
+#parse("about/simpleworkflow.vm")
+</ol>
+
+      </div>
+    ## container will be closed by footer
+
+
+#parse("footer.vm")
