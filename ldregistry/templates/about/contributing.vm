@@ -4,26 +4,22 @@
 
     <div class="jumbotron">
       <div class="container">
-        <h1>$registry.configExtensions.registryName</h1>
+        <h1>Contributing to the WMO Codes Registry</h1>
         <a href="http://www.wmo.int/pages/index_en.html">
             <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
         </a>
       </div>
     </div>
 
-
     <div class="container">
       <div class="row">
-      <p> <a href="/ui/about/using">Making use of the content from the WMO Codes Registry service.</a> </p>
-      </div>
 
-      <div class="row">
-      <p> <a href="/ui/about/contributing">Contributing to the content of the WMO Codes Registry service.</a> </p>
-      </div>
+      <p> <a href="$uiroot/about/typofixes">How to fix a typographical error.</a> </p>
+      <p> <a href="$uiroot/about/translation">How to add a linguistic translation.</a> </p>
+      <p> <a href="$uiroot/about/broader">How to add a semantic link between concepts.</a> </p>
 
-      <div class="row">
-      <p> <a href="/ui/about/expectations">What to expect from the WMO Codes Registry service</a> </p>
       </div>
-    
+    ## container will be closed by footer
+
 
 #parse("footer.vm")

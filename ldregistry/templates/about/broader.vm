@@ -1,0 +1,86 @@
+#parse("header.vm")
+#set($nav="about")
+#parse("navbar.vm")
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>WMO Codes Registry</h1>
+        <a href="http://www.wmo.int/pages/index_en.html">
+            <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+      <p> You can propose a link between two concepts.
+
+For example:
+
+The concept is ‘Pressure reduced to MSL’
+
+You may want to suggest that this has a broader concept and that the broader concept is ‘Pressure’.
+
+We only accept suggestions for concepts to be linked in a broader way. The inverse 'narrower' relation is inferred, so we do not encode it.
+
+To make the suggestion:</p>
+
+<ol><li>The first step is to get the text so you can change it - so download the content in the RDF ttl-plain format.</li>
+<li>Open the file with a text editor.</li>
+<li>Add the broader relation in a new line (see example below).</li>
+#parse("about/simpleworkflow.vm")
+</ol>
+
+
+<p>For example: </p>
+
+<pre>
+&lthttp://codes.wmo.int/grib2/codeflag/4.2/0-3-1&gt
+        a                skos:Concept , &lthttp://codes.wmo.int/def/grib2/Parameter&gt ;
+        rdfs:label       "Pressure reduced to MSL"@en ;
+        &lthttp://codes.wmo.int/def/common/edition&gt
+                &lthttp://codes.wmo.int/codeform/grib2&gt ;
+        &lthttp://codes.wmo.int/def/common/unit&gt
+                &lthttp://codes.wmo.int/common/unit/Pa&gt ;
+        &lthttp://codes.wmo.int/def/grib2/category&gt
+                &lthttp://codes.wmo.int/grib2/codeflag/4.1/0-3&gt ;
+        &lthttp://codes.wmo.int/def/grib2/discipline&gt
+                &lthttp://codes.wmo.int/grib2/codeflag/0.0/0&gt ;
+        &lthttp://codes.wmo.int/def/grib2/parameter&gt
+                1 ;
+        &lthttp://metarelate.net/vocabulary/index.html#identifier&gt
+                &lthttp://codes.wmo.int/def/grib2/category&gt , &lthttp://codes.wmo.int/def/grib2/discipline&gt , &lthttp://codes.wmo.int/def/grib2/parameter&gt , &lthttp://codes.wmo.int/def/common/edition&gt ;
+        dct:description  "Pressure reduced to MSL"@en ;
+        skos:prefLabel   "Pressure reduced to MSL"@en .
+</pre>
+<p>Becomes:</p>
+<pre>
+&lthttp://codes.wmo.int/grib2/codeflag/4.2/0-3-1&gt
+        a                skos:Concept , &lthttp://codes.wmo.int/def/grib2/Parameter&gt ;
+        rdfs:label       "Pressure reduced to MSL"@en ;
+        &lthttp://codes.wmo.int/def/common/edition&gt
+                &lthttp://codes.wmo.int/codeform/grib2&gt ;
+        &lthttp://codes.wmo.int/def/common/unit&gt
+                &lthttp://codes.wmo.int/common/unit/Pa&gt ;
+        &lthttp://codes.wmo.int/def/grib2/category&gt
+                &lthttp://codes.wmo.int/grib2/codeflag/4.1/0-3&gt ;
+        &lthttp://codes.wmo.int/def/grib2/discipline&gt
+                &lthttp://codes.wmo.int/grib2/codeflag/0.0/0&gt ;
+        &lthttp://codes.wmo.int/def/grib2/parameter&gt
+                1 ;
+        &lthttp://metarelate.net/vocabulary/index.html#identifier&gt
+                &lthttp://codes.wmo.int/def/grib2/category&gt , &lthttp://codes.wmo.int/def/grib2/discipline&gt , &lthttp://codes.wmo.int/def/grib2/parameter&gt , &lthttp://codes.wmo.int/def/common/edition&gt ;
+        dct:description  "Pressure reduced to MSL"@en ;
+        skos:prefLabel   "Pressure reduced to MSL"@en <FONT style="BACKGROUND-COLOR: yellow">;
+        skos:broader &lthttp://codes.wmo.int/grib2/codeflag/4.2/0-3-0&gt</FONT> .
+</pre>
+
+ </p>
+
+
+      </div>
+    ## container will be closed by footer
+
+
+#parse("footer.vm")
