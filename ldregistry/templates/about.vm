@@ -11,8 +11,19 @@
       </div>
     </div>
 
-
     <div class="container">
+      <div class="row">
+      <p>The World Meteorological Organisation (WMO) brings together national meteorological services
+         to promote the sharing of data and services. It is a United Nations organisation.</p>
+      <p>This is the WMO Codes Registry, which publishes structured content from the official WMO manuals in a web accessible form. </p>
+      <ul>
+      <li>A register publishes an official record of items.</li>
+      <li>In some cases, this will be a collection of other registers.</li>
+      <li>A registry is collection of registers, published by an authoritative source.</li></ul>
+      <p>The WMO Codes Registry enables the WMO to publish codes as individual resources within a resource structure. These codes are officially managed within the \
+WMO Manuals on Codes.</p>
+      </div>
+
       <div class="row">
       <p> <a href="/ui/about/using">Making use of the content from the WMO Codes Registry service.</a> </p>
       </div>

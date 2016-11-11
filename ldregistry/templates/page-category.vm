@@ -3,10 +3,10 @@
 
 <div class="container">
 
-  <h1>List all registers</h1>
+  <h1>WMO registers</h1>
   #set($base="${root}/")
   #if(!$state)
-    #set($state="")
+    #set($state="category=<http://codes.wmo.int/structure/category/WMO-I.2>")
   #end
 
   #set($fr=$registry.facetService.query($state))
