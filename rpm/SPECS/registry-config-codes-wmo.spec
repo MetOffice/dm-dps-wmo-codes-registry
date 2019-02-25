@@ -1,6 +1,7 @@
 Name:		registry-config-codes-wmo
-Version:	1.2
-Release:	8
+Version:	2.0
+Release:	10
+
 Summary:	Registry-core linked data registry
 
 License:	apache
@@ -9,7 +10,7 @@ URL:		https://github.com/wmo-registers/codes-wmo-deploy
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Source0:	%{name}-%{version}.tar.gz
 
-Requires:       java-1.7.0-openjdk
+Requires:       java-1.8.0-openjdk
 Requires:       nginx
 Requires:       tomcat
 
@@ -41,6 +42,7 @@ rm -rf /var/lib/tomcat/webapps/ROOT
 rm -rf /var/lib/tomcat/webapps/ROOT.war
 rm -rf /var/opt/ldregistry/userstore/db.lck
 rm -rf /var/opt/ldregistry/userstore/dbex.lck
+rm -rf /var/opt/ldregistry/userstore
 
 declare -a arr=("/var/log/ldregistry" "/var/opt/ldregistry")
 
@@ -54,8 +56,8 @@ do
 done
 
 %post
-ln -s /opt/oauth/oauth.conf /opt/ldregistry/config/oauth.conf
-service tomcat7 start
+ln -s /opt/oauth /opt/ldregistry/config/oauth2
+service tomcat start
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -73,5 +75,7 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Feb 15 2019 markh <markh@metarelate.net> - 2.0
+- deploy 2.0
 * Tue Dec 1 2015 markh <markh@metarelate.net> - 1.0-1
 - Initial version

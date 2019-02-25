@@ -1,8 +1,8 @@
-#parse("header.vm")
+#parse("structure/_header.vm")
   #if($uri.isEmpty())
     #set($nav="root")
   #end
-#parse("navbar.vm")
+#parse("nav/_navbar.vm")
 
 <div class="container">
 
@@ -63,4 +63,4 @@
   </div>
 #end
 
-#parse("footer.vm")
+#parse("structure/_footer.vm")

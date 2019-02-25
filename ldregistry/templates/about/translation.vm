@@ -1,6 +1,6 @@
-#parse("header.vm")
+#parse("structure/_header.vm")
 #set($nav="about")
-#parse("navbar.vm")
+#parse("nav/_navbar.vm")
 
     <div class="jumbotron">
       <div class="container">
@@ -48,4 +48,4 @@ Becomes:
     ## container will be closed by footer
 
 
-#parse("footer.vm")
+#parse("structure/_footer.vm")

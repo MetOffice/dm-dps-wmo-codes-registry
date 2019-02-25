@@ -5,7 +5,7 @@
 #else
     #set($scheme = "http")
 #end
-#set( $absoluteRoot = "$scheme://$request.serverName/registry" )
+#set( $absoluteRoot = "$scheme://$request.serverName" )
 
 <nav class='navbar o-navbar-reg navbar-static-top' role='navigation'>
     <div class='container'>

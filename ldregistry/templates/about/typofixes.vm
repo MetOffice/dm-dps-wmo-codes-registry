@@ -1,7 +1,6 @@
-23 lines (16 sloc)  597 Bytes
-#parse("header.vm")
+#parse("structure/_header.vm")
 #set($nav="about")
-#parse("navbar.vm")
+#parse("nav/_navbar.vm")
 
     <div class="jumbotron">
       <div class="container">
@@ -25,4 +24,4 @@ If you notice a typo in the register, for example, you notice ‘velocity’ is 
     ## container will be closed by footer
 
 
-#parse("footer.vm")
+#parse("structure/_footer.vm")
