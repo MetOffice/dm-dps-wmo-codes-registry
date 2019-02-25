@@ -1,0 +1,43 @@
+## Render the "Advanced" menu within the navigation bar
+
+<li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Advanced <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+        #if( ! $subject.isAuthenticated() )
+            <li><a href="$absoluteRoot/ui/login?return=$absoluteRoot/$uri">Login</a></li>
+        #end
+
+        #if( $subject.isAuthenticated() )
+            ## import
+            #if( $register && $lib.reg.isPermitted("RealDelete", $uri) && $uri != "_" )
+                <li><a href="#import-dialog" role="button" data-toggle="modal">Import</a></li>
+                #incdialog( "import" )
+            #end
+
+            ## attach graph
+            #if ( !$register )
+                <li><a href="#annotate-dialog" role="button" data-toggle="modal">Attach graph</a></li>
+                #incdialog( "attach-graph" )
+            #end
+
+            ## redirect
+            <li><a href="$uiroot/actions/create-redirect-page?entity=#linkhref($entity)&return=$root/$uri" role="button" data-toggle="modal">Create redirect</a></li>
+        #end
+
+       <li role="separator" class="divider"></li>
+       #if( $register )
+           #if( $showStatus == "accepted" )
+               <li><a href="$root/$uri?showStatus=valid">Hide deprecated entries</a></li>
+            #else
+               <li><a href="$root/$uri?showStatus=accepted">Show all entries</a></li>
+            #end
+        #end
+       <li><a href="$uiroot/actions/check-page">Check URI</a></li>
+       <li><a href="$uiroot/sparql-form">Sparql</a></li>
+
+        #if( $subject.isAuthenticated() )
+            <li role="separator" class="divider"></li>
+            <li><a  href="#logout-dialog" role="button" data-toggle="modal">Logout</a></li>
+       #end
+   </ul>
+</li>

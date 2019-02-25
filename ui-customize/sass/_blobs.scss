@@ -1,0 +1,21 @@
+
+.result-blob {
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+    /* margin-right: 5px; */
+}
+
+.blob {
+}
+
+.blob-inner {
+    padding: 5px;
+}
+
+.blob-password {
+    background-color:  $password-background;
+}
+
+.blob-oauth {
+    background-color:  $oauth-background;
+}

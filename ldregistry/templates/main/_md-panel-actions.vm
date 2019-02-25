@@ -1,0 +1,40 @@
+## Generate the controls for the main admin actions on an item
+
+    <h3 class="text-center">Actions</h3>
+
+    ## Status setting
+    #if($lib.reg.isPermitted("StatusUpdate", $uri))
+        #startActionSection( "Status" )
+        #action( "set-status" )
+        #if( $register )
+            #action( "set-status-content" )
+        #end
+        #endActionSection()
+    #end
+
+    ## Register and patch
+    #if($register && $lib.reg.isPermitted("Register", $uri)) 
+
+        #startActionSection( "Register" )
+        #action( "register" )
+        #endActionSection()
+        
+        #startActionSection( "Create" )
+        #action( "create-register" )
+        #action( "create-manual" )
+        #endActionSection()
+        
+    #end
+
+    ## Editing
+    #startActionSection( "Edit" )
+        #if($item && $lib.reg.isPermitted("Update", $uri))  
+            #action( "edit" )
+        #end
+        #if($item && $lib.reg.isPermitted("RealDelete", $uri) && $uri != "_")
+            #action( "delete" )
+        #end
+        #if( !$register && $lib.reg.isPermitted("Update", $uri) && $entity.uRI.startsWith( $registry.baseURI ) )
+            #action( "replace" )
+        #end
+    #endActionSection()

@@ -1,8 +1,6 @@
-#parse("header.vm")
 #set($nav="admin")
-#parse("navbar.vm")
+#parse("structure/_preamble.vm")
 
-    <div class="container">
     #if($subject.isAuthenticated())
         <h2>Admin action completed</h2>
         <p>See the Admin menu for further actions available.</p>
@@ -11,5 +9,4 @@
         <h3>Sorry you must be logged in to access this page</h3>
     #end
 
-    ## container will be closed by footer
-#parse("footer.vm")
+#parse("structure/_footer.vm")

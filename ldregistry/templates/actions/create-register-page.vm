@@ -1,0 +1,134 @@
+## Generate registration dialog for creating a register
+## Parameters:
+##    $return the page to return to (or is that just referrer)
+##    $register the relative URI of the target register
+
+#parse("structure/_preamble.vm")
+
+#parse( "actions/_configure-create-register.vm" )
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 modal-page-panel">
+    
+        <div class="modal-page-head">
+            <h3>Create a sub-register in $register</h3>
+        </div>
+
+        <div class="modal-page-body">
+            <div class="ajax-error"></div>
+
+            <form id="create-register-form" action="$register" method="post" data-return="$return">
+                <input type="hidden" name="action" value="register-inline" />
+                <input type="hidden" name="form-type" value="$registry.baseURI/system/form-templates/register" />
+
+                <p>All fields are required.</p>
+
+                <div class="form-group">
+                    <label class="control-label" for="id-input">
+                        Notation (identifier) for the register
+                    </label>
+                    <input class="form-control" type="text" name="id" id="id-input" placeholder="Short identifier (no spaces, only allowed symbols are - and _)" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="label-input">
+                        Label for the register
+                    </label>
+                    <input class="form-control" type="text" name="label" id="label-input" placeholder="Short name" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="description-input">
+                        Description of the register
+                    </label>
+                    <textarea class="form-control" rows="2" name="description" id="description-input" placeholder="Description" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="control-label" for="register-type">
+                        Type of register to create
+                    </label>
+                    <select class="form-control" name="register-type" id="register-type">
+                        #foreach( $option in $createRegisterTypes )
+                            #set( $spec = $createRegisterTypeMap[$option] )
+                            <option value="$option"
+                                #if( $spec.membership )   data-membership="$spec.membership" #end
+                                #if( $spec.imembership )  data-imembership="$spec.imembership" #end
+                                #if( $spec.type )         data-type="$spec.type" #end
+                                #if( $spec.hRoot )        data-hRoot="$spec.hRoot" #end
+                                #if( $spec.hChild )       data-hChild="$spec.hChild" #end
+                                >$spec.label</option>
+                        #end
+                    </select>
+                </div>
+
+                #foreach( $tagindex in $registerTagSets )
+                    #set( $tag = $registerTagSepecs[$tagindex] )
+                    <div class="form-group">
+                        <label class="control-label" for="$tagindex-input"> $tag.label </label>
+                        <select class="form-control" name="$tag.formField" id="$tagindex-input">
+                            <option value="">No value set</option>
+                            #foreach( $option in $lib.reg.listMembers( $tag.register ) )
+                                <option value="$option.entityURI">$option.labels.iterator().next()</option>
+                            #end
+                        </select>
+                    </div>
+                #end
+
+                <button class="btn form-submit">Create register</button>
+            </form>
+
+        </div>
+
+        <div class="modal-page-footer">
+            <a href="$return" class="btn pull-right">Close</a>
+        </div>
+      
+    </div>
+</div>
+<div class="modal-backdrop in"></div>
+
+<script type="text/javascript">
+$(function() {
+    var setOption = function(option, attrName, options, oName) {
+        if ( option.attr( attrName ) ) {
+            options[oName] = option.attr(attrName);
+        }
+    };
+
+    $("#create-register-form").submit( function(){
+        var form = $(this);
+        var returnURL = form.attr('data-return');
+        var option = $("\#register-type option:selected").first();
+        var regType = option.val();
+        var options = {};
+        setOption( option, "data-membership",  options, "membership" );
+        setOption( option, "data-imembership", options, "inv-membership" );
+        setOption( option, "data-type",        options, "type" );
+        setOption( option, "data-hRoot",       options, "hRoot" );
+        setOption( option, "data-hChild",      options, "hChild" );
+
+        form.ajaxSubmit(
+          {
+            data: options,
+            success:
+                function(data, status, xhr){
+                    if (returnURL) {
+                        window.location.href = returnURL;
+                    } else {
+                      location.reload();
+                    }
+                },
+
+            error:
+              function(xhr, status, error){
+                 $(".ajax-error").html("<div class='alert alert-warning'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
+              }
+          }
+        );
+        return false;
+    });
+});
+</script>
+
+#parse("structure/_footer.vm")

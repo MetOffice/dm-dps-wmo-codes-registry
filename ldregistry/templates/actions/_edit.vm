@@ -1,0 +1,5 @@
+## Action to manually edit an entity
+## Input parameters:
+##    $entity   - the resource to edit   (make it $item to edit metadata)
+
+<a href="$uiroot/actions/edit-page?target=$lib.pathEncode($entity.uRI)&return=$root/$uri?tabStatus=adminTab&isRegister=true" role="button" class="btn btn-default btn-sm" >Edit <span class="glyphicon glyphicon-edit"></span></a>

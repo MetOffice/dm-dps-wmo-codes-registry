@@ -1,0 +1,13 @@
+## Render any colour bar and service status information on all pages
+
+    <div class='o-top-colour-bar'></div>
+    <div class='o-service-phase'>
+        <span class='c-service-phase-beta-badge'>
+            beta
+        </span>
+        This is a trial service &ndash; your
+        <a href='mailto:TBD'>
+            feedback
+        </a>
+        will help us to improve it.
+    </div>

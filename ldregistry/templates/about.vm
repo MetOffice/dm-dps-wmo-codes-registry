@@ -1,7 +1,5 @@
-#parse("header.vm")
 #set($nav="about")
-#parse("navbar.vm")
-
+#parse("structure/_preamble.vm")
     <div class="jumbotron">
       <div class="container">
         <h1>$registry.configExtensions.registryName</h1>
@@ -37,4 +35,4 @@ WMO Manuals on Codes.</p>
       </div>
     
 
-#parse("footer.vm")
+#parse("structure/_footer.vm")

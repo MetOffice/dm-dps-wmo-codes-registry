@@ -1,0 +1,30 @@
+## Generate registration dialog for creating a forwarding record
+## Parameters:
+##    $return the page to return to (or is that just referrer)
+##    $entity the relative URI of the URL to redirect
+
+#parse("structure/_preamble.vm")
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 modal-page-panel">
+    
+        <div class="modal-page-head">
+            <h3>Create an http forwarding record for $entity</h3>
+        </div>
+
+        <div class="modal-page-body">
+            <div class="ajax-error"></div>
+            #set( $spec=$lib.reg.getResource("/system/form-templates/forward") )
+            #parse( "actions/_form-for.vm" )
+        </div>
+
+
+        <div class="modal-page-footer">
+            <a href="$return" class="btn pull-right">Close</a>
+        </div>
+      
+    </div>
+</div>
+<div class="modal-backdrop in"></div>
+
+#parse("structure/_footer.vm")

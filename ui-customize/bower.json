@@ -1,0 +1,17 @@
+{
+  "name": "reg-style",
+  "authors": [
+    "Epimorphics Ltd"
+  ],
+  "description": "Default registry styling",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "dependencies": {
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.6"
+  }
+}

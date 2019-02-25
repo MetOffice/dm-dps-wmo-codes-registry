@@ -1,0 +1,4 @@
+## Render button to replace an item (equivalent to PUT = update)
+
+<a href="#replace-dialog" role="button" class="btn btn-default btn-sm" data-toggle="modal">Replace <span class="glyphicon glyphicon-upload"></span></a>
+#incdialog( "replace" )

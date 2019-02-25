@@ -1,11 +1,13 @@
+#set($root=$registry.rootPath)
+
 #set($response=$registry.perform("Read","$uri?_view=version_list", $requestor))
 #set($target="$registry.baseURI/$uri")
 
 #if($response.status == 404)
-  #parse("not-found.vm")
+  #parse("main/_not-found.vm")
 
 #elseif($response.status >= 500)
-  #parse("internal-error.vm")
+  #parse("main/_internal-error.vm")
 
 #else
   #set($model=$response.entity)
@@ -14,6 +16,7 @@
                        OPTIONAL {?version version:interval [time:hasEnd [time:inXSDDateTime ?to]].}} ORDER BY DESC(?vi)"))
 
   <h3 class="text-center">Historical versions available</h3>
+
 
   <table class="table table-striped table-condensed">
     <thead>

@@ -14,8 +14,7 @@
 #end
 
 #set($pageTitle="Search: $lib.escapeHtml($query)")
-#parse("header.vm")
-#parse("navbar.vm")
+#parse( "structure/_preamble.vm" )
 
 #set($target='<nullsearch>')
 #if($query && !$query.trim().isEmpty()) #set($target=$lib.reg.asLucenceQuery($query.trim())) #end
@@ -34,7 +33,6 @@
   #set($items=$qr.items.asList())
   #set($pageres=$qr.page)
 
-  <div class="container">
     <h3>Search results for: $lib.escapeHtml($query)</h3>
 
     <table class="table table-striped table-bordered">
@@ -68,11 +66,11 @@
 
 ##    #set($qparam="&query=$lib.pathEncode($query)")
     #set($qparam="&query=$lib.escapeHtml($query)")
-    #parse("paging.vm")
+    #parse( "main/_paging.vm" )
 
 #else
-  #parse("internal-error.vm")
+  #parse("main/_internal-error.vm")
 #end
 
 
-#parse("footer.vm")
+#parse("structure/_footer.vm")

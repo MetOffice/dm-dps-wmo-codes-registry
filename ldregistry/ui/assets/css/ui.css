@@ -1,0 +1,82 @@
+/**
+ * Style adjustments specific to current registry UI pages.
+ * The general registry L&F styling is based on bootstrap 3
+ * with extensions and modifications created using the sass
+ * scripts in the ui-customize arae. 
+ */
+
+body {
+        min-height: 600px;
+}
+
+/* General table tweaks - possible should move to ui-customize */
+.table {
+   margin-bottom: 0em;
+}
+
+table tr td table {
+   margin-bottom: 0em;
+}
+
+td.align-right {
+    text-align: right;
+}
+
+/* Actions tab on metadata pane */
+.action-section {
+    margin-bottom: 10px;
+}
+
+/* Table of download formats */
+.formats {
+    border: 2px solid lightgrey;
+    margin-bottom: 10px;
+    padding: 5px;
+   font-size: 80%;
+   line-spacing: 80%;
+}
+
+.formats dl {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.formats table tr td {
+    vertical-align: middle;
+}
+
+.tab-content {
+    border-left: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding:  5px;
+ }
+
+#metadata-content {
+    border-top: 1px solid lightgrey;
+}
+
+/* Sizes for some specific modals */
+#registration-dialog {
+    width: 700px;
+    top: 5%;
+    left: 40%;
+}
+
+#registration-body {
+   min-height: 500px;
+   min-width: 600px;
+}
+
+
+.ui-edit-main {
+    min-width: 350px;
+}
+
+#uriField {
+    width: 100%;
+}
+
+.langTable .langValueColumn {
+    padding-left: 5px;
+}

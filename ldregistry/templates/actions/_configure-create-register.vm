@@ -1,0 +1,18 @@
+## Configure the register types available in create-register action
+
+#set( $createRegisterTypes = [ "default", "scheme", "tree", "collection", "ontology" ] )
+#set( $createRegisterTypeMap = {
+    "default"    : { "label" : "Default simple register" },
+    "scheme"     : { "label" : "Concept scheme", "imembership" : "skos:inScheme", "type" : "skos:ConceptScheme" },
+    "tree"       : { "label" : "Hierarchical scheme (tree view)", "imembership" : "skos:inScheme", "type" : "skos:ConceptScheme", "hChild" : "skos:narrower", "hRoot" :  "skos:topConceptOf" },
+    "collection" : { "label" : "Simple concept collection", "membership" : "skos:member", "type" : "skos:Collection" },
+    "ontology"   : { "label" : "Ontology", "imembership" : "rdfs:isDefinedBy", "type" : "owl:Ontology" }
+} )
+
+#set( $registerTagSets = [ "category", "owner", "entity", "licence" ] )
+#set( $registerTagSepecs = {
+    "category" : { "label" : "Category tag for register", "register" : "/structure/category", "formField" : "category"},
+    "owner"    : { "label" : "Owner of register", "register" : "/structure/org", "formField" : "owner"},
+    "entity"   : { "label" : "Type of entities in register", "register" : "/structure/entity-type", "formField" : "entity"},
+    "licence"   : { "label" : "Licence that applies to the regster contents", "register" : "/structure/licence", "formField" : "licence"}
+} )

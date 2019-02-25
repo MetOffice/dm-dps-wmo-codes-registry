@@ -1,0 +1,68 @@
+## Generate registration dialog for creating a manual entry in a register
+## Parameters:
+##    $return the page to return to (or is that just referrer)
+##    $register the relative URI of the target register
+
+#parse("structure/_preamble.vm")
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 modal-page-panel">
+    
+        <div class="modal-page-head">
+            <h3>Create a new entry in in $register</h3>
+        </div>
+
+        <div class="modal-page-body">
+            <select class="form-control" id="form-chooser">
+                <option>Choose a form:</option>
+                #foreach($form in $lib.reg.listMembers("/system/form-templates"))
+                    #if(!$form.entityURI.endsWith("/forward") && !$form.entityURI.endsWith("/register"))
+                        #set($label = $form.labels.iterator().next().lexicalForm)
+                        <option data-target="#form-$label">$label</option>
+                    #end
+                #end
+            </select>
+
+            #foreach($form in $lib.reg.listMembers("/system/form-templates"))
+                #if(!$form.entityURI.endsWith("/forward") && !$form.entityURI.endsWith("/register"))
+                    #set($label = $form.labels.iterator().next().lexicalForm)
+                    <div class="hidden form-choice" id="form-$label">
+                        #set($spec=$lib.reg.getResource($form.entityURI))
+                        #parse( "actions/_form-for.vm" )
+                        <div class="ajax-error"></div>
+                    </div>
+                #end
+            #end
+
+        </div>
+
+        <div class="modal-page-footer">
+            <a href="$return" class="btn pull-right">Close</a>
+        </div>
+      
+    </div>
+</div>
+<div class="modal-backdrop in"></div>
+
+
+   <script type="text/javascript">
+    $(function() {
+
+       $("#form-chooser").change(function(event){
+         $(".form-choice").each(function(){
+           var form = $(this);
+           if (!form.hasClass("hidden")) {
+              form.addClass("hidden")
+           }
+         });
+         var target = event.target;
+         var option = target.options[target.selectedIndex];
+         var form = $(option).attr('data-target');
+         $(form).removeClass("hidden");
+         return false;
+       });
+    });
+
+   </script>
+   
+#parse("structure/_footer.vm")

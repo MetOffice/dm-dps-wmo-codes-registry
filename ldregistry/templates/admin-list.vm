@@ -1,3 +1,4 @@
+## Render a list of administrators - called via security api
 <table class="table table-bordered table-condensed">
   <tbody>
   #foreach($user in $admins)

@@ -1,0 +1,30 @@
+
+.modal-body.update {
+    max-height: 650px;
+}
+
+/* Modal pages */
+.modal-page-panel {
+    z-index: 1050;
+    background-color: white;
+    position: relative;
+}
+
+.modal-page-head {
+    padding: 5px 10px 5px 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-page-body {
+    padding: 5px 10px 5px 10px;
+}
+
+.modal-page-footer {
+    padding: 5px 10px 5px 10px;
+    background-color: $reg-shade;
+    border-top: 1px solid $reg-border;
+    box-shadow: inset 0 1px 0 white;
+    -webkit-box-shadow: inset 0 1px 0 white;
+    -moz-box-shadow: inset 0 1px 0 white;
+    min-height: 30px;
+}

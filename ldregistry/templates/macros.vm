@@ -1,12 +1,54 @@
 ## Global macros
 
+##
+## Support for actions UI elements
+##
+
+#macro( startActionSection $section )
+    #set( $actionSectionState = { "section" : "$section", "started" : false } )
+#end
+
+#macro( action $action )
+    #if( $actionSectionState.section && ! $actionSectionState.started )
+        #set( $ignore = $actionSectionState.put("started", true) )
+        <div class="row action-section">
+            <div class=" col-md-offset-1 col-md-2">
+                <strong>$actionSectionState.section</strong>:
+            </div>
+            <div class="col-md-9">
+    #end
+    #parse( "actions/_${action}.vm" )
+#end
+
+#macro( endActionSection )
+    #if( $actionSectionState.section && $actionSectionState.started )
+            </div>
+        </div>
+    #end
+#end
+
+#macro( incdialog $name )
+   #if( ! $dialogs ) #set( $dialogs = {} ) #end
+   #set( $ignore = $dialogs.put( $name, true) )
+#end
+
+#macro( renderDialogs )
+   #foreach( $dialog in $dialogs.keySet() )
+       #parse( "actions/_${dialog}-dialog.vm" )
+   #end
+#end
+
+##
+## General render macros
+##
+
 ## Show status value as a suitably coloured blob
 #macro(showstatus $status)
   <span class="label label-$lib.reg.asStatus($status).presentation">$lib.reg.asStatus($status)</span>
 #end
 
 ## Determine the href value to use in a link to the given resource, reference URIs go external
-#macro(linkhref $res)#if($res.uRI.startsWith($registry.baseURI))$root$res.uRI.substring($registry.baseURI.length())#else$res.uRI#end#end
+#macro(linkhref $res)#if($res.uRI.startsWith($registry.baseURI))$root$lib.reg.xssCleanURI($res.uRI.substring($registry.baseURI.length()))#else$lib.reg.xssCleanURI($res.uRI)#end#end
 
 ## Determine the href value to use in a link to the given resource, reference URIs go internal
 #macro(linkhrefInt $res)#if($res.uRI.startsWith($registry.baseURI))${root}$res.uRI.substring($registry.baseURI.length())#else${root}/?entity=$lib.pathEncode($res.getURI())#end#end
@@ -48,11 +90,16 @@
         #end
 ##        #linkfor($v)
       #elseif ($lib.isDatetime($v))
-        $lib.printDatetime($v)
+        #if( $v.datatype == "xsd:date" )
+          $lib.printDatetime("d MMM yyyy", $v)
+        #else
+          $lib.printDatetime($v)
+        #end
       #else
         $lib.escapeHtml($v.lexicalForm, 1000)
       #end
 #end
+
 
 ## Display a description for a resource if one is available, otherwise show the default (which can be empty)
 #macro(description $r $default)
@@ -90,33 +137,52 @@
   #end
 #end
 
-## Display a set of property/value pairs in the RDF browser
-#macro(restable $res $classes)
-  <table class="table $classes">
-##    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+#macro(langtable $values)
+  <table class="langTable">
     <tbody>
-      #foreach($pv in $res.listProperties())
+      #foreach($v in $values)
         <tr>
-          <td class="align-right span2"> <strong title="$pv.getProp().uRI">$pv.getProp().name</strong> </td>
-          <td>
-            #foreach($v in $pv.getValues())
-              #if($v.isList())
-                  (#foreach($e in $v.asList())#resentry($e)#if( $foreach.hasNext ), #end#end)
-              #elseif($v.isAnon())
-                #restable($v)
-              #else
-                #resentry($v)
-              #end
-              #if( $foreach.hasNext )|#end
-              #if( $foreach.count > 100 ) ... #break #end
-            #end
-            <br />
+          <td align="right">
+            <strong>$v.language</strong>
+          </td>
+          <td align="left" class="langValueColumn">
+            #render($v)
           </td>
         </tr>
       #end
     </tbody>
   </table>
+#end
 
+## Display a set of property/value pairs in the RDF browser
+#macro(restable $res $classes)
+  <table class="table $classes">
+    <tbody>
+      #foreach($pv in $res.listProperties())
+        <tr>
+          <td class="align-right span2"> <strong title="$pv.getProp().uRI">$pv.getProp().name</strong> </td>
+          <td>
+            #if($pv.isMultilingual())
+              #langtable($pv.getValues())
+            #else
+              #foreach($v in $pv.getValues())
+                #if($v.isList())
+                    (#foreach($e in $v.asList())#resentry($e)#if( $foreach.hasNext ), #end#end)
+                #elseif($v.isAnon())
+                  #restable($v)
+                #else
+                  #resentry($v)
+                #end
+                #if( $foreach.hasNext )|#end
+                #if( $foreach.count > 100 ) ... #break #end
+              #end
+              <br />
+            #end
+          </td>
+        </tr>
+      #end
+    </tbody>
+  </table>
 #end
 
 ## Conditional row in a metadata table
@@ -201,4 +267,24 @@
     <h4>Root: $root.uRI</h4>
     #restable($root, "table-condensed table-bordered")
   #end
+#end
+
+#macro(oauthLogin $provider, $return)
+  <form class="form-horizontal" action="$root/system/security/loginoa" method="post">
+	<div class="input-group space-above">
+	  <input type="hidden" name="provider" value="$provider.name" />
+	  <input type="hidden" name="return" value="$return" />
+	  <input type="submit" value="Login via $provider.label" class="btn btn-primary" type="button" />
+	</div><!-- /input-group -->
+  </form>
+#end
+
+#macro(oauthRegister $provider, $return)
+  <form class="form-horizontal" action="$root/system/security/registeroa" method="post">
+	<div class="input-group space-above">
+	  <input type="hidden" name="provider" value="$provider.name" />
+	  <input type="hidden" name="return" value="$return" />
+	  <input type="submit" value="Create account via $provider.label" class="btn btn-primary" type="button" />
+	</div>
+  </form>
 #end
