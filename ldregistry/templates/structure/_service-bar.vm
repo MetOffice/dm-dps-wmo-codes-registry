@@ -3,9 +3,9 @@
     <div class='o-top-colour-bar'></div>
     <div class='o-service-phase'>
         <span class='c-service-phase-beta-badge'>
-            beta
+            test
         </span>
-        This is a trial service &ndash; your
+        This is a test service &ndash; your
         <a href='mailto:TBD'>
             feedback
         </a>
