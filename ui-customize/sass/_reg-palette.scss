@@ -69,7 +69,7 @@ $highlight-colour: $grey-4;       // Table stripes etc.
 $page-colour: $white;             // The page
 $alpha-colour: $pink;             // Alpha badges and banners
 $beta-colour: $orange;            // Beta badges and banners
-$banner-text-colour: #000;        // Text colour for Alpha & Beta banners
+$banner-text-colour: $white;        // Text colour for Alpha & Beta banners
 $error-colour: $mellow-red;       // Error text and border colour
 $error-background: #fef7f7;       // Error background colour
 $password-background: #d9f0f9;    // Password entry or update blobs
@@ -81,10 +81,10 @@ $reg-shade: #f5f5f5;              // Light background for e.g. modal footers
 $reg-border: #ddd;                // Border colour that works with background shade
 
 // functional colours
-$top-bar-bg-colour: $black;
-$top-bar-link-colour: $white;
-$top-bar-link-underline-colour: $white;
-$top-bar-link-active-colour: $white;
+$top-bar-bg-colour: $white;
+$top-bar-link-colour: $light-blue;
+$top-bar-link-underline-colour: $light-blue;
+$top-bar-link-active-colour: $light-blue;
 $top-bar-link-active-underline-colour: $reg-highlight;
 
 $phase-bar-top-border: $reg-highlight;

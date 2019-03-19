@@ -5990,7 +5990,7 @@ legend {
   margin-bottom: 2em; }
 
 .o-navbar-reg {
-  background-color: #0b0c0c;
+  background-color: #fff;
   margin-bottom: 0 !important; }
   .o-navbar-reg .container {
     margin-bottom: 0.75em; }
@@ -6006,18 +6006,18 @@ legend {
     padding: 5px 0 0 !important;
     font-weight: bold; }
   .o-navbar-reg a, .o-navbar-reg a:focus, .o-navbar-reg a:hover, .o-navbar-reg li a:focus, .o-navbar-reg li a:hover, .o-navbar-reg .c-navbar-menu-item {
-    background-color: #0b0c0c !important;
-    color: #fff; }
+    background-color: #fff !important;
+    color: #2b8cc4; }
   .o-navbar-reg a:hover {
     text-decoration: none;
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #2b8cc4;
     margin-bottom: -3px; }
   .o-navbar-reg li.active a, .o-navbar-reg li.active .c-navbar-menu-item {
-    color: #fff;
+    color: #2b8cc4;
     border-bottom: 3px solid #005ea5;
     margin-bottom: -3px; }
   .o-navbar-reg li.active a:hover {
-    border-bottom-color: #fff; }
+    border-bottom-color: #2b8cc4; }
   .o-navbar-reg a.navbar-brand {
     margin-left: 0 !important; }
   .o-navbar-reg a.navbar-brand:hover {
@@ -6049,9 +6049,9 @@ legend {
   background-color: rgba(11, 12, 12, 0.9);
   z-index: 1; }
   .navbar-collapse.in a {
-    color: #fff; }
+    color: #2b8cc4; }
   .navbar-collapse.in a:hover {
-    color: #fff; }
+    color: #2b8cc4; }
 
 .navbar-collapse.in, .navbar-collapse.collapsing {
   text-align: right; }
