@@ -13,7 +13,7 @@
         </div>
       </div>
 
-      <div class="col-sm-6" text-align="right">
+      <div class="pull-right">
         <p class="c-footer-epimorphics">
           <span class="i18n">Design and development by</span>
           <a href="http://www.epimorphics.com">Epimorphics</a>.
