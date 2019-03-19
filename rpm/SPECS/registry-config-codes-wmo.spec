@@ -1,6 +1,6 @@
 Name:		registry-config-codes-wmo
 Version:	2.0
-Release:	11
+Release:	13
 
 Summary:	Registry-core linked data registry
 

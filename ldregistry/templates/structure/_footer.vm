@@ -6,20 +6,14 @@
       <div class="col-sm-6">
         <div class="">
           <div class="c-footer-credits">
-            <h4 class="">Support</h4>
             <p>
-                Support and contact information goes here.
+		<a href="https://github.com/UKGovLD/registry-core/wiki/Api#content-negotiation">Content negotiation</a>  is supported.
             </p>
           </div>
         </div>
       </div>
 
-      <div class="col-sm-6">
-        <h4>About this page</h4>
-        <p>
-            Unless otherwise stated, all content is available under the
-          <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a>
-        </p>
+      <div class="col-sm-6" text-align="right">
         <p class="c-footer-epimorphics">
           <span class="i18n">Design and development by</span>
           <a href="http://www.epimorphics.com">Epimorphics</a>.
