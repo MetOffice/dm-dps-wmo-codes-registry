@@ -1,6 +1,6 @@
 Name:		registry-config-codes-wmo
 Version:	2.0
-Release:	16
+Release:	19
 
 Summary:	Registry-core linked data registry
 
@@ -26,7 +26,6 @@ Configuration of codes-wmo ukgov-ld linked data registry
 %install
 rm -rf $RPM_BUILD_ROOT
 install -D etc/sudoers.d/reg-sudoers.conf $RPM_BUILD_ROOT/etc/sudoers.d/reg-sudoers.conf
-install -D etc/nginx/conf.d/reg-nginx.conf $RPM_BUILD_ROOT/etc/nginx/conf.d/reg-nginx.conf
 mkdir -p $RPM_BUILD_ROOT/opt/
 cp -pr opt/ldregistry $RPM_BUILD_ROOT/opt/ldregistry
 install -D var/lib/tomcat/webapps/ROOT.war $RPM_BUILD_ROOT/var/lib/tomcat/webapps/ROOT.war
@@ -56,7 +55,7 @@ do
 done
 
 %post
-ln -s /opt/oauth /opt/ldregistry/config/oauth2
+ln -s /opt/oauth/provider/github.properties /opt/ldregistry/config/oauth2/provider/github.properties
 service tomcat start
 
 %clean
@@ -66,7 +65,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 /etc/sudoers.d/reg-sudoers.conf
-/etc/nginx/conf.d/reg-nginx.conf
 %defattr(775,root,tomcat,775)
 /opt/ldregistry
 /var/lib/tomcat/webapps/ROOT.war

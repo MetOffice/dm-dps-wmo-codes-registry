@@ -4,7 +4,7 @@
     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Advanced <b class="caret"></b></a>
     <ul class="dropdown-menu">
         #if( ! $subject.isAuthenticated() )
-            <li><a href="$absoluteRoot/ui/login?return=$absoluteRoot/$uri">Login</a></li>
+            <li><a href="$absoluteRoot/ui/login?return=/$uri">Login</a></li>
         #end
 
         #if( $subject.isAuthenticated() )
