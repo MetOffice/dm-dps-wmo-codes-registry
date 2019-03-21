@@ -1,0 +1,4 @@
+## Render button to set the status of an item
+
+<a href="#status-dialog-item" role="button" class="btn btn-default btn-sm" data-toggle="modal">Set status</a>
+#incdialog( "set-status" )

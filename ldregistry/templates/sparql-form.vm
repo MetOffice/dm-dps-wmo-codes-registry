@@ -1,73 +1,14 @@
 #set($pageTitle="Registry sparql query")
 #set($extraCSS="qonsole.css,codemirror.css")
-#set($extraCSSraw="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css")
-#parse("header.vm")
-
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    <script src="js/lib/sprintf-0.7-beta1.js"></script>
-    <script src="js/lib/underscore.js"></script>
-
-    <script src="js/lib/codemirror.js"></script>
-    <script src="js/lib/foldcode.js"></script>
-    <script src="js/lib/foldgutter.js"></script>
-    <script src="js/lib/brace-fold.js"></script>
-    <script src="js/lib/xml-fold.js"></script>
-    <script src="js/lib/comment-fold.js"></script>
-    <script src="js/lib/javascript.js"></script>
-    <script src="js/lib/xml.js"></script>
-    <script src="js/lib/sparql.js"></script>
-    <script src="js/app/qonsole.js"></script>
-
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.9.4/jquery.dataTables.min.js"></script>
+#set($nav="sparql")
+#parse("structure/_preamble.vm")
 
     <!-- This link provides CORS support in IE8+ -->
     <!--[if lt IE 10]>
       <script src="js/lib/jquery.xdomainrequest.js"></script>
     <![endif]-->
 
-    <script type="text/javascript">
-      // configuration
-      var config = {
-        endpoints: {
-          "default": "$root/system/query",
-        },
-        prefixes: {
-          "rdf":      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-          "rdfs":     "http://www.w3.org/2000/01/rdf-schema#",
-          "owl":      "http://www.w3.org/2002/07/owl#",
-          "xsd":      "http://www.w3.org/2001/XMLSchema#",
-
-          "dct":  "http://purl.org/dc/terms/",
-          "foaf": "http://xmlns.com/foaf/0.1/",
-          "skos": "http://www.w3.org/2004/02/skos/core#",
-          "version":  "http://purl.org/linked-data/version#",
-          "ldp":  "http://www.w3.org/ns/ldp#",
-          "time": "http://www.w3.org/2006/time#",
-          "reg":  "http://purl.org/linked-data/registry#",
-          "ui":   "http://purl.org/linked-data/registry-ui#",
-          "qb":   "http://purl.org/linked-data/cube#",
-          "org":  "http://www.w3.org/ns/org#"
-        },
-        queries: [
-          { "name": "List all registers",
-            "query": "select *\nwhere {\n" +
-                     "  ?register a reg:Register; version:currentVersion ?regVer.\n}"
-          } ,
-          { "name": "List items in a register",
-            "query": "select *\nwhere {\n" +
-                     "  ?item reg:register <${registry.baseURI}/system/prefixes>;\n" + 
-                     "        version:currentVersion ?itemVer.\n}"
-          }
-        ]
-        };
-
-      $(function(){qonsole.init( config );});
-    </script>
-
-#set($nav="sparql")
-#parse("navbar.vm")
-
-    <div class="container qonsole">
+    <div class="qonsole">
       <div class="col-md-12 well">
         <h2 class="">Example queries</h2>
         <ul class="list-inline examples">
@@ -91,24 +32,15 @@
         </div>
         <div class="query-chrome">
           <form class="form-inline" role="form">
-            <div class="form-group">
-              <label for="sparqlEndpoint"></label>
-              <div class="dropdown ">
-                <a data-toggle="dropdown" class="btn btn-custom2" href="#">
-                  Select endpoint <i class="icon-collapse"></i>
-                </a>
-                <ul class="dropdown-menu endpoints" role="menu" aria-labelledby="dropdownMenu1">
-                </ul>
-              </div>
-            </div>
+
             <div class="form-group">
               <label for="sparqlEndpoint">SPARQL endpoint</label>
               <input type="text" class="form-control" id="sparqlEndpoint" />
             </div>
             <div class="form-group">
               <label for="displayFormat">Results</label>
-              <div class="dropdown ">
-                <a data-toggle="dropdown" class="btn btn-custom2 display-format" href="#" data-value="tsv">
+              <div class="dropdown" >
+                <a data-toggle="dropdown" class="btn btn-custom2 display-format" href="#" data-value="tsv" id="displayFormat">
                   <span>table</span> <i class="icon-collapse"></i>
                 </a>
                 <ul class="dropdown-menu formats  " role="menu" aria-labelledby="dropdownMenu2">
@@ -152,10 +84,6 @@
 
       <div class="row clearfix"></div>
 
-      <footer>
-        <p class="text-center">&copy; <a href="http://www.epimorphics.com">Epimorphics Ltd</a> 2012&ndash;2013.
-          Freely re-usable under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache Open Source license</a>.</p>
-      </footer>
     </div><!-- .container-->
 
     <!-- modal dialogue -->
@@ -195,5 +123,5 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-  </body>
-</html>
+#set($extraJS="qlib/sprintf-0.7-beta1.js,qlib/underscore.js,qlib/codemirror.js,qlib/foldcode.js,qlib/foldgutter.js,qlib/brace-fold.js,qlib/xml-fold.js,qlib/comment-fold.js,qlib/javascript.js,qlib/xml.js,qlib/sparql.js,app/qonsole.js,app/qconfig.js")
+#parse("structure/_footer.vm")

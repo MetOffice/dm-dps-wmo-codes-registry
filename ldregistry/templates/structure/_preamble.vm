@@ -1,0 +1,10 @@
+## Structure for start of all pages.
+##    - standard head elements
+##    - navigation bar
+##    - starts main container div, which is left optn
+##    - includes any serive status bar element below the nav
+
+#parse("structure/_header.vm")
+#parse("nav/_navbar.vm")
+<div class='container' id="main">
+#parse("structure/_service-bar.vm")

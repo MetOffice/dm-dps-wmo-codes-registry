@@ -1,0 +1,82 @@
+## Parameters:
+##    $return the page to return to (or is that just referrer)
+
+#set($nav="admin")
+#parse("structure/_preamble.vm")
+
+  <div class="row">
+    <div class="col-md-12 modal-page-panel">
+      <div class="modal-page-head">
+        <h1>Register a new user</h1>
+      </div>
+      <div class="modal-page-body">
+ 
+
+        <div class="row space-above">
+        
+          <div class="col-md-offset-2 col-md-5 blob-password">
+            <div class="blob-inner">
+              <h2>User details</h2>
+              #if( ! $registry.configExtensions.suppressPasswordLogin)
+              <div class="row">
+                <form class="form-horizontal form-validated" role="form"  action="$root/system/security/pwregisterOther" method="post" autocomplete="off">
+                  <div class="form-group">
+                    <label for="userid2" class="col-md-offset-1 col-md-2 control-label">Username</label>
+                    <div class="col-md-8">
+                      <input type="text" class="form-control" id="userid2" name="userid" placeholder="User id e.g. email address" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="name2" class="col-md-offset-1 col-md-2 control-label">Display name</label>
+                    <div class="col-md-8">
+                      <input type="text" class="form-control" id="name2" name="name" placeholder="Display name or nickname" required>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password1" class="col-md-offset-1 col-md-2 control-label">Password</label>
+                    <div class="col-md-8">
+                      <input type="password" class="form-control" id="password1" minlength=8 name="password" placeholder="Password" required pwcomplex="true">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="password2" class="col-md-offset-1 col-md-2 control-label">Repeat password</label>
+                    <div class="col-md-8">
+                      <input type="password" class="form-control" id="password2" name="password2" placeholder="Password" required equalTo="#password1">
+                    </div>
+                  </div>
+                  <input type="hidden" name="return" value="$return" />
+                  <div class="form-group">
+                    <div class="col-md-offset-1 col-md-10">
+                      <button type="submit" class="btn btn-default">Create account</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              #end
+            </div>
+          </div>        
+        </div>
+        
+        <div class="row space-above">
+          <div class="col-md-12">
+            <p>If you register or login this site will use cookies to record your
+             preferred OpenID provider (if any) and to record the ID you are logged in with for this session.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-page-footer">
+        <div class="row">
+          <div class="col-md-offset-10 col-md-1">
+            <a href="$return" class="btn">Close</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal-backdrop in"></div>
+
+#set( $extraJS = "jquery.validate.min.js,validate-password.js" )
+#parse("structure/_footer.vm")
+

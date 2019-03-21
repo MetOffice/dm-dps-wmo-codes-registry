@@ -1,0 +1,31 @@
+## Dialog for uploading a replacement for an item
+
+#set( $euri = $entity.uRI.substring($registry.baseURI.length()) )
+#set( $euri = $euri.replaceAll("^/", "") )
+
+<div id="replace-dialog" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3>Replace entry with new version</h3>
+            </div>
+            <div id="replace-dialog-body" class="modal-body">
+                <form class="ajax-form" id="replace-form" action="$root/$euri" method="post" enctype="multipart/form-data" data-action="$root/$uri">
+                    <div class="form-group">
+                        <label for="replace-chooser">
+                            Choose file containing replacement entry
+                        </label>
+                        <input id="replace-chooser" class="form-control" type="file" name="file" multiple />
+                    </div>
+                    <input type="hidden" name="action" value="update" />
+                    <button class="btn form-submit">Replace</button>
+                </form>
+                <div class="ajax-error"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

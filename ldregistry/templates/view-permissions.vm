@@ -1,8 +1,6 @@
-#parse("header.vm")
 #set($nav="admin")
-#parse("navbar.vm")
+#parse("structure/_preamble.vm")
 
-    <div class="container">
     #if($subject.isAuthenticated())
         <h2>Permissions</h2>
         #if($subject.hasRole("administrator"))
@@ -21,11 +19,12 @@
                 #end
               </tbody>
             </table>
+        #else
+            <p>No explicit permissions granted</p>
         #end
 
     #else
         <h3>Sorry you must be logged in to access this page</h3>
     #end
 
-    ## container will be closed by footer
-#parse("footer.vm")
+#parse("structure/_footer.vm")

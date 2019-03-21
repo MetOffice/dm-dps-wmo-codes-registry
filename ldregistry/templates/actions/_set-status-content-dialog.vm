@@ -1,0 +1,8 @@
+## Render dialog to the set the content status of a register
+## Input parameters:
+##     $register - the register whose content to set
+##     statusContentsSample - representative member from which to deduce legal status settings
+
+#if ( $statusContentsSample )
+    #statusSet("status-dialog-content", "Set status of register contents to ...", $statusContentsSample, $register)
+#end

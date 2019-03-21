@@ -1,0 +1,28 @@
+## Dialog for importing an exported sub-tree
+<div id="import-dialog" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3>Import a replacement register tree</h3>
+            </div>
+            <div id="import-dialog-status-body" class="modal-body">
+              #set($target="$root/$uri.replace('/_','/')")
+                <form class="ajax-form" id="import-form" action="$target" method="post" enctype="multipart/form-data" data-action="$target">
+                    <div class="form-group">
+                        <label for="import-chooser">
+                            Choose import file to upload:
+                        </label>
+                        <input id="import-chooser" class="form-control" type="file" name="file" multiple />
+                    </div>
+                    <input type="hidden" name="action" value="import" />
+                    <button class="btn form-submit">import</button>
+                </form>
+                <div class="ajax-error"></div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

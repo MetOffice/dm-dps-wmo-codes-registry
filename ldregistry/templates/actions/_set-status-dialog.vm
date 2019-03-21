@@ -1,0 +1,32 @@
+## Inject the dialog for setting status of the current item
+## Input parameters:
+##         $item the item to set
+
+#statusSet("status-dialog-item", "Set status of $entity.name to ...", $item, $item)
+
+<script type="text/javascript">
+    $(function() {
+
+      $(".set-status").click(function(event) {
+        var action = $(event.target).attr('data-target') + "?update&status=" + $(event.target).attr('data-status');
+        var argid = $(event.target).attr('data-arg');
+        if (argid) {
+            action += "&successor=" + $(argid).val();
+        }
+        $.ajax(action,{
+            type : "POST",
+            success :
+              function(data, status, xhr){
+                $("#status-dialog").modal("hide");
+                location.reload();
+              },
+            error :
+              function(xhr, status, error){
+               $(".status-error").html("<div class='alert alert-warning'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + status + "</div>");
+              }
+        });
+      });
+
+    });
+
+</script>

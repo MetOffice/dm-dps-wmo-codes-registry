@@ -1,0 +1,98 @@
+#set($nav="admin")
+#parse("structure/_preamble.vm")
+
+#macro(administatorForm $user $add)
+    <form class="form-inline" action="$root/system/security/setrole" method="post">
+        <input type="hidden" name="role" value="#if($add)administrator#end" >
+        <input type="hidden" name="id" value="$user.openid" >
+        <input type="hidden" name="return" value="$absoluteRoot/$uri" >
+        #if( $add )
+            <input class="btn btn-sm " type="submit" value="Make admin" >  
+        #else
+            Administrator <button type="submit" class="btn btn-sm">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        #end
+    </form>
+#end
+
+    #if($subject.isAuthenticated() && $subject.hasRole("administrator"))
+        <h1>Manage users</h1>
+        #set( $admins = $registry.userStore.listAdminUsers() )
+        <table class="table table-striped table-bordered datatable">
+            <thead>
+                <tr>
+                    <th>Display Name</th>
+                    <th>Username</th>
+                    <th>Administrator?</th>
+                    <th>Actions</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+              #foreach( $user in $registry.userStore.listUsers("") )
+                #set($isAdmin = $admins.contains($user))
+                <tr>
+                    <td>$user.name</td>
+                    <td>$user.openid</td>
+                    <td>
+                        #if( $isAdmin )
+                          #if( $admins.size() > 1)
+                            <form class="form-inline" action="$root/system/security/setrole" method="post">
+                                <input type="hidden" name="role" value="" >
+                                <input type="hidden" name="id" value="$user.openid" >
+                                <input type="hidden" name="return" value="$absoluteRoot/$uri" >
+                                <span class="text-nowrap">Administrator 
+                                    <button type="submit" class="btn btn-sm">
+                                        <i class="fa fa-times-circle"></i>
+                                    </button>
+                                </span>
+                            </form>
+                          #else
+                            Administrator
+                          #end
+                        #elseif( $user.openid != "http://localhost/anon" )
+                            <form class="form-inline" action="$root/system/security/setrole" method="post">
+                                <input type="hidden" name="role" value="administrator" >
+                                <input type="hidden" name="id" value="$user.openid" >
+                                <input type="hidden" name="return" value="$absoluteRoot/$uri" >
+                                <input class="btn btn-sm btn-default" type="submit" value="Make admin" >  
+                            </form>
+                        #end
+                    </td>
+                    <td>
+                        #if( $user.openid != "http://localhost/anon" )
+                        <a class="btn btn-sm btn-default" role="button" href="$root/ui/reset-password?userid=$user.openid&return=$absoluteRoot/$uri">Change password</a>
+                        #end
+                        #if( $user.openid == "replication" )
+                            <form class="form-inline" action="$root/system/security/grant" method="post">
+                                <input type="hidden" name="grant" value="Replication" >
+                                <input type="hidden" name="user" value="$user.openid" >
+                                <input type="hidden" name="path" value="/" >
+                                <input type="hidden" name="return" value="$absoluteRoot/$uri" >
+                                <input class="btn btn-sm btn-default" type="submit" value="Grant replication" >  
+                            </form>
+                        #end
+                    </td>
+                    <td>
+                        #if( $user.openid != "http://localhost/anon" && (!$isAdmin || $admins.size() > 1) )
+                        <form class="form-inline" action="$root/system/security/unregister" method="post">
+                            <input type="hidden" name="id" value="$user.openid" >
+                            <input type="hidden" name="return" value="$absoluteRoot/$uri" >
+                            <input class="btn btn-sm btn-default" type="submit" value="Remove user" >  
+                        </form>
+                        #end
+                    </td>
+                </tr>
+              #end
+            </tbody>
+        </table>
+
+        <p></p>
+        <a class="btn btn-primary" role="button" href="$root/ui/user-register?return=$absoluteRoot/$uri">Register a new user</a>
+
+    #else
+        <h3>Sorry you must be logged in as an administrator to access this page.</h3>
+    #end
+
+#parse("structure/_footer.vm")

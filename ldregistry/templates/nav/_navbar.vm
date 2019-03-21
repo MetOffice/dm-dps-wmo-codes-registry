@@ -1,0 +1,71 @@
+## Render the top navigation bar
+
+#if( $registry.isRedirectToHttpsOnLogin() )
+    #set($scheme = "https")
+#else
+    #set($scheme = "http")
+#end
+#set( $absoluteRoot = "$scheme://$request.serverName" )
+
+<nav class='navbar o-navbar-reg navbar-static-top' role='navigation'>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-sm-3'>
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class='navbar-header'>
+                    <button class='navbar-toggle collapsed' data-target='#navbar-ea-menu' data-toggle='collapse' type='button'>
+                        <span class='sr-only'>Toggle navigation</span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                        <span class='icon-bar'></span>
+                    </button>
+                    <a class="navbar-brand" href="$root/">$registry.configExtensions.registryName</a>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <div class='collapse navbar-collapse' id='navbar-ea-menu'>
+                    <ul class='nav navbar-nav navbar-left'>
+                        <li #if($nav=="browse")class="active"#end><a href="$root/?_browse=true">Browse</a></li>
+                        <li #if($nav=="about")class="active"#end><a href="$uiroot/about">About</a></li>
+                        #if($subject.isAuthenticated())
+                            #parse( "nav/_menu-admin.vm" )
+                        #end
+                        #parse( "nav/_menu-advanced.vm" )
+                    </ul>
+
+                    <form action="$uiroot/text-search" method="get" class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="search" class="form-control search-query" placeholder="Search" #if($query)value="$lib.escapeHtml($query)"#end name="query"/>
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+
+                    #if($subject.isAuthenticated())
+                        #set($user=$subject.principal)
+                        <ul class="nav pull-right">
+                            <li>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <span class="nav-text">$user.name</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <a href="#logout-dialog" data-target="#logout-dialog" role="button" data-toggle="modal">logout</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    #end
+
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+#if($subject.isAuthenticated())
+    #parse( "actions/_logout-dialog.vm" )
+#end
+

@@ -1,6 +1,6 @@
-#parse("header.vm")
+#parse("structure/_header.vm")
 #set($nav="about")
-#parse("navbar.vm")
+#parse("nav/_navbar.vm")
 
     <div class="jumbotron">
       <div class="container">
@@ -13,10 +13,13 @@
 
     <div class="container">
       <div class="row">
-
+      <a href="$uiroot/about/whatisacode">What is a code?</a>
+      </div>
+      <div class="row">
+      <a href="$uiroot/about/findingentries">Searching within specific WMO code tables</a>
 
       </div>
     ## container will be closed by footer
 
 
-#parse("footer.vm")
+#parse("structure/_footer.vm")

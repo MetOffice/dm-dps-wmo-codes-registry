@@ -1,0 +1,4 @@
+## Action to register new or patched entries in a register
+
+<a href="$uiroot/actions/register-page?register=#linkhref($register)&return=$root/$uri" role="button" class="btn btn-default btn-sm" data-toggle="modal">
+    Register new or changed entries </a>

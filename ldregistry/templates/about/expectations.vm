@@ -1,10 +1,10 @@
-#parse("header.vm")
+#parse("structure/_header.vm")
 #set($nav="about")
-#parse("navbar.vm")
+#parse("nav/_navbar.vm")
 
     <div class="jumbotron">
       <div class="container">
-        <h1>WMO Codes Registry</h1>
+        <h2>What to expect from the WMO Codes Registry service</h2>
         <a href="http://www.wmo.int/pages/index_en.html">
             <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
         </a>
@@ -14,46 +14,45 @@
     <div class="container">
       <div class="row">
 
+<p>
+The WMO Codes Registry is the mechanism through which the authoritative terms required for <a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a> are published as web accessible resources.
+</p>
 
 <p>
-WMO Codes Registry (Initial Operating Capability)
+The <a href="http://www.metoffice.gov.uk">Met Office</a> operates this service on behalf of <a href="http://www.wmo.int">WMO</a>.  The Met Office does not anticipate that operational services will have a direct dependency on this service and therefore does not offer any assurances regarding the availability or accuracy of the service.
 </p>
 <p>
-The primary purpose of this Service is to support the new data exchange standard developed by WMO in support of Amendment 76 to ICAO Annex 3 "Meteorological Services for International Air Navigation". This new data exchange standard (<a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a>) enables exchange of operational aeronautical meteorological (OPMET) in XML format. It depends on availability of authoritative terms from WMO technical regulation - most notably <a href="http://www.wmo.int/pages/prog/www/WMOCodes.html">WMO No. 306 Manual on Codes</a> - as web-accessible resources that can be referenced from WMO AvXML-compliant data products. 
+The Met Office aims to ensure that information provided within the service is accurate, albeit incomplete in comparison to the scope of the WMO Technical Regulations. The initial set of authoritative terms is deemed sufficient to support the <a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML data exchange standard</a>. It is anticipated that the scope of content available through this service will expand during the life of the service.
 </p>
 <p>
-The WMO Codes Registry is the mechanism through which the authoritative terms required for <a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a> are published as web-accessible resources.
+Contributions are encouraged from interested parties, see <a href="/ui/about/contributing">contributing to the content of the WMO Codes Registry service</a> for more details.  For example, the site is not yet multi-lingual.
+
 </p>
 <p>
-The <a href="http://www.metoffice.gov.uk">Met Office</a> operates this Service on behalf of <a href="http://www.wmo.int">WMO</a>. Following an initial period of two (2) years from September 2013, the Service, and the arrangements for it, will be assessed by WMO and the Met Office and a decision made as to whether this arrangement will continue or not or be amended or a new arrangement put in place.
+The Met Office will endeavour that the service is available, 24 hours a day, 7 days a week. In the event of a system fault, the Met Office will endeavour to restore the system to normal operation. There is no provision of an alternative service should the service be unavailable.
 </p>
 <p>
-During this initial two year period the Service is provided as an Initial Operating Capability. The <a href="http://www.metoffice.gov.uk">Met Office</a> does not anticipate that operational services will have a direct dependency on this Service and therefore does not offer any assurances regarding the availability or accuracy of the Service.
+The WMO provides a Google Group (<a href="http://www.google.com/url?q=https%3A%2F%2Fgroups.google.com%2Fa%2Fwmo.int%2Fforum%2F%3Fhl%3Den-GB%23!forum%2Fcbs-codes-registry">WMO Codes List Registry</a>) for discussion about the service and content provided.
 </p>
 <p>
-However, the <a href="http://www.metoffice.gov.uk">Met Office</a> will endeavour that information provided within the Service is accurate, albeit sparse in comparison to the scope of the WMO Technical Regulation. Furthermore, please note that the Service does not (yet) provide a multi-lingual content, nor a change history of the authoritative terms pertaining to previous versions of the WMO Technical Regulation. The initial set of authoritative terms is deemed sufficient to support the <a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML data exchange standard</a>. It is anticipated that the scope of content available through this Service will expand during the Initial Operating Capability period. 
+If you encounter technical issues, please contact the <a href="http://www.metoffice.gov.uk/about-us/contact">Met Office Weather Desk</a> during UK business hours. 
+For technical information about the Registry software implementation and API, please refer to the documentation provided at the <a href="https://github.com/der/ukl-registry-poc/wiki">UKGovLD Registry project wiki</a> (note that the UKGovLD Registry software and API are open source and published under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2 license</a>).
 </p>
 <p>
-The <a href="http://www.metoffice.gov.uk">Met Office</a> will endeavour that the Service is available, 24-hours per day, 7-days per week. In the event of a system fault, the <a href="http://www.metoffice.gov.uk">Met Office</a> will endeavour to restore the system to normal operation. There is no provision of an alternative service should the Service be unavailable.
+The information provided by the service will be maintained by nominated members of WMO Expert Teams and the <a href="https://www.wmo.int/pages/prog/www/WDM/wdm.html">WMO Secretariat</a>. To request the provision of additional content from WMO Technical Regulation to be published via this service please post to the <a href="http://www.google.com/url?q=https%3A%2F%2Fgroups.google.com%2Fa%2Fwmo.int%2Fforum%2F%3Fhl%3Den-GB%23!forum%2Fcbs-codes-registry">WMO Codes List Registry group</a>. 
 </p>
 <p>
-<a href="http://www.wmo.int">WMO</a> provides a Google Group (<a href="http://www.google.com/url?q=https%3A%2F%2Fgroups.google.com%2Fa%2Fwmo.int%2Fforum%2F%3Fhl%3Den-GB%23!forum%2Fcbs-codes-registry">WMO Codes List Registry</a>) for discussion about the Service and content provided therein during the Initial Operating Capability period. 
+To notify the service administrators of inappropriate information, please contact the <a href="http://www.metoffice.gov.uk/about-us/contact">Met Office Weather desk</a>.
 </p>
 <p>
-If you encounter technical issues, please contact the <a href="http://www.metoffice.gov.uk/about-us/contact">Met Office Weather Desk</a> during UK business hours. End-user documentation is available here: <a href="/ui/resources/WMO-Codes-Registry_user-guide-v1.0.pdf">User Guide</a> and <a href="/ui/resources/WMO-Codes-Registry_FAQ-v1.0.pdf">FAQ</a>. For technical information about the Registry software implementation and API, please refer to the documentation provided at the <a href="https://github.com/der/ukl-registry-poc/wiki">UKGovLD Registry project wiki</a>. (note that the UKGovLD Registry software and API are open source and published under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2 license</a>) 
+To notify the service administrators of erroneous information, please post to the <a href="http://www.google.com/url?q=https%3A%2F%2Fgroups.google.com%2Fa%2Fwmo.int%2Fforum%2F%3Fhl%3Den-GB%23!forum%2Fcbs-codes-registry">WMO Codes List Registry group</a>.
 </p>
 <p>
-The information provided by the Service will be maintained by nominated members of WMO Expert Teams and the <a href="https://www.wmo.int/pages/prog/www/WDM/wdm.html">WMO Secretariat</a>. To request the provision of additional content from WMO Technical Regulation to be published via this Service please post to the <a href="http://www.google.com/url?q=https%3A%2F%2Fgroups.google.com%2Fa%2Fwmo.int%2Fforum%2F%3Fhl%3Den-GB%23!forum%2Fcbs-codes-registry">WMO Codes List Registry group</a>. 
-</p>
-<p>
-To notify the Service administrators of inappropriate information, please contact the <a href="http://www.metoffice.gov.uk/about-us/contact">Met Office Weather desk</a>.
-</p>
-<p>
-To notify the Service administrators of erroneous information, please post to the <a href="http://www.google.com/url?q=https%3A%2F%2Fgroups.google.com%2Fa%2Fwmo.int%2Fforum%2F%3Fhl%3Den-GB%23!forum%2Fcbs-codes-registry">WMO Codes List Registry group</a>.
+The primary purpose of this service is to support the new data exchange standard developed by WMO in support of Amendment 76 to ICAO Annex 3 "Meteorological services for International Air Navigation". This new data exchange standard (<a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a>) enables exchange of operational aeronautical meteorological (OPMET) in XML format. It depends on availability of authoritative terms from WMO technical regulation - most notably <a href="http://www.wmo.int/pages/prog/www/WMOCodes.html">WMO No. 306 Manual on Codes</a> - as web accessible resources that can be referenced from WMO AvXML-compliant data products. 
 </p>
 
       </div>
     ## container will be closed by footer
 
 
-#parse("footer.vm")
+#parse("structure/_footer.vm")

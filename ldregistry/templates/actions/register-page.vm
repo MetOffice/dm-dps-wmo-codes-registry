@@ -1,0 +1,103 @@
+## Render the dialog for regsitering an set of entries by uploading a file (patch, bulk, multi)
+## Parameters:
+##    $return the page to return to (or is that just referrer)
+##    $register the register in which to add the new registration
+
+#parse("structure/_preamble.vm")
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1 modal-page-panel">
+    
+        <div class="modal-page-head">
+            <h3>Register new or changed entries</h3>
+        </div>
+
+        <div class="modal-page-body">
+            <div class="ajax-error"></div>
+        </div>
+
+        <div class="row space-above">
+            <div class="col-md-8">
+                Upload a file of entries in <code>csv</code>csv, <code>jsonld</code> or <code>ttl</code> or format.
+            </div>
+        </div>
+        <div id="patch-dialog-status-body" class="modal-body">
+
+            <form id="registration-form" action="$register" method="post" enctype="multipart/form-data" data-return="$return">
+                <label>File contents:</label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="uploadOptions" id="uploadOptions1" value="edit" checked>
+                        may contain patches to existing entries as well as new registrations
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="uploadOptions" id="uploadOptions2" value="batch">
+                        contains a sub-register plus its contents ("bulk upload")
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="uploadOptions" id="uploadOptions3" value="">
+                        contains new entries only, reject if any have already been registered
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="file">
+                        Choose patch file to upload:
+                    </label>
+                    <input id="patch-chooser" class="form-control" type="file" name="file" multiple />
+                </div>
+                <input id="action-field" type="hidden" name="action" value="register" />
+                <button class="btn form-submit">upload</button>
+            </form>
+        </div>
+
+        <div class="modal-page-footer">
+            <a href="$return" class="btn pull-right">Close</a>
+        </div>
+      
+    </div>
+</div>
+<div class="modal-backdrop in"></div>
+
+
+<script type="text/javascript">
+$(function() {
+    $("#registration-form").submit( function(){
+        var form = $(this);
+        var returnURL = form.attr('data-return');
+        var target = form.attr('action');
+        var uploadOption = $("\#registration-form input[name=uploadOptions]:checked").val();
+        if (uploadOption) {
+            if (uploadOption === "edit") {
+                $("\#action-field").val( "edit" );
+            } else if (uploadOption === "batch") {
+                target = target + "?batch-managed";
+            }
+        };
+        form.ajaxSubmit(
+          {
+            url: target,
+            success:
+                function(data, status, xhr){
+                    if (returnURL) {
+                        window.location.href = returnURL;
+                    } else {
+                      location.reload();
+                    }
+                },
+
+            error:
+              function(xhr, status, error){
+                 $(".ajax-error").html("<div class='alert alert-warning'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
+              }
+          }
+        );
+        return false;
+    });
+});
+</script>
+
+#parse("structure/_footer.vm")

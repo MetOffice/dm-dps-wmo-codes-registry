@@ -1,0 +1,9 @@
+name           = github
+label          = GitHub
+client.id      = ## your client id
+client.secret  = ## your client secret
+auth.endpoint  = https://github.com/login/oauth/authorize
+token.endpoint = https://github.com/login/oauth/access_token
+userInfo.endpoint   = https://api.github.com/user
+userInfo.key   = url
+userInfo.name  = login

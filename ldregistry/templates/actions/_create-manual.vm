@@ -1,0 +1,2 @@
+## Action to manually create a new entry in a register
+<a href="$uiroot/actions/create-manual-page?register=#linkhref($register)&return=$root/$uri" role="button" class="btn btn-default btn-sm" data-toggle="modal">Manual entry <span class="glyphicon glyphicon-plus-sign"></span></a>

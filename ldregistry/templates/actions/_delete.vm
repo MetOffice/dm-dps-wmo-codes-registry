@@ -1,0 +1,4 @@
+## Action to delete an entry
+<a href="#confirm-delete-dialog" role="button" class="btn btn-default btn-sm" data-toggle="modal">Delete <span class="glyphicon glyphicon-minus-sign"></span></a>
+
+#incdialog( "delete" )

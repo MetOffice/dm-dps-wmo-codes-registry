@@ -1,0 +1,28 @@
+#parse("structure/_header.vm")
+#set($nav="about")
+#parse("nav/_navbar.vm")
+
+    <div class="jumbotron">
+      <div class="container">
+        <h2>What is a code?</h2>
+        <a href="http://www.wmo.int/pages/index_en.html">
+            <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
+        </a>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="row">
+      <p>A code is a definition of a particular concept, provided by the WMO.</p>
+      <p>Each code on the WMO site is published as an entry with its own unique identifier, a URI (Uniform Resource Identifier).</p>
+      <p>The collection of statements in the definition table provide information about the code and its use. </p>
+
+      <p>Often these statements link to other resources within the WMO registry and across the web.</p>
+      <p>Codes are organised within registers, providing context for those codes.  A list of related codes about a particular topic will be published as a register.</p>
+      <p>Codes and registers are available in a variety of Resource Description Framework (RDF) formats, via <a href="https://github.com/UKGovLD/registry-core/wiki/Api#content-negotiation">content negotiation</a>, as well as in pretty web pages.</p>
+      </div>
+    ## container will be closed by footer
+
+
+#parse("structure/_footer.vm")

@@ -1,13 +1,30 @@
-#parse("header.vm")
 #set($nav="admin")
-#parse("navbar.vm")
+#parse("structure/_preamble.vm")
 
-    <div class="container">
     #if($subject.isAuthenticated())
         #if($subject.hasRole("administrator"))
             <h3>Current administrators</h3>
             #set($admins=$registry.userStore.listAdminUsers())
-            #parse("admin-list.vm")
+            
+            <table class="table table-bordered table-condensed">
+                <tbody>
+                    #foreach($user in $admins)
+                    <tr>
+                        <td>
+                            <span title="$user.openid">$user.name</span>
+                        </td>
+                        <td>
+                            <form class="form-inline" action="$root/system/security/setrole" method="post">
+                                <input type="hidden" name="role" value="" />
+                                <input type="hidden" name="id" value="$user.openid" />
+                                <input type="submit" value="remove" class="btn btn-primary popinfo btn-sm" data-trigger="hover" data-placement="bottom"  data-content="Warning: this will remove administrator rights from this person!" />
+                            </form>
+                        </td>
+                    </tr>
+                    #end
+                </tbody>
+            </table>
+
             <div class="space-above">
                     <a href="#grant-user-dialog" role="button" class="btn btn-primary" data-toggle="modal">Add administrator</a>
             </div>
@@ -43,5 +60,4 @@
     </div><!-- /.modal-dialog -->
   </div><!-- /.modal -->
 
-    ## container will be closed by footer
-#parse("footer.vm")
+#parse("structure/_footer.vm")

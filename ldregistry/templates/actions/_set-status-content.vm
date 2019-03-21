@@ -1,0 +1,25 @@
+## Render button to set the status of all items in a register
+## 
+## Input parameters:
+##     $resister - the register
+
+    ## Find a sample member
+    #set( $items = $model.querySelectW("SELECT * where {?page a ldp:Page; api:items ?items.}") )
+    #if ( ! $items.isEmpty() ) 
+        #set( $members = $items.get(0).items.asList() )
+        #set( $hasmembers = !$members.isEmpty() )
+    #else
+        #set( $hasmembers = false )
+    #end
+
+    #if( $hasmembers )
+        #set( $ml = $members[0].connectedNodes("^reg:entity/^reg:definition") )
+        #if( ! $ml.isEmpty() )
+            #set( $statusContentsSample = $ml[0] )
+            <a href="#status-dialog-content" role="button" class="btn btn-default btn-sm" data-toggle="modal">Set contents status</a>
+        #else
+            #set( $statusContentsSample = false )
+        #end
+    #end
+
+    #incdialog( "set-status-content" )
