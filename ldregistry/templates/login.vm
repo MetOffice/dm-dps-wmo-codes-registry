@@ -127,6 +127,12 @@
           <div class="col-md-12">
             <p>If you register or login this site will use cookies to record your
              preferred OpenID provider (if any) and to record the ID you are logged in with for this session.</p>
+           <p>If you choose to register, the only information that shall be stored on this site is the URI identifie\
+r used by your identity provider and the display name associated with that identifier.  This URI identifier will be \
+used to tag all direct edit interactions with the data published on this site.  This is not deemed personal informat\
+ion, under European GDPR legislation.  There is no facility to remove your identifier from data resources once it ha\
+s been attached, it is part of the history of the registry.<p>
+
           </div>
         </div>
         
