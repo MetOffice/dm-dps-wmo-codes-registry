@@ -1,6 +1,6 @@
 Name:		registry-config-codes-wmo
 Version:	2.0
-Release:	19
+Release:	20
 
 Summary:	Registry-core linked data registry
 
@@ -56,6 +56,10 @@ done
 
 %post
 ln -s /opt/oauth/provider/github.properties /opt/ldregistry/config/oauth2/provider/github.properties
+setsebool httpd_can_network_connect on -P
+semanage permissive -a tomcat_t
+semanage fcontext -a -t httpd_config_t /var/opt/ldregistry/proxy-registry.conf
+restorecon -v /var/opt/ldregistry/proxy-registry.conf
 service tomcat start
 
 %clean
