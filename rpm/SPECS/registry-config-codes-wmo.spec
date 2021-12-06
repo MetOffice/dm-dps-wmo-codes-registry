@@ -1,6 +1,6 @@
 Name:		registry-config-codes-wmo
 Version:	2.0
-Release:	20
+Release:	21
 
 Summary:	Registry-core linked data registry
 
@@ -41,7 +41,6 @@ rm -rf /var/lib/tomcat/webapps/ROOT
 rm -rf /var/lib/tomcat/webapps/ROOT.war
 rm -rf /var/opt/ldregistry/userstore/db.lck
 rm -rf /var/opt/ldregistry/userstore/dbex.lck
-rm -rf /var/opt/ldregistry/userstore
 
 declare -a arr=("/var/log/ldregistry" "/var/opt/ldregistry")
 
