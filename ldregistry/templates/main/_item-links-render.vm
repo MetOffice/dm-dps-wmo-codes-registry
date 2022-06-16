@@ -6,7 +6,7 @@
 
 #set($response=$registry.perform("Read","system/links?_view=with_metadata&status=any", $requestor))
 #if($response.status != 404 && $response.status < 500)
-  <h2>Links</h2>
+  <h2>$msg['registerItem.links.header']</h2>
   #set($started=false)
   #set($model=$response.entity)
   #set($target="$registry.baseURI/system/links")
@@ -31,7 +31,7 @@
   #end
 
   #if(!$started)
-     <p>.. none found</p>
+     <p>$msg['registerItem.links.notFound']</p>
   #end
 
 #end

@@ -16,7 +16,7 @@
           #if($uri)
           <input type="hidden" name="path" value="$uri" />
           #end
-          <input type="submit" value="grant" class="btn" />
+          <input type="submit" value="$msg['admin.permissions.grant.button']" class="btn" />
         </form>
       </td>
     </tr>
@@ -25,5 +25,9 @@
 </table>
 
 <div class="space-above">
-  <p>Click grant to allow that user $grant privileges#if($uri) on $uri#end.</p>
+  #if($uri)
+    <p>$msg['admin.permissions.grant.uri']</p>
+  #else
+    <p>$msg['admin.permissions.grant.global']</p>
+  #end
 </div>

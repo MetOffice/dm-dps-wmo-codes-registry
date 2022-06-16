@@ -32,7 +32,7 @@ require.config({
     }
   },
   paths: {
-    jquery: "jquery-1.12.0.min",
+    jquery: "jquery-3.6.0.min",
     "jquery-ui": "jquery-ui.min",
     "bootstrap": "bootstrap.min",
     "datatables": "jquery.dataTables.min",

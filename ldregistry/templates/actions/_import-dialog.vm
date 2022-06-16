@@ -4,7 +4,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3>Import a replacement register tree</h3>
+                <h3>$msg['register.import.heading']</h3>
             </div>
             <div id="import-dialog-status-body" class="modal-body">
               #set($target="$root/$uri.replace('/_','/')")
@@ -16,12 +16,12 @@
                         <input id="import-chooser" class="form-control" type="file" name="file" multiple />
                     </div>
                     <input type="hidden" name="action" value="import" />
-                    <button class="btn form-submit">import</button>
+                    <button class="btn form-submit">$msg['register.import.button']</button>
                 </form>
                 <div class="ajax-error"></div>
             </div>
             <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn" data-dismiss="modal" aria-hidden="true">$msg['ui.close']</button>
             </div>
         </div>
     </div>

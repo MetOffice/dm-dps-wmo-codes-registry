@@ -10,8 +10,8 @@
         <form class="form-inline" action="$root/system/security/setrole" method="post">
           <input type="hidden" name="role" value="" />
           <input type="hidden" name="id" value="$user.openid" />
-          <input type="submit" value="remove" class="btn btn-primary popinfo btn-sm" data-trigger="hover" data-placement="bottom"
-            data-content="Warning: this will remove administrator rights from this person!" />
+          <input type="submit" value="$msg['admin.list.remove.button']" class="btn btn-primary popinfo btn-sm" data-trigger="hover" data-placement="bottom"
+            data-content="$msg['admin.list.remove.warning']" />
         </form>
       </td>
     </tr>

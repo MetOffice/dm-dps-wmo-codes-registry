@@ -7,9 +7,9 @@
         <input type="hidden" name="id" value="$user.openid" >
         <input type="hidden" name="return" value="$absoluteRoot/$uri" >
         #if( $add )
-            <input class="btn btn-sm " type="submit" value="Make admin" >  
+            <input class="btn btn-sm " type="submit" value="$msg['admin.users.admin.button']" >
         #else
-            Administrator <button type="submit" class="btn btn-sm">
+            $msg['admin.users.admin.label'] <button type="submit" class="btn btn-sm">
                 <i class="fa fa-times-circle"></i>
             </button>
         #end
@@ -17,16 +17,16 @@
 #end
 
     #if($subject.isAuthenticated() && $subject.hasRole("administrator"))
-        <h1>Manage users</h1>
+        <h1>$msg['admin.users.heading']</h1>
         #set( $admins = $registry.userStore.listAdminUsers() )
         <table class="table table-striped table-bordered datatable">
             <thead>
                 <tr>
-                    <th>Display Name</th>
-                    <th>Username</th>
-                    <th>Administrator?</th>
-                    <th>Actions</th>
-                    <th>Remove</th>
+                    <th>$msg['user.displayName.label']</th>
+                    <th>$msg['user.username.label']</th>
+                    <th>$msg['user.isAdmin.label']</th>
+                    <th>$msg['user.actions.label']</th>
+                    <th>$msg['user.remove.button']</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,27 +42,27 @@
                                 <input type="hidden" name="role" value="" >
                                 <input type="hidden" name="id" value="$user.openid" >
                                 <input type="hidden" name="return" value="$absoluteRoot/$uri" >
-                                <span class="text-nowrap">Administrator 
+                                <span class="text-nowrap">$msg['admin.users.admin.label']
                                     <button type="submit" class="btn btn-sm">
                                         <i class="fa fa-times-circle"></i>
                                     </button>
                                 </span>
                             </form>
                           #else
-                            Administrator
+                            $msg['admin.users.admin.label']
                           #end
                         #elseif( $user.openid != "http://localhost/anon" )
                             <form class="form-inline" action="$root/system/security/setrole" method="post">
                                 <input type="hidden" name="role" value="administrator" >
                                 <input type="hidden" name="id" value="$user.openid" >
                                 <input type="hidden" name="return" value="$absoluteRoot/$uri" >
-                                <input class="btn btn-sm btn-default" type="submit" value="Make admin" >  
+                                <input class="btn btn-sm btn-default" type="submit" value="$msg['admin.users.admin.button']" >
                             </form>
                         #end
                     </td>
                     <td>
                         #if( $user.openid != "http://localhost/anon" )
-                        <a class="btn btn-sm btn-default" role="button" href="$root/ui/reset-password?userid=$user.openid&return=$absoluteRoot/$uri">Change password</a>
+                        <a class="btn btn-sm btn-default" role="button" href="$root/ui/reset-password?userid=$user.openid&return=$absoluteRoot/$uri">$msg['user.password.change.button']</a>
                         #end
                         #if( $user.openid == "replication" )
                             <form class="form-inline" action="$root/system/security/grant" method="post">
@@ -70,7 +70,7 @@
                                 <input type="hidden" name="user" value="$user.openid" >
                                 <input type="hidden" name="path" value="/" >
                                 <input type="hidden" name="return" value="$absoluteRoot/$uri" >
-                                <input class="btn btn-sm btn-default" type="submit" value="Grant replication" >  
+                                <input class="btn btn-sm btn-default" type="submit" value="$msg['admin.users.replication.button']" >
                             </form>
                         #end
                     </td>
@@ -79,7 +79,7 @@
                         <form class="form-inline" action="$root/system/security/unregister" method="post">
                             <input type="hidden" name="id" value="$user.openid" >
                             <input type="hidden" name="return" value="$absoluteRoot/$uri" >
-                            <input class="btn btn-sm btn-default" type="submit" value="Remove user" >  
+                            <input class="btn btn-sm btn-default" type="submit" value="$msg['admin.users.remove.button']" >
                         </form>
                         #end
                     </td>
@@ -89,10 +89,10 @@
         </table>
 
         <p></p>
-        <a class="btn btn-primary" role="button" href="$root/ui/user-register?return=$absoluteRoot/$uri">Register a new user</a>
+        <a class="btn btn-primary" role="button" href="$root/ui/user-register?return=$absoluteRoot/$uri">$msg['admin.users.register.button']</a>
 
     #else
-        <h3>Sorry you must be logged in as an administrator to access this page.</h3>
+        <h3>$msg['admin.loginRequired']</h3>
     #end
 
 #parse("structure/_footer.vm")

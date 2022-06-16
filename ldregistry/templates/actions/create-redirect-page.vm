@@ -9,7 +9,7 @@
     <div class="col-md-10 col-md-offset-1 modal-page-panel">
     
         <div class="modal-page-head">
-            <h3>Create an http forwarding record for $entity</h3>
+            <h3>$msg.get('redirect.heading', $entity)</h3>
         </div>
 
         <div class="modal-page-body">
@@ -20,7 +20,7 @@
 
 
         <div class="modal-page-footer">
-            <a href="$return" class="btn pull-right">Close</a>
+            <a href="$return" class="btn pull-right">$msg['ui.close']</a>
         </div>
       
     </div>

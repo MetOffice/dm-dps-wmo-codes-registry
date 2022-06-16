@@ -28,16 +28,17 @@
       #set( $uri = $entity )
     #else
       #if( $subject.isAuthenticated() )
-        #set( $response = $registry.perform("Read","$uri?_view=with_metadata&status=any&$paging", $requestor) )
+        #set( $visibleStatus = "any" )
       #else
         #if( ! $showStatus )
           #set( $showStatus = "accepted" )
           #if( $registry.configExtensions.showStatus )
              #set( $showStatus = $registry.configExtensions.showStatus )
           #end
+          #set ( $visibleStatus = $showStatus )
         #end
-        #set( $response = $registry.perform("Read","$uri?_view=with_metadata&status=$showStatus&$paging", $requestor) )
       #end
+      #set( $response = $registry.perform("Read","$uri?_view=with_metadata&status=$visibleStatus&$paging", $requestor) )
       #set( $versionNumber = $lib.regex($uri,".*:(\d+)$") )
       #if( $versionNumber )
         #set( $versionNumber = $versionNumber[0] )

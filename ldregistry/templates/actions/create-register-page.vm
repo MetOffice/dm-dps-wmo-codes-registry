@@ -11,42 +11,42 @@
     <div class="col-md-10 col-md-offset-1 modal-page-panel">
     
         <div class="modal-page-head">
-            <h3>Create a sub-register in $register</h3>
+            <h3>$msg.get('register.createManual.heading', $register)</h3>
         </div>
 
         <div class="modal-page-body">
             <div class="ajax-error"></div>
 
             <form id="create-register-form" action="$register" method="post" data-return="$return">
-                <input type="hidden" name="action" value="register-inline" />
+                <!-- <input type="hidden" name="action" value="register-inline" /> -->
                 <input type="hidden" name="form-type" value="$registry.baseURI/system/form-templates/register" />
 
-                <p>All fields are required.</p>
+                <p>$msg['ui.allFieldsRequired']</p>
 
                 <div class="form-group">
                     <label class="control-label" for="id-input">
-                        Notation (identifier) for the register
+                        $msg['register.notation.description']
                     </label>
-                    <input class="form-control" type="text" name="id" id="id-input" placeholder="Short identifier (no spaces, only allowed symbols are - and _)" required>
+                    <input class="form-control" type="text" name="id" id="id-input" placeholder="$msg['register.notation.prompt']" required>
                 </div>
 
                 <div class="form-group">
                     <label class="control-label" for="label-input">
-                        Label for the register
+                        $msg['register.label.description']
                     </label>
-                    <input class="form-control" type="text" name="label" id="label-input" placeholder="Short name" required>
+                    <input class="form-control" type="text" name="label" id="label-input" placeholder="$msg['register.label.prompt']" required>
                 </div>
 
                 <div class="form-group">
                     <label class="control-label" for="description-input">
-                        Description of the register
+                        $msg['register.description.description']
                     </label>
-                    <textarea class="form-control" rows="2" name="description" id="description-input" placeholder="Description" required></textarea>
+                    <textarea class="form-control" rows="2" name="description" id="description-input" placeholder="$msg['register.description.prompt']" required></textarea>
                 </div>
 
                 <div class="form-group">
                     <label class="control-label" for="register-type">
-                        Type of register to create
+                        $msg['register.createManual.type.description']
                     </label>
                     <select class="form-control" name="register-type" id="register-type">
                         #foreach( $option in $createRegisterTypes )
@@ -67,7 +67,7 @@
                     <div class="form-group">
                         <label class="control-label" for="$tagindex-input"> $tag.label </label>
                         <select class="form-control" name="$tag.formField" id="$tagindex-input">
-                            <option value="">No value set</option>
+                            <option value="">$msg['ui.emptyValue']</option>
                             #foreach( $option in $lib.reg.listMembers( $tag.register ) )
                                 <option value="$option.entityURI">$option.labels.iterator().next()</option>
                             #end
@@ -75,18 +75,22 @@
                     </div>
                 #end
 
-                <button class="btn form-submit">Create register</button>
+                <button class="btn form-submit">$msg['register.createManual.button']</button>
+                <button class="btn" type="button" id="create-register-form-compare">$msg['registerItem.compare.button']</button>
             </form>
 
+            <div class="compare-results"></div>
         </div>
 
         <div class="modal-page-footer">
-            <a href="$return" class="btn pull-right">Close</a>
+            <a href="$return" class="btn pull-right">$msg['ui.close']</a>
         </div>
       
     </div>
 </div>
 <div class="modal-backdrop in"></div>
+
+<script type="text/javascript" src="$assets/js/registry-compare.js"></script>
 
 <script type="text/javascript">
 $(function() {
@@ -96,17 +100,41 @@ $(function() {
         }
     };
 
-    $("#create-register-form").submit( function(){
+    var makeOptions = function() {
+        var selection = $("\#register-type option:selected").first();
+        var options = {};
+        setOption( selection, "data-membership",  options, "membership" );
+        setOption( selection, "data-imembership", options, "inv-membership" );
+        setOption( selection, "data-type",        options, "type" );
+        setOption( selection, "data-hRoot",       options, "hRoot" );
+        setOption( selection, "data-hChild",      options, "hChild" );
+
+        return options;
+    };
+
+    var onError = function(xhr, status, error) {
+        $(".ajax-error").html("<div class='alert alert-warning'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
+    }
+
+    registryCompare({
+      selector: {
+        target: ".compare-results",
+        error: ".ajax-error",
+        button: "#create-register-form-compare",
+        form: "#create-register-form"
+      },
+      data: {
+        apply: function (data) {
+          return Object.assign(data, makeOptions());
+        }
+      }
+    });
+
+    $("#create-register-form").submit(function() {
         var form = $(this);
         var returnURL = form.attr('data-return');
-        var option = $("\#register-type option:selected").first();
-        var regType = option.val();
-        var options = {};
-        setOption( option, "data-membership",  options, "membership" );
-        setOption( option, "data-imembership", options, "inv-membership" );
-        setOption( option, "data-type",        options, "type" );
-        setOption( option, "data-hRoot",       options, "hRoot" );
-        setOption( option, "data-hChild",      options, "hChild" );
+        var options = makeOptions();
+        options.action = "register-inline";
 
         form.ajaxSubmit(
           {
@@ -120,10 +148,7 @@ $(function() {
                     }
                 },
 
-            error:
-              function(xhr, status, error){
-                 $(".ajax-error").html("<div class='alert alert-warning'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
-              }
+            error: onError
           }
         );
         return false;
