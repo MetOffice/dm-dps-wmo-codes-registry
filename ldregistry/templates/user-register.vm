@@ -7,47 +7,45 @@
   <div class="row">
     <div class="col-md-12 modal-page-panel">
       <div class="modal-page-head">
-        <h1>Register a new user</h1>
+        <h1>$msg['admin.users.register.heading']</h1>
       </div>
       <div class="modal-page-body">
- 
-
         <div class="row space-above">
         
           <div class="col-md-offset-2 col-md-5 blob-password">
             <div class="blob-inner">
-              <h2>User details</h2>
+              <h2>$msg['admin.users.details.heading']</h2>
               #if( ! $registry.configExtensions.suppressPasswordLogin)
               <div class="row">
                 <form class="form-horizontal form-validated" role="form"  action="$root/system/security/pwregisterOther" method="post" autocomplete="off">
                   <div class="form-group">
-                    <label for="userid2" class="col-md-offset-1 col-md-2 control-label">Username</label>
+                    <label for="userid2" class="col-md-offset-1 col-md-2 control-label">$msg['user.username.label']</label>
                     <div class="col-md-8">
-                      <input type="text" class="form-control" id="userid2" name="userid" placeholder="User id e.g. email address" required>
+                      <input type="text" class="form-control" id="userid2" name="userid" placeholder="$msg['user.username.prompt']" required>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="name2" class="col-md-offset-1 col-md-2 control-label">Display name</label>
+                    <label for="name2" class="col-md-offset-1 col-md-2 control-label">$msg['user.displayName.label']</label>
                     <div class="col-md-8">
-                      <input type="text" class="form-control" id="name2" name="name" placeholder="Display name or nickname" required>
+                      <input type="text" class="form-control" id="name2" name="name" placeholder="$msg['user.displayName.prompt']" required>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="password1" class="col-md-offset-1 col-md-2 control-label">Password</label>
+                    <label for="password1" class="col-md-offset-1 col-md-2 control-label">$msg['user.password.label']</label>
                     <div class="col-md-8">
-                      <input type="password" class="form-control" id="password1" minlength=8 name="password" placeholder="Password" required pwcomplex="true">
+                      <input type="password" class="form-control" id="password1" minlength=8 name="password" placeholder="$msg['user.password.label']" required pwcomplex="true">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="password2" class="col-md-offset-1 col-md-2 control-label">Repeat password</label>
+                    <label for="password2" class="col-md-offset-1 col-md-2 control-label">$msg['user.password.repeat']</label>
                     <div class="col-md-8">
-                      <input type="password" class="form-control" id="password2" name="password2" placeholder="Password" required equalTo="#password1">
+                      <input type="password" class="form-control" id="password2" name="password2" required equalTo="#password1">
                     </div>
                   </div>
                   <input type="hidden" name="return" value="$return" />
                   <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
-                      <button type="submit" class="btn btn-default">Create account</button>
+                      <button type="submit" class="btn btn-default">$msg['admin.users.create.button']</button>
                     </div>
                   </div>
                 </form>
@@ -59,8 +57,7 @@
         
         <div class="row space-above">
           <div class="col-md-12">
-            <p>If you register or login this site will use cookies to record your
-             preferred OpenID provider (if any) and to record the ID you are logged in with for this session.</p>
+            <p>$msg['login.cookies.notice']</p>
           </div>
         </div>
 
@@ -68,7 +65,7 @@
       <div class="modal-page-footer">
         <div class="row">
           <div class="col-md-offset-10 col-md-1">
-            <a href="$return" class="btn">Close</a>
+            <a href="$return" class="btn">$msg['ui.close']</a>
           </div>
         </div>
       </div>

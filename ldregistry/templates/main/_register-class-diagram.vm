@@ -46,6 +46,15 @@
             {
                 'label' : '$member.name', 
                 'uri' : '$member.uRI',
+                'properties': {
+                    #foreach($p in $members)
+                      #if ($p.hasResourceValue("rdf:type", "owl:DatatypeProperty"))
+                        #if ($p.hasResourceValue("rdfs:domain", $member.uRI))
+                          '$p.name': { type: #if ($p.hasResourceValue("rdfs:range", null)) '$p.getPropertyValue("rdfs:range").getShortURI()' #else null #end },
+                        #end
+                      #end
+                    #end
+                },
                 'superClasses' :[
                     #foreach($c in $member.listPropertyValues("rdfs:subClassOf")) #if(!$c.isAnon())'$c.uRI'#end #if( $foreach.hasNext ),#end #end                
                 ]
@@ -59,8 +68,8 @@
           #if ($member.hasResourceValue("rdf:type", "owl:ObjectProperty"))
             #if($started),#else#set($started=true)#end
             {
-                'label' : '$member.name', 
-                'uri' : '$member.uRI', 
+                'label' : '$member.name',
+                'uri' : '$member.uRI',
                 'domain' : #parseDomainRange($member.listPropertyValues("rdfs:domain")),
                 'range'  : #parseDomainRange($member.listPropertyValues("rdfs:range"))
             } 

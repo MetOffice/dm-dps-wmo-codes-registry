@@ -9,12 +9,12 @@
     <div class="col-md-10 col-md-offset-1 modal-page-panel">
     
         <div class="modal-page-head">
-            <h3>Create a new entry in in $register</h3>
+            <h3>$msg.get('registerItem.createManual.heading', $register)</h3>
         </div>
 
         <div class="modal-page-body">
             <select class="form-control" id="form-chooser">
-                <option>Choose a form:</option>
+                <option>$msg['registerItem.createManual.form.prompt']</option>
                 #foreach($form in $lib.reg.listMembers("/system/form-templates"))
                     #if(!$form.entityURI.endsWith("/forward") && !$form.entityURI.endsWith("/register"))
                         #set($label = $form.labels.iterator().next().lexicalForm)
@@ -37,7 +37,7 @@
         </div>
 
         <div class="modal-page-footer">
-            <a href="$return" class="btn pull-right">Close</a>
+            <a href="$return" class="btn pull-right">$msg['ui.close']</a>
         </div>
       
     </div>

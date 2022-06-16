@@ -14,7 +14,7 @@
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class='navbar-header'>
                     <button class='navbar-toggle collapsed' data-target='#navbar-ea-menu' data-toggle='collapse' type='button'>
-                        <span class='sr-only'>Toggle navigation</span>
+                        <span class='sr-only'>$msg['nav.toggle.button']</span>
                         <span class='icon-bar'></span>
                         <span class='icon-bar'></span>
                         <span class='icon-bar'></span>
@@ -26,8 +26,8 @@
             <div class="col-sm-9">
                 <div class='collapse navbar-collapse' id='navbar-ea-menu'>
                     <ul class='nav navbar-nav navbar-left'>
-                        <li #if($nav=="browse")class="active"#end><a href="$root/?_browse=true">Browse</a></li>
-                        <li #if($nav=="about")class="active"#end><a href="$uiroot/about">About</a></li>
+                        <li #if($nav=="browse")class="active"#end><a href="$root/?_browse=true">$msg['nav.browse.label']</a></li>
+                        <li #if($nav=="about")class="active"#end><a href="$uiroot/about">$msg['nav.about.label']</a></li>
                         #if($subject.isAuthenticated())
                             #parse( "nav/_menu-admin.vm" )
                         #end
@@ -36,29 +36,33 @@
 
                     <form action="$uiroot/text-search" method="get" class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input type="search" class="form-control search-query" placeholder="Search" #if($query)value="$lib.escapeHtml($query)"#end name="query"/>
+                            <input type="search" class="form-control search-query" placeholder="$msg['ui.search']" #if($query)value="$lib.escapeHtml($query)"#end name="query"/>
                         </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button type="submit" class="btn btn-default">$msg['ui.submit']</button>
                     </form>
+
+                    #if($registry.languageManager.multilingual)
+                      <ul class="nav navbar-nav navbar-right">
+                        #parse("nav/_menu-language.vm")
+                      </ul>
+                    #end
 
                     #if($subject.isAuthenticated())
                         #set($user=$subject.principal)
-                        <ul class="nav pull-right">
-                            <li>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <span class="nav-text">$user.name</span>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <a href="#logout-dialog" data-target="#logout-dialog" role="button" data-toggle="modal">logout</a>
-                                    </div>
-                                </div>
-                            </li>
+                        <ul class="nav navbar-nav navbar-right">
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">$msg['nav.user.label'] <b class="caret"></b></a>
+                            <ul class="dropdown-menu dropdown-menu-right" style="width: max-content;">
+                              <li>
+                                <span>$user.name</span>
+                              </li>
+                              <li>
+                                <a href="#logout-dialog" data-target="#logout-dialog" role="button" data-toggle="modal">$msg['logout.button']</a>
+                              </li>
+                            </ul>
+                          </li>
                         </ul>
                     #end
-
                 </div>
             </div>
         </div>

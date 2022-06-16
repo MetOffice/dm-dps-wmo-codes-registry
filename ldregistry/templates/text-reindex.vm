@@ -3,11 +3,11 @@
 
     #if($subject.isAuthenticated() && $subject.hasRole("administrator"))
 
-        <h2>Regenerate text index</h2>
+        <h2>$msg['textIndex.rebuild.heading']</h2>
 
           <div class="row">
             <form class="form-inline ajax-inline-form col-md-12" action="$root/system/text-reindex" method="post">
-              <input type="submit" value="Reindex" class="btn" />
+              <input type="submit" value="$msg['textIndex.rebuild.button']" class="btn" />
             </form>
           </div>
           <div class="row">
@@ -15,7 +15,7 @@
           </div>
 
     #else
-        <h3>Sorry you must be logged in as an administrator to access this page</h3>
+        <h3>$msg['user.loginRequired']</h3>
     #end
 
 #parse("structure/_footer.vm")

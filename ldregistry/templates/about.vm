@@ -33,6 +33,6 @@ WMO Manuals on Codes.</p>
       <div class="row">
       <p> <a href="/ui/about/expectations">What to expect from the WMO Codes Registry service</a> </p>
       </div>
-    
+
 
 #parse("structure/_footer.vm")

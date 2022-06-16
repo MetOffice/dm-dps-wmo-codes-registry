@@ -6,6 +6,7 @@
       <div class="col-sm-6">
         <div class="">
           <div class="c-footer-credits">
+            <h4 class="">$msg['footer.support.heading']</h4>
             <p>
 		<a href="https://github.com/UKGovLD/registry-core/wiki/Api#content-negotiation">Content negotiation</a>  is supported.
             </p>
@@ -13,17 +14,31 @@
         </div>
       </div>
 
-      <div class="pull-right">
-        <p class="c-footer-epimorphics">
-          <span class="i18n">Design and development by</span>
-          <a href="http://www.epimorphics.com">Epimorphics</a>.
+      <div class="col-sm-6">
+        <h4>$msg['footer.about.heading']</h4>
+        <p>
+            Unless otherwise stated, all content is available under the
+          <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/" rel="license">Open Government Licence</a>
         </p>
+        <p class="c-footer-epimorphics">
+          <span class="i18n">$msg.get('footer.about.credit', "Epimorphics", "http://www.epimorphics.com")</span>
+        </p>
+        #if($registry.languageManager.useCookies)
+          <p>
+            $msg['footer.language.cookies.notice']
+          </p>
+        #end
       </div>
 
     </div><!--/.row-->
   </div>
 </footer>
-
+    <script type="text/javascript">
+      window.registry = {
+        assets: "$lib.reg.jsEncode($assets)",
+        language: "$lib.reg.jsEncode($language)"
+      };
+    </script>
 
     <script type="text/javascript" src="$assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="$assets/js/jquery.dataTables.min.js"></script>

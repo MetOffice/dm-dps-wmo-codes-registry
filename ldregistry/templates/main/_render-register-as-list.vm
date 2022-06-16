@@ -9,11 +9,11 @@
   	  <table class="table table-striped table-bordered #if($registry.configExtensions.showRegisterAsDatatable) datatable #end">
   	  	<thead>
   	      <tr>
-  	      	<th>Name</th>
-  	      	<th>Notation</th>
-  	      	<th>Description</th>
-  	      	<th>Types</th>
-  	      	<th>Status</th>
+  	      	<th>$msg['registerItem.name.label']</th>
+  	      	<th>$msg['registerItem.notation.label']</th>
+  	      	<th>$msg['registerItem.description.label']</th>
+  	      	<th>$msg['registerItem.types.label']</th>
+  	      	<th>$msg['registerItem.status.label']</th>
   	      </tr>
   	  	</thead>
 

@@ -1,6 +1,6 @@
   <div class="jumbotron">
-    <h1>Not found (404)</h1>
+    <h1>$msg['error.notFound.heading']</h1>
     <p>
-      Sorry but the URI <a href="$target">$lib.escapeHtml($target)</a> was not found on this site.
+      $msg.get('error.notFound.note', $target, $lib.escapeHtml($target))
     </p>
   </div>

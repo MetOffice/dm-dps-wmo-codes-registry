@@ -2,13 +2,13 @@
 #parse("structure/_preamble.vm")
 
     #if($subject.isAuthenticated())
-        <h2>Backups</h2>
+        <h2>$msg['backups.heading']</h2>
         #if($subject.hasRole("administrator"))
             <div class="row">
               <div class="col-md-2">
                 <form class="form-horizontal ajax-inline-form" action="$root/system/backup" method="post">
                   <div class="form-group">
-                    <input type="submit" value="Schedule backup" class="btn" />
+                    <input type="submit" value="$msg['backups.schedule.button']" class="btn" />
                   </div>
                 </form>
               </div>
@@ -19,7 +19,7 @@
         #end
 
     #else
-        <h3>Sorry you must be logged in to access this page</h3>
+        <h3>$msg['user.loginRequired']</h3>
     #end
 
 #parse("structure/_footer.vm")

@@ -1,7 +1,7 @@
 ## Parameters:
 ##    $return the page to return to (or is that just referrer)
 
-#set($pageTitle="Registry login")
+#set($pageTitle="$msg['login.title']")
 #set($oauthProviders = $registry.configExtensions.oauth2.config.providers)
 
 #parse("structure/_preamble.vm")
@@ -20,11 +20,11 @@
   <div class="row">
     <div class="col-md-12 modal-page-panel">
       <div class="modal-page-head">
-        <h1>Login or register</h1>
+        <h1>$msg['login.heading']</h1>
       </div>
       <div class="modal-page-body">
         
-        <p>It is not necessary to login or register to simply access the registry. This is only necessary if wish to add or change entries.</p>
+        <p>$msg['login.note']</p>
 
         <div class="row space-above">
         
@@ -32,28 +32,28 @@
             <div class="blob-inner">
               <div class="row">
                 <div class="col-md-12">
-                  <h2>Login</h2>
+                  <h2>$msg['login.label']</h2>
                 </div>
               </div>
               #if(!$registry.configExtensions.suppressPasswordLogin)
               <div class="row">
                 <form class="form-horizontal" role="form"  action="$lroot/system/security/pwlogin" method="post">
                   <div class="form-group">
-                    <label for="userid1" class="col-md-offset-1 col-md-2 control-label">Username</label>
+                    <label for="userid1" class="col-md-offset-1 col-md-2 control-label">$msg['user.username.label']</label>
                     <div class="col-md-8">
-                      <input type="text" class="form-control" id="userid1" name="userid" placeholder="Username">
+                      <input type="text" class="form-control" id="userid1" name="userid" placeholder="$msg['user.username.label']">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="password1" class="col-md-offset-1 col-md-2 control-label">Password</label>
+                    <label for="password1" class="col-md-offset-1 col-md-2 control-label">$msg['user.password.label']</label>
                     <div class="col-md-8">
-                      <input type="password" class="form-control" id="password1" name="password" placeholder="Password">
+                      <input type="password" class="form-control" id="password1" name="password" placeholder="$msg['user.password.label']">
                     </div>
                   </div>
                   <input type="hidden" name="return" value="$return" />
                   <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
-                      <button type="submit" class="btn btn-default">Login</button>
+                      <button type="submit" class="btn btn-default">$msg['login.button']</button>
                     </div>
                   </div>
                 </form>
@@ -63,7 +63,7 @@
               <div class="row space-above">
                 <div class="col-md-12">
                   #if(!$registry.configExtensions.suppressPasswordLogin && !$oauthProviders.isEmpty())
-				    <p>Or log in to a registered account via an OAuth provider.</p>
+				    <p>$msg['login.oauth.note']</p>
 				  #end
 				  #foreach($provider in $oauthProviders)
                     #oauthLogin($provider, $return)
@@ -77,32 +77,32 @@
           #if( ! $registry.configExtensions.passwordLoginOnly )
           <div class="col-md-5 col-md-offset-1 blob-oauth">
             <div class="blob-inner">
-              <h2>Register as a new user</h2>
+              <h2>$msg['login.register.heading']</h2>
               #if( ! $registry.configExtensions.suppressPasswordLogin)
               <div class="row">
                 <form class="form-horizontal" role="form"  action="$lroot/system/security/pwregister" method="post">
                   <div class="form-group">
-                    <label for="userid2" class="col-md-offset-1 col-md-2 control-label">Username</label>
+                    <label for="userid2" class="col-md-offset-1 col-md-2 control-label">$user.username.label</label>
                     <div class="col-md-8">
-                      <input type="text" class="form-control" id="userid2" name="userid" placeholder="Username e.g. email address">
+                      <input type="text" class="form-control" id="userid2" name="userid" placeholder="$msg['user.username.prompt']">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="name2" class="col-md-offset-1 col-md-2 control-label">Name</label>
+                    <label for="name2" class="col-md-offset-1 col-md-2 control-label">$msg['user.name.label']</label>
                     <div class="col-md-8">
-                      <input type="text" class="form-control" id="name2" name="name" placeholder="Display name or nickname">
+                      <input type="text" class="form-control" id="name2" name="name" placeholder="$msg['user.name.prompt']">
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for="password2" class="col-md-offset-1 col-md-2 control-label">Password</label>
+                    <label for="password2" class="col-md-offset-1 col-md-2 control-label">$msg['user.password.label']</label>
                     <div class="col-md-8">
-                      <input type="password" class="form-control" id="password2" name="password" placeholder="Password">
+                      <input type="password" class="form-control" id="password2" name="password" placeholder="$msg['user.password.label']">
                     </div>
                   </div>
                   <input type="hidden" name="return" value="$return" />
                   <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
-                      <button type="submit" class="btn btn-default">Create account</button>
+                      <button type="submit" class="btn btn-default">$msg['login.register.button']</button>
                     </div>
                   </div>
                 </form>
@@ -111,7 +111,7 @@
               <div class="row space-above">
                 <div class="col-md-12">
                   #if(!$registry.configExtensions.suppressPasswordLogin && !$oauthProviders.isEmpty())
-                  	<p>Or register via an OAuth provider.</p>
+                  	<p>$msg['login.register.oauth']</p>
                   #end
                   #foreach($provider in $oauthProviders)
                     #oauthRegister($provider, $return)
@@ -125,13 +125,12 @@
         
         <div class="row space-above">
           <div class="col-md-12">
-            <p>If you register or login this site will use cookies to record your
-             preferred OpenID provider (if any) and to record the ID you are logged in with for this session.</p>
-           <p>If you choose to register, the only information that shall be stored on this site is the URI identifie\
-r used by your identity provider and the display name associated with that identifier.  This URI identifier will be \
-used to tag all direct edit interactions with the data published on this site.  This is not deemed personal informat\
-ion, under European GDPR legislation.  There is no facility to remove your identifier from data resources once it ha\
-s been attached, it is part of the history of the registry.<p>
+            <p>$msg['login.cookies.notice']</p>
+            <p>If you choose to register, the only information that shall be stored on this site is the URI identifie\
+                r used by your identity provider and the display name associated with that identifier.  This URI identifier will be \
+                used to tag all direct edit interactions with the data published on this site.  This is not deemed personal informat\
+                ion, under European GDPR legislation.  There is no facility to remove your identifier from data resources once it ha\
+                s been attached, it is part of the history of the registry.<p>
 
           </div>
         </div>
@@ -141,7 +140,7 @@ s been attached, it is part of the history of the registry.<p>
       <div class="modal-page-footer">
         <div class="row">
           <div class="col-md-offset-10 col-md-1">
-            <a href="#if($return)$return#else$root#end" class="btn">Close</a>
+            <a href="#if($return)$return#else$root#end" class="btn">$msg['ui.close']</a>
           </div>
         </div>
       </div>

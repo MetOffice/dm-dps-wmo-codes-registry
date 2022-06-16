@@ -2,11 +2,10 @@
 #parse("structure/_preamble.vm")
 
     #if($subject.isAuthenticated())
-        <h2>Admin action completed</h2>
-        <p>See the Admin menu for further actions available.</p>
-
+        <h2>$msg['admin.action.complete']</h2>
+        <p>$msg['admin.action.menu']</p>
     #else
-        <h3>Sorry you must be logged in to access this page</h3>
+        <h3>$msg['user.loginRequired']</h3>
     #end
 
 #parse("structure/_footer.vm")

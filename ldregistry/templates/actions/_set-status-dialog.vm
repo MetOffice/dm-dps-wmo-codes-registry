@@ -2,7 +2,7 @@
 ## Input parameters:
 ##         $item the item to set
 
-#statusSet("status-dialog-item", "Set status of $entity.name to ...", $item, $item)
+#statusSet("status-dialog-item", $msg.get('registerItem.setStatus.heading', $entity.name), $item, $item)
 
 <script type="text/javascript">
     $(function() {

@@ -3,8 +3,7 @@
 ## $register   - the register to which the form should be sent
 ## $return     - URL to return to 
 
-<form class="ajax-form" action="$register" method="post" data-return="$return">
-  <input type="hidden" name="action" value="register-inline" />
+<form class="ajax-form" action="$register" method="post" data-return="$return" id="create-entry-form">
   <input type="hidden" name="form-type" value="$spec.uRI" />
 
   <p>
@@ -22,11 +21,49 @@
           <textarea class="form-control" rows="2" name="$notation" id="$notation" placeholder="$field.name"></textarea>
         #elseif($field.hasResourceValue("ui:fieldType", "ui:anyURIField"))
           <input class="input-large popinfo form-control" type="text" name="$notation" id="$notation" placeholder="$field.name"
-            data-trigger="hover" data-placement="bottom" data-content="URI, can use prefixes, separate multiple values with ','.">
+            data-trigger="hover" data-placement="bottom" data-content="$msg['registerItem.property.prompt']">
         #end
     </div>
 
   #end
   
-  <button class="btn">Create and register</button>
+  <button class="btn">$msg['registerItem.create.button']</button>
+  <button id="create-entry-form-compare" type="button" class="btn">$msg['registerItem.compare.button']</button>
 </form>
+
+<div class="compare-results"></div>
+
+<script type="text/javascript" src="$assets/js/registry-compare.js"></script>
+<script type="text/javascript">
+  $(function() {
+    registryCompare({
+      selector: {
+        target: ".compare-results",
+        error: ".ajax-error",
+        button: "#create-entry-form-compare",
+        form: "#create-entry-form"
+      }
+    });
+
+    $("#create-entry-form").submit(function() {
+      var form = $(this);
+      var returnURL = form.attr('data-return');
+
+      form.ajaxSubmit({
+        data: { action: "register-inline" },
+        success: function(data, status, xhr) {
+          if (returnURL) {
+              window.location.href = returnURL;
+          } else {
+            location.reload();
+          }
+        },
+        error: function(xhr, status, error) {
+          $(".ajax-error").html("<div class='alert alert-warning'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
+        }
+      });
+
+      return false;
+    });
+  });
+</script>

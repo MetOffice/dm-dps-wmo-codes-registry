@@ -8,7 +8,7 @@ $(function() {
     // Enable datatable processing
     $('.datatable').dataTable( {
       "language": {
-        "search": "Filter entries:"
+        "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
       },
       "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ]
     } );
@@ -56,14 +56,18 @@ $(function() {
         var uiroot = tab.attr('data-uiroot');
         if (action) {
           //var url = '$uiroot/' + action +'?uri=$lib.pathEncode($uri)&requestor=$requestor';
-          var url = uiroot + '/' + action + '?uri=' + uri;
+          var url = uiroot + '/' + action + '?param=' + uri;
           var args = tab.attr('data-args');
           if (args) {
              url = url + "&" + args;
           }
           tab.find(".tab-pane-inner").load(url, function(){
              $('.action-tab').tab(); //reinitialize tabs
-             $('.datatable').dataTable();
+             $('.datatable').dataTable({
+               "language": {
+                 "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
+               }
+             });
              processQueryForms();
            });
         };

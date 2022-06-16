@@ -48,7 +48,7 @@
 #end
 
 ## Determine the href value to use in a link to the given resource, reference URIs go external
-#macro(linkhref $res)#if($res.uRI.startsWith($registry.baseURI))$root$lib.reg.xssCleanURI($res.uRI.substring($registry.baseURI.length()))#else$lib.reg.xssCleanURI($res.uRI)#end#end
+#macro(linkhref $res)#if($res.uRI.startsWith($registry.baseURI))$root$lib.reg.xssCleanURI($res.uRI.substring($registry.baseURI.length()))#else#set($href = $lib.reg.xssCleanURI($res.uRI))#if($href.startsWith("javascript:"))#[[#]]##else$href#end#end#end
 
 ## Determine the href value to use in a link to the given resource, reference URIs go internal
 #macro(linkhrefInt $res)#if($res.uRI.startsWith($registry.baseURI))${root}$res.uRI.substring($registry.baseURI.length())#else${root}/?entity=$lib.pathEncode($res.getURI())#end#end
@@ -140,7 +140,7 @@
 #macro(langtable $values)
   <table class="langTable">
     <tbody>
-      #foreach($v in $values)
+      #foreach($v in $reg.sortLanguages($values, $language))
         <tr>
           <td align="right">
             <strong>$v.language</strong>
@@ -215,7 +215,7 @@
            #set($submitter=false)
            #set($submitter=$item.listPropertyValues("reg:submitter"))
            #if(!$submitter.isEmpty())
-             <tr><td class="align-right"><strong>submitted by</strong></td><td>#foreach($s in $submitter)
+             <tr><td class="align-right"><strong>$msg['registerItem.metadata.submitter.label']</strong></td><td>#foreach($s in $submitter)
              $s.name#if( $foreach.hasNext ), #end#end</td></tr>
            #end
 #end
@@ -241,11 +241,11 @@
                 #end
               #if($superseded)
                   <div class="form-group">
-                    <label for="superseded-by">or, superseded by:</label>
+                    <label for="superseded-by">$msg['registerItem.superseded.label']</label>
                     <div class="input-group">
-                      <input type="text" class="form-control" id="superseded-by" placeholder="URI for new item">
+                      <input type="text" class="form-control" id="superseded-by" placeholder="$msg['registerItem.successor.prompt']">
                       <span class="input-group-btn">
-                        <button class="set-status btn btn-$status.presentation" data-status="superseded" data-target="#linkhref($target)" data-arg="#superseded-by">superseded</button>
+                        <button class="set-status btn btn-$status.presentation" data-status="superseded" data-target="#linkhref($target)" data-arg="#superseded-by">$msg['registerItem.superseded.button']</button>
                       </span>
                     </div>
                   </div>
@@ -253,7 +253,7 @@
               </div>
               <div class="status-error"></div>
               <div class="modal-footer">
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+                <button class="btn" data-dismiss="modal" aria-hidden="true">$msg['ui.close']</button>
               </div>
             </div>
           </div>
@@ -274,7 +274,7 @@
 	<div class="input-group space-above">
 	  <input type="hidden" name="provider" value="$provider.name" />
 	  <input type="hidden" name="return" value="$return" />
-	  <input type="submit" value="Login via $provider.label" class="btn btn-primary" type="button" />
+	  <input type="submit" value="$msg.get('login.oauth.provider.login', $provider.label)" class="btn btn-primary" type="button" />
 	</div><!-- /input-group -->
   </form>
 #end
@@ -284,7 +284,7 @@
 	<div class="input-group space-above">
 	  <input type="hidden" name="provider" value="$provider.name" />
 	  <input type="hidden" name="return" value="$return" />
-	  <input type="submit" value="Create account via $provider.label" class="btn btn-primary" type="button" />
+	  <input type="submit" value="$msg.get('login.oauth.provider.register', $provider.label)" class="btn btn-primary" type="button" />
 	</div>
   </form>
 #end

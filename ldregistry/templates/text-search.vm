@@ -13,7 +13,7 @@
             </tr>
 #end
 
-#set($pageTitle="Search: $lib.escapeHtml($query)")
+#set($pageTitle=$msg.get("textSearch.title", $lib.escapeHtml($query)))
 #parse( "structure/_preamble.vm" )
 
 #set($target='<nullsearch>')
@@ -33,16 +33,16 @@
   #set($items=$qr.items.asList())
   #set($pageres=$qr.page)
 
-    <h3>Search results for: $lib.escapeHtml($query)</h3>
+    <h3>$msg.get("textSearch.results.heading", $lib.escapeHtml($query))</h3>
 
     <table class="table table-striped table-bordered">
       <thead>
         <tr>
-          <th>Name</th>
-          <th>Notation</th>
-          <th>Description</th>
-          <th>Types</th>
-          <th>Status</th>
+          <th>$msg['registerItem.name.label']</th>
+          <th>$msg['registerItem.notation.label']</th>
+          <th>$msg['registerItem.description.label']</th>
+          <th>$msg['registerItem.types.label']</th>
+          <th>$msg['registerItem.status.label']</th>
         </tr>
       </thead>
 

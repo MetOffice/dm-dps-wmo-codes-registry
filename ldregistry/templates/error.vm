@@ -1,12 +1,9 @@
-#set($pageTitle="Registry error")
+#set($pageTitle=$msg['error.title'])
   #if($uri.isEmpty())
     #set($nav="root")
   #end
 
 #parse("structure/_preamble.vm")
-
-        <h2>Sorry</h2>
-
-        <p>$lib.escapeHtml($message)</p>
-
+  <h2>$msg['error.heading']</h2>
+  <p>$lib.escapeHtml($message)</p>
 #parse("structure/_footer.vm")
