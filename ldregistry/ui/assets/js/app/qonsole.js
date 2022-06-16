@@ -137,7 +137,7 @@ var qonsole = function() {
   var initPrefixes = function( config ) {
     var prefixAdd = $("ul.prefixes li:last" );
     $.each( config.prefixes, function( key, value ) {
-      var html = sprintf( "<li><a class='btn btn-custom2 btn-sm active' data-toggle='button' data-uri='%s'>%s</a></li>", value, key );
+      var html = sprintf( "<li><a class='btn btn-custom2 btn-sm active' data-toggle='button' data-uri='%s' href='#'>%s</a></li>", value, key );
       $(html).insertBefore( prefixAdd);
     } );
   };
@@ -149,7 +149,7 @@ var qonsole = function() {
     examples.empty();
 
     $.each( config.queries, function( i, queryDesc ) {
-      var html = sprintf( "<li><a class='btn btn-custom2 btn-sm' data-toggle='button'>%s</a></li>",
+      var html = sprintf( "<li><a class='btn btn-custom2 btn-sm' data-toggle='button' href='#'>%s</a></li>",
                           queryDesc.name );
       examples.append( html );
 
@@ -631,7 +631,7 @@ var qonsole = function() {
     $("#inputURI").val("");
 
     if (prefix) {
-      $.getJSON( sprintf( "http://prefix.cc/%s.file.json", prefix ),
+      $.getJSON( sprintf( "https://prefix.cc/%s.file.json", prefix ),
                 function( data ) {
                   $("#inputURI").val( data[prefix] );
                 }
