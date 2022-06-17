@@ -185,8 +185,7 @@ th {
   padding: 0; }
 
 #logoWMO {
-  width: 169;
-  height: 144;
+  max-height: 40%;
 }
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
@@ -1090,7 +1089,7 @@ textarea {
   line-height: inherit; }
 
 a {
-  color: #277DB0;
+  color: #195476;
   text-decoration: none; }
   a:hover, a:focus {
     color: #134fb8;
@@ -4077,9 +4076,9 @@ tbody.collapse.in {
     .breadcrumb > li + li:before {
       content: "/ ";
       padding: 0 5px;
-      color: #ccc; }
+      color: #424242; }
   .breadcrumb > .active {
-    color: #b3b3b3; }
+    color: black; }
 
 .pagination {
   display: inline-block;
@@ -6116,7 +6115,7 @@ footer {
     color: #202222;
     text-decoration: underline; }
   footer .c-footer-epimorphics {
-    color: #515757; }
+    color: #404040; }
     footer .c-footer-epimorphics a, footer .c-footer-epimorphics a:hover {
       color: inherit; }
   footer .c-linked-data-logo {
