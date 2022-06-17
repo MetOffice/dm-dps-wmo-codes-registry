@@ -20,7 +20,7 @@
         <ul class="list-inline prefixes">
           <li class="keep">
             <a data-toggle="modal" href="#prefixEditor" class="button" title="$msg['sparql.prefix.add']">
-              <i class="icon-plus-sign"></i>
+              <i class="icon-plus-sign" style="font-size: 150%">&nbsp;&nbsp;+&nbsp;&nbsp;</i>
             </a>
           </li>
         </ul>
