@@ -482,7 +482,18 @@ var qonsole = function() {
   var onQueryFail = function( jqXHR, textStatus, errorThrown ) {
     showResultsTimeAndCount( 0 );
     var text = jqXHR.valueOf().responseText || sprintf( "Sorry, that didn't work because: '%s'", jqXHR.valueOf().statusText );
-    $("#results").html( sprintf( "<pre class='text-danger'>%s</pre>", _.escape(text) ) );
+    if (text.includes("Parse error:")) {
+      // Tidy up a parse error message so it can be displayed without the
+      // http 400-code wrapper
+      var startParseError = text.indexOf("Parse error:");
+      var endParseError = text.indexOf("<\/p><p><b>Description<\/b> The server cannot or will not process the request");
+      text = text.substring(startParseError, endParseError);
+      // Don't escape the text in this instance
+      $("#results").html( sprintf( "<pre class='text-danger'>%s</pre>", text ) );
+    } else {
+      // Escape the text
+      $("#results").html( sprintf( "<pre class='text-danger'>%s</pre>", _.escape(text) ) );
+    }
   };
 
   /** Return options for display query results as text */
