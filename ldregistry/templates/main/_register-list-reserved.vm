@@ -13,10 +13,10 @@
       #end
       
       #if(!$reserved.isEmpty())
-        <h3>Reserved items</h3>
+        <h3>$msg['register.reserved.heading']</h3>
         <div class="result-blob">
           <div class="blob-inner">
-            <p>The following items are reserved for future use: $reserved</p> 
+            <p>$msg.get('register.reserved.note', $reserved)</p>
           </div>
         </div>
       #end

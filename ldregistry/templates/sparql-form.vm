@@ -1,4 +1,4 @@
-#set($pageTitle="Registry sparql query")
+#set($pageTitle=$msg['sparql.title'])
 #set($extraCSS="qonsole.css,codemirror.css")
 #set($nav="sparql")
 #parse("structure/_preamble.vm")
@@ -10,17 +10,17 @@
 
     <div class="qonsole">
       <div class="col-md-12 well">
-        <h2 class="">Example queries</h2>
+        <h2 class="">$msg['sparql.example']</h2>
         <ul class="list-inline examples">
         </ul>
       </div>
 
       <div class="col-md-12 well vertical">
-        <h2 class="">Prefixes</h2>
+        <h2 class="">$msg['sparql.prefix.heading']</h2>
         <ul class="list-inline prefixes">
           <li class="keep">
-            <a data-toggle="modal" href="#prefixEditor" class="button" title="Add a SPARQL prefix">
-              <i class="icon-plus-sign" style="font-size: 150%">&nbsp;&nbsp;+&nbsp;&nbsp;</i>
+            <a data-toggle="modal" href="#prefixEditor" class="button" title="$msg['sparql.prefix.add']">
+              <i class="icon-plus-sign"></i>
             </a>
           </li>
         </ul>
@@ -34,18 +34,18 @@
           <form class="form-inline" role="form">
 
             <div class="form-group">
-              <label for="sparqlEndpoint">SPARQL endpoint</label>
-              <input type="text" class="form-control" id="sparqlEndpoint" placeholder="/system/query/"/>
+              <label for="sparqlEndpoint">$msg['sparql.endpoint.label']</label>
+              <input type="text" class="form-control" id="sparqlEndpoint" />
             </div>
             <div class="form-group">
-              <label for="displayFormat">Results</label>
+              <label for="displayFormat">$msg['sparql.results.label']</label>
               <div class="dropdown" >
                 <a data-toggle="dropdown" class="btn btn-custom2 display-format" href="#" data-value="tsv" id="displayFormat">
-                  <span>table</span> <i class="icon-collapse"></i>
+                  <span>$msg['sparql.results.table.button']</span> <i class="icon-collapse"></i>
                 </a>
-                <ul class="dropdown-menu formats  " role="menu" aria-labelledby="dropdown-menu">
-                  <li role='presentation' class="" ><a data-value="tsv" role='menuitem' tabindex='-1' href='#'>table</a></li>
-                  <li role='presentation' class="" ><a data-value="text" role='menuitem' tabindex='-1' href='#'>plain text</a></li>
+                <ul class="dropdown-menu formats  " role="menu" aria-labelledby="dropdownMenu2">
+                  <li role='presentation' class="" ><a data-value="tsv" role='menuitem' tabindex='-1' href='#'>$msg['sparql.results.format.table']</a></li>
+                  <li role='presentation' class="" ><a data-value="text" role='menuitem' tabindex='-1' href='#'>$msg['sparql.results.format.plain']</a></li>
                   <li role='presentation' class="" ><a data-value="json" role='menuitem' tabindex='-1' href='#'>JSON</a></li>
                   <li role='presentation' class="" ><a data-value="xml" role='menuitem' tabindex='-1' href='#'>XML</a></li>
                 </ul>
@@ -54,7 +54,7 @@
             </div>
             <div class="form-group">
               <label>&nbsp;</label>
-              <a href="#" class="btn btn-success run-query form-control">perform query</a>
+              <a href="#" class="btn btn-success run-query form-control">$msg['sparql.perform.button']</a>
             </div>
 
           </form>
@@ -68,14 +68,14 @@
             <div class="row">
               <div class="col-md-12">
                 <span class="loadingSpinner hidden">
-                  <img src="img/wait30.gif" alt="waiting for server action to complete" />
+                  <img src="img/wait30.gif" alt="$msg['sparql.waiting']" />
                 </span>
                 <span class="timeTaken hidden"></span>
               </div>
             </div>
             <div class="row">
               <div class="col-md-12" id="results">
-                <h2 class="col-md-12">Query results</h2>
+                <h2 class="col-md-12">$msg['sparql.results.heading']</h2>
               </div>
             </div>
           </div>
@@ -92,32 +92,32 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Add a SPARQL prefix</h4>
+            <h4 class="modal-title">$msg['sparql.prefix.add']</h4>
           </div>
           <div class="modal-body">
-            <form class="form-horizontal">
+            <form class="form-horizontal" role="form">
               <div class="form-group">
-                <label for="inputPrefix" class="col-lg-2 control-label">Prefix</label>
+                <label for="inputPrefix" class="col-lg-2 control-label">$msg['sparql.prefix.prefix']</label>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" id="inputPrefix" placeholder="Prefix" autofocus>
+                  <input type="text" class="form-control" id="inputPrefix" placeholder="$msg['sparql.prefix.prefix']" autofocus>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-lg-offset-2 col-lg-10">
-                  <button class="btn btn-sm btn-primary" id="lookupPrefix">Lookup <span></span> on prefix.cc</button>
+                  <button class="btn btn-sm btn-primary" id="lookupPrefix">$msg['sparql.prefix.lookup']</button>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputURI" class="col-lg-2 control-label">URI</label>
+                <label for="inputURI" class="col-lg-2 control-label">$msg['ui.uri']</label>
                 <div class="col-lg-10">
-                  <input type="text" class="form-control" id="inputURI" placeholder="URI">
+                  <input type="text" class="form-control" id="inputURI" placeholder="$msg['ui.uri']">
                 </div>
               </div>
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">cancel</button>
-            <button type="button" class="btn btn-primary" data-dismiss="modal" id="addPrefix">add prefix</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">$msg['ui.cancel']</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal" id="addPrefix">$msg['sparql.prefix.add.button']</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->

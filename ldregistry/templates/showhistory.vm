@@ -1,7 +1,8 @@
 #set($root=$registry.rootPath)
 
-#set($response=$registry.perform("Read","$uri?_view=version_list", $requestor))
-#set($target="$registry.baseURI/$uri")
+#set($p=$param.replace('"',''))
+#set($response=$registry.perform("Read","$p?_view=version_list", $requestor))
+#set($target="$registry.baseURI/$p")
 
 #if($response.status == 404)
   #parse("main/_not-found.vm")
@@ -15,15 +16,15 @@
                        OPTIONAL {?version version:interval [time:hasBeginning [time:inXSDDateTime ?from]].}
                        OPTIONAL {?version version:interval [time:hasEnd [time:inXSDDateTime ?to]].}} ORDER BY DESC(?vi)"))
 
-  <h3 class="text-center">Historical versions available</h3>
+  <h3 class="text-center">$msg['registerItem.history.heading']</h3>
 
 
   <table class="table table-striped table-condensed">
     <thead>
       <tr>
-        <th>Version</th>
-        <th>Valid from</th>
-        <th>Valid to</th>
+        <th>$msg['registerItem.history.version.version.label']</th>
+        <th>$msg['registerItem.history.version.validFrom.label']</th>
+        <th>$msg['registerItem.history.version.validTo.label']</th>
       </tr>
     </thead>
     <tbody>

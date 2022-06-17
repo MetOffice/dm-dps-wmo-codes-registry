@@ -2,13 +2,13 @@
 #parse("structure/_preamble.vm")
 
     #if($subject.isAuthenticated())
-        <h2>Permissions</h2>
+        <h2>$msg['user.permissions.heading']</h2>
         #if($subject.hasRole("administrator"))
-            <p>You are an administrator and so have full permissions, the following list is superfluous.</p>
+            <p>$msg['user.permissions.admin.note']</p>
         #end
         #set($permissions = $lib.reg.permissions)
         #if(!$permissions.isEmpty())
-            <h3>Explicitly granted permissions (inherit down the tree)</h3>
+            <h3>$msg['user.permissions.granted']</h3>
             <table class="table">
               <tbody>
                 #foreach($permission in $lib.reg.permissions)
@@ -20,11 +20,11 @@
               </tbody>
             </table>
         #else
-            <p>No explicit permissions granted</p>
+            <p>$msg['user.permissions.none']</p>
         #end
 
     #else
-        <h3>Sorry you must be logged in to access this page</h3>
+        <h3>$msg['user.loginRequired']</h3>
     #end
 
 #parse("structure/_footer.vm")

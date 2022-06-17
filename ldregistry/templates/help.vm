@@ -35,15 +35,15 @@ WMO Manuals on Codes.</p>
       </div>
 
       <div class="row">
-      <p><a href="ui/about/querying"> Some guidance as to how to make queries</a></p>
+      <p><a href="/about/querying"> Some guidance as to how to make queries</a></p>
       </div>
 
       <div class="row">
-      <p><a href="ui/about/identifiers">Documentation regarding entities contained in the register</a></p>
+      <p><a href="/about/identifiers">Documentation regarding entities contained in the register</a></p>
       </div>
 
 
     </div>
-    
+
 
 #parse("structure/_footer.vm")

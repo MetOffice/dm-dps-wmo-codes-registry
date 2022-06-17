@@ -1,0 +1,96 @@
+#*
+  $response | The Response instance to be rendered. The response entity is a Jena model.
+  $newItems | The RDF Nodes corresponding to the register items that were inferred from the request.
+*#
+
+#set($root=$registry.rootPath)
+#set($uiroot="$root/ui")
+#set($assets="$uiroot/assets")
+
+#macro( resultRowValues $item )
+  #set( $itemEntity = $item.getPropertyValue("reg:definition").getPropertyValue("reg:entity") )
+  <td>
+    <a href="#linkhref($item)" title="$lib.reg.xssCleanURI($item.uRI)" target="_blank">$item.name</a>
+  </td>
+  <td>
+    #set( $registerPath = $item.getPropertyValue("reg:register").uRI.substring($registry.baseURI.length()) )
+    #set( $registerUri = "$root$registerPath" )
+    <a href="$lib.reg.xssCleanURI($registerUri)" title="$lib.reg.xssCleanURI($registerUri)" target="_blank">$registerPath</a>
+  </td>
+  <td>
+    #foreach($ty in $itemEntity.listPropertyValues("rdf:type"))
+      #linkfor($ty)#if( $foreach.hasNext ), #end
+    #end
+  </td>
+  <td>#showstatus($item.getPropertyValue("reg:status"))</td>
+#end
+
+#macro( resultRow $newItemW $property $isMulti )
+  #set( $items = $newItemW.listPropertyValues($property) )
+  #set( $firstItem = true )
+
+  #foreach( $item in $items )
+    <tr>
+      #set( $newEntity = $newItemW.getPropertyValue("reg:definition").getPropertyValue("reg:entity") )
+      #if( $firstItem && $isMulti )<td rowspan="$items.size()">$lib.reg.xssCleanURI($newEntity.uRI)</td>#end
+      #resultRowValues($item)
+    </tr>
+
+    #set( $firstItem = false )
+  #end
+#end
+
+#macro( resultTable $modelW $newItems $property )
+  #set( $isMulti = $newItems.size() > 1 )
+
+  <table class="table table-striped table-bordered" style="color: black; background-color: white;">
+    <thead>
+      <tr>
+        #if( $isMulti )<th>$msg['compare.item.new.label']</th>#end
+        <th>$msg['compare.item.suggested.label']</th>
+        <th>$msg['registerItem.register.label']</th>
+        <th>$msg['registerItem.types.label']</th>
+        <th>$msg['registerItem.status.label']</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      #foreach( $newItem in $newItems )
+        #set( $newItemW = $modelW.getNode($newItem.uRI) )
+        #resultRow( $newItemW, $property, $isMulti )
+      #end
+    </tbody>
+  </table>
+#end
+
+<div>
+  #set( $model = $response.entity )
+  #set( $modelW = $lib.reg.wrapModel($response.entity) )
+  #set( $isExactMatch = $modelW.queryAsk("ASK { ?result a reg:CompareResult; rdfs:member/skos:exactMatch ?item }") )
+  #set( $isCloseMatch = $modelW.queryAsk("ASK { ?result a reg:CompareResult; rdfs:member/skos:closeMatch ?item }") )
+
+  #if( $isExactMatch || $isCloseMatch )
+    #if( $isExactMatch )
+      <div class='alert alert-warning'>
+        <button type='button' class='close' data-dismiss='alert'>&times;</button>
+        <span>$msg['compare.exactMatch.description']</span>
+
+        #resultTable( $modelW, $newItems, "skos:exactMatch" )
+      </div>
+    #end
+
+    #if( $isCloseMatch )
+      <div class='alert alert-warning'>
+        <button type='button' class='close' data-dismiss='alert'>&times;</button>
+        <span>$msg['compare.closeMatch.description']</span>
+
+        #resultTable( $modelW, $newItems, "skos:closeMatch" )
+      </div>
+    #end
+  #else
+    <div class='alert'>
+      <button type='button' class='close' data-dismiss='alert'>&times;</button>
+      <span>$msg['compare.noMatch.description']</span>
+    </div>
+  #end
+</div>

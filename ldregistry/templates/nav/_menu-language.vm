@@ -1,0 +1,17 @@
+## Render the language selection menu within the navigation bar
+
+<li class="dropdown languages">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">$lib.escapeHtml($language)<b class="caret"></b></a>
+  <ul class="dropdown-menu dropdown-menu-right">
+    #foreach($lang in $registry.languageManager.languages)
+      <li><a href="?lang=$lang.code">
+        <div class="langCode">
+          <b>$lang.code</b>
+        </div>
+        <div>
+          $lang.label
+        </div>
+      </a></li>
+    #end
+  </ul>
+</li>

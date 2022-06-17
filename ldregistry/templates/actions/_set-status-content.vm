@@ -16,7 +16,7 @@
         #set( $ml = $members[0].connectedNodes("^reg:entity/^reg:definition") )
         #if( ! $ml.isEmpty() )
             #set( $statusContentsSample = $ml[0] )
-            <a href="#status-dialog-content" role="button" class="btn btn-default btn-sm" data-toggle="modal">Set contents status</a>
+            <a href="#status-dialog-content" role="button" class="btn btn-default btn-sm" data-toggle="modal">$msg['register.setStatus.button']</a>
         #else
             #set( $statusContentsSample = false )
         #end

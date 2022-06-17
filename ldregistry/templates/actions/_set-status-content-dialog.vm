@@ -4,5 +4,5 @@
 ##     statusContentsSample - representative member from which to deduce legal status settings
 
 #if ( $statusContentsSample )
-    #statusSet("status-dialog-content", "Set status of register contents to ...", $statusContentsSample, $register)
+    #statusSet("status-dialog-content", $msg['register.setStatus.heading'], $statusContentsSample, $register)
 #end
