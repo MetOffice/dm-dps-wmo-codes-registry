@@ -1,7 +1,7 @@
       // configuration
       var config = {
         endpoints: {
-          "default": "/registry/system/query",
+          "default": "/system/query",
         },
         prefixes: {
           "rdf":      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",

@@ -35,7 +35,7 @@
 
             <div class="form-group">
               <label for="sparqlEndpoint">$msg['sparql.endpoint.label']</label>
-              <input type="text" class="form-control" id="sparqlEndpoint" placeholder="/system/query"/>
+              <input type="text" class="form-control" id="sparqlEndpoint"/>
             </div>
             <div class="form-group">
               <label for="displayFormat">$msg['sparql.results.label']</label>
