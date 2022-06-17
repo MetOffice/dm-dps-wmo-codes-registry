@@ -27,7 +27,7 @@
                 <div class='collapse navbar-collapse' id='navbar-ea-menu'>
                     <ul class='nav navbar-nav navbar-left'>
                         <li #if($nav=="browse")class="active"#end><a href="$root/?_browse=true">$msg['nav.browse.label']</a></li>
-                        <li #if($nav=="about")class="active"#end><a href="$uiroot/about">$msg['nav.about.label']</a></li>
+                        <li #if($nav=="help")class="active"#end><a href="$uiroot/help">$msg['nav.about.label']</a></li>
                         #if($subject.isAuthenticated())
                             #parse( "nav/_menu-admin.vm" )
                         #end
