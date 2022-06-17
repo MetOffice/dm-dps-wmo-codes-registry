@@ -6,7 +6,7 @@ let query = "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \
             prefix reg: <http://purl.org/linked-data/registry#> \
             prefix version: <http://purl.org/linked-data/version#> \
             select ?regdef ?label where { \
-            ?item reg:register <http://reference.metoffice.gov.uk/EnvironmentalDataCategorisation/data-readiness> ; \
+            ?item reg:register <http://codes.wmo.int/wmdr/DataFormat> ; \
                   version:currentVersion/reg:definition/reg:entity ?regdef ; \
                   version:currentVersion ?itemVer. \
             ?regdef rdfs:label ?label . }";
