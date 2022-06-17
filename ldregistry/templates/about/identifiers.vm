@@ -1,6 +1,6 @@
-#parse("../structure/_header.vm")
+#parse("/structure/_header.vm")
 #set($nav="identifiers")
-#parse("../nav/_navbar.vm")
+#parse("/nav/_navbar.vm")
 
 <div class="jumbotron">
   <div class="container">
