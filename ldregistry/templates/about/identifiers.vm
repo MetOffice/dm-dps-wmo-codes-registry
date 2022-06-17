@@ -22,7 +22,7 @@
       The Identifier for an entity is always the URI as defined in the middle of the page:
     </p>
     <p>
-      <strong>URI:</strong> <span id="forHelpPageURI">http://reference.metoffice.gov.uk/an-example-uri</span>&nbsp;&nbsp;<span title="Copy URI to clipboard" id="copyButtonID_forHelpPageURI" onclick="copyToClipboard('forHelpPageURI', 'copyButtonID_forHelpPageURI')">&nbsp;</span>
+      <strong>URI:</strong> <span id="forHelpPageURI">https://codes.wmo.int//an-example-uri</span>&nbsp;&nbsp;<span title="Copy URI to clipboard" id="copyButtonID_forHelpPageURI" onclick="copyToClipboard('forHelpPageURI', 'copyButtonID_forHelpPageURI')">&nbsp;</span>
     </p>
 
     <h2>Uniform Resource Identifiers and Uniform Resource Locators</h2>
@@ -37,7 +37,7 @@
     </p>
     <p>
       The primary job of the codes registry is to register URIs, controlled term identifiers to definitively define a
-      term within the scope of the domain that owns the registry. URIs published on this registry are the Met Office's
+      term within the scope of the domain that owns the registry. URIs published on this registry are the WMO's
       structured definitions of terms.
     </p>
     <p>
@@ -92,8 +92,8 @@
       the most common scenario is that a RegisterItem is managing an Entity defined in the same place.
     </p>
     <p>
-      In this common scenario, an Entity exists, e.g. <a href="http://reference.metoffice.gov.uk/grib/grib2/mo--74">http://reference.metoffice.gov.uk/grib/grib2/mo--74</a>
-      which is managed by a RegisterItem, e.g. <a href="http://reference.metoffice.gov.uk/grib/grib2/_mo--74">http://reference.metoffice.gov.uk/grib/grib2/_mo--74</a>
+      In this common scenario, an Entity exists, e.g. <a href="https://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD">http://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD</a>
+      which is managed by a RegisterItem, e.g. <a href="https://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD">http://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD</a>
     </p>
     <p>
       The RegisterItem is identifiable by the presence of the leading underscore, _mo--74 as compared to mo--74.

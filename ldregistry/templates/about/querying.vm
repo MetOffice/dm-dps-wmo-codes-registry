@@ -16,7 +16,7 @@
 <p>For example, JavaScript may be written to target the service query endpoint and
   run a query that obtains the URI and label for each of the entities in the current
   version of the register:
-  <a href="/EnvironmentalDataCategorisation/_data-readiness">https://reference.metoffice.gov.uk/EnvironmentalDataCategorisation/_data-readiness</a>
+  <a href="/wmdr/DataFormat">http://codes.wmo.int/wmdr/DataFormat</a>
 </p>
 
 <pre>
@@ -25,7 +25,7 @@ let query = "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \
             prefix reg: <http://purl.org/linked-data/registry#> \
             prefix version: <http://purl.org/linked-data/version#> \
             select ?regdef ?label where { \
-            ?item reg:register <http://reference.metoffice.gov.uk/EnvironmentalDataCategorisation/data-readiness> ; \
+            ?item reg:register <http://codes.wmo.int/wmdr/DataFormat> ; \
                   version:currentVersion/reg:definition/reg:entity ?regdef ; \
                   version:currentVersion ?itemVer. \
             ?regdef rdfs:label ?label . }";
