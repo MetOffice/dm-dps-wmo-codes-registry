@@ -69,6 +69,14 @@
     <script type="text/javascript" src="$assets/js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="$assets/js/jquery.form.js"></script>
     <script type="text/javascript" src="$assets/js/copy-to-clipboard.js"></script>
+
+    <!-- Force all keyboard tabbed elements to have this outline style. -->
+    <style>
+      *:focus-visible {
+        outline: orangered dotted 2px !important;
+      }
+    </style>
+
   </head>
 
   <body onload="onLoadInitialisation();">

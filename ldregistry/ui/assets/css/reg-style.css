@@ -185,7 +185,7 @@ th {
   padding: 0; }
 
 #logoWMO {
-  max-height: 40%;
+  max-inline-size: 25%;
 }
 
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
