@@ -27,7 +27,7 @@
           } ,
           { "name": "List items in a register",
             "query": "select *\nwhere {\n" +
-                     "  ?item reg:register <${registry.baseURI}/system/prefixes>;\n" + 
+                     "  ?item reg:register <http://http://codes.wmo.int/system/prefixes>;\n" +
                      "        version:currentVersion ?itemVer.\n}"
           }
         ]
