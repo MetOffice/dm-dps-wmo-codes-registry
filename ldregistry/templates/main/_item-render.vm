@@ -25,7 +25,7 @@
   <div id="description" class="col-md-10">
     <h2>#if($register)$msg.get('register.heading', $entity.name) #{else}$msg.get('registerItem.heading', $entity.name) #end #if($versionNumber)- $msg.get('registerItem.version.heading', $versionNumber)#end</h2>
     <p>  <strong>URI:</strong> <span title="$entity.uRI" id="forItemURI">$entity.uRI</span> &nbsp;&nbsp;<a href="#" onkeydown="copyToClipboardKeydown(event, 'forItemURI', 'copyButtonID_forItemURI')" onfocus="copyToClipboardFocus('copyButtonID_forItemURI')" onblur="copyToClipboardBlur('copyButtonID_forItemURI')"><span title="Copy URI to clipboard" id="copyButtonID_forItemURI" onclick="copyToClipboard('forItemURI', 'copyButtonID_forItemURI')">&nbsp;</span></a></p>
-    <div class="col-md-offset-0 col-md-1">
+    <div class="col-md-offset-0 col-md-1" style="margin-right: 2%">
       #showstatus( $item.getPropertyValue("reg:status") )
     </div>
     <p> #description($entity, "<p><em>$msg['resource.description.notFound']</em></p>") </p>
