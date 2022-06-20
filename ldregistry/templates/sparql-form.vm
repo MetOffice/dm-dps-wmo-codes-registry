@@ -38,7 +38,6 @@
               <input type="text" class="form-control" id="sparqlEndpoint"/>
             </div>
             <div class="form-group">
-              <label for="displayFormat">$msg['sparql.results.label']</label>
               <div class="dropdown" >
                 <a data-toggle="dropdown" class="btn btn-custom2 display-format" href="#" data-value="tsv" id="displayFormat">
                   <span>$msg['sparql.results.table.button']</span> <i class="icon-collapse"></i>
@@ -53,7 +52,6 @@
 
             </div>
             <div class="form-group">
-              <label>&nbsp;</label>
               <a href="#" class="btn btn-success run-query form-control">$msg['sparql.perform.button']</a>
             </div>
 
