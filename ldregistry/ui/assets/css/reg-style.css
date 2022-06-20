@@ -2966,7 +2966,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #3FAD46;
+  background-color: #246029;
   border-color: #3FAD46; }
   .btn-success:focus, .btn-success.focus {
     color: #fff;
@@ -5049,7 +5049,7 @@ button.list-group-item-danger {
 button.close {
   padding: 0;
   cursor: pointer;
-  background: transparent;
+  background: black;
   border: 0;
   -webkit-appearance: none; }
 
@@ -5873,7 +5873,7 @@ legend {
   text-decoration: none;
   opacity: 0.4; }
   .close:hover, .close:focus {
-    color: #fff;
+    color: grey;
     opacity: 1; }
 
 .label {
