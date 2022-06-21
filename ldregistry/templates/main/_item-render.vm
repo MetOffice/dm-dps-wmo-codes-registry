@@ -16,7 +16,7 @@
 #set( $isAdministrator = $lib.reg.isPermitted("Grant", $uri) )
 
 <div class="row">
-  <div class="col-md-10">
+  <div class="col">
     #parse( "main/_breadcrumbs.vm" )
   </div>
 </div>
@@ -28,7 +28,7 @@
     <div class="col-md-offset-0 col-md-1" style="margin-right: 2%">
       #showstatus( $item.getPropertyValue("reg:status") )
     </div>
-    <p> #description($entity, "<p><em>$msg['resource.description.notFound']</em></p>") </p>
+    <p> #description($entity, "<em>$msg['resource.description.notFound']</em>") </p>
   </div>
   <div id="metadata-pane" class="col-md-5 hide">
     <div class="tab-content" id="metadata-content">

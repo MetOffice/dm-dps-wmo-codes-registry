@@ -7,7 +7,7 @@
 #end
 #set( $absoluteRoot = "$scheme://$request.serverName" )
 
-<nav class='navbar o-navbar-reg navbar-static-top' role='navigation'>
+<nav class='navbar o-navbar-reg navbar-static-top'>
     <div class='container'>
         <div class='row'>
             <div class='col-sm-3'>
