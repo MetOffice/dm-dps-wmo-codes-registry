@@ -142,10 +142,10 @@
     <tbody>
       #foreach($v in $reg.sortLanguages($values, $language))
         <tr>
-          <td align="right">
+          <td class="text-right">
             <strong>$v.language</strong>
           </td>
-          <td align="left" class="langValueColumn">
+          <td class="text-left langValueColumn">
             #render($v)
           </td>
         </tr>
@@ -160,7 +160,7 @@
     <tbody>
       #foreach($pv in $res.listProperties())
         <tr>
-          <td class="align-right span2"> <strong title="$pv.getProp().uRI">$pv.getProp().name</strong> </td>
+          <td class="text-right span2"> <strong title="$pv.getProp().uRI">$pv.getProp().name</strong> </td>
           <td>
             #if($pv.isMultilingual())
               #langtable($pv.getValues())
@@ -274,7 +274,7 @@
 	<div class="input-group space-above">
 	  <input type="hidden" name="provider" value="$provider.name" />
 	  <input type="hidden" name="return" value="$return" />
-	  <input type="submit" value="$msg.get('login.oauth.provider.login', $provider.label)" class="btn btn-primary" type="button" />
+	  <input type="submit" value="$msg.get('login.oauth.provider.login', $provider.label)" class="btn btn-primary" />
 	</div><!-- /input-group -->
   </form>
 #end
@@ -284,7 +284,7 @@
 	<div class="input-group space-above">
 	  <input type="hidden" name="provider" value="$provider.name" />
 	  <input type="hidden" name="return" value="$return" />
-	  <input type="submit" value="$msg.get('login.oauth.provider.register', $provider.label)" class="btn btn-primary" type="button" />
+	  <input type="submit" value="$msg.get('login.oauth.provider.register', $provider.label)" class="btn btn-primary" />
 	</div>
   </form>
 #end

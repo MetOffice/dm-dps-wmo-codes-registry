@@ -17,7 +17,7 @@
               <h2>$msg['admin.users.details.heading']</h2>
               #if( ! $registry.configExtensions.suppressPasswordLogin)
               <div class="row">
-                <form class="form-horizontal form-validated" role="form"  action="$root/system/security/pwregisterOther" method="post" autocomplete="off">
+                <form class="form-horizontal form-validated"  action="$root/system/security/pwregisterOther" method="post" autocomplete="off">
                   <div class="form-group">
                     <label for="userid2" class="col-md-offset-1 col-md-2 control-label">$msg['user.username.label']</label>
                     <div class="col-md-8">
