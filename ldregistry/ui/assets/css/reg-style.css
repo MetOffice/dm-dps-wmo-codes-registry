@@ -184,6 +184,10 @@ td,
 th {
   padding: 0; }
 
+#logoWMO {
+  max-inline-size: 25%;
+}
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -1085,7 +1089,7 @@ textarea {
   line-height: inherit; }
 
 a {
-  color: #4582EC;
+  color: #195476;
   text-decoration: none; }
   a:hover, a:focus {
     color: #134fb8;
@@ -2962,7 +2966,7 @@ a.btn.disabled, fieldset[disabled] a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #3FAD46;
+  background-color: #246029;
   border-color: #3FAD46; }
   .btn-success:focus, .btn-success.focus {
     color: #fff;
@@ -4072,9 +4076,9 @@ tbody.collapse.in {
     .breadcrumb > li + li:before {
       content: "/ ";
       padding: 0 5px;
-      color: #ccc; }
+      color: #424242; }
   .breadcrumb > .active {
-    color: #b3b3b3; }
+    color: black; }
 
 .pagination {
   display: inline-block;
@@ -4228,24 +4232,24 @@ a.label:hover, a.label:focus {
     background-color: #1863e6; }
 
 .label-success {
-  background-color: #3FAD46; }
+  background-color: #00662E; }
   .label-success[href]:hover, .label-success[href]:focus {
-    background-color: #318837; }
+    background-color: #005229; }
 
 .label-info {
-  background-color: #5bc0de; }
+  background-color: #0079A6; }
   .label-info[href]:hover, .label-info[href]:focus {
-    background-color: #31b0d5; }
+    background-color: #005E80; }
 
 .label-warning {
-  background-color: #f0ad4e; }
+  background-color: #983C06; }
   .label-warning[href]:hover, .label-warning[href]:focus {
-    background-color: #ec971f; }
+    background-color: #712C05; }
 
 .label-danger {
-  background-color: #d9534f; }
+  background-color: #B30F14; }
   .label-danger[href]:hover, .label-danger[href]:focus {
-    background-color: #c9302c; }
+    background-color: #760A0D; }
 
 .badge {
   display: inline-block;
@@ -5045,7 +5049,7 @@ button.list-group-item-danger {
 button.close {
   padding: 0;
   cursor: pointer;
-  background: transparent;
+  background: black;
   border: 0;
   -webkit-appearance: none; }
 
@@ -5869,7 +5873,7 @@ legend {
   text-decoration: none;
   opacity: 0.4; }
   .close:hover, .close:focus {
-    color: #fff;
+    color: grey;
     opacity: 1; }
 
 .label {
@@ -6007,7 +6011,7 @@ legend {
     font-weight: bold; }
   .o-navbar-reg a, .o-navbar-reg a:focus, .o-navbar-reg a:hover, .o-navbar-reg li a:focus, .o-navbar-reg li a:hover, .o-navbar-reg .c-navbar-menu-item {
     background-color: #fff !important;
-    color: #2b8cc4; }
+    color: #1C5B7D; }
   .o-navbar-reg a:hover {
     text-decoration: none;
     border-bottom: 3px solid #2b8cc4;
@@ -6111,7 +6115,7 @@ footer {
     color: #202222;
     text-decoration: underline; }
   footer .c-footer-epimorphics {
-    color: #515757; }
+    color: #404040; }
     footer .c-footer-epimorphics a, footer .c-footer-epimorphics a:hover {
       color: inherit; }
   footer .c-linked-data-logo {

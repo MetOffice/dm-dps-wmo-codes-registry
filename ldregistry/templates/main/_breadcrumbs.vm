@@ -1,7 +1,7 @@
 ## Assumes $uri is set to the uri of the entity/item/register being displayed
     #set($link="$root")
     <ol class="breadcrumb">
-      <li><a href="$link/">$registry.baseURI</a></li>
+      <li><a href="$link/">Home</a></li>
       #foreach($segment in $uri.split("/"))
         #if($foreach.hasNext)
           <li><a href="$link/$segment">$segment</a></li>

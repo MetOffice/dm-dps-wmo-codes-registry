@@ -1,0 +1,143 @@
+#set($nav="querying")
+#parse("structure/_preamble.vm")
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>Populate Contents Tutorial</h1>
+  </div>
+</div>
+
+<p>This is a developer tutorial, demonstrating how one may use information from the registry
+  within other implementations.</p>
+
+<p>Contents of a registry may be used as structured information. The registry provides a
+  query endpoint where queries using the W3 SPARQL query language may be run.</p>
+
+<p>For example, JavaScript may be written to target the service query endpoint and
+  run a query that obtains the URI and label for each of the entities in the current
+  version of the register:
+  <a href="/DataFormat/FM-14-synopMobil/">http://codes.wmo.int/wmdr/DataFormat/FM-14-synopMobil</a>
+</p>
+
+<pre>
+let endpoint = "/system/query";
+let query = "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \
+            prefix reg: <http://purl.org/linked-data/registry#> \
+            prefix version: <http://purl.org/linked-data/version#> \
+            select ?regdef ?label where { \
+            ?item reg:register <http://codes.wmo.int/wmdr/DataFormat/_FM-14-synopMobil> ; \
+                  version:currentVersion/reg:definition/reg:entity ?regdef ; \
+                  version:currentVersion ?itemVer. \
+            ?regdef rdfs:label ?label . }";
+</pre>
+
+<p>
+  A javascript function can be provided to run the query on the end point and return
+  results that may be processed and presented, used in forms, and applied to other aspects
+  of user interaction.
+</p>
+
+<pre>
+let divResults = document.getElementById("results");
+
+function sparqlQueryJson(queryStr, endpoint, callback) {
+    // Build the request URI
+    let requestUri = endpoint + "?query=" + escape(queryStr) + "&output=json";
+
+    // Get our HTTP request object.
+    if (window.XMLHttpRequest) {
+        let xhr = new XMLHttpRequest();
+        xhr.open('GET', requestUri, true);
+
+        // Set up callback to get the response asynchronously.
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    // Do something with the results
+                    callback(xhr.responseText);
+                } else {
+                    // Some kind of error occurred.
+                    alert("Sparql query error: " + xhr.status + " " + xhr.responseText);
+                }
+            }
+        };
+
+        // Send the query to the endpoint.
+        xhr.send();
+    } else {
+        divResults.innerHTML = "Your browser does not support XMLHttpRequest";
+    }
+}
+</pre>
+
+<p>
+  Defining a callback function in the script to process results provides easy access to
+  information from the register.
+</p>
+
+<pre>
+function myCallback(str) {
+    // Convert result to JSON
+    let jsonObj = eval('(' + str + ')');
+
+    // Build up a table of results.
+    let table = document.createElement("table");
+    table.className = "table table-striped table-bordered datatable dataTable";
+
+    // Create column headers
+    let tableHeader = document.createElement("tr");
+
+    for (let dataColumn of jsonObj.head.vars) {
+        let th = document.createElement("th");
+        th.appendChild(document.createTextNode(dataColumn));
+        tableHeader.appendChild(th);
+    }
+
+    table.appendChild(tableHeader);
+
+    // Create result rows
+    for (let dataRow of jsonObj.results.bindings) {
+        let tableRow = document.createElement("tr");
+
+        // Create columns in row
+        for (let column of jsonObj.head.vars) {
+            let td = document.createElement("td");
+            td.appendChild(document.createTextNode(dataRow[column].value));
+            tableRow.appendChild(td);
+        }
+
+        table.appendChild(tableRow);
+    }
+
+    // Append the table to the results HTML container
+    divResults.textContent = "";
+    divResults.appendChild(table);
+}
+</pre>
+
+<p>
+  Finally, call the sparqlQueryJson method to initiate the query.
+</p>
+
+<pre>
+sparqlQueryJson(query, endpoint, myCallback);
+</pre>
+
+<p>
+  Queries may be structured to deliver the information required for a particular use case,
+  based on knowledge of the
+  targeted register information.
+</p>
+
+<h2>Example Results</h2>
+<p>
+  Results from this example are presented below. 'browse source' on this page to see this
+  working example code set out.
+</p>
+
+<div id="results">
+  It may take a few moments for the info to be displayed here...
+</div>
+
+#set($extraJS="querying-example.js")
+#parse("structure/_footer.vm")

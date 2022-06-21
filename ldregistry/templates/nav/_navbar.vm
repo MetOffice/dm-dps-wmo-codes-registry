@@ -27,19 +27,18 @@
                 <div class='collapse navbar-collapse' id='navbar-ea-menu'>
                     <ul class='nav navbar-nav navbar-left'>
                         <li #if($nav=="browse")class="active"#end><a href="$root/?_browse=true">$msg['nav.browse.label']</a></li>
-                        <li #if($nav=="about")class="active"#end><a href="$uiroot/about">$msg['nav.about.label']</a></li>
+                        <li #if($nav=="help")class="active"#end><a href="$uiroot/help">$msg['nav.about.label']</a></li>
                         #if($subject.isAuthenticated())
                             #parse( "nav/_menu-admin.vm" )
                         #end
                         #parse( "nav/_menu-advanced.vm" )
                     </ul>
 
-                    <form action="$uiroot/text-search" method="get" class="navbar-form navbar-left" role="search">
-                        <div class="form-group">
-                            <input type="search" class="form-control search-query" placeholder="$msg['ui.search']" #if($query)value="$lib.escapeHtml($query)"#end name="query"/>
-                        </div>
-                        <button type="submit" class="btn btn-default">$msg['ui.submit']</button>
-                    </form>
+                  <form action="$uiroot/text-search" method="get" class="navbar-form navbar-left" role="search">
+                    <label for="txtSearch" class="sr-only" style="color: white">$msg['ui.search']</label>
+                    <input id="txtSearch" type="search" class="form-control search-query" placeholder="$msg['ui.search']" #if($query)value="$lib.escapeHtml($query)"#end name="query">
+                    <button type="submit" class="btn btn-default">$msg['ui.submit']</button>
+                  </form>
 
                     #if($registry.languageManager.multilingual)
                       <ul class="nav navbar-nav navbar-right">

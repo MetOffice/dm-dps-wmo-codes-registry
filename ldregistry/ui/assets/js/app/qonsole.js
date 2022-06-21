@@ -137,7 +137,7 @@ var qonsole = function() {
   var initPrefixes = function( config ) {
     var prefixAdd = $("ul.prefixes li:last" );
     $.each( config.prefixes, function( key, value ) {
-      var html = sprintf( "<li><a class='btn btn-custom2 btn-sm active' data-toggle='button' data-uri='%s'>%s</a></li>", value, key );
+      var html = sprintf( "<li><a class='btn btn-custom2 btn-sm active' data-toggle='button' data-uri='%s' href='#'>%s</a></li>", value, key );
       $(html).insertBefore( prefixAdd);
     } );
   };
@@ -149,7 +149,7 @@ var qonsole = function() {
     examples.empty();
 
     $.each( config.queries, function( i, queryDesc ) {
-      var html = sprintf( "<li><a class='btn btn-custom2 btn-sm' data-toggle='button'>%s</a></li>",
+      var html = sprintf( "<li><a class='btn btn-custom2 btn-sm' data-toggle='button' href='#'>%s</a></li>",
                           queryDesc.name );
       examples.append( html );
 
@@ -482,7 +482,18 @@ var qonsole = function() {
   var onQueryFail = function( jqXHR, textStatus, errorThrown ) {
     showResultsTimeAndCount( 0 );
     var text = jqXHR.valueOf().responseText || sprintf( "Sorry, that didn't work because: '%s'", jqXHR.valueOf().statusText );
-    $("#results").html( sprintf( "<pre class='text-danger'>%s</pre>", _.escape(text) ) );
+    if (text.includes("Parse error:")) {
+      // Tidy up a parse error message so it can be displayed without the
+      // http 400-code wrapper
+      var startParseError = text.indexOf("Parse error:");
+      var endParseError = text.indexOf("<\/p><p><b>Description<\/b> The server cannot or will not process the request");
+      text = text.substring(startParseError, endParseError);
+      // Don't escape the text in this instance
+      $("#results").html( sprintf( "<pre class='text-danger'>%s</pre>", text ) );
+    } else {
+      // Escape the text
+      $("#results").html( sprintf( "<pre class='text-danger'>%s</pre>", _.escape(text) ) );
+    }
   };
 
   /** Return options for display query results as text */
@@ -631,7 +642,7 @@ var qonsole = function() {
     $("#inputURI").val("");
 
     if (prefix) {
-      $.getJSON( sprintf( "http://prefix.cc/%s.file.json", prefix ),
+      $.getJSON( sprintf( "https://prefix.cc/%s.file.json", prefix ),
                 function( data ) {
                   $("#inputURI").val( data[prefix] );
                 }

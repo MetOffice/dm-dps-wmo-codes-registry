@@ -1,0 +1,127 @@
+#parse("/structure/_header.vm")
+#set($nav="identifiers")
+#parse("/nav/_navbar.vm")
+
+<div class="jumbotron">
+  <div class="container">
+    <h1>URIs: Codes Registry Identifiers</h1>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <p>
+      Identifiers (URIs) and Locators (URLs) are key concepts for the Registry.
+    </p>
+    <p>
+      The key message is to avoid copying URLs out of your browser URL bar, as a URL is often subtly different from the
+      defined URI. Use the little "copy to clipboard" icon to the right of the URI, like the example below.
+    </p>
+    <p>
+      The Identifier for an entity is always the URI as defined in the middle of the page:
+    </p>
+    <p>
+      <strong>URI:</strong> <span id="forHelpPageURI">https://codes.wmo.int//an-example-uri</span>&nbsp;&nbsp;<span title="Copy URI to clipboard" id="copyButtonID_forHelpPageURI" onclick="copyToClipboard('forHelpPageURI', 'copyButtonID_forHelpPageURI')">&nbsp;</span>
+    </p>
+
+    <h2>Uniform Resource Identifiers and Uniform Resource Locators</h2>
+    <p>
+      The W3 standards body define the terms URI: Uniform Resource Identifiers and URL: Uniform Resource Locators, along
+      with the term URN: Uniform Resource Notation (which is not used within this Registry).
+    <p>
+      <a href="https://www.w3.org/TR/uri-clarification/" target="_blank">https://www.w3.org/TR/uri-clarification/</a>
+    </p>
+    <p>
+      <a href="https://www.w3.org/Addressing/URL/uri-spec.html" target="_blank">https://www.w3.org/Addressing/URL/uri-spec.html</a>
+    </p>
+    <p>
+      The primary job of the codes registry is to register URIs, controlled term identifiers to definitively define a
+      term within the scope of the domain that owns the registry. URIs published on this registry are the WMO's
+      structured definitions of terms.
+    </p>
+    <p>
+      An Entity defined within the Registry should have one and only one URI: the identifier for this entity.
+    </p>
+    <p>
+      The URI identifier shall also function as a locator, the URI shall resolve effectively.
+    </p>
+    <h3>Multiple Registry Locators</h3>
+    <p>
+      Within the registry implementations, there are numerous opportunities for further resolvable locators for
+      identified entities. This can lead to confusion potential, which needs to be guarded against. Just because a URL
+      resolves, doesn't mean it should be used as the identifier, always use the URI identifier.
+    </p>
+    <p>
+      Some examples of where a locator (URL) may resolve, but not be the identifier (URI), to aid understanding.
+    </p>
+
+    <h4>HTTP over SSL</h4>
+    <p>
+      The registry supports HTTP over SSL and resolution of content using HTTPS URLs and secure connections. Content is
+      served from HTTPS URLs to provide secure connection benefits. All HTTP content is identical to HTTPS content.
+    </p>
+    <p>
+      The URIs are, by design, always HTTP URIs within this registry. The identifier for an entity shall always be HTTP,
+      even though the content resolution may use a HTTPS URL within a browser URL bar.
+    </p>
+    <p>
+      This pattern of HTTP identifiers and resolving content over HTTPS via rewrites is a common pattern across
+      terminology publishing standards bodies such as W3.
+    </p>
+    <p>
+      Never use the HTTPS URL as a URI.
+    </p>
+
+    <h4>Entities, RegisterItems and Underscore characters</h4>
+    <p>
+      There are 2 core concepts, information types, internally to the registry software, that support the registry
+      publishing: Entities and RegisterItems.
+    </p>
+    <p>
+      Entities are the things that we are defining or referencing within the registry. RegisterItems are how we manage
+      the entities we register. The key way to see that a URL refers to a RegisterItem is the presence of the underscore
+      character at the start of the last part of the fragment. The concepts are presented in more detail in the registry
+      software documentation:
+    </p>
+    <p>
+      <a href="https://github.com/UKGovLD/registry-core/wiki/Principles-and-concepts#register-registeritem-entity">https://github.com/UKGovLD/registry-core/wiki/Principles-and-concepts#register-registeritem-entity</a>
+    </p>
+    <p>
+      A RegisterItem may be defined by an external Entity or an Entity from another area of the register hierarchy, but
+      the most common scenario is that a RegisterItem is managing an Entity defined in the same place.
+    </p>
+    <p>
+      In this common scenario, an Entity exists, e.g. <a href="https://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD">http://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD</a>
+      which is managed by a RegisterItem, e.g. <a href="https://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD">http://codes.wmo.int/49-2/AirWxPhenomena/BKN_CLD</a>
+    </p>
+    <p>
+      The RegisterItem is identifiable by the presence of the leading underscore, _mo--74 as compared to mo--74.
+    </p>
+    <p>
+      The RegisterItem is a locator, but it is not the Identifier, the URI is the key name to use to reference from any
+      other places, within queries and so on. The leading underscore fragment is not part of the name hierarchy and use
+      of fragments with leading underscores can lead to 404 not found responses.
+    </p>
+    <p>
+      For implementation reasons, the browser interface will use registerItems in the browser URL bar. This is necessary
+      for some content and thus is used for the browsing interface locators. However this can lead to further confusion
+      between URIs and URLs.
+    </p>
+    <p>
+      Do not use interpret URLs with leading underscore characters in any of the fragment as URIs, always use the
+      defined URI.
+    </p>
+    <h4>Managing Entities</h4>
+    <p>
+      Another way that RegisterItems are used is in providing further management of entities. A defined entity may be
+      managed by one RegisterItem and define another RegisterItem, many RegisterItems defined by one entity.
+    </p>
+    <p>
+      The URI is always the URI of the entity, no fragment has a leading underscore character.
+    </p>
+  </div>
+    ## container will be closed by footer
+
+
+#parse("/structure/_footer.vm")

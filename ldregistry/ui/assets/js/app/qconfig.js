@@ -1,7 +1,7 @@
       // configuration
       var config = {
         endpoints: {
-          "default": "/registry/system/query",
+          "default": "/system/query",
         },
         prefixes: {
           "rdf":      "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -27,7 +27,7 @@
           } ,
           { "name": "List items in a register",
             "query": "select *\nwhere {\n" +
-                     "  ?item reg:register <${registry.baseURI}/system/prefixes>;\n" + 
+                     "  ?item reg:register <http://codes.wmo.int/system/prefixes>;\n" +
                      "        version:currentVersion ?itemVer.\n}"
           }
         ]

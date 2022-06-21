@@ -4,7 +4,7 @@
       <div class="container">
         <h1>$registry.configExtensions.registryName</h1>
         <a href="http://www.wmo.int/pages/index_en.html">
-            <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" name="logoWMO" width="169" height="144" border="5"></img>
+            <img class="float-right"  src="$uiroot/img/wmo-logo-official-blue-on-white-trunc.png" alt="World Meteorological Organization" id="logoWMO">
         </a>
       </div>
     </div>
@@ -23,7 +23,7 @@ WMO Manuals on Codes.</p>
       </div>
 
       <div class="row">
-      <p> <a href="/ui/about/using">Making use of the content from the WMO Codes Registry service</a> </p>
+      <p> <a href="/ui/about/whatisacode">Making use of the codes from the WMO Codes Registry service</a> </p>
       </div>
 
       <div class="row">
@@ -33,6 +33,17 @@ WMO Manuals on Codes.</p>
       <div class="row">
       <p> <a href="/ui/about/expectations">What to expect from the WMO Codes Registry service</a> </p>
       </div>
+
+      <div class="row">
+      <p><a href="/ui/about/querying"> Some guidance as to how to make queries</a></p>
+      </div>
+
+      <div class="row">
+      <p><a href="/ui/about/identifiers">Documentation regarding entities contained in the register</a></p>
+      </div>
+
+
+    </div>
 
 
 #parse("structure/_footer.vm")
