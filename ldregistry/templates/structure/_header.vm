@@ -66,9 +66,9 @@
       #end
     #end
 
-    <script type="text/javascript" src="$assets/js/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="$assets/js/jquery.form.js"></script>
-    <script type="text/javascript" src="$assets/js/copy-to-clipboard.js"></script>
+    <script src="$assets/js/jquery-3.6.0.min.js"></script>
+    <script src="$assets/js/jquery.form.js"></script>
+    <script src="$assets/js/copy-to-clipboard.js"></script>
 
     <!-- Force all keyboard tabbed elements to have this outline style. -->
     <style>

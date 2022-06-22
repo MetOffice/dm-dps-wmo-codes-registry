@@ -37,7 +37,7 @@
               </div>
               #if(!$registry.configExtensions.suppressPasswordLogin)
               <div class="row">
-                <form class="form-horizontal" role="form"  action="$lroot/system/security/pwlogin" method="post">
+                <form class="form-horizontal" action="$lroot/system/security/pwlogin" method="post">
                   <div class="form-group">
                     <label for="userid1" class="col-md-offset-1 col-md-2 control-label">$msg['user.username.label']</label>
                     <div class="col-md-8">
@@ -80,7 +80,7 @@
               <h2>$msg['login.register.heading']</h2>
               #if( ! $registry.configExtensions.suppressPasswordLogin)
               <div class="row">
-                <form class="form-horizontal" role="form"  action="$lroot/system/security/pwregister" method="post">
+                <form class="form-horizontal"  action="$lroot/system/security/pwregister" method="post">
                   <div class="form-group">
                     <label for="userid2" class="col-md-offset-1 col-md-2 control-label">$user.username.label</label>
                     <div class="col-md-8">
