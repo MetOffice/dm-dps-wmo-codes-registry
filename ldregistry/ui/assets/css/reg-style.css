@@ -4242,9 +4242,9 @@ a.label:hover, a.label:focus {
     background-color: #005E80; }
 
 .label-warning {
-  background-color: #983C06; }
+  background-color: #750DB5; }
   .label-warning[href]:hover, .label-warning[href]:focus {
-    background-color: #712C05; }
+    background-color: #5C0B8E; }
 
 .label-danger {
   background-color: #B30F14; }
