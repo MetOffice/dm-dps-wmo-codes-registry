@@ -5,7 +5,7 @@ let endpoint = "/system/query";
 let query = "prefix version: <http://purl.org/linked-data/version#>\
              prefix reg: <http://purl.org/linked-data/registry#>\
              select * where {\
-             ?register a reg:Register; version:currentVersion ?regVer.}";
+             ?register a reg:Register; version:currentVersion ?regVer.} limit 10";
 let divResults = document.getElementById("results");
 
 function sparqlQueryJson(queryStr, endpoint, callback) {
