@@ -14,21 +14,15 @@
   query endpoint where queries using the W3 SPARQL query language may be run.</p>
 
 <p>For example, JavaScript may be written to target the service query endpoint and
-  run a query that obtains the URI and label for each of the entities in the current
-  version of the register:
-  <a href="/DataFormat/FM-14-synopMobil/">http://codes.wmo.int/wmdr/DataFormat/FM-14-synopMobil</a>
+  run a query that obtains all the registers and the current version
 </p>
 
 <pre>
 let endpoint = "/system/query";
-let query = "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> \
-            prefix reg: <http://purl.org/linked-data/registry#> \
-            prefix version: <http://purl.org/linked-data/version#> \
-            select ?regdef ?label where { \
-            ?item reg:register <http://codes.wmo.int/wmdr/DataFormat/_FM-14-synopMobil> ; \
-                  version:currentVersion/reg:definition/reg:entity ?regdef ; \
-                  version:currentVersion ?itemVer. \
-            ?regdef rdfs:label ?label . }";
+let query = "prefix version: <http://purl.org/linked-data/version#>
+            prefix reg: <http://purl.org/linked-data/registry#>
+            select * where {
+            ?register a reg:Register; version:currentVersion ?regVer.} limit 10"
 </pre>
 
 <p>
