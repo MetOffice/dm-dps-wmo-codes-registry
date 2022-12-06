@@ -20,11 +20,11 @@
 
 <pre>
 let endpoint = "/system/query";
-let query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-                PREFIX reg: <http://purl.org/linked-data/registry#>
-                PREFIX version: <http://purl.org/linked-data/version#>
+let query = "PREFIX rdfs: &#60;http://www.w3.org/2000/01/rdf-schema#&#62;
+                PREFIX reg: &#60;http://purl.org/linked-data/registry#&#62;
+                PREFIX version: &#60;http://purl.org/linked-data/version#&#62;
                 SELECT ?regdef ?label WHERE {
-                ?item reg:register <http://codes.wmo.int/49-2/AerodromeRecentWeather> ;
+                ?item reg:register &#60;http://codes.wmo.int/49-2/AerodromeRecentWeather&#62; ;
                     version:currentVersion/reg:definition/reg:entity ?regdef ;
                     version:currentVersion ?itemVer .
                 ?regdef rdfs:label ?label . } LIMIT 10"
