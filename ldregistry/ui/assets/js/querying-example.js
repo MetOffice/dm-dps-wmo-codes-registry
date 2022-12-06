@@ -2,47 +2,51 @@
  * Querying Example JavaScript used by the /ui/querying page.
  */
 let endpoint = "/system/query";
-let query = "prefix version: <http://purl.org/linked-data/version#>\
-             prefix reg: <http://purl.org/linked-data/registry#>\
-             select * where {\
-             ?register a reg:Register; version:currentVersion ?regVer.} limit 10";
+let query = "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\
+                PREFIX reg: <http://purl.org/linked-data/registry#>\
+                PREFIX version: <http://purl.org/linked-data/version#>\
+                SELECT ?regdef ?label WHERE {\
+                ?item reg:register <http://codes.wmo.int/49-2/AerodromeRecentWeather> ;\
+                    version:currentVersion/reg:definition/reg:entity ?regdef ;\
+                    version:currentVersion ?itemVer .\
+                ?regdef rdfs:label ?label . } LIMIT 10";
 let divResults = document.getElementById("results");
 
 function sparqlQueryJson(queryStr, endpoint, callback) {
     // Build the request URI
     let requestUri = endpoint + "?query=" + escape(queryStr) + "&output=json";
 
-    // Get our HTTP request object.
+    // Get our HTTP request object
     if (window.XMLHttpRequest) {
         let xhr = new XMLHttpRequest();
         xhr.open('GET', requestUri, true);
 
-        // Set up callback to get the response asynchronously.
+        // Set up callback to get the response asynchronously
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) {
                     // Do something with the results
                     callback(xhr.responseText);
                 } else {
-                    // Some kind of error occurred.
+                    // Some kind of error occurred
                     alert("Sparql query error: " + xhr.status + " " + xhr.responseText);
                 }
             }
         };
 
-        // Send the query to the endpoint.
+        // Send the query to the endpoint
         xhr.send();
     } else {
         alert("Your browser does not support XMLHttpRequest");
     }
 }
 
-// Define a callback function to receive the SPARQL JSON result.
+// Define a callback function to receive the SPARQL JSON result
 function myCallback(str) {
     // Convert result to JSON
     let jsonObj = eval('(' + str + ')');
 
-    // Build up a table of results.
+    // Build up a table of results
     let table = document.createElement("table");
     table.className = "table table-striped table-bordered datatable dataTable";
 
@@ -76,5 +80,5 @@ function myCallback(str) {
     divResults.appendChild(table);
 }
 
-// Make the query.
+// Make the query
 sparqlQueryJson(query, endpoint, myCallback);
