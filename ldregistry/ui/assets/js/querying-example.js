@@ -50,16 +50,24 @@ function myCallback(str) {
     let table = document.createElement("table");
     table.className = "table table-striped table-bordered datatable dataTable";
 
+    // Create table head
+    let tableHead = document.createElement("thead");
+    table.appendChild(tableHead);
+
     // Create column headers
-    let tableHeader = document.createElement("tr");
+    let tableHeadRow = document.createElement("tr");
 
     for (let dataColumn of jsonObj.head.vars) {
         let th = document.createElement("th");
         th.appendChild(document.createTextNode(dataColumn));
-        tableHeader.appendChild(th);
+        tableHeadRow.appendChild(th);
     }
 
-    table.appendChild(tableHeader);
+    tableHead.appendChild(tableHeadRow);
+
+    // Create table body
+    let tableBody = document.createElement("tbody");
+    table.appendChild(tableBody);
 
     // Create result rows
     for (let dataRow of jsonObj.results.bindings) {
@@ -72,7 +80,7 @@ function myCallback(str) {
             tableRow.appendChild(td);
         }
 
-        table.appendChild(tableRow);
+        tableBody.appendChild(tableRow);
     }
 
     // Append the table to the results HTML container
