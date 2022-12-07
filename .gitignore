@@ -12,3 +12,4 @@
 /cookie-jar
 .vagrant
 /war/ROOT.war
+.idea
