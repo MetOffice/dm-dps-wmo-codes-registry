@@ -65,8 +65,8 @@
                 #foreach( $tagindex in $registerTagSets )
                     #set( $tag = $registerTagSepecs[$tagindex] )
                     <div class="form-group">
-                        <label class="control-label" for="$tagindex-input"> $tag.label </label>
-                        <select class="form-control" name="$tag.formField" id="$tagindex-input">
+                        <label class="control-label" for="${tagindex}-input"> $tag.label </label>
+                        <select class="form-control" name="$tag.formField" id="${tagindex}-input">
                             <option value="">$msg['ui.emptyValue']</option>
                             #foreach( $option in $lib.reg.listMembers( $tag.register ) )
                                 <option value="$option.entityURI">$option.labels.iterator().next()</option>

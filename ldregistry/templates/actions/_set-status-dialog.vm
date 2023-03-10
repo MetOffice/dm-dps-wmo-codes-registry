@@ -15,6 +15,7 @@
         }
         $.ajax(action,{
             type : "POST",
+            contentType : "application/x-www-form-urlencoded; charset=UTF-8",
             success :
               function(data, status, xhr){
                 $("#status-dialog").modal("hide");
