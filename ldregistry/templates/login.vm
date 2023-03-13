@@ -14,8 +14,6 @@
     #set( $lroot = $root )
 #end
 
-#set( $return = $lib.reg.xssCleanURI($return) )
-
 <div class="modal-page container">
   <div class="row">
     <div class="col-md-12 modal-page-panel">
@@ -50,7 +48,7 @@
                       <input type="password" class="form-control" id="password1" name="password" placeholder="$msg['user.password.label']">
                     </div>
                   </div>
-                  <input type="hidden" name="return" value="$return" />
+                  <input type="hidden" name="return" value="$lib.reg.xssCleanHTMLAtribute($return)" />
                   <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
                       <button type="submit" class="btn btn-default">$msg['login.button']</button>
@@ -66,7 +64,7 @@
 				    <p>$msg['login.oauth.note']</p>
 				  #end
 				  #foreach($provider in $oauthProviders)
-                    #oauthLogin($provider, $return)
+                    #oauthLogin($provider, $lib.reg.xssCleanHTMLAtribute($return))
                   #end
                 </div>
               </div>
@@ -99,7 +97,7 @@
                       <input type="password" class="form-control" id="password2" name="password" placeholder="$msg['user.password.label']">
                     </div>
                   </div>
-                  <input type="hidden" name="return" value="$return" />
+                  <input type="hidden" name="return" value="$lib.reg.xssCleanHTMLAtribute($return)" />
                   <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
                       <button type="submit" class="btn btn-default">$msg['login.register.button']</button>
@@ -114,7 +112,7 @@
                   	<p>$msg['login.register.oauth']</p>
                   #end
                   #foreach($provider in $oauthProviders)
-                    #oauthRegister($provider, $return)
+                    #oauthRegister($provider, $lib.reg.xssCleanHTMLAtribute($return))
                   #end
                 </div>
               </div>
@@ -140,7 +138,7 @@
       <div class="modal-page-footer">
         <div class="row">
           <div class="col-md-offset-10 col-md-1">
-            <a href="#if($return)$return#else$root#end" class="btn">$msg['ui.close']</a>
+            <a href="#if($return)$lib.reg.xssCleanURI($return)#else$root#end" class="btn">$msg['ui.close']</a>
           </div>
         </div>
       </div>
