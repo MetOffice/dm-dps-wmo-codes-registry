@@ -48,10 +48,10 @@
 #end
 
 ## Determine the href value to use in a link to the given resource, reference URIs go external
-#macro(linkhref $res)#if($res.uRI.startsWith($registry.baseURI))$root$lib.reg.xssCleanURI($res.uRI.substring($registry.baseURI.length()))#else#set($href = $lib.reg.xssCleanURI($res.uRI))#if($href.startsWith("javascript:"))#[[#]]##else$href#end#end#end
+#macro(linkhref $res)#if($res.uRI.startsWith($registry.baseURI))$root$lib.reg.xssCleanHTMLAtribute($res.uRI.substring($registry.baseURI.length()))#else#set($href = $lib.reg.xssCleanHTMLAtribute($res.uRI))#if($href.startsWith("javascript:"))#[[#]]##else$href#end#end#end
 
 ## Determine the href value to use in a link to the given resource, reference URIs go internal
-#macro(linkhrefInt $res)#if($res.uRI.startsWith($registry.baseURI))${root}$res.uRI.substring($registry.baseURI.length())#else${root}/?entity=$lib.pathEncode($res.getURI())#end#end
+#macro(linkhrefInt $res)#if($res.uRI.startsWith($registry.baseURI))${root}$res.uRI.substring($registry.baseURI.length())#else$res.uRI#end#end
 
 ## Inject a link to the given resource
 ###macro(linkfor $res)
@@ -273,8 +273,8 @@
   <form class="form-horizontal" action="$root/system/security/loginoa" method="post">
 	<div class="input-group space-above">
 	  <input type="hidden" name="provider" value="$provider.name" />
-	  <input type="hidden" name="return" value="$return" />
-	  <input type="submit" value="$msg.get('login.oauth.provider.login', $provider.label)" class="btn btn-primary" />
+	  <input type="hidden" name="return" value="$lib.reg.xssCleanHTMLAtribute($return)" />
+	  <input type="submit" value="$msg.get('login.oauth.provider.login', $provider.label)" class="btn btn-primary" type="button" />
 	</div><!-- /input-group -->
   </form>
 #end
@@ -283,8 +283,8 @@
   <form class="form-horizontal" action="$root/system/security/registeroa" method="post">
 	<div class="input-group space-above">
 	  <input type="hidden" name="provider" value="$provider.name" />
-	  <input type="hidden" name="return" value="$return" />
-	  <input type="submit" value="$msg.get('login.oauth.provider.register', $provider.label)" class="btn btn-primary" />
+	  <input type="hidden" name="return" value="$lib.reg.xssCleanHTMLAtribute($return)" />
+	  <input type="submit" value="$msg.get('login.oauth.provider.register', $provider.label)" class="btn btn-primary" type="button" />
 	</div>
   </form>
 #end
