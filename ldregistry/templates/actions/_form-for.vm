@@ -3,7 +3,7 @@
 ## $register   - the register to which the form should be sent
 ## $return     - URL to return to 
 
-<form class="ajax-form" action="$register" method="post" data-return="$return" id="create-entry-form">
+<form class="ajax-form" action="$lib.reg.xssCleanHTMLAtribute($register)" method="post" data-return="$lib.reg.xssCleanHTMLAtribute($return)" id="create-entry-form">
   <input type="hidden" name="form-type" value="$spec.uRI" />
 
   <p>

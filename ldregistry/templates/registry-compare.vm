@@ -10,12 +10,12 @@
 #macro( resultRowValues $item )
   #set( $itemEntity = $item.getPropertyValue("reg:definition").getPropertyValue("reg:entity") )
   <td>
-    <a href="#linkhref($item)" title="$lib.reg.xssCleanURI($item.uRI)" target="_blank">$item.name</a>
+    <a href="#linkhref($item)" title="$lib.reg.xssCleanHTMLAtribute($item.uRI)" target="_blank">$item.name</a>
   </td>
   <td>
     #set( $registerPath = $item.getPropertyValue("reg:register").uRI.substring($registry.baseURI.length()) )
     #set( $registerUri = "$root$registerPath" )
-    <a href="$lib.reg.xssCleanURI($registerUri)" title="$lib.reg.xssCleanURI($registerUri)" target="_blank">$registerPath</a>
+    <a href="$lib.reg.xssCleanHTMLAtribute($registerUri)" title="$lib.reg.xssCleanHTMLAtribute($registerUri)" target="_blank">$registerPath</a>
   </td>
   <td>
     #foreach($ty in $itemEntity.listPropertyValues("rdf:type"))
