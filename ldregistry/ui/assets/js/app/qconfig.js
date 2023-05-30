@@ -1,5 +1,6 @@
       // configuration
-      var config = {
+      let baseURI = $("#baseUri").val();
+      let config = {
         endpoints: {
           "default": "/system/query",
         },
@@ -27,7 +28,7 @@
           } ,
           { "name": "List items in a register",
             "query": "select *\nwhere {\n" +
-                     "  ?item reg:register <http://codes.wmo.int/system/prefixes>;\n" +
+                     "  ?item reg:register <" + baseURI + "/system/prefixes>;\n" +
                      "        version:currentVersion ?itemVer.\n}"
           }
         ]
