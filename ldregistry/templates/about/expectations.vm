@@ -15,11 +15,11 @@
       <div class="row">
 
 <p>
-The WMO Codes Registry is the mechanism through which the authoritative terms required for <a href="https://old.wmo.int/wiswiki/">WMO AvXML</a> are published as web accessible resources.
+The WMO Codes Registry is the mechanism through which the authoritative terms required for <a href="https://old.wmo.int/wiswiki/" target="_blank">WMO AvXML</a> are published as web accessible resources.
 </p>
 
 <p>
-The <a href="http://www.metoffice.gov.uk">Met Office</a> operates this service on behalf of <a href="http://www.wmo.int">WMO</a>.  The Met Office does not anticipate that operational services will have a direct dependency on this service and therefore does not offer any assurances regarding the availability or accuracy of the service.
+The <a href="http://www.metoffice.gov.uk" target="_blank">Met Office</a> operates this service on behalf of <a href="http://www.wmo.int" target="_blank">WMO</a>.  The Met Office does not anticipate that operational services will have a direct dependency on this service and therefore does not offer any assurances regarding the availability or accuracy of the service.
 </p>
 <p>
 The Met Office aims to ensure that information provided within the service is accurate, albeit incomplete in comparison to the scope of the WMO Technical Regulations. The initial set of authoritative terms is deemed sufficient to support the <a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML data exchange standard</a>. It is anticipated that the scope of content available through this service will expand during the life of the service.
