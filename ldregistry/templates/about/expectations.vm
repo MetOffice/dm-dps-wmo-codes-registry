@@ -42,13 +42,13 @@ For technical information about the Registry software implementation and API, pl
 The information provided by the service will be maintained by nominated members of WMO Expert Teams and the <a href="https://old.wmo.int/wiswiki/" target="_blank">WMO Secretariat</a>. To request the provision of additional content from WMO Technical Regulation to be published via this service please post to the <a href="http://www.google.com/url?q=https%3A%2F%2Fgroups.google.com%2Fa%2Fwmo.int%2Fforum%2F%3Fhl%3Den-GB%23!forum%2Fcbs-codes-registry" target="_blank">WMO Codes List Registry group</a>. 
 </p>
 <p>
-To notify the service administrators of inappropriate information, please contact the <a href="http://www.metoffice.gov.uk/about-us/contact">Met Office Weather desk</a>.
+To notify the service administrators of inappropriate information, please contact the <a href="http://www.metoffice.gov.uk/about-us/contact" target="_blank">Met Office Weather desk</a>.
 </p>
 <p>
-To notify the service administrators of erroneous information, please post to the <a href="http://www.google.com/url?q=https%3A%2F%2Fgroups.google.com%2Fa%2Fwmo.int%2Fforum%2F%3Fhl%3Den-GB%23!forum%2Fcbs-codes-registry">WMO Codes List Registry group</a>.
+To notify the service administrators of erroneous information, please post to the <a href="http://www.google.com/url?q=https%3A%2F%2Fgroups.google.com%2Fa%2Fwmo.int%2Fforum%2F%3Fhl%3Den-GB%23!forum%2Fcbs-codes-registry" target="_blank">WMO Codes List Registry group</a>.
 </p>
 <p>
-The primary purpose of this service is to support the new data exchange standard developed by WMO in support of Amendment 76 to ICAO Annex 3 "Meteorological services for International Air Navigation". This new data exchange standard (<a href="http://wis.wmo.int/page=AvXML-1">WMO AvXML</a>) enables exchange of operational aeronautical meteorological (OPMET) in XML format. It depends on availability of authoritative terms from WMO technical regulation - most notably <a href="http://www.wmo.int/pages/prog/www/WMOCodes.html">WMO No. 306 Manual on Codes</a> - as web accessible resources that can be referenced from WMO AvXML-compliant data products. 
+The primary purpose of this service is to support the new data exchange standard developed by WMO in support of Amendment 76 to ICAO Annex 3 "Meteorological services for International Air Navigation". This new data exchange standard (<a href="https://old.wmo.int/wiswiki/" target="_blank">WMO AvXML</a>) enables exchange of operational aeronautical meteorological (OPMET) in XML format. It depends on availability of authoritative terms from WMO technical regulation - most notably <a href="https://public.wmo.int/en" target="_blank">WMO No. 306 Manual on Codes</a> - as web accessible resources that can be referenced from WMO AvXML-compliant data products. 
 </p>
 
       </div>
