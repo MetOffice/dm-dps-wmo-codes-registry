@@ -8,7 +8,10 @@
           <div class="c-footer-credits">
             <h4 class="">$msg['footer.support.heading']</h4>
             <p>
-		<a href="https://github.com/UKGovLD/registry-core/wiki/Api#content-negotiation">Content negotiation</a>  is supported.
+              <a href="/ui/about/identifiers">Documentation regarding Identifiers</a> and how to identify entities contained in the registry.</p>
+            </p>
+            <p>
+              <a href="https://github.com/UKGovLD/registry-core/wiki/Api#content-negotiation">Content negotiation</a>  is supported.
             </p>
           </div>
         </div>

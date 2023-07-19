@@ -42,7 +42,7 @@
                       <input type="password" class="form-control" id="password2" name="password2" required equalTo="#password1">
                     </div>
                   </div>
-                  <input type="hidden" name="return" value="$return" />
+                  <input type="hidden" name="return" value="$lib.reg.xssCleanHTMLAtribute($return)" />
                   <div class="form-group">
                     <div class="col-md-offset-1 col-md-10">
                       <button type="submit" class="btn btn-default">$msg['admin.users.create.button']</button>
@@ -65,7 +65,7 @@
       <div class="modal-page-footer">
         <div class="row">
           <div class="col-md-offset-10 col-md-1">
-            <a href="$return" class="btn">$msg['ui.close']</a>
+            <a href="$lib.reg.xssCleanURI($return)" class="btn">$msg['ui.close']</a>
           </div>
         </div>
       </div>

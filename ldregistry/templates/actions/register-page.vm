@@ -5,6 +5,10 @@
 
 #parse("structure/_preamble.vm")
 
+#if(! $subject.isAuthenticated())
+  <h1>Not authenticated</h1>
+#else
+
 <div class="row">
     <div class="col-md-10 col-md-offset-1 modal-page-panel">
     
@@ -23,7 +27,7 @@
         </div>
         <div id="patch-dialog-status-body" class="modal-body">
 
-            <form id="registration-form" action="$register" method="post" enctype="multipart/form-data" data-return="$return">
+            <form id="registration-form" action="$lib.reg.xssCleanHTMLAtribute($register)" method="post" enctype="multipart/form-data" data-return="$lib.reg.xssCleanHTMLAtribute($return)">
                 <label>$msg['register.update.content.label']</label>
                 <div class="radio">
                     <label>
@@ -56,7 +60,7 @@
         </div>
 
         <div class="modal-page-footer">
-            <a href="$return" class="btn pull-right">$msg['ui.close']</a>
+            <a href="$lib.reg.xssCleanURI($return)" class="btn pull-right">$msg['ui.close']</a>
         </div>
       
     </div>
@@ -122,5 +126,7 @@ $(function() {
     });
 });
 </script>
+
+#end ## auth check
 
 #parse("structure/_footer.vm")

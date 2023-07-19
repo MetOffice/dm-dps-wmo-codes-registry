@@ -1,11 +1,12 @@
 #set($pageTitle=$msg['sparql.title'])
 #set($extraCSS="qonsole.css,codemirror.css")
 #set($nav="sparql")
+#set($baseURI=$registry.baseURI)
 #parse("structure/_preamble.vm")
 
     <!-- This link provides CORS support in IE8+ -->
     <!--[if lt IE 10]>
-      <script src="js/lib/jquery.xdomainrequest.js"></script>
+      <script src="js/qlib/jquery.xdomainrequest.js"></script>
     <![endif]-->
 
     <div class="qonsole">
@@ -32,6 +33,7 @@
         </div>
         <div class="query-chrome">
           <form class="form-inline">
+            <input type="hidden" id="baseUri" value="$baseURI">
 
             <div class="form-group">
               <label for="sparqlEndpoint">$msg['sparql.endpoint.label']</label>

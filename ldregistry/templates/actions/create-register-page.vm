@@ -5,19 +5,23 @@
 
 #parse("structure/_preamble.vm")
 
+#if(! $subject.isAuthenticated())
+  <h1>Not authenticated</h1>
+#else
+
 #parse( "actions/_configure-create-register.vm" )
 
 <div class="row">
     <div class="col-md-10 col-md-offset-1 modal-page-panel">
     
         <div class="modal-page-head">
-            <h3>$msg.get('register.createManual.heading', $register)</h3>
+            <h3>$msg.get('register.createManual.heading', $lib.reg.xssCleanHTML($register))</h3>
         </div>
 
         <div class="modal-page-body">
             <div class="ajax-error"></div>
 
-            <form id="create-register-form" action="$register" method="post" data-return="$return">
+            <form id="create-register-form" action="$lib.reg.xssCleanHTMLAtribute($register)" method="post" data-return="$lib.reg.xssCleanHTMLAtribute($return)">
                 <!-- <input type="hidden" name="action" value="register-inline" /> -->
                 <input type="hidden" name="form-type" value="$registry.baseURI/system/form-templates/register" />
 
@@ -65,8 +69,8 @@
                 #foreach( $tagindex in $registerTagSets )
                     #set( $tag = $registerTagSepecs[$tagindex] )
                     <div class="form-group">
-                        <label class="control-label" for="$tagindex-input"> $tag.label </label>
-                        <select class="form-control" name="$tag.formField" id="$tagindex-input">
+                        <label class="control-label" for="${tagindex}-input"> $tag.label </label>
+                        <select class="form-control" name="$tag.formField" id="${tagindex}-input">
                             <option value="">$msg['ui.emptyValue']</option>
                             #foreach( $option in $lib.reg.listMembers( $tag.register ) )
                                 <option value="$option.entityURI">$option.labels.iterator().next()</option>
@@ -83,7 +87,7 @@
         </div>
 
         <div class="modal-page-footer">
-            <a href="$return" class="btn pull-right">$msg['ui.close']</a>
+            <a href="$lib.reg.xssCleanURI($return)" class="btn pull-right">$msg['ui.close']</a>
         </div>
       
     </div>
@@ -155,5 +159,7 @@ $(function() {
     });
 });
 </script>
+
+#end ## auth check
 
 #parse("structure/_footer.vm")
