@@ -2,7 +2,7 @@
   <h1>$msg['register.list.heading']</h1>
   #set($base="${root}/")
   #if(!$state)
-    #set($state="category=<http://codes.wmo.int/structure/category/WMO-I.2>")
+    #set($state="category=<http://codes.wmo.int/structure/category/home>")
   #end
 
   #set($fr=$registry.facetService.query($state, $language))
