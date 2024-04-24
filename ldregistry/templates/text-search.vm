@@ -6,11 +6,9 @@
                 <a href="#linkhref($item)" title="$item.uRI">$entity.name</a>
               </td>
               <td>#tdescription($entity,"",70)</td>
-##              <-- commented body out -->
 ##              <td>
 ##                #foreach($ty in $entity.listPropertyValues("rdf:type"))#linkfor($ty)#if( $foreach.hasNext ), #end#end
 ##              </td>
-##              <-- commented body out -->
               <td>#showstatus($item.getPropertyValue("reg:status"))</td>
             </tr>
 #end
@@ -43,9 +41,7 @@
           <th>$msg['registerItem.notation.label']</th>
           <th>$msg['registerItem.name.label']</th>
           <th>$msg['registerItem.description.label']</th>
-##          <-- commented head out -->
 ##          <th>$msg['registerItem.types.label']</th>
-##          <-- commented head out -->
           <th>$msg['registerItem.status.label']</th>
         </tr>
       </thead>
