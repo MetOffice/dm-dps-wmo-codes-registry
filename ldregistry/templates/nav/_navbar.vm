@@ -66,7 +66,9 @@
             </div>
         </div>
     </div>
-    <div style="width: 100%; height: 200px; background-color: #f2de35; font-size:24px; text-align:center;">In Test</div>
+    #if($request.getRequestURL().indexOf("int") == -1)
+        <div style="width: 100%; background-color: #eeff1b; font-size:28px; text-align:center;">In Test</div>
+    #end
 </nav>
 
 #if($subject.isAuthenticated())
