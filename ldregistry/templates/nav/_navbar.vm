@@ -66,7 +66,7 @@
             </div>
         </div>
     </div>
-    #if($request.getRequestURL().indexOf("int") == -1)
+    #if($request.getRequestURL().indexOf("int") != -1)
         <div style="width: 100%; background-color: #eeff1b; font-size:28px; text-align:center;">In Test</div>
     #end
 </nav>
