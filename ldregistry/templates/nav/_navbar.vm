@@ -66,8 +66,8 @@
             </div>
         </div>
     </div>
-    #if($request.getRequestURL().indexOf("int") != -1)
-        <div style="width: 100%; background-color: #eeff1b; font-size:28px; text-align:center;">In Test</div>
+    #if($request.getRequestURL().indexOf("reference.metoffice.gov.uk") == -1 || $request.getRequestURL().indexOf("codes.wmo.int") == -1)
+        <div class="non-operational-banner" >This is a test website – some features and links may not work, and data may be incorrect.</div>
     #end
 </nav>
 
