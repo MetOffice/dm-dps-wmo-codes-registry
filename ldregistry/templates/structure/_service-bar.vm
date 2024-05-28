@@ -7,7 +7,7 @@
    ##     </span>
    ##     $msg.get('service.beta.description', 'TBD')
    ## </div>
-#if(!$request.getServerName().equals("ci.codes.wmo.int"))
+#if(!$request.getServerName().equals("codes.wmo.int"))
     <div class="row">
         <div class="non-operational-banner">This is a test website – some features and links may not work, and data may be incorrect.</div>
     </div>
