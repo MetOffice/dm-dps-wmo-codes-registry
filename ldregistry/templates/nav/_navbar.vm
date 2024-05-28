@@ -66,12 +66,9 @@
             </div>
         </div>
     </div>
-    #if(!$request.getRequestURL().toString().equals("https://codes.wmo.int/"))
-        <div class="non-operational-banner">This is a test website – some features and links may not work, and data may be incorrect.</div>
-    #end
+
 </nav>
 
 #if($subject.isAuthenticated())
     #parse( "actions/_logout-dialog.vm" )
 #end
-
