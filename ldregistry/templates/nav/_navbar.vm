@@ -66,9 +66,9 @@
             </div>
         </div>
     </div>
+
 </nav>
 
 #if($subject.isAuthenticated())
     #parse( "actions/_logout-dialog.vm" )
 #end
-

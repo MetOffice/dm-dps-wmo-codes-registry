@@ -200,3 +200,13 @@ td.align-right {
   margin-bottom: 3px;
   font-size: 15.4px;
 }
+
+.non-operational-banner {
+  background-color: #ff7e00;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
