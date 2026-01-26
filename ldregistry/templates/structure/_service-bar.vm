@@ -10,5 +10,10 @@
 #if(!$request.getServerName().equals("codes.wmo.int"))
     <div class="row">
         <div class="non-operational-banner">This is a test website – some features and links may not work, and data may be incorrect.</div>
+
+        <p>Request URL = $request.getRequestURL().toString()</p>
+        <p>Request ServerName = $request.getServerName().toString()</p>
+        <p>Root = $root</p>
+
     </div>
 #end
