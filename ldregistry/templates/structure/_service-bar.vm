@@ -11,9 +11,36 @@
     <div class="row">
         <div class="non-operational-banner">This is a test website – some features and links may not work, and data may be incorrect.</div>
 
-        <p>Request URL = $request.getRequestURL().toString()</p>
-        <p>Request ServerName = $request.getServerName().toString()</p>
-        <p>Root = $root</p>
+        <p><strong>Debug Information:</strong></p>
+        <ul>
+            <li>Request URL: $request.getRequestURL().toString()</li>
+            <li>Server Name: $request.getServerName()</li>
+            <li>Server Port: $request.getServerPort()</li>
+            <li>Remote Addr: $request.getRemoteAddr()</li>
+            <li>Remote Host: $request.getRemoteHost()</li>
+            <li>Timestamp: $lib.reg.now()</li>
+            <li><strong>Accept-Language: $request.getHeader('Accept-Language')</strong></li>
+            <li><strong>X-Forwarded-Host: $request.getHeader('X-Forwarded-Host')</strong></li>
+            <li><strong>Host: $request.getHeader('Host')</strong></li>
+            <li>X-Forwarded-For: $request.getHeader('X-Forwarded-For')</li>
+            <li>X-Forwarded-Proto: $request.getHeader('X-Forwarded-Proto')</li>
+            <li>Request Headers:
+                <ul>
+                    #foreach($headerName in $request.getHeaderNames())
+                        <li>$headerName: $request.getHeader($headerName)</li>
+                    #end
+                </ul>
+            </li>
+        </ul>
+        #set($void = $log.warn("==== NON-PRODUCTION BANNER DISPLAYED ===="))
+        #set($void = $log.warn("Server Name: ${request.getServerName()}"))
+        #set($void = $log.warn("Request URL: ${request.getRequestURL()}"))
+        #set($void = $log.warn("X-Forwarded-Host: ${request.getHeader('X-Forwarded-Host')}"))
+        #set($void = $log.warn("Host Header: ${request.getHeader('Host')}"))
+        #set($void = $log.warn("Accept-Language: ${request.getHeader('Accept-Language')}"))
+        #set($void = $log.warn("Remote Addr: ${request.getRemoteAddr()}"))
+        #set($void = $log.warn("Timestamp: ${lib.reg.now()}"))
+        #set($void = $log.warn("=========================================="))
 
     </div>
 #end
