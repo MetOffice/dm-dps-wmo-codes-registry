@@ -7,7 +7,7 @@
    ##     </span>
    ##     $msg.get('service.beta.description', 'TBD')
    ## </div>
-#if(!$request.getServerName().equals("carys.dev.codes.wmo.int"))
+#if(!$request.getServerName().equals("carys.dev.codes.wmo.int")|| $request.getParameter("forceBanner"))
     <div class="row">
         <div class="non-operational-banner">This is a test website – some features and links may not work, and data may be incorrect.</div>
 
