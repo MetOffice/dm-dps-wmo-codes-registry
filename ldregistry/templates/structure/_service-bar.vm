@@ -32,14 +32,14 @@
         </ul>
     </li>
 </ul>
-    #set($void = $requestLogger.info("==== NON-PRODUCTION BANNER DISPLAYED ===="))
-    #set($void = $requestLogger.info("Server Name: ${request.getServerName()}"))
-    #set($void = $requestLogger.info("Request URL: ${request.getRequestURL()}"))
-    #set($void = $requestLogger.info("X-Forwarded-Host: ${request.getHeader('X-Forwarded-Host')}"))
-    #set($void = $requestLogger.info("Host Header: ${request.getHeader('Host')}"))
-    #set($void = $requestLogger.info("Accept-Language: ${request.getHeader('Accept-Language')}"))
-    #set($void = $requestLogger.info("Remote Addr: ${request.getRemoteAddr()}"))
-    #set($void = $requestLogger.info("Timestamp: ${lib.reg.now()}"))
-    #set($void = $requestLogger.info("=========================================="))
+    $registry.requestLogger.info("==== NON-PRODUCTION BANNER DISPLAYED ===="))
+    $registry.requestLogger.info("Server Name: ${request.getServerName()}"))
+    $registry.requestLogger.info("Request URL: ${request.getRequestURL()}"))
+    $registry.requestLogger.info("X-Forwarded-Host: ${request.getHeader('X-Forwarded-Host')}"))
+    $registry.requestLogger.info("Host Header: ${request.getHeader('Host')}"))
+    $registry.requestLogger.info("Accept-Language: ${request.getHeader('Accept-Language')}"))
+    $registry.requestLogger.info("Remote Addr: ${request.getRemoteAddr()}"))
+    $registry.requestLogger.info("Timestamp: ${lib.reg.now()}"))
+    $registry.requestLogger.info("=========================================="))
 
 #end
