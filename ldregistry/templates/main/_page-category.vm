@@ -54,7 +54,7 @@
             $entity.modelW.setLanguage($language)
 
           <tr>
-            <td>$item.getPropertyValue("reg:notation").lexicalForm</td>
+            <td>"$item.getPropertyValue("reg:notation").lexicalForm" , $item.getPropertyValue("reg:notation") , <p>$item.getPropertyValue("reg:notation").lexicalForm</p></td>
             <td>
               #if($entity.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
               <a href="#linkhref($item)" title="$item.uRI">$entity.name</a>
