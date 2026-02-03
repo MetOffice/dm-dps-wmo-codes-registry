@@ -25,7 +25,7 @@
           <tr>
           	## When might we not have an $memitem?
               ## <td>$memitem.getPropertyValue("reg:notation").lexicalForm</td>
-              <td>"$memitem.getPropertyValue("reg:notation").lexicalForm" , $memitem.getPropertyValue("reg:notation") , <p>$memitem.getPropertyValue("reg:notation").lexicalForm</p></td>
+              <td>$!{memitem.getPropertyValue("reg:notation").lexicalForm.toString()}</td>
           	<td>
               #if($member.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
               <a href="#linkhref($memitem)" title="$memitem.uRI">$member.name</a>
