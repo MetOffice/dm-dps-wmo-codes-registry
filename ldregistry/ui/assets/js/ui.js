@@ -10,7 +10,13 @@ $(function() {
       "language": {
         "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
       },
-      "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ]
+        "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
+        "columnDefs": [
+            {
+                targets: 0,
+                type: 'string'
+            }
+        ],
     } );
     
     // Query forms run a target query and load the resulting HTML into a data-result element
