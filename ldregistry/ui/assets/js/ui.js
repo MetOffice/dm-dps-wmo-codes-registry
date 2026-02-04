@@ -18,7 +18,7 @@ $(function() {
         "columnDefs": [{
             targets: [0],
             type: 'numeric-preserve-zeros',
-            data: 'Notation',
+            data: 'notation',
             render: {
                 _: 'display',
                 sort: function(data) {
