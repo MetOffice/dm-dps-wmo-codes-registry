@@ -9,20 +9,7 @@ $(function() {
       "language": {
         "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
       },
-        "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
-        "columnDefs": [{
-            targets: [0],
-            render: function(data, type, row) {
-                if (type === 'display') {
-                    return data;
-                }
-                if (type === 'sort' || type === 'type') {
-                    return parseFloat(data) || 0;
-                }
-                return data;
-            }
-        }]
-
+        "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ]
 
     } );
     
