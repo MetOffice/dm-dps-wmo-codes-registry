@@ -1,11 +1,6 @@
 // Set of initialization actions run on page load to make UI features live
 
 $(function() {
-    $.fn.dataTable.ext.type.order['numeric-preserve-zeros-pre'] = function(data) {
-        return parseFloat(data) || 0;
-    };
-
-
     // Move any rhs elements (typically from type-specific templates) to rhs column
     $(".rhs").appendTo("#rhs");
 
@@ -17,16 +12,17 @@ $(function() {
         "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
         "columnDefs": [{
             targets: [0],
-            type: 'numeric-preserve-zeros',
-            data: 'notation',
-            render: {
-                _: 'display',
-                sort: function(data) {
+            render: function(data, type, row) {
+                if (type === 'display') {
+                    return data;
+                }
+                if (type === 'sort' || type === 'type') {
                     return parseFloat(data) || 0;
-                },
-                filter: 'display'
+                }
+                return data;
             }
         }]
+
 
     } );
     
