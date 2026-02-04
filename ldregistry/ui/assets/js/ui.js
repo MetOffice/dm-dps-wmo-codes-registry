@@ -1,6 +1,11 @@
 // Set of initialization actions run on page load to make UI features live
 
 $(function() {
+    $.fn.dataTable.ext.type.order['version-pre'] = function(data) {
+        var match = data.match(/\d+/);
+        return match ? parseInt(match[0], 10) : 0;
+    };
+
 
     // Move any rhs elements (typically from type-specific templates) to rhs column
     $(".rhs").appendTo("#rhs");
@@ -14,7 +19,7 @@ $(function() {
         "columnDefs": [
             {
                 targets: 0,
-                type: 'string'
+                type: 'version'
             }
         ],
     } );
