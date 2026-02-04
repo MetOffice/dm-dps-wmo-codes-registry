@@ -1,9 +1,8 @@
 // Set of initialization actions run on page load to make UI features live
 
 $(function() {
-    $.fn.dataTable.ext.type.order['version-pre'] = function(data) {
-        var match = data.match(/\d+/);
-        return match ? parseInt(match[0], 10) : 0;
+    $.fn.dataTable.ext.type.order['numeric-preserve-zeros-pre'] = function(data) {
+        return parseFloat(data) || 0;
     };
 
 
@@ -16,12 +15,19 @@ $(function() {
         "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
       },
         "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
-        "columnDefs": [
-            {
-                targets: 0,
-                type: 'version'
+        "columnDefs": [{
+            targets: [0],
+            type: 'numeric-preserve-zeros',
+            data: 'Notation',
+            render: {
+                _: 'display',
+                sort: function(data) {
+                    return parseFloat(data) || 0;
+                },
+                filter: 'display'
             }
-        ],
+        }]
+
     } );
     
     // Query forms run a target query and load the resulting HTML into a data-result element
