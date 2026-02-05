@@ -41,12 +41,30 @@
                 #end
               #end
 
-              #if($registry.backupService)
-                  #set($backupStatus = $registry.backupService.getStatus())
-                  #if($backupStatus)
-                      <div><strong>Last deployed:</strong> $backupStatus</div>
-                  #end
+              <div class="text-muted small" style="margin-top: 15px">
+                  #set($store = $registry.store)
+                  #if($store)
+                  $store.lock()
+                    #set($model = $store.asModel())
+                    #set($results = $model.querySelectW("SELECT ?modified WHERE { ?item <http://purl.ord/dc/terms/modified> ?modified } ORDER BY DESC(?modified) LIMIT 1"))
+                    #if($results && $results.size() > 0)
+                        #set($modifiedNode = $results.get(0).get("modified"))
+                        #if($modifiedNode)
+                            <div><strong>Last update: </strong>$!{modifiedNode.lexicalForm}</div>
+                        #end
+                    #end
+                      $store.end()
+
               #end
+              </div>
+
+              #set($ManagementFactory = $lib.class.forName("java.lang.management.ManagementFactory"))
+              #set($RuntimeMXBean = $ManagementFactory.getRuntimeMXBean())
+              #set($startTime = $RuntimeMXBean.getStartTime())
+              #set($dateFormat = $lib.class.forName("java.text.SimpleDateFormat").newInstance())
+              $dateFormat.applyPattern("d MMM yyyy HH:mm:ss")
+              #set($deployDate = $dateFormat.format($startTime))
+              <div><strong>Last started:</strong> $!{deployDate}</div>
           </div>
       </div>
 
