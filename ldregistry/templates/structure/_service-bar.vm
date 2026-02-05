@@ -7,8 +7,39 @@
    ##     </span>
    ##     $msg.get('service.beta.description', 'TBD')
    ## </div>
-#if(!$request.getServerName().equals("codes.wmo.int"))
+#if(!($request.getServerName().equals("carys.dev.codes.wmo.int") || $request.getServerName().equals("carys2.dev.codes.wmo.int")) ||  $request.getParameter("forceBanner"))
     <div class="row">
         <div class="non-operational-banner">This is a test website – some features and links may not work, and data may be incorrect.</div>
     </div>
+<p><strong>Debug Information:</strong></p>
+<ul>
+    <li>Request URL: $request.getRequestURL().toString()</li>
+    <li>Server Name: $request.getServerName()</li>
+    <li>Server Port: $request.getServerPort()</li>
+    <li>Remote Addr: $request.getRemoteAddr()</li>
+    <li>Remote Host: $request.getRemoteHost()</li>
+    <li>Timestamp: $lib.reg.now()</li>
+    <li><strong>Accept-Language: $request.getHeader('Accept-Language')</strong></li>
+    <li><strong>X-Forwarded-Host: $request.getHeader('X-Forwarded-Host')</strong></li>
+    <li><strong>Host: $request.getHeader('Host')</strong></li>
+    <li>X-Forwarded-For: $request.getHeader('X-Forwarded-For')</li>
+    <li>X-Forwarded-Proto: $request.getHeader('X-Forwarded-Proto')</li>
+    <li>Request Headers:
+        <ul>
+            #foreach($headerName in $request.getHeaderNames())
+                <li>$headerName: $request.getHeader($headerName)</li>
+            #end
+        </ul>
+    </li>
+</ul>
+    $log.info("==== NON-PRODUCTION BANNER DISPLAYED ===="))
+    $log.info("Server Name: ${request.getServerName()}"))
+    $log.info("Request URL: ${request.getRequestURL()}"))
+    $log.info("X-Forwarded-Host: ${request.getHeader('X-Forwarded-Host')}"))
+    $log.info("Host Header: ${request.getHeader('Host')}"))
+    $log.info("Accept-Language: ${request.getHeader('Accept-Language')}"))
+    $log.info("Remote Addr: ${request.getRemoteAddr()}"))
+    $log.info("Timestamp: ${lib.reg.now()}"))
+    $log.info("=========================================="))
+
 #end
