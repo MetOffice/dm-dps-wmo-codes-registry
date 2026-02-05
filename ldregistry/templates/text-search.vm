@@ -1,15 +1,20 @@
 #macro(resultrow $entity $item)
             <tr>
               <td>$item.getPropertyValue("reg:notation").lexicalForm</td>
-              <td>$item.getPropertyValue("reg:Register")</td>
+              <td>
+                #set($parentReg = $item.getPropertyValue("reg:register"))
+                #if($parentReg)
+                  $parentReg.name
+                #end
+              </td>
               <td>
                 #if($entity.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
                 <a href="#linkhref($item)" title="$item.uRI">$entity.name</a>
               </td>
               <td>#tdescription($entity,"",70)</td>
-              <td>
-                #foreach($ty in $entity.listPropertyValues("rdf:type"))#linkfor($ty)#if( $foreach.hasNext ), #end#end
-              </td>
+              ##<td>
+              ##  #foreach($ty in $entity.listPropertyValues("rdf:type"))#linkfor($ty)#if( $foreach.hasNext ), #end#end
+              ##</td>
               <td>#showstatus($item.getPropertyValue("reg:status"))</td>
             </tr>
 #end
