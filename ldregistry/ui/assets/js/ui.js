@@ -7,10 +7,26 @@ $(function() {
 
     // Enable datatable processing
     $('.datatable').dataTable( {
-      "language": {
-        "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
-      },
-      "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ]
+        "language": {
+          "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
+        },
+        "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
+        "columnDefs": [
+            {
+                type: 'string',
+                targets: '_all',
+                render: function(data, type, row) {
+                    if (type === 'display' || type === 'filer') {
+                        return data;
+                    }
+                    if (type === 'sort') {
+                        var num = parseFloat(data);
+                        return isNaN(num) ? data : num;
+                    }
+                    return data;
+                }
+            }
+        ]
     } );
     
     // Query forms run a target query and load the resulting HTML into a data-result element
