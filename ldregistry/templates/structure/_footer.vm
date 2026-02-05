@@ -31,6 +31,23 @@
             $msg['footer.language.cookies.notice']
           </p>
         #end
+          ## Last modified dates
+          <div class="text-muted small" style="margin-top: 15px">
+              #set($queryResults = $lib.reg.query("SELECT ?modified WHERE { ?item dct:modified ?modified } ORDER BY DESC(?modified) LIMIT 1"))
+              #if($queryResults && $queryResults.size() > 0)
+                #set($lastModified = $queryResults.get(0).get("modified"))
+                #if($lastModified)
+                    <div><strong>Last content update:</strong> $lib.printDateTime($lastModified)</div>
+                #end
+              #end
+
+              #if($registry.backupService)
+                  #set($backupStatus = $registry.backupService.status)
+                  #if($backupStatus)
+                      <div><strong>Last deployed:</strong> $backupStatus</div>
+                  #end
+              #end
+          </div>
       </div>
 
     </div><!--/.row-->
