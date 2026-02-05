@@ -35,14 +35,22 @@
           <div class="text-muted small" style="margin-top: 15px">
               #set($queryResults = $lib.reg.query("SELECT ?modified WHERE { ?item dct:modified ?modified } ORDER BY DESC(?modified) LIMIT 1"))
               #if($queryResults && $queryResults.size() > 0)
-                #set($lastModified = $queryResults.get(0).get("modified"))
-                #if($lastModified)
-                    <div><strong>Last content update:</strong> $lib.printDateTime($lastModified)</div>
+                #set($lastModifiedWrapper = $queryResults.get(0).get("modified"))
+                #if($lastModifiedWrapper)
+                    #set($lastModified = $lastModifiedWrapper.asLiteral())
+                    <div>
+                        <strong>Last Content Update: </strong>
+                        #if($lastModified.datatype.toString() == "http://www.w3.org/2001/XMLSchema#date")
+                            $lib.printDatetime("d MMM yyyy", $lastModified)
+                        #else
+                            $lib.printDatetime(lastModified)
+                        #end
+                    </div>
                 #end
               #end
 
               #if($registry.backupService)
-                  #set($backupStatus = $registry.backupService.status)
+                  #set($backupStatus = $registry.backupService.getStatus())
                   #if($backupStatus)
                       <div><strong>Last deployed:</strong> $backupStatus</div>
                   #end
