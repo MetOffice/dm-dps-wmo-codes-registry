@@ -17,7 +17,7 @@ $(function() {
                 targets: '_all',
                 render: function(data, type, row) {
                     if (type === 'display' || type === 'filer') {
-                        return data;
+                        return String(data);
                     }
                     if (type === 'sort') {
                         var num = parseFloat(data);
@@ -89,7 +89,7 @@ $(function() {
                          targets: '_all',
                          render: function(data, type, row) {
                              if (type === 'display' || type === 'filer') {
-                                 return data;
+                                 return String(data);
                              }
                              if (type === 'sort') {
                                  var num = parseFloat(data);
