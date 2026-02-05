@@ -10,11 +10,14 @@ $(function() {
         "language": {
           "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
         },
+        "order": [],
         "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
         "columnDefs": [
             {
-                type: 'html-string',
+                type: 'string',
                 targets: '_all',
+                orderDataType: "dom-text"
+                /*
                 render: function(data, type, row) {
                     if (type === 'display' || type === 'filer') {
                         return String(data);
@@ -25,6 +28,7 @@ $(function() {
                     }
                     return data;
                 }
+                 */
             }
         ]
     } );
