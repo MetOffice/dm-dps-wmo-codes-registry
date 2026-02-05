@@ -6,6 +6,9 @@
                 #if($parentReg)
                   $parentReg.name
                 #end
+                #set($itemUri = $item.uRI.substring($registry.baseURI.length()))
+                #set($itemPath = $itemUri.replaceAll("^/","").replaceAll("/"," / "))
+                $itemPath
               </td>
               <td>
                 #if($entity.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
