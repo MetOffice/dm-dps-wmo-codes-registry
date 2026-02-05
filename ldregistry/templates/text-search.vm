@@ -8,7 +8,11 @@
                 #end
                 #set($itemUri = $item.uRI.substring($registry.baseURI.length()))
                 #set($itemPath = $itemUri.replaceAll("^/","").replaceAll("/"," / "))
-                $itemPath
+                #set($lastSlashIndex = $itemPath.lastIndexOf(" / "))
+                #if($lastSlashIndex > 0)
+                #set($parentPath = $itemPath.substring(0, $lastSlashIndex))
+                $parentPath
+              #end
               </td>
               <td>
                 #if($entity.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
