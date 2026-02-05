@@ -82,7 +82,23 @@ $(function() {
              $('.datatable').dataTable({
                "language": {
                  "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
-               }
+               },
+                 "columnDefs": [
+                     {
+                         type: 'string',
+                         targets: '_all',
+                         render: function(data, type, row) {
+                             if (type === 'display' || type === 'filer') {
+                                 return data;
+                             }
+                             if (type === 'sort') {
+                                 var num = parseFloat(data);
+                                 return isNaN(num) ? data : num;
+                             }
+                             return data;
+                         }
+                     }
+                 ]
              });
              processQueryForms();
            });
