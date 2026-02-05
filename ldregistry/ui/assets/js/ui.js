@@ -13,7 +13,7 @@ $(function() {
         "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
         "columnDefs": [
             {
-                type: 'string',
+                type: 'html-string',
                 targets: '_all',
                 render: function(data, type, row) {
                     if (type === 'display' || type === 'filer') {
@@ -85,7 +85,7 @@ $(function() {
                },
                  "columnDefs": [
                      {
-                         type: 'string',
+                         type: 'html-string',
                          targets: '_all',
                          render: function(data, type, row) {
                              if (type === 'display' || type === 'filer') {
