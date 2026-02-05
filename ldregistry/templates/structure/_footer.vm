@@ -37,15 +37,7 @@
               #if($queryResults && $queryResults.size() > 0)
                 #set($lastModifiedWrapper = $queryResults.get(0).get("modified"))
                 #if($lastModifiedWrapper)
-                    #set($lastModified = $lastModifiedWrapper.asLiteral())
-                    <div>
-                        <strong>Last Content Update: </strong>
-                        #if($lastModified.datatype.toString() == "http://www.w3.org/2001/XMLSchema#date")
-                            $lib.printDatetime("d MMM yyyy", $lastModified)
-                        #else
-                            $lib.printDatetime(lastModified)
-                        #end
-                    </div>
+                    <div><strong>Last content update:</strong> ${lastModifiedWrapper.lexicalForm}</div>
                 #end
               #end
 
