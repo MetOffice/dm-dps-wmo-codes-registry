@@ -1,6 +1,17 @@
 // Set of initialization actions run on page load to make UI features live
 
 $(function() {
+    // Force datatable to not convert string with leading zeros to num
+    $.fn.dataTable.ext.type.detect.unshift(function(data) {
+        if(typeof data === 'string' && /^0\d+$/.test(data.trim())) {
+            return 'leading-zeros-string';
+        }
+        return null;
+    });
+
+    $.fn.dataTable.ext.type.order['leading-zeros-string-pre'] = function(data) {
+        return typeof data == "string" ? parseInt(data,10) : 0;
+    }
 
     // Move any rhs elements (typically from type-specific templates) to rhs column
     $(".rhs").appendTo("#rhs");
@@ -10,6 +21,7 @@ $(function() {
       "language": {
         "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
       },
+        "order": [],
       "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ]
     } );
     
@@ -66,7 +78,8 @@ $(function() {
              $('.datatable').dataTable({
                "language": {
                  "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
-               }
+               },
+                 "order": [],
              });
              processQueryForms();
            });
