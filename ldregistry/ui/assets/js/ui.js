@@ -1,16 +1,25 @@
 // Set of initialization actions run on page load to make UI features live
 
 $(function() {
-    // Force datatable to not convert string with leading zeros to num
+    // Force datatables to not convert string with leading zeros to num
     $.fn.dataTable.ext.type.detect.unshift(function(data) {
-        if(typeof data === 'string' && /^0\d+$/.test(data.trim())) {
+        var text = typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : data;
+        if(typeof text === 'string' && /^0\d+$/.test(text)) {
             return 'leading-zeros-string';
         }
         return null;
     });
 
     $.fn.dataTable.ext.type.order['leading-zeros-string-pre'] = function(data) {
-        return typeof data == "string" ? parseInt(data,10) : 0;
+        var text = typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : data;
+        return typeof text == "string" ? parseInt(text,10) : 0;
+    }
+
+    $.fn.dataTable.ext.type.render['leading-zeros-string'] = function(data, type, row) {
+        if(type === 'display' || type == 'filter') {
+            return data;
+        }
+        return typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : data;
     }
 
     // Move any rhs elements (typically from type-specific templates) to rhs column
@@ -22,7 +31,8 @@ $(function() {
         "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
       },
         "order": [],
-      "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ]
+      "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
+        "typeDetect": false
     } );
     
     // Query forms run a target query and load the resulting HTML into a data-result element
