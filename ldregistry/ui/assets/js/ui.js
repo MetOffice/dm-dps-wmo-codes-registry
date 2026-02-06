@@ -32,7 +32,12 @@ $(function() {
       },
         "order": [],
       "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
-        "typeDetect": false
+        "columnDefs": [
+            {
+                "type": "leading-zeros-string",
+                "targets": 0
+            }
+        ]
     } );
     
     // Query forms run a target query and load the resulting HTML into a data-result element
@@ -89,7 +94,12 @@ $(function() {
                "language": {
                  "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
                },
-                 "order": [],
+                 "columnDefs": [
+                     {
+                         "type": "leading-zeros-string",
+                         "targets": 0
+                     }
+                 ]
              });
              processQueryForms();
            });
