@@ -25,10 +25,18 @@
           <tr>
           	## When might we not have an $memitem?
               <td>
-                  $member.notation
-                  $member.notation.lexicalForm
-                  $memitem.notation
-                  $memitem.notation.lexicalForm
+                  #set($entity = $member.connectedNodes("reg:entity"))
+                  #if($entity && $entity.size() > 0)
+                  #set($ent = $entity.get(0))
+                  #foreach($pv in $ent.listProperties())
+                      #if($pv.getProp().name=="notation")
+                          #foreach($v in $pv.getValues())
+                              $lib.escapeHtml($v.lexicalForm, 1000)
+                          #end
+                      #end
+
+                  #end
+              #end
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
           	<td>
