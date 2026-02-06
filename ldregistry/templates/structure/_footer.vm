@@ -46,15 +46,24 @@
                   #if($store)
                   $store.lock()
                     #set($model = $store.asModel())
-                    #set($results = $model.querySelectW("SELECT ?modified WHERE { ?item <http://purl.ord/dc/terms/modified> ?modified } ORDER BY DESC(?modified) LIMIT 1"))
+                    #set($results = $model.querySelectW("SELECT ?modified WHERE { ?item <http://purl.org/dc/terms/modified> ?modified } ORDER BY DESC(?modified) LIMIT 1"))
                     #if($results && $results.size() > 0)
                         #set($modifiedNode = $results.get(0).get("modified"))
+                        #set($dateStr = $modifiedNode.lexicalForm)
                         #if($modifiedNode)
-                            <div><strong>Last update: </strong>$!{modifiedNode.lexicalForm}</div>
+
+                            #set($simpleDateFormat = $lib.class.forName("java.text.SimpleDateFormat"))
+                            #set($inputFormat = $simpleDateFormat.newInstance())
+                            $inputFormat.applyPattern("yyyy-MM-dd'T'HH:mm:ss")
+                            #set($outputFormat = $simpleDateFormat.newInstance())
+                            $outputFormat.applyPattern("d MMM yyyy HH:mm:ss")
+                            #set($parsedDate = $inputFormat.parse($dateStr))
+                            #set($formattedDate = $outputFormat.format($parsedDate))
+                            <div><strong>Last update: </strong>$!{formattedDate}</div>
+                            ##<div><strong>Last update: </strong>$!{modifiedNode.lexicalForm}</div>
                         #end
                     #end
-                      $store.end()
-
+                    $store.unlock()
               #end
               </div>
 
