@@ -42,7 +42,8 @@ $(function() {
                     }
                     var text = typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : String(data);
                     return type === 'sort' ? parseInt(text, 10) : text;
-                }
+                },
+                "orderDataType": "dom-data-sort"
             }
         ]
     } );
@@ -104,7 +105,15 @@ $(function() {
                  "columnDefs": [
                      {
                          "type": "leading-zeros-string",
-                         "targets": 0
+                         "targets": 0,
+                         "render": function(data, type, row) {
+                             if (type === 'display') {
+                                 return data;
+                             }
+                             var text = typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : String(data);
+                             return type === 'sort' ? parseInt(text, 10) : text;
+                         },
+                         "orderDataType": "dom-data-sort"
                      }
                  ]
              });

@@ -24,7 +24,7 @@
           #if( !$memitem.hasResourceValue("reg:status", "reg:statusReserved") )
           <tr>
           	## When might we not have an $memitem?
-              <td>$memitem.getPropertyValue("reg:notation").lexicalForm</td>
+              <td data-order="$memitem.getPropertyValue("reg:notation").lexicalForm" data-sort="$memitem.getPropertyValue("reg:notation").lexicalForm">$memitem.getPropertyValue("reg:notation").lexicalForm</td>
           	<td>
               #if($member.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
               <a href="#linkhref($memitem)" title="$memitem.uRI">$member.name</a>
