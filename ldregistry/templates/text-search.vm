@@ -2,6 +2,15 @@
             <tr>
               <td>$item.getPropertyValue("reg:notation").lexicalForm</td>
               <td>
+                #set($itemUri = $item.uRI.substring($registry.baseURI.length()))
+                #set($itemPath = $itemUri.replaceAll("^/","").replaceAll("/"," / "))
+                #set($lastSlashIndex = $itemPath.lastIndexOf(" / "))
+                #if($lastSlashIndex > 0)
+                  #set($parentPath = $itemPath.substring(0, $lastSlashIndex))
+                  $parentPath
+                #end
+              </td>
+              <td>
                 #if($entity.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
                 <a href="#linkhref($item)" title="$item.uRI">$entity.name</a>
               </td>
@@ -39,6 +48,7 @@
       <thead>
         <tr>
           <th>$msg['registerItem.notation.label']</th>
+          <th>$msg['registerItem.register.label']</th>
           <th>$msg['registerItem.name.label']</th>
           <th>$msg['registerItem.description.label']</th>
 ##          <th>$msg['registerItem.types.label']</th>
