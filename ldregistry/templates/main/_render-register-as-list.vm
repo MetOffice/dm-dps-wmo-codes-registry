@@ -26,6 +26,7 @@
           	## When might we not have an $memitem?
               <td>
                   #set($notation = $memitem.getPropertyValue("reg:notation"))
+                  <!--DEBUG: class=$notation.class.name, lexicalForm=$notation.lexicalForm, toString=$notation.toString()-->
                   $lib.escapeHtml($notation.lexicalForm, 1000)
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
