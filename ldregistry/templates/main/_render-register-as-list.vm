@@ -26,18 +26,16 @@
           	## When might we not have an $memitem?
               <td>
                   #set($notationProp = false)
-                  #foreach($p in $memitem.listProperties())
-                  #if($p.getProp().name == "notation")
-                      #set($notationProp = $p)
+                  #foreach($pv in $memitem.listProperties())
+                  #if($pv.getProp().name == "notation")
+                      #set($notationProp = $pv)
+                      #break
                   #end
               #end
               #if($notationProp)
-                  #set($notationValues = $notationProp.getValues())
-                  <!-- DEBUG: Notation found, values count: $notationValues.size() -->
-                  #if($notationValues.size() > 0)
-                      #set($notationValue = $notationValues.get(0))
-                      <!-- DEBUG: value class=$notationValue.class.name , lexicalForm=$notationValue.lexicalForm-->
-                      $notationValue.lexicalForm
+                  #foreach($v in $notationProp.getValues())
+                      #render($v)
+                      #break
                   #end
               #end
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
