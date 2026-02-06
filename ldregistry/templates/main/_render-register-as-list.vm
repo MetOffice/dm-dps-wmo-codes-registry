@@ -25,19 +25,10 @@
           <tr>
           	## When might we not have an $memitem?
               <td>
-                  #set($notationProp = false)
-                  #foreach($pv in $memitem.listProperties())
-                  #if($pv.getProp().name == "notation")
-                      #set($notationProp = $pv)
-                      #break
-                  #end
-              #end
-              #if($notationProp)
-                  #foreach($v in $notationProp.getValues())
-                      #render($v)
-                      #break
-                  #end
-              #end
+                  $member.notation
+                  $member.notation.lexicalForm
+                  $memitem.notation
+                  $memitem.notation.lexicalForm
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
           	<td>
