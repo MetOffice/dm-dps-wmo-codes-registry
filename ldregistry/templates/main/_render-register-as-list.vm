@@ -25,16 +25,21 @@
           <tr>
           	## When might we not have an $memitem?
               <td>
-                  #set($notationFromItem = $memitem.getPropertyValue("reg:notation"))
-                  #set($notationFromMember = $member.getPropertyValue("reg:notation"))
-                  <!--DEBUG: member URI: $member.uRI -->
-                  <!--DEBUG: memitem URI: $memitem.uRI -->
-                  <!--DEBUG: member props: #foreach($p in $member.listProperties()) $p.getProp().name, #end -->
-                  <!--DEBUG: member props: #foreach($p in $memitem.listProperties()) $p.getProp().name, #end -->
-                  #set($notationNode = $memitem.getPropertyValue("reg:notation"))
-                  #set($rawNotation = $notationNode.asNode().getLiteral().getLexicalForm())
-                  <!-- DEBUG: rawNotation=$rawNotation -->
-                  $rawNotation
+                  #set($notationProp = false)
+                  #foreach($p in $memitem.listProperties())
+                  #if($p.getProp().name == "notation")
+                      #set($notationProp = $p)
+                  #end
+              #end
+              #if($notationProp)
+                  #set($notationValues = $notationProp.getValues())
+                  <!-- DEBUG: Notation found, values count: $notationValues.size() -->
+                  #if($notationValues.size() > 0)
+                      #set($notationValue = $notationValues.get(0))
+                      <!-- DEBUG: value class=$notationValue.class.name , lexicalForm=$notationValue.lexicalForm-->
+                      $notationValue.lexicalForm
+                  #end
+              #end
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
           	<td>
