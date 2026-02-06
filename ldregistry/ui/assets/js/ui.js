@@ -1,6 +1,16 @@
 // Set of initialization actions run on page load to make UI features live
 
 $(function() {
+    $.fn.dataTable.ext.type.detect.unshift(function(data) {
+        if(typeof data === 'string' && /^0\d+$/.test(data.trim())) {
+            return 'leading-zeros-string';
+        }
+        return null;
+    });
+
+    $.fn.dataTable.ext.type.order['leading-zeros-string-pre'] = function(data) {
+        return typeof data == "string" ? parseInt(data,10) : 0;
+    }
 
     // Move any rhs elements (typically from type-specific templates) to rhs column
     $(".rhs").appendTo("#rhs");
@@ -11,26 +21,7 @@ $(function() {
           "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
         },
         "order": [],
-        "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
-        "columnDefs": [
-            {
-                type: 'string',
-                targets: '_all',
-                orderDataType: "dom-text"
-                /*
-                render: function(data, type, row) {
-                    if (type === 'display' || type === 'filer') {
-                        return String(data);
-                    }
-                    if (type === 'sort') {
-                        var num = parseFloat(data);
-                        return isNaN(num) ? data : num;
-                    }
-                    return data;
-                }
-                 */
-            }
-        ]
+        "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ]
     } );
     
     // Query forms run a target query and load the resulting HTML into a data-result element
