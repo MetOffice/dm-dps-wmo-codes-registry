@@ -27,8 +27,14 @@
               <td>
                   #set($notationFromItem = $memitem.getPropertyValue("reg:notation"))
                   #set($notationFromMember = $member.getPropertyValue("reg:notation"))
-                  <!--DEBUG: member: $notationFromMember.lexicalForm | item: $notationFromItem.lexicalForm -->
-                  $lib.escapeHtml($notationFromMember.lexicalForm, 1000)
+                  <!--DEBUG: member URI: $member.uRI -->
+                  <!--DEBUG: memitem URI: $memitem.uRI -->
+                  <!--DEBUG: member props: #foreach($p in $member.listProperties()) $p.getProp().name, #end -->
+                  <!--DEBUG: member props: #foreach($p in $memitem.listProperties()) $p.getProp().name, #end -->
+                  #set($notationNode = $memitem.getPropertyValue("reg:notation"))
+                  #set($rawNotation = $notationNode.asNode().getLiteral().getLexicalForm())
+                  <!-- DEBUG: rawNotation=$rawNotation -->
+                  $rawNotation
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
           	<td>
