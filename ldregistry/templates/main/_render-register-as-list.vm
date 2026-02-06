@@ -25,9 +25,7 @@
           <tr>
           	## When might we not have an $memitem?
               <td>
-                  #set($notationNode = $memitem.getPropertyValue("reg:notation"))
-                  #set($notationValue = $notationNode.asLiteral().getLexicalForm())
-                  $notationValue
+                  $!{memitem.getPropertyValue("reg:notation").asNode().getLiteralLexicalForm()}
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
           	<td>
