@@ -12,7 +12,7 @@
                 #end
 
                  *#
-                #set($path = $item.uRI.substring($registry.baseURI.length()).replaceAll("^/","").replaceAll("/"," / ")))
+                #set($path = $item.uRI.substring($registry.baseURI.length()).replaceAll("^/","").replaceAll("/"," / "))
                 #set($pathEndIndex = $path.lastIndexOf(" / "))
                 #if($pathEndIndex > 0)
                   $path.substring(0, $pathEndIndex)
