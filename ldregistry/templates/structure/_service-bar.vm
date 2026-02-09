@@ -7,7 +7,7 @@
    ##     </span>
    ##     $msg.get('service.beta.description', 'TBD')
    ## </div>
-#if($request.getServerName().contains("dev.codes.wmo.int") || $request.getServerName().contians("ci.codes.wmo.int"))
+#if($request.getServerName().contains("dev.codes.wmo.int") || $request.getServerName().contains("ci.codes.wmo.int"))
     <div class="row">
         <div class="non-operational-banner">This is a test website – some features and links may not work, and data may be incorrect.</div>
     </div>
