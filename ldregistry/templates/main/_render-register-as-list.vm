@@ -25,7 +25,7 @@
           <tr>
           	## When might we not have an $memitem?
               <td>
-                  #set($entity = $member.connectedNodes("reg:entity"))
+                  #set($entity = $memitem.connectedNodes("reg:entity"))
                   #if($entity && $entity.size() > 0)
                   #set($ent = $entity.get(0))
                   #foreach($pv in $ent.listProperties())
@@ -34,7 +34,6 @@
                               $lib.escapeHtml($v.lexicalForm, 1000)
                           #end
                       #end
-
                   #end
               #end
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
