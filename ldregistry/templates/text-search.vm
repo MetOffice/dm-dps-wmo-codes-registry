@@ -2,16 +2,6 @@
             <tr>
               <td>$item.getPropertyValue("reg:notation").lexicalForm</td>
               <td>
-                #*
-                #set($itemUri = $item.uRI.substring($registry.baseURI.length()))
-                #set($itemPath = $itemUri.replaceAll("^/","").replaceAll("/"," / "))
-                #set($lastSlashIndex = $itemPath.lastIndexOf(" / "))
-                #if($lastSlashIndex > 0)
-                  #set($parentPath = $itemPath.substring(0, $lastSlashIndex))
-                  $parentPath
-                #end
-
-                 *#
                 #set($path = $item.uRI.substring($registry.baseURI.length()).replaceAll("^/","").replaceAll("/"," / "))
                 #set($pathEndIndex = $path.lastIndexOf(" / "))
                 #if($pathEndIndex > 0)
