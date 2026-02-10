@@ -43,6 +43,21 @@
                     $ty.lexicalForm
                   #end
 
+                  #set($str1 = $memitem.uRI.lexicalForm)
+                  #set($str2 = $memitem.uRI)
+                  #set($str3 = $memitem.uRI.toString())
+                  #set($str1_mod = $str1.substring($str1.lastIndexOf("/")))
+                  #set($str2_mod = $str2.substring($str2.lastIndexOf("/")))
+                  #set($str3_mod = $str3.substring($str3.lastIndexOf("/")))
+                  $str1
+                  $str2
+                  $str3
+                  $str1_mod
+                  $str2_mod
+                  $str3_mod
+
+
+
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
           	<td>
