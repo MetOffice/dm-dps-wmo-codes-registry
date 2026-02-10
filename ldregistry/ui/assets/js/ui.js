@@ -1,53 +1,18 @@
 // Set of initialization actions run on page load to make UI features live
 
 $(function() {
-    // Force datatables to not convert string with leading zeros to num
-    $.fn.dataTable.ext.type.detect.unshift(function(data) {
-        var text = typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : data;
-        if(typeof text === 'string' && /^0\d+$/.test(text)) {
-            return 'leading-zeros-string';
-        }
-        return null;
-    });
-
-    $.fn.dataTable.ext.type.order['leading-zeros-string-pre'] = function(data) {
-        var text = typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : data;
-        return typeof text == "string" ? parseInt(text,10) : 0;
-    }
-
-    $.fn.dataTable.ext.type.render['leading-zeros-string'] = function(data, type, row) {
-        if(type === 'display' || type == 'filter') {
-            return data;
-        }
-        return typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : data;
-    }
 
     // Move any rhs elements (typically from type-specific templates) to rhs column
     $(".rhs").appendTo("#rhs");
 
     // Enable datatable processing
     $('.datatable').dataTable( {
-      "language": {
-        "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
-      },
-        "order": [],
-      "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ],
-        "columnDefs": [
-            {
-                "type": "leading-zeros-string",
-                "targets": 0,
-                "render": function(data, type, row) {
-                    if (type === 'display') {
-                        return data;
-                    }
-                    var text = typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : String(data);
-                    return type === 'sort' ? parseInt(text, 10) : text;
-                },
-                "orderDataType": "dom-data-sort"
-            }
-        ]
+        "language": {
+            "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
+        },
+        "lengthMenu": [ [20, 50, 100, -1], [20, 50, 100, "All"] ]
     } );
-    
+
     // Query forms run a target query and load the resulting HTML into a data-result element
     var processQueryForms = function() {
         $(".query-form").each(function() {
@@ -90,37 +55,23 @@ $(function() {
         var uri = tab.attr('data-uri');
         var uiroot = tab.attr('data-uiroot');
         if (action) {
-          //var url = '$uiroot/' + action +'?uri=$lib.pathEncode($uri)&requestor=$requestor';
-          var url = uiroot + '/' + action + '?param=' + uri;
-          var args = tab.attr('data-args');
-          if (args) {
-             url = url + "&" + args;
-          }
-          tab.find(".tab-pane-inner").load(url, function(){
-             $('.action-tab').tab(); //reinitialize tabs
-             $('.datatable').dataTable({
-               "language": {
-                 "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
-               },
-                 "columnDefs": [
-                     {
-                         "type": "leading-zeros-string",
-                         "targets": 0,
-                         "render": function(data, type, row) {
-                             if (type === 'display') {
-                                 return data;
-                             }
-                             var text = typeof data === 'string' ? data.replace(/<[^>]*>/g, '').trim() : String(data);
-                             return type === 'sort' ? parseInt(text, 10) : text;
-                         },
-                         "orderDataType": "dom-data-sort"
-                     }
-                 ]
-             });
-             processQueryForms();
-           });
+            //var url = '$uiroot/' + action +'?uri=$lib.pathEncode($uri)&requestor=$requestor';
+            var url = uiroot + '/' + action + '?param=' + uri;
+            var args = tab.attr('data-args');
+            if (args) {
+                url = url + "&" + args;
+            }
+            tab.find(".tab-pane-inner").load(url, function(){
+                $('.action-tab').tab(); //reinitialize tabs
+                $('.datatable').dataTable({
+                    "language": {
+                        "url": registry.assets + "/js/locales/dataTables/" + registry.language + ".json"
+                    }
+                });
+                processQueryForms();
+            });
         };
-     });
+    });
 
 
     // Anything marked as popinfo will have a popover (data-trigger, data-placement, data-content)
@@ -137,28 +88,28 @@ $(function() {
                     if (returnURL) {
                         window.location.href = returnURL;
                     } else {
-                      location.reload();
+                        location.reload();
                     }
                 },
 
             error:
-              function(xhr, status, error){
-                 $(".ajax-error").html("<div class='alert alert-warning'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
-              }
-          });
+                function(xhr, status, error){
+                    $(".ajax-error").html("<div class='alert alert-warning'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
+                }
+        });
     });
 
     // Simple ajax inline forms that display the returned message
     $(".ajax-inline-form").ajaxForm({
-      success:
-          function(data, status, xhr){
-             $("#form-result").html(data);
-          },
+        success:
+            function(data, status, xhr){
+                $("#form-result").html(data);
+            },
 
-      error:
-        function(xhr, status, error){
-           $("#form-result").html("<div class='alert'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
-        }
+        error:
+            function(xhr, status, error){
+                $("#form-result").html("<div class='alert'> <button type='button' class='close' data-dismiss='alert'>&times;</button>Action failed: " + error + " - " + xhr.responseText + "</div>");
+            }
     });
 
     // Hierarchical views
@@ -168,7 +119,7 @@ $(function() {
         var state = button.attr("data-state");
         if (state === "new") {
             $.get(button.attr("data-target"), function(data){
-                parent.after("<div class='hlist-child-box'>" + data + "</div>");    
+                parent.after("<div class='hlist-child-box'>" + data + "</div>");
                 parent.next("div").find("a.hlist-button").click(hlistHandler);
             });
             setHlistState(button, "open");
@@ -185,12 +136,12 @@ $(function() {
     var setHlistState = function(button, state) {
         button.attr("data-state", state);
         if (state === "open") {
-            button.find("span").removeClass("glyphicon-plus-sign").addClass("glyphicon-minus-sign");            
+            button.find("span").removeClass("glyphicon-plus-sign").addClass("glyphicon-minus-sign");
         } else if (state === "closed") {
             button.find("span").removeClass("glyphicon-minus-sign").addClass("glyphicon-plus-sign");
         }
     };
-    
+
     $("a.hlist-button").click( hlistHandler );
 
     // ------------
@@ -308,7 +259,7 @@ $(function() {
                 $("#msg").html("Save failed: " + error + " - " + xhr.responseText);
                 $('#msg-alert').removeClass('alert-success').addClass('alert-warning').show();
             }
-          });
+        });
     });
 });
 
