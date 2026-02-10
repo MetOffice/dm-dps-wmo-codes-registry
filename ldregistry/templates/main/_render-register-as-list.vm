@@ -27,7 +27,7 @@
               <td>
 
                   #set($str = $memitem.uRI)
-                  #set($index = $str.lastIndexOf("/"))
+                  #set($index = $str.lastIndexOf("/")+1)
                   #set($str = $str.substring($index))
                   $str
 
