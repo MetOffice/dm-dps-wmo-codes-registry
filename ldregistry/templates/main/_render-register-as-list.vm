@@ -34,7 +34,6 @@
                   $lib.escapeHtml($newNotation.lexicalForm, 1000)
 
 
-              #end
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
           	<td>
