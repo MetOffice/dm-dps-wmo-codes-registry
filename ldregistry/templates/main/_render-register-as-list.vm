@@ -28,11 +28,20 @@
 
                   #set($store = $registry.store())
                   #set($item = $store.getItem($memitem.uRI, true))
-                  #set($newNotation = $item.getNotation())
-                  $newNotation
-                  $newNotation.lexicalForm
-                  $lib.escapeHtml($newNotation.lexicalForm, 1000)
+                  Item: $item
+                  Item.lexicalForm: $item.lexicalForm
 
+                  #set($store = $registry.store())
+
+                  #set($idk=$store.beginSafeRead().getNotation($memitem.uRI).endSafeRead())
+                  Store with safe read: $idk
+
+                  #foreach($ty in $member.listPropertyValues("rdf:type"))
+                    $ty
+                    $ty.name
+                    $ty.value
+                    $ty.lexicalForm
+                  #end
 
                   ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
