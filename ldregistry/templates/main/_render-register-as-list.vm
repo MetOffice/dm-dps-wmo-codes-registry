@@ -29,7 +29,11 @@
                   #set($str = $memitem.uRI)
                   #set($index = $str.lastIndexOf("/")+1)
                   #set($str = $str.substring($index))
+                  #if($str.charAt(0)=='_')
+                  $str.substring(1)
+                  #else
                   $str
+                  #end
 
 
 
