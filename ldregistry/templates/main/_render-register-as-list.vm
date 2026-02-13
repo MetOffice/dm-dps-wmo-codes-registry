@@ -29,10 +29,9 @@
                   #set($startIndex = $itemUri.lastIndexOf("/")+1)
                   #set($notation = $itemUri.substring($startIndex))
                   #if($notation.charAt(0) == '_')
-                    $notation.substring(1)
-                  #else
-                    $notation
+                    #set($notation = $notation.substring(1))
                   #end
+                  $notation
               </td>
           	<td>
               #if($member.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
