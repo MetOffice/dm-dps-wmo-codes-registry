@@ -1,14 +1,14 @@
 #macro(resultrow $entity $item)
             <tr>
               <td>
-                #set($str = $item.uRI)
-                  #set($index = $str.lastIndexOf("/")+1)
-                  #set($str = $str.substring($index))
-                  #if($str.charAt(0)=='_')
-                $str.substring(1)
-              #else
-                $str
-              #end
+                #set($itemUri = $item.uRI)
+                #set($startIndex = $itemUri.lastIndexOf("/")+1)
+                #set($notation = $itemUri.substring($startIndex))
+                #if($notation.charAt(0) == '_')
+                  $notation.substring(1)
+                #else
+                  $notation
+                #end
               </td>
               <td>
                 #if($entity.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end

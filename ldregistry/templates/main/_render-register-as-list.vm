@@ -25,19 +25,14 @@
           <tr>
           	## When might we not have an $memitem?
               <td>
-
-                  #set($str = $memitem.uRI)
-                  #set($index = $str.lastIndexOf("/")+1)
-                  #set($str = $str.substring($index))
-                  #if($str.charAt(0)=='_')
-                  $str.substring(1)
+                  #set($itemUri = $item.uRI)
+                  #set($startIndex = $itemUri.lastIndexOf("/")+1)
+                  #set($notation = $itemUri.substring($startIndex))
+                  #if($notation.charAt(0) == '_')
+                    $notation.substring(1)
                   #else
-                  $str
+                    $notation
                   #end
-
-
-
-                  ##$memitem.getPropertyValue("reg:notation").lexicalForm
               </td>
           	<td>
               #if($member.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
