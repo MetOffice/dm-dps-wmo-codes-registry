@@ -24,14 +24,7 @@
             <li><a href="$uiroot/actions/create-redirect-page?entity=#linkhref($entity)&return=$root/$uri" role="button" data-toggle="modal">$msg['redirect.label']</a></li>
         #end
 
-       <li role="separator" class="divider"></li>
-       #if( $register )
-           #if( $showStatus == "accepted" )
-               <li><a href="$root/$uri?showStatus=valid">$msg['register.hideDeprecated']</a></li>
-            #else
-               <li><a href="$root/$uri?showStatus=accepted">$msg['register.showAll']</a></li>
-            #end
-        #end
+
        <li><a href="$uiroot/actions/check-page">$msg['checkUri.label']</a></li>
        <li><a href="$uiroot/sparql-form">$msg['sparql.label']</a></li>
 

@@ -32,16 +32,10 @@
           </p>
         #end
           ## Last modified dates
-          <div class="text-muted small" style="margin-top: 15px">
-              #set($queryResults = $lib.reg.query("SELECT ?modified WHERE { ?item dct:modified ?modified } ORDER BY DESC(?modified) LIMIT 1"))
-              #if($queryResults && $queryResults.size() > 0)
-                #set($lastModifiedWrapper = $queryResults.get(0).get("modified"))
-                #if($lastModifiedWrapper)
-                    <div><strong>Last content update:</strong> ${lastModifiedWrapper.lexicalForm}</div>
-                #end
-              #end
+          <div style="margin-top: 15px">
+              <h4>Registry Information</h4>
 
-              <div class="text-muted small" style="margin-top: 15px">
+              <div>
                   #set($store = $registry.store)
                   #if($store)
                   $store.lock()
@@ -59,8 +53,7 @@
                             $outputFormat.applyPattern("d MMM yyyy HH:mm:ss")
                             #set($parsedDate = $inputFormat.parse($dateStr))
                             #set($formattedDate = $outputFormat.format($parsedDate))
-                            <div><strong>Last update: </strong>$!{formattedDate}</div>
-                            ##<div><strong>Last update: </strong>$!{modifiedNode.lexicalForm}</div>
+                            <div><strong>Last content update: </strong>$!{formattedDate}</div>
                         #end
                     #end
                     $store.unlock()
