@@ -27,11 +27,15 @@
               <td>
                   #set($itemUri = $item.uRI)
                   #set($startIndex = $itemUri.lastIndexOf("/")+1)
-                  #set($notation = $itemUri.substring($startIndex))
-                  #if($notation.charAt(0) == '_')
-                    #set($notation = $notation.substring(1))
+                  #if($startIndex > 0)
+                    #set($notation = $itemUri.substring($startIndex))
+                    #if($notation.charAt(0) == '_')
+                      #set($notation = $notation.substring(1))
+                    #end
+                    $notation
+                  #else
+                    $memitem.getPropertyValue("reg:notation").lexicalForm
                   #end
-                  $notation
               </td>
           	<td>
               #if($member.hasResourceValue("rdf:type", "reg:Register"))<span class="glyphicon glyphicon-folder-open"></span> &nbsp; #end
