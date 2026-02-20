@@ -1,17 +1,17 @@
 #macro(resultrow $entity $item)
             <tr>
               <td>
-                #set($itemUri = $item.uRI)
-                #set($startIndex = $itemUri.lastIndexOf("/")+1)
-                #if($startIndex > 0)
-                 #set($notation = $itemUri.substring($startIndex))
-                  #if($notation.charAt(0) == '_')
-                    #set($notation = $notation.substring(1))
-                  #end
-                  $notation
-                #else
-                  $memitem.getPropertyValue("reg:notation").lexicalForm
+                #set($itemUri = $memitem.uRI)
+                  #set($startIndex = $itemUri.lastIndexOf("/")+1)
+                  #if($startIndex > 0)
+                #set($notation = $itemUri.substring($startIndex))
+                #if($notation.charAt(0) == '_')
+                  #set($notation = $notation.substring(1))
                 #end
+                $notation
+              #else
+                $memitem.getPropertyValue("reg:notation").lexicalForm
+              #end
 
 
 
