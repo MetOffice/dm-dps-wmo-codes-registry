@@ -25,7 +25,7 @@
           <tr>
           	## When might we not have an $memitem?
               <td>
-                  #set($itemUri = $item.uRI)
+                  #set($itemUri = $memitem.uRI)
                   #set($startIndex = $itemUri.lastIndexOf("/")+1)
                   #if($startIndex > 0)
                     #set($notation = $itemUri.substring($startIndex))
