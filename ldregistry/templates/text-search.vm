@@ -1,6 +1,21 @@
 #macro(resultrow $entity $item)
             <tr>
-              <td>$item.getPropertyValue("reg:notation").lexicalForm</td>
+              <td>
+                #set($itemUri = $item.uRI)
+                #set($startIndex = $itemUri.lastIndexOf("/")+1)
+                #if($startIndex > 0)
+                  #set($notation = $itemUri.substring($startIndex))
+                    #if($notation.charAt(0) == '_')
+                      #set($notation = $notation.substring(1))
+                    #end
+                  $notation
+                #else
+                  $memitem.getPropertyValue("reg:notation").lexicalForm
+                #end
+
+
+
+              </td>
               <td>
                 #set($path = $item.uRI.substring($registry.baseURI.length()).replaceAll("^/","").replaceAll("/"," / "))
                 #set($pathEndIndex = $path.lastIndexOf(" / "))
